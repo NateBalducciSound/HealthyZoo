@@ -4,6 +4,8 @@ using UnityEngine.EventSystems;
 
 public class DragAndDrop : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler
 {
+
+    public GrabbableType grabbableType;
     // Might need to workshop for later implementation
     private RectTransform rectTransform;
     private Image grabbableObject;
