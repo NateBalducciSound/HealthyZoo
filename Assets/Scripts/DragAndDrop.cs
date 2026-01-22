@@ -2,6 +2,7 @@ using UnityEngine.UI;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
+//using event system because they will be images and raycasting is heavier on mobile (plus you can't click)
 public class DragAndDrop : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler
 {
 
