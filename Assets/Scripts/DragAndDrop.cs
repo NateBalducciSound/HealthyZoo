@@ -24,9 +24,7 @@ public class DragAndDrop : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndD
     {
         //using this one because final won't have mouse location
        rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
-        //or
-
-        // transform.position = Input.mousePosition;
+       
     }
 
     public void OnEndDrag(PointerEventData eventData)
