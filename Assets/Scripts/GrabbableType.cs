@@ -1,6 +1,4 @@
 using UnityEngine;
-
-  
     public enum GrabbableType {
         Giraffe,
         Elephant,

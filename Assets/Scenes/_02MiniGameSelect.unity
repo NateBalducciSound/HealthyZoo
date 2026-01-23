@@ -148,6 +148,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: feb8ab5c2feda47448ec4eb39f123bbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  playButtonPrefab: {fileID: 3197394493052294629, guid: 06c0b6e24193c410597fd6d57fd25061, type: 3}
+  buttonParent: {fileID: 298625174}
 --- !u!4 &104073255
 Transform:
   m_ObjectHideFlags: 0
@@ -198,7 +200,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -330, y: -282.93948}
+  m_AnchoredPosition: {x: -330, y: 1054}
   m_SizeDelta: {x: 2.25, y: 2.25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &155732189
@@ -213,7 +215,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2aeeccd81f06e4358a146c3fdfe85149, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DragAndDrop
-  grabableType: 0
+  grabbableType: 2
 --- !u!114 &155732190
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -456,7 +458,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
@@ -474,7 +476,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 788685350}
-  - {fileID: 1298019347}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -509,7 +510,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 556900223}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 2}
   m_LocalScale: {x: 6, y: 6, z: 6}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -517,7 +518,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -323, y: -858}
+  m_AnchoredPosition: {x: -323, y: 479}
   m_SizeDelta: {x: 35.7449, y: 66.07}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &556900226
@@ -532,7 +533,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2aeeccd81f06e4358a146c3fdfe85149, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DragAndDrop
-  grabableType: 0
+  grabbableType: 0
 --- !u!114 &556900227
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -603,6 +604,7 @@ RectTransform:
   - {fileID: 2137083404}
   - {fileID: 556900224}
   - {fileID: 1648378804}
+  - {fileID: 1298019347}
   m_Father: {fileID: 298625174}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -817,16 +819,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1298019346}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 1}
+  m_LocalScale: {x: 15, y: 15, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 298625174}
+  m_Father: {fileID: 788685350}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 72.96997, y: -1521.3383}
+  m_AnchoredPosition: {x: 72.96997, y: -903}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1298019348
@@ -842,7 +844,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.22745098}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -879,6 +881,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9855833d320b346f48dbb762a11b424a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  playButtonSpawner: {fileID: 104073254}
 --- !u!1 &1455454204
 GameObject:
   m_ObjectHideFlags: 0
@@ -1105,7 +1108,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 377, y: -860}
+  m_AnchoredPosition: {x: 377, y: 476.93958}
   m_SizeDelta: {x: 43.26, y: 54.588097}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1648378806
@@ -1120,7 +1123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2aeeccd81f06e4358a146c3fdfe85149, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DragAndDrop
-  grabableType: 0
+  grabbableType: 3
 --- !u!114 &1648378807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1194,7 +1197,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 356.57153, y: -263.86295}
+  m_AnchoredPosition: {x: 356.57153, y: 1073.0767}
   m_SizeDelta: {x: 48.07, y: 51.221306}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2137083406
@@ -1209,7 +1212,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2aeeccd81f06e4358a146c3fdfe85149, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DragAndDrop
-  grabableType: 0
+  grabbableType: 1
 --- !u!114 &2137083407
 MonoBehaviour:
   m_ObjectHideFlags: 0
