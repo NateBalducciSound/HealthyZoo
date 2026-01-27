@@ -12,6 +12,18 @@ EditorBuildSettings:
     path: Assets/Scenes/_02MiniGameSelect.unity
     guid: 9533aadb625cb491c8323b95375f4099
   - enabled: 1
+    path: Assets/Scenes/_03AGiraffeScene.unity
+    guid: 10cde43e35dc44ce2b0038a4a94a9407
+  - enabled: 1
+    path: Assets/Scenes/_03BElephantScene.unity
+    guid: d6351750f92494ed39f9bcbe1fc51904
+  - enabled: 1
+    path: Assets/Scenes/_03CLemurScene.unity
+    guid: b71f5c97552af4eb095802917fe511ff
+  - enabled: 1
+    path: Assets/_03DDogScene.unity
+    guid: bbb470f9d85c346d885502c18bd283a8
+  - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 4755b35b590504809a7525fd2109c2e2
   m_configObjects:
