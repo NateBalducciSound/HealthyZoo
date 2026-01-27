@@ -21,11 +21,11 @@ public class PlayButtonSpawner : MonoBehaviour
         switch (selectedGrabbable)
         {
              case GrabbableType.Giraffe:
-                SceneManager.LoadScene("_03AGiraffeScene");
+                SceneManager.LoadScene("Scenes/_03AGiraffeScene");
                 break;
 
             case GrabbableType.Elephant:
-                SceneManager.LoadScene("_03BElephantScene");
+                SceneManager.LoadScene("Scenes/_03BElephantScene");
                 break;
 
             case GrabbableType.Dog:
@@ -33,7 +33,7 @@ public class PlayButtonSpawner : MonoBehaviour
                 break;
 
             case GrabbableType.Lemur:
-                SceneManager.LoadScene("_O3CLemurScene");
+                SceneManager.LoadScene("Scenes/_O3CLemurScene");
                 break;
         }
     }
