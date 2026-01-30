@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 public class PlayButtonSpawner : MonoBehaviour
 {
    public GameObject playButtonPrefab;
@@ -14,6 +15,9 @@ public class PlayButtonSpawner : MonoBehaviour
         if(currentButton  == null)
         {
             currentButton = Instantiate (playButtonPrefab, buttonParent);
+
+            Button btn = currentButton.GetComponent<Button>();
+            btn.onClick.AddListener (OnPlayPressed);
         }
     }
     public void OnPlayPressed ()
@@ -33,7 +37,7 @@ public class PlayButtonSpawner : MonoBehaviour
                 break;
 
             case GrabbableType.Lemur:
-                SceneManager.LoadScene("Scenes/_O3CLemurScene");
+                SceneManager.LoadScene("Scenes/_03CLemurScene");
                 break;
         }
     }
