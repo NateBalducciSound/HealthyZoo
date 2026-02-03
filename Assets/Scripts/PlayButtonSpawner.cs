@@ -1,3 +1,4 @@
+using UnityEditor.Build.Reporting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -28,17 +29,24 @@ public class PlayButtonSpawner : MonoBehaviour
                 SceneManager.LoadScene("Scenes/_03AGiraffeScene");
                 break;
 
-            case GrabbableType.Elephant:
-                SceneManager.LoadScene("Scenes/_03BElephantScene");
+            case GrabbableType.Heron:
+                SceneManager.LoadScene("Scenes/_03BHeronScene");
                 break;
 
-            case GrabbableType.Dog:
-                SceneManager.LoadScene("_03DDogScene");
+            case GrabbableType.Porcupine:
+                SceneManager.LoadScene("_03DPorcupineScene");
                 break;
 
-            case GrabbableType.Lemur:
-                SceneManager.LoadScene("Scenes/_03CLemurScene");
+            case GrabbableType.Sloth:
+                SceneManager.LoadScene("Scenes/_03CSlothScene");
                 break;
+            case GrabbableType.Panda:
+                SceneManager.LoadScene("Scenes/_03EPandaScene");
+                break;
+            case GrabbableType.Alligator:
+                SceneManager.LoadScene("Scenes/_03FAlligatorScene");
+                break;
+                
         }
     }
 }

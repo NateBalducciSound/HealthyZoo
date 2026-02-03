@@ -3,7 +3,7 @@ using UnityEngine.EventSystems;
 
 
 public class DropZone : MonoBehaviour, IDropHandler
-{
+    {
     public PlayButtonSpawner playButtonSpawner;
     public void OnDrop(PointerEventData eventData)
     {

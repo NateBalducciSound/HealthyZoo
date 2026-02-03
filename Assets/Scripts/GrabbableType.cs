@@ -1,7 +1,9 @@
 using UnityEngine;
     public enum GrabbableType {
         Giraffe,
-        Elephant,
-        Dog,
-        Lemur
+        Heron,
+        Panda,
+        Porcupine, 
+        Sloth,
+        Alligator
     };
