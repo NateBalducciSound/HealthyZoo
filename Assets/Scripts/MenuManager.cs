@@ -8,7 +8,7 @@ public class MenuManager : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
-    public void ScannerLoad(){
+    public void ScannerLoad(){ 
     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
     // Add get component later for Number of objects to track CPU usage and make sure no memory leaks happen from
     // recurring animations
