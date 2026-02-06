@@ -18,14 +18,20 @@ EditorBuildSettings:
     path: Assets/Scenes/_03AGiraffeScene.unity
     guid: 10cde43e35dc44ce2b0038a4a94a9407
   - enabled: 1
-    path: Assets/Scenes/_03BElephantScene.unity
+    path: Assets/Scenes/_03BHeronScene.unity
     guid: d6351750f92494ed39f9bcbe1fc51904
   - enabled: 1
-    path: Assets/Scenes/_03CLemurScene.unity
+    path: Assets/Scenes/_03CPorcupineScene.unity
     guid: b71f5c97552af4eb095802917fe511ff
   - enabled: 1
-    path: Assets/_03DDogScene.unity
+    path: Assets/Scenes/_03DSlothScene.unity
     guid: bbb470f9d85c346d885502c18bd283a8
+  - enabled: 1
+    path: Assets/Scenes/_03EPandaScene.unity
+    guid: 8d4b3f89988604651a5a94c0b01129f7
+  - enabled: 1
+    path: Assets/Scenes/_03FAlligatorScene.unity
+    guid: d2149eb915e5144728b171f30595f1da
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 6ee72d15cf39dd748a13eac57397b9af, type: 2}
     UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: 0465d33c6aee55f44b0237db8b0e0259, type: 2}

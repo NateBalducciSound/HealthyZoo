@@ -1,8 +1,9 @@
 using UnityEditor.Build.Reporting;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-public class PlayButtonSpawner : MonoBehaviour
+public class PlayButtonSpawner : MonoBehaviour, IPointerClickHandler
 {
    public GameObject playButtonPrefab;
    public Transform buttonParent;
@@ -34,11 +35,11 @@ public class PlayButtonSpawner : MonoBehaviour
                 break;
 
             case GrabbableType.Porcupine:
-                SceneManager.LoadScene("_03DPorcupineScene");
+                SceneManager.LoadScene("Scenes/_03CPorcupineScene");
                 break;
 
             case GrabbableType.Sloth:
-                SceneManager.LoadScene("Scenes/_03CSlothScene");
+                SceneManager.LoadScene("Scenes/_03DSlothScene");
                 break;
             case GrabbableType.Panda:
                 SceneManager.LoadScene("Scenes/_03EPandaScene");
@@ -48,5 +49,10 @@ public class PlayButtonSpawner : MonoBehaviour
                 break;
                 
         }
+    }
+
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        throw new System.NotImplementedException();
     }
 }
