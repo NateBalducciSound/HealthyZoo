@@ -12,8 +12,6 @@ public class DropZone : MonoBehaviour, IDropHandler
         //tell spawner to create button
         playButtonSpawner.setSelectedGrabbable(dragged.grabbableType); 
     }
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         

@@ -1,4 +1,3 @@
-using UnityEditor.Build.Reporting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
@@ -7,6 +6,8 @@ public class PlayButtonSpawner : MonoBehaviour, IPointerClickHandler
 {
    public GameObject playButtonPrefab;
    public Transform buttonParent;
+   public Image targetImage;
+
 
    private GrabbableType selectedGrabbable;
    private GameObject currentButton;
@@ -14,12 +15,39 @@ public class PlayButtonSpawner : MonoBehaviour, IPointerClickHandler
    public void setSelectedGrabbable (GrabbableType grabbable)
     {
         selectedGrabbable = grabbable;
+
+        // check completion
+        bool completed = MiniGameProgress.IsCompleted(grabbable);
+
+        if (!completed)
+        {
+            GreyOut();
+            return;
+        }    
+
+        RestoreColor();
+
         if(currentButton  == null)
         {
             currentButton = Instantiate (playButtonPrefab, buttonParent);
 
             Button btn = currentButton.GetComponent<Button>();
             btn.onClick.AddListener (OnPlayPressed);
+        }
+    }
+
+    void GreyOut()
+    {
+        if (targetImage != null)
+        {
+            targetImage.color = Color.grey;
+        }
+    }
+    void RestoreColor()
+    {
+        if (targetImage != null)
+        {
+            targetImage.color = Color.white;
         }
     }
     public void OnPlayPressed ()
