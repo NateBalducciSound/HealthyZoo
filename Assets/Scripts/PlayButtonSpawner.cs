@@ -1,60 +1,65 @@
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-public class PlayButtonSpawner : MonoBehaviour, IPointerClickHandler
+
+public class PlayButtonSpawner : MonoBehaviour
 {
-   public GameObject playButtonPrefab;
-   public Transform buttonParent;
-   public Image targetImage;
+    [Header("UI References")]
+    public GameObject playButtonPrefab;
+    public Transform buttonParent;
+    public Image targetImage;
 
+    [Header("Mini Game Identity")]
+    public GrabbableType myGrabbable;
 
-   private GrabbableType selectedGrabbable;
-   private GameObject currentButton;
+    private GrabbableType selectedGrabbable;
+    private GameObject currentButton;
 
-   public void setSelectedGrabbable (GrabbableType grabbable)
+    void Start()
     {
-        selectedGrabbable = grabbable;
+        RefreshVisualState();
+    }
 
-        // check completion
-        bool completed = MiniGameProgress.IsCompleted(grabbable);
+    void OnEnable()
+    {
+        RefreshVisualState(); // ensures update after returning from mini-game
+    }
 
-        if (!completed)
+    /// <summary>
+    /// Called when the image is clicked
+    /// </summary>
+    public void setSelectedGrabbable()
+    {
+        selectedGrabbable = myGrabbable;
+
+        // Always spawn the play button
+        if (currentButton == null)
         {
-            GreyOut();
-            return;
-        }    
-
-        RestoreColor();
-
-        if(currentButton  == null)
-        {
-            currentButton = Instantiate (playButtonPrefab, buttonParent);
-
+            currentButton = Instantiate(playButtonPrefab, buttonParent);
             Button btn = currentButton.GetComponent<Button>();
-            btn.onClick.AddListener (OnPlayPressed);
+            btn.onClick.AddListener(OnPlayPressed);
         }
     }
 
-    void GreyOut()
+    /// <summary>
+    /// Updates image color based on completion state
+    /// </summary>
+    void RefreshVisualState()
     {
-        if (targetImage != null)
-        {
-            targetImage.color = Color.grey;
-        }
+        if (targetImage == null) return;
+
+        bool completed = MiniGameProgress.IsCompleted(myGrabbable);
+        targetImage.color = completed ? Color.green : Color.gray;
     }
-    void RestoreColor()
-    {
-        if (targetImage != null)
-        {
-            targetImage.color = Color.white;
-        }
-    }
-    public void OnPlayPressed ()
+
+    /// <summary>
+    /// Loads the selected mini-game
+    /// </summary>
+    public void OnPlayPressed()
     {
         switch (selectedGrabbable)
         {
-             case GrabbableType.Giraffe:
+            case GrabbableType.Giraffe:
                 SceneManager.LoadScene("Scenes/_03AGiraffeScene");
                 break;
 
@@ -69,18 +74,14 @@ public class PlayButtonSpawner : MonoBehaviour, IPointerClickHandler
             case GrabbableType.Sloth:
                 SceneManager.LoadScene("Scenes/_03DSlothScene");
                 break;
+
             case GrabbableType.Panda:
                 SceneManager.LoadScene("Scenes/_03EPandaScene");
                 break;
+
             case GrabbableType.Alligator:
                 SceneManager.LoadScene("Scenes/_03FAlligatorScene");
                 break;
-                
         }
-    }
-
-    public void OnPointerClick(PointerEventData eventData)
-    {
-        throw new System.NotImplementedException();
     }
 }

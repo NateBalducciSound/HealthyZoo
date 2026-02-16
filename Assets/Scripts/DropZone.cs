@@ -10,7 +10,7 @@ public class DropZone : MonoBehaviour, IDropHandler
         DragAndDrop dragged = eventData.pointerDrag?.GetComponent<DragAndDrop>();
         if (dragged == null ) return;
         //tell spawner to create button
-        playButtonSpawner.setSelectedGrabbable(dragged.grabbableType); 
+        playButtonSpawner.setSelectedGrabbable(); 
     }
     void Start()
     {

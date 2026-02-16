@@ -9,6 +9,6 @@ public class ImageButtonSpawner : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        spawner.setSelectedGrabbable(grabbableType);
+        spawner.setSelectedGrabbable();
     }
 }
