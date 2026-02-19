@@ -12,4 +12,16 @@ public static class MiniGameProgress
         PlayerPrefs.SetInt(type.ToString(), 1);
         PlayerPrefs.Save();
     }
+    //dev tool to remove type
+    
+    public static void ResetAll()
+    {
+        foreach (GrabbableType type in System.Enum.GetValues(typeof(GrabbableType)))
+        {
+            PlayerPrefs.DeleteKey(type.ToString());
+        }
+
+        PlayerPrefs.Save();
+        Debug.Log("Mini-game progress RESET");
+    }
 }

@@ -7,7 +7,7 @@ public class PlayButtonSpawner : MonoBehaviour
     [Header("UI References")]
     public GameObject playButtonPrefab;
     public Transform buttonParent;
-    public Image targetImage;
+    public GameObject checkmarkObject; // ✅ green checkmark object
 
     [Header("Mini Game Identity")]
     public GrabbableType myGrabbable;
@@ -22,7 +22,7 @@ public class PlayButtonSpawner : MonoBehaviour
 
     void OnEnable()
     {
-        RefreshVisualState(); // ensures update after returning from mini-game
+        RefreshVisualState(); // update when returning from mini-game
     }
 
     /// <summary>
@@ -42,14 +42,18 @@ public class PlayButtonSpawner : MonoBehaviour
     }
 
     /// <summary>
-    /// Updates image color based on completion state
+    /// Shows or hides the checkmark based on completion
     /// </summary>
     void RefreshVisualState()
     {
-        if (targetImage == null) return;
+        if (checkmarkObject == null)
+        {
+            Debug.LogWarning("Checkmark not assigned on " + gameObject.name);
+            return;
+        }
 
         bool completed = MiniGameProgress.IsCompleted(myGrabbable);
-        targetImage.color = completed ? Color.green : Color.gray;
+        checkmarkObject.SetActive(completed);
     }
 
     /// <summary>

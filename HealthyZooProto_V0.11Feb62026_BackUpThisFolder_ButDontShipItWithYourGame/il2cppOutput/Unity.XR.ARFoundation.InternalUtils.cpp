@@ -382,7 +382,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Quaternion__ctor_m868FD60AA6
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 72319
+// Method Definition Index: 72346
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MonoScriptData_t44A5E36BD951F01F57591E4EB452B0C75C1030ED UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mAE2DDF7FCE8FE1F3660DEB64FBC6BF057F09E861 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -416,7 +416,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MonoScriptData_t44A5E36BD951F01F57591E4EB452B
 		return L_6;
 	}
 }
-// Method Definition Index: 72320
+// Method Definition Index: 72347
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mD1FBF1E8C89F62B711476EB16EA754FB281D936B (UnitySourceGeneratedAssemblyMonoScriptTypes_v1_t94BE2D40410DB3237531C6A1B0D4C62DE9ABCFA2* __this, const RuntimeMethod* method) 
 {
 	{
@@ -502,7 +502,7 @@ IL2CPP_EXTERN_C void MonoScriptData_t44A5E36BD951F01F57591E4EB452B0C75C1030ED_ma
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 72322
+// Method Definition Index: 72349
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* FindObjectsUtility_FindAnyObjectByType_m0DB6DB459BF52A74B398EB069D81158DEFD84A89 (Type_t* ___0_type, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -520,7 +520,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D971
 		return L_1;
 	}
 }
-// Method Definition Index: 72324
+// Method Definition Index: 72351
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ObjectU5BU5D_tD4BF1BEC72A31DF6611C0B8FA3112AF128FC3F8A* FindObjectsUtility_FindObjectsByType_m3319ABCA3B46008448BE671C3E04A4E73BA7BED0 (Type_t* ___0_type, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -546,7 +546,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ObjectU5BU5D_tD4BF1BEC72A31DF6611C0B8FA3112AF
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 72325
+// Method Definition Index: 72352
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971 PoseUtils_CalculateOffset_m6879E7AFD770A7788A8229393C573207C757FABF (Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971 ___0_a, Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971 ___1_b, const RuntimeMethod* method) 
 {
 	{
@@ -571,7 +571,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE797
 		return L_11;
 	}
 }
-// Method Definition Index: 72326
+// Method Definition Index: 72353
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971 PoseUtils_WithOffset_mB70A61FE6A3A0379F96848733DF4AFCBA6D6B910 (Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971 ___0_pose, Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971 ___1_offset, const RuntimeMethod* method) 
 {
 	{
@@ -602,7 +602,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE797
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 72327
+// Method Definition Index: 72354
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR SerializableGuid_tCEABDCED6CD954AC100159BDEFC5D414049C0378 SerializableGuidUtility_AsSerializedGuid_m357A4BB3D52EC18EB467A58D9C8357C13767171B (Guid_t ___0_guid, const RuntimeMethod* method) 
 {
 	uint64_t V_0 = 0;

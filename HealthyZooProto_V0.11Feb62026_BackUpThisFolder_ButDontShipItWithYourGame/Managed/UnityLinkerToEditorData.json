@@ -572,7 +572,9 @@
           },
           {
             "name": "SpriteRenderer",
-            "scenes": [],
+            "scenes": [
+              "Assets/Scenes/_02MiniGameSelect.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },

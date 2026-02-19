@@ -3,9 +3,13 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
+    public GrabbableType grabbableType;
+    public Scene scene;
     public void OnPlayPressed()
     {
-            SceneManager.LoadScene("_02MiniGameSelect");   
+            MiniGameProgress.SetCompleted(grabbableType);
+        Debug.Log("COMPLETED: " + grabbableType);
+        SceneManager.LoadScene("Scenes/_02MiniGameSelect"); 
     }
  
     
