@@ -55,10 +55,7 @@ public class PlayButtonSpawner : MonoBehaviour
         bool completed = MiniGameProgress.IsCompleted(myGrabbable);
         checkmarkObject.SetActive(completed);
     }
-
-    /// <summary>
-    /// Loads the selected mini-game
-    /// </summary>
+    //Button press spawn button
     public void OnPlayPressed()
     {
         switch (selectedGrabbable)

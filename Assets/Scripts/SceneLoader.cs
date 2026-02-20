@@ -11,8 +11,5 @@ public class SceneLoader : MonoBehaviour
         Debug.Log("COMPLETED: " + grabbableType);
         SceneManager.LoadScene("Scenes/_02MiniGameSelect"); 
     }
- 
-    
-
 
 }
