@@ -7,7 +7,7 @@ public class PlayButtonSpawner : MonoBehaviour
     [Header("UI References")]
     public GameObject playButtonPrefab;
     public Transform buttonParent;
-    public GameObject checkmarkObject; // ✅ green checkmark object
+    public GameObject checkmarkObject; 
 
     [Header("Mini Game Identity")]
     public GrabbableType myGrabbable;
@@ -24,10 +24,6 @@ public class PlayButtonSpawner : MonoBehaviour
     {
         RefreshVisualState(); // update when returning from mini-game
     }
-
-    /// <summary>
-    /// Called when the image is clicked
-    /// </summary>
     public void setSelectedGrabbable()
     {
         selectedGrabbable = myGrabbable;
