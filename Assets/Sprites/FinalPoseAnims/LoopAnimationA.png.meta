@@ -1,0 +1,1193 @@
+fileFormatVersion: 2
+guid: 4e1b93556b1924d78b1930b46c70082c
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: LoopAnimationA_0
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 7859
+        width: 800
+        height: 1750
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66c646cab30fe4340bd2a22ba28e278a
+      internalID: -995164665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LoopAnimationA_1
+      rect:
+        serializedVersion: 2
+        x: 1104
+        y: 7859
+        width: 800
+        height: 1750
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b41db001770c743c681b95746809e499
+      internalID: -955221184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LoopAnimationA_2
+      rect:
+        serializedVersion: 2
+        x: 2184
+        y: 7859
+        width: 800
+        height: 1750
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2151ad15309a44ea7b80280dcca238a7
+      internalID: 1760834230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LoopAnimationA_3
+      rect:
+        serializedVersion: 2
+        x: 3264
+        y: 7859
+        width: 800
+        height: 1750
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20f8dc9f0392c4dc08ece9cb21f34a80
+      internalID: -1065344472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LoopAnimationA_4
+      rect:
+        serializedVersion: 2
+        x: 4344
+        y: 7859
+        width: 800
+        height: 1750
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e3f453e6925e4d778dc670f1d41f2ab
+      internalID: 1862256372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LoopAnimationA_5
+      rect:
+        serializedVersion: 2
+        x: 5424
+        y: 7859
+        width: 800
+        height: 1750
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c537224d221af415d8364f513e2f1f49
+      internalID: 245418524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LoopAnimationA_6
+      rect:
+        serializedVersion: 2
+        x: 6504
+        y: 7859
+        width: 800
+        height: 1750
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfc65633d62e240bab39761c8dc8e281
+      internalID: -1750401912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LoopAnimationA_7
+      rect:
+        serializedVersion: 2
+        x: 7584
+        y: 7859
+        width: 800
+        height: 1750
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d67536fb1347b42e5a7ac1a80ab10977
+      internalID: -1815411335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LoopAnimationA_8
+      rect:
+        serializedVersion: 2
+        x: 8664
+        y: 7859
+        width: 800
+        height: 1750
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4c23848a86864001bb8ce201fd37db6
+      internalID: -2027761868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LoopAnimationA_9
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 5929
+        width: 800
+        height: 1750
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a868ee3ad11c749d5a2da7bbd61647f3
+      internalID: -999776173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LoopAnimationA_10
+      rect:
+        serializedVersion: 2
+        x: 1104
+        y: 5929
+        width: 800
+        height: 1750
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8feb8f60c0e4646f2ba6a41bb3fc49b7
+      internalID: 1978966405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LoopAnimationA_11
+      rect:
+        serializedVersion: 2
+        x: 2184
+        y: 5929
+        width: 800
+        height: 1750
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35491930a4bb44a20ba1357fc28279fe
+      internalID: 1659977337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LoopAnimationA_12
+      rect:
+        serializedVersion: 2
+        x: 3264
+        y: 5929
+        width: 800
+        height: 1750
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e10f2b54b795743a4be5858cf2bc29df
+      internalID: 1902625702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LoopAnimationA_13
+      rect:
+        serializedVersion: 2
+        x: 4344
+        y: 5929
+        width: 800
+        height: 1750
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26f68f0f8eb944edcafa875c29c76ae3
+      internalID: 487840540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LoopAnimationA_14
+      rect:
+        serializedVersion: 2
+        x: 5424
+        y: 5929
+        width: 800
+        height: 1750
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 126a1e174c2764dd5b8276b773d56791
+      internalID: 585702999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LoopAnimationA_15
+      rect:
+        serializedVersion: 2
+        x: 6504
+        y: 5929
+        width: 800
+        height: 1750
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae97c633ce20d4e33aefc07458ae9c41
+      internalID: -1035728364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LoopAnimationA_16
+      rect:
+        serializedVersion: 2
+        x: 7584
+        y: 5929
+        width: 800
+        height: 1750
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9748ec40fa0b423da0ed45585cf7a0f
+      internalID: 1003292026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LoopAnimationA_17
+      rect:
+        serializedVersion: 2
+        x: 8664
+        y: 5929
+        width: 800
+        height: 1750
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a49bb28514eba415f8d9c95404878b66
+      internalID: -579312184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LoopAnimationA_18
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 4009
+        width: 800
+        height: 1750
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73f2856bba86e4a438cee5cfc6db4574
+      internalID: 973866603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LoopAnimationA_19
+      rect:
+        serializedVersion: 2
+        x: 1104
+        y: 3999
+        width: 800
+        height: 1750
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da5c2fb4785cd4ccdb447be920cf2a89
+      internalID: 1286798797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LoopAnimationA_20
+      rect:
+        serializedVersion: 2
+        x: 2184
+        y: 3999
+        width: 800
+        height: 1750
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8aba41f7baf324ebf86af686775f06de
+      internalID: 1268969311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LoopAnimationA_21
+      rect:
+        serializedVersion: 2
+        x: 3264
+        y: 3999
+        width: 800
+        height: 1750
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e023675e2b904d4fa66d961d23356df
+      internalID: -1151941921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LoopAnimationA_22
+      rect:
+        serializedVersion: 2
+        x: 4344
+        y: 3999
+        width: 800
+        height: 1750
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fec2cbb34cd1844caa11634e4e0af641
+      internalID: 1428829625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LoopAnimationA_23
+      rect:
+        serializedVersion: 2
+        x: 5424
+        y: 3999
+        width: 800
+        height: 1750
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a70e0e49e1884b1196746418bae808f
+      internalID: -474525283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LoopAnimationA_24
+      rect:
+        serializedVersion: 2
+        x: 6504
+        y: 3999
+        width: 800
+        height: 1750
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80ae80a0e3cef46aeb0204ca5d518eb8
+      internalID: -1176659019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LoopAnimationA_25
+      rect:
+        serializedVersion: 2
+        x: 7584
+        y: 3999
+        width: 800
+        height: 1750
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d87e841c3c330404892039d010bc6d76
+      internalID: 679418035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LoopAnimationA_26
+      rect:
+        serializedVersion: 2
+        x: 8664
+        y: 4000
+        width: 800
+        height: 1750
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b79bf844c3fbe42638ce43fee9062d82
+      internalID: 1330838986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LoopAnimationA_27
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 2079
+        width: 800
+        height: 1750
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40fc3dd7182b04fa7a4fb99a23e95bb3
+      internalID: 1375057708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LoopAnimationA_28
+      rect:
+        serializedVersion: 2
+        x: 1104
+        y: 2069
+        width: 800
+        height: 1750
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a401ed2818404454855bd6506eb3e2a
+      internalID: -887587769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LoopAnimationA_29
+      rect:
+        serializedVersion: 2
+        x: 2184
+        y: 2069
+        width: 800
+        height: 1750
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7033731fec456477296bd453c26c2bed
+      internalID: -1354057333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LoopAnimationA_30
+      rect:
+        serializedVersion: 2
+        x: 3264
+        y: 2069
+        width: 800
+        height: 1750
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0db1f1416d9224599926c28e1ca0a402
+      internalID: -709596310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LoopAnimationA_31
+      rect:
+        serializedVersion: 2
+        x: 4344
+        y: 2069
+        width: 800
+        height: 1750
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1af8e3c77abf84a52b5b932a5472bf44
+      internalID: -1095304651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LoopAnimationA_32
+      rect:
+        serializedVersion: 2
+        x: 5424
+        y: 2069
+        width: 800
+        height: 1750
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46996571ba74f4a57b1f0e4f8d87ca39
+      internalID: -107868564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LoopAnimationA_33
+      rect:
+        serializedVersion: 2
+        x: 6504
+        y: 2069
+        width: 800
+        height: 1750
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83d516b9422134bfeb81fc8d9a71adf6
+      internalID: 703462499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LoopAnimationA_34
+      rect:
+        serializedVersion: 2
+        x: 7584
+        y: 2069
+        width: 800
+        height: 1750
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c440bb0b64d249a8b1e5a4f6ef2007b
+      internalID: -1344729783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LoopAnimationA_35
+      rect:
+        serializedVersion: 2
+        x: 8664
+        y: 2069
+        width: 800
+        height: 1750
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 177d9935464a04efabe86022c32f698f
+      internalID: 1913207823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LoopAnimationA_36
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 149
+        width: 800
+        height: 1750
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60d9bfd2f0d974131b6dacde4642d988
+      internalID: -1401665240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LoopAnimationA_37
+      rect:
+        serializedVersion: 2
+        x: 1104
+        y: 139
+        width: 800
+        height: 1750
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c99c776564444941b020fdcfb3e81ba
+      internalID: 2040732506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LoopAnimationA_38
+      rect:
+        serializedVersion: 2
+        x: 2184
+        y: 149
+        width: 800
+        height: 1750
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9b475846ddab49f5ad9fd7be5cea350
+      internalID: 1292646410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LoopAnimationA_39
+      rect:
+        serializedVersion: 2
+        x: 3264
+        y: 149
+        width: 800
+        height: 1750
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 362b296fd520442f2b5fb3784636b9d0
+      internalID: 652220740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LoopAnimationA_40
+      rect:
+        serializedVersion: 2
+        x: 4344
+        y: 149
+        width: 800
+        height: 1750
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49b231c74c912423898eea3c31b9e8d5
+      internalID: -2104133141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LoopAnimationA_41
+      rect:
+        serializedVersion: 2
+        x: 5424
+        y: 149
+        width: 800
+        height: 1750
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfd13c9f2df19479aa33f6cbef9c7b90
+      internalID: -191295303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LoopAnimationA_42
+      rect:
+        serializedVersion: 2
+        x: 6504
+        y: 149
+        width: 800
+        height: 1750
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35c3fc14695c944b79db07e1025eb619
+      internalID: -450718638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LoopAnimationA_43
+      rect:
+        serializedVersion: 2
+        x: 7584
+        y: 149
+        width: 800
+        height: 1750
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f38c97517dff46f18c6c53cbb6403a8
+      internalID: 1142265146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LoopAnimationA_44
+      rect:
+        serializedVersion: 2
+        x: 8664
+        y: 149
+        width: 800
+        height: 1750
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac26a3dad7a404b4db849e0c8d12e89a
+      internalID: 1459432046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: cab9bbb863b114067bcdcc6409d0aa27
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":800.0,"y":1750.0},"gridSpriteOffset":{"x":24.0,"y":30.0},"gridSpritePadding":{"x":280.0,"y":180.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":1,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      LoopAnimationA_0: -995164665
+      LoopAnimationA_1: -955221184
+      LoopAnimationA_10: 1978966405
+      LoopAnimationA_11: 1659977337
+      LoopAnimationA_12: 1902625702
+      LoopAnimationA_13: 487840540
+      LoopAnimationA_14: 585702999
+      LoopAnimationA_15: -1035728364
+      LoopAnimationA_16: 1003292026
+      LoopAnimationA_17: -579312184
+      LoopAnimationA_18: 973866603
+      LoopAnimationA_19: 1286798797
+      LoopAnimationA_2: 1760834230
+      LoopAnimationA_20: 1268969311
+      LoopAnimationA_21: -1151941921
+      LoopAnimationA_22: 1428829625
+      LoopAnimationA_23: -474525283
+      LoopAnimationA_24: -1176659019
+      LoopAnimationA_25: 679418035
+      LoopAnimationA_26: 1330838986
+      LoopAnimationA_27: 1375057708
+      LoopAnimationA_28: -887587769
+      LoopAnimationA_29: -1354057333
+      LoopAnimationA_3: -1065344472
+      LoopAnimationA_30: -709596310
+      LoopAnimationA_31: -1095304651
+      LoopAnimationA_32: -107868564
+      LoopAnimationA_33: 703462499
+      LoopAnimationA_34: -1344729783
+      LoopAnimationA_35: 1913207823
+      LoopAnimationA_36: -1401665240
+      LoopAnimationA_37: 2040732506
+      LoopAnimationA_38: 1292646410
+      LoopAnimationA_39: 652220740
+      LoopAnimationA_4: 1862256372
+      LoopAnimationA_40: -2104133141
+      LoopAnimationA_41: -191295303
+      LoopAnimationA_42: -450718638
+      LoopAnimationA_43: 1142265146
+      LoopAnimationA_44: 1459432046
+      LoopAnimationA_5: 245418524
+      LoopAnimationA_6: -1750401912
+      LoopAnimationA_7: -1815411335
+      LoopAnimationA_8: -2027761868
+      LoopAnimationA_9: -999776173
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
