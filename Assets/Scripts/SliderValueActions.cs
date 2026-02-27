@@ -1,35 +1,73 @@
-using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+
 public class SliderValueActions : MonoBehaviour
 {
+    [Header("Slider")]
     public Slider slider;
 
-    public GameObject buttonPrefab;
+    [Header("Snap Values (0–1, bottom to top)")]
+    public float[] snapValues; // MUST match stageSprites length
+
+    [Header("Character")]
+    public SpriteRenderer characterRenderer;
+    public Sprite[] stageSprites;
+
+    [Header("Play Button")]
     public Transform buttonParent;
     public GameObject playButtonPrefab;
 
     private GameObject currentButton;
+    private int currentStage = -1;
 
     void Start()
     {
         slider.onValueChanged.AddListener(OnSliderChanged);
-        OnSliderChanged(slider.value); // handle starting value
+        OnSliderChanged(slider.value);
     }
 
     void OnSliderChanged(float value)
     {
-        int v = Mathf.RoundToInt(value);
+        int stage = GetStageFromSnapValues(value);
 
-        if (v == 3)
-        {
+        if (stage == currentStage)
+            return;
+
+        currentStage = stage;
+
+        UpdateCharacterSprite(stage);
+
+        if (stage == stageSprites.Length - 1)
             SpawnButtonIfNeeded();
-        }
         else
-        {
             RemoveButton();
+    }
+
+    int GetStageFromSnapValues(float value)
+    {
+        int closestIndex = 0;
+        float closestDistance = Mathf.Abs(value - snapValues[0]);
+
+        for (int i = 1; i < snapValues.Length; i++)
+        {
+            float distance = Mathf.Abs(value - snapValues[i]);
+            if (distance < closestDistance)
+            {
+                closestDistance = distance;
+                closestIndex = i;
+            }
         }
+
+        return closestIndex;
+    }
+
+    void UpdateCharacterSprite(int stage)
+    {
+        if (stageSprites == null || stageSprites.Length == 0)
+            return;
+
+        characterRenderer.sprite = stageSprites[stage];
     }
 
     void SpawnButtonIfNeeded()
@@ -37,9 +75,7 @@ public class SliderValueActions : MonoBehaviour
         if (currentButton != null) return;
 
         currentButton = Instantiate(playButtonPrefab, buttonParent);
-
-        Button btn = currentButton.GetComponent<Button>();
-        btn.onClick.AddListener(OnPlayPressed);
+        currentButton.GetComponent<Button>().onClick.AddListener(OnPlayPressed);
     }
 
     void RemoveButton()

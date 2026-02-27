@@ -5,7 +5,7 @@ public class SceneLoader : MonoBehaviour
 {
     public GrabbableType grabbableType;
     public Scene scene;
-    public void OnPlayPressed()
+        public void OnPlayPressed()
     {
             MiniGameProgress.SetCompleted(grabbableType);
         Debug.Log("COMPLETED: " + grabbableType);
@@ -13,3 +13,4 @@ public class SceneLoader : MonoBehaviour
     }
 
 }
+        
