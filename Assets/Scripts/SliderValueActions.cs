@@ -11,14 +11,28 @@ public class SliderValueActions : MonoBehaviour
     [Header("Snap Values")]
     public float[] snapValues;
 
-    [Header("Character")]
+    [Header("Character Sprites")]
     public SpriteRenderer characterRenderer;
     public Sprite[] stageSprites;
 
-    [Header("Animation")]
-    public Animator characterAnimator;
-    public string startAnimationState = "Complete_Start";
-    public string loopAnimationState = "Complete_Loop";
+    [Header("Start / Congrats Animator")]
+    public Animator startAnimator;
+    [Tooltip("Plays once when completion is reached")]
+    public string startAnimationState;
+
+    [Header("Loop Animator")]
+    public Animator loopAnimator;
+    [Tooltip("Loops forever after the start animation")]
+    public string loopAnimationState;
+
+    [Header("Confetti Animator")]
+    public Animator confettiAnimator;
+    [Tooltip("Plays once over the loop")]
+    public string confettiAnimationState;
+
+    [Range(0f, 1f)]
+    [Tooltip("When confetti triggers during the FIRST loop (0.5 = halfway)")]
+    public float confettiTriggerPoint = 0.5f;
 
     [Header("Play Button")]
     public Transform buttonParent;
@@ -27,6 +41,7 @@ public class SliderValueActions : MonoBehaviour
     private GameObject currentButton;
     private int currentStage = -1;
     private bool completionTriggered = false;
+    private bool confettiPlayed = false;
 
     void Start()
     {
@@ -53,24 +68,53 @@ public class SliderValueActions : MonoBehaviour
 
     IEnumerator PlayCompletionSequence()
     {
-        // Play startup animation (once)
-        characterAnimator.Play(startAnimationState);
+        // 1️⃣ Play start / congrats animation
+        if (startAnimator != null && !string.IsNullOrEmpty(startAnimationState))
+        {
+            startAnimator.gameObject.SetActive(true);
+            startAnimator.Play(startAnimationState);
+            yield return WaitForAnimationToFinish(startAnimator, startAnimationState);
+        }
 
-        // Wait for startup animation to finish
-        yield return WaitForAnimation(characterAnimator, startAnimationState);
+        // 2️⃣ Start looping animation
+        if (loopAnimator != null && !string.IsNullOrEmpty(loopAnimationState))
+        {
+            loopAnimator.gameObject.SetActive(true);
+            loopAnimator.Play(loopAnimationState);
+        }
 
-        // Animator transitions automatically to loop state
+        // 3️⃣ Wait until halfway through first loop
+        if (loopAnimator != null)
+        {
+            yield return WaitForLoopProgress(loopAnimator, loopAnimationState, confettiTriggerPoint);
+        }
+
+        // 4️⃣ Play confetti ONCE
+        if (!confettiPlayed && confettiAnimator != null && !string.IsNullOrEmpty(confettiAnimationState))
+        {
+            confettiPlayed = true;
+            confettiAnimator.gameObject.SetActive(true);
+            confettiAnimator.Play(confettiAnimationState);
+        }
+
         SpawnButtonIfNeeded();
     }
 
-    IEnumerator WaitForAnimation(Animator animator, string stateName)
+    IEnumerator WaitForAnimationToFinish(Animator animator, string stateName)
     {
-        // Wait until we enter the state
         while (!animator.GetCurrentAnimatorStateInfo(0).IsName(stateName))
             yield return null;
 
-        // Wait until it finishes
         while (animator.GetCurrentAnimatorStateInfo(0).normalizedTime < 1f)
+            yield return null;
+    }
+
+    IEnumerator WaitForLoopProgress(Animator animator, string stateName, float progress)
+    {
+        while (!animator.GetCurrentAnimatorStateInfo(0).IsName(stateName))
+            yield return null;
+
+        while (animator.GetCurrentAnimatorStateInfo(0).normalizedTime < progress)
             yield return null;
     }
 
@@ -102,7 +146,8 @@ public class SliderValueActions : MonoBehaviour
 
     void SpawnButtonIfNeeded()
     {
-        if (currentButton != null) return;
+        if (currentButton != null)
+            return;
 
         currentButton = Instantiate(playButtonPrefab, buttonParent);
         currentButton.GetComponent<Button>().onClick.AddListener(OnPlayPressed);
