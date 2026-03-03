@@ -1,47 +1,48 @@
-using UnityEngine.UI;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-//using event system because they will be images and raycasting is heavier on mobile (plus you can't click)
-public class DragAndDrop : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler
+public class DraggableItem : MonoBehaviour,
+    IBeginDragHandler, IDragHandler, IEndDragHandler
 {
-
-    public GrabbableType grabbableType;
-    // Might need to workshop for later implementation
-    private RectTransform rectTransform;
-    private Image grabbableObject;
+    public Vector3 startPosition;
+    public Transform startParent;
 
     private Canvas canvas;
+    private CanvasGroup canvasGroup;
 
-// all "drag" are implemented to not throw errors
+    private void Awake()
+    {
+        canvas = GetComponentInParent<Canvas>();
+        canvasGroup = GetComponent<CanvasGroup>();
+        startPosition = transform.position;
+        startParent = transform.parent;
+    }
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        grabbableObject.color = new Color32 (255,255,255,170);
+        canvasGroup.blocksRaycasts = false;
+        transform.SetParent(canvas.transform);
     }
 
     public void OnDrag(PointerEventData eventData)
     {
-        //using this one because final won't have mouse location
-       rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
-       
+        transform.position += (Vector3)eventData.delta / canvas.scaleFactor;
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        grabbableObject.color = new Color32 (255, 255, 255, 255);
+        canvasGroup.blocksRaycasts = true;
     }
 
-    void Start()
+    public void ReturnToStart(float delay = 0f)
     {
-        rectTransform = GetComponent<RectTransform>();
-        grabbableObject = GetComponent<Image>();
-        canvas = GetComponentInParent<Canvas>();
-
+        StartCoroutine(ReturnRoutine(delay));
     }
 
-    // Update is called once per frame
-    void Update()
+    private System.Collections.IEnumerator ReturnRoutine(float delay)
     {
+        yield return new WaitForSeconds(delay);
+        transform.position = startPosition;
+        transform.SetParent(startParent);
     }
 }

@@ -1,25 +1,24 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
+public enum DropZoneType
+{
+    Eyes,
+    Hand,
+    Nose,
+    Mouth
+}
 
 public class DropZone : MonoBehaviour, IDropHandler
-    {
-    public PlayButtonSpawner playButtonSpawner;
+{
+    public DropZoneType zoneType;
+    public AlligatorController alligatorController;
+
     public void OnDrop(PointerEventData eventData)
     {
-        DragAndDrop dragged = eventData.pointerDrag?.GetComponent<DragAndDrop>();
-        if (dragged == null ) return;
-        //tell spawner to create button
-        playButtonSpawner.setSelectedGrabbable(); 
-    }
-    void Start()
-    {
-        
-    }
+        DraggableItem draggable = eventData.pointerDrag.GetComponent<DraggableItem>();
+        if (draggable == null) return;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        alligatorController.HandleDrop(zoneType, draggable);
     }
 }
