@@ -4,15 +4,27 @@ using UnityEngine.UI;
 
 public class PlayButtonSpawner : MonoBehaviour
 {
-    [Header("UI References")]
+    [Header("UI Component References")]
+    [Tooltip("The Image component on the UI that shows the animal/icon")]
+    public Image mainImageComponent; 
+    [Tooltip("The Image component on the UI that shows the overlay")]
+    public Image overlayImageComponent;
+
+    [Header("Sprite Assets (B&W / Default)")]
+    public Sprite mainSpriteBW;           
+    public Sprite overlaySpriteBW;        
+
+    [Header("Sprite Assets (Colored / Completed)")]
+    public Sprite mainCompletedSprite;
+    public Sprite overlayCompletedSprite;
+
+    [Header("Play Button Settings")]
     public GameObject playButtonPrefab;
     public Transform buttonParent;
-    public GameObject checkmarkObject; 
 
     [Header("Mini Game Identity")]
     public GrabbableType myGrabbable;
 
-    private GrabbableType selectedGrabbable;
     private GameObject currentButton;
 
     void Start()
@@ -22,63 +34,65 @@ public class PlayButtonSpawner : MonoBehaviour
 
     void OnEnable()
     {
-        RefreshVisualState(); // update when returning from mini-game
-    }
-    public void setSelectedGrabbable()
-    {
-        selectedGrabbable = myGrabbable;
-
-        // Always spawn the play button
-        if (currentButton == null)
-        {
-            currentButton = Instantiate(playButtonPrefab, buttonParent);
-            Button btn = currentButton.GetComponent<Button>();
-            btn.onClick.AddListener(OnPlayPressed);
-        }
+        RefreshVisualState(); 
     }
 
     /// <summary>
-    /// Shows or hides the checkmark based on completion
+    /// Swaps the sprites based on whether the game is finished.
     /// </summary>
     void RefreshVisualState()
     {
-        if (checkmarkObject == null)
+        if (mainImageComponent == null || overlayImageComponent == null)
         {
-            Debug.LogWarning("Checkmark not assigned on " + gameObject.name);
+            Debug.LogWarning($"Missing Image components on {gameObject.name}. Please assign them in the Inspector.");
             return;
         }
 
         bool completed = MiniGameProgress.IsCompleted(myGrabbable);
-        checkmarkObject.SetActive(completed);
+
+        if (completed)
+        {
+            mainImageComponent.sprite = mainCompletedSprite;
+            overlayImageComponent.sprite = overlayCompletedSprite;
+        }
+        else
+        {
+            mainImageComponent.sprite = mainSpriteBW;
+            overlayImageComponent.sprite = overlaySpriteBW;
+        }
     }
-    //Button press spawn button
+
+    public void setSelectedGrabbable()
+    {
+        // Spawns the play button if it doesn't exist yet
+        if (currentButton == null && playButtonPrefab != null)
+        {
+            currentButton = Instantiate(playButtonPrefab, buttonParent);
+            Button btn = currentButton.GetComponent<Button>();
+            if (btn != null)
+            {
+                btn.onClick.AddListener(OnPlayPressed);
+            }
+        }
+    }
+
     public void OnPlayPressed()
     {
-        switch (selectedGrabbable)
+        string sceneName = "";
+
+        switch (myGrabbable)
         {
-            case GrabbableType.Giraffe:
-                SceneManager.LoadScene("Scenes/_03AGiraffeScene");
-                break;
+            case GrabbableType.Giraffe:   sceneName = "_03AGiraffeScene"; break;
+            case GrabbableType.Heron:     sceneName = "_03BHeronScene"; break;
+            case GrabbableType.Porcupine: sceneName = "_03CPorcupineScene"; break;
+            case GrabbableType.Sloth:     sceneName = "_03DSlothScene"; break;
+            case GrabbableType.Panda:     sceneName = "_03EPandaScene"; break;
+            case GrabbableType.Alligator: sceneName = "_03FAlligatorScene"; break;
+        }
 
-            case GrabbableType.Heron:
-                SceneManager.LoadScene("Scenes/_03BHeronScene");
-                break;
-
-            case GrabbableType.Porcupine:
-                SceneManager.LoadScene("Scenes/_03CPorcupineScene");
-                break;
-
-            case GrabbableType.Sloth:
-                SceneManager.LoadScene("Scenes/_03DSlothScene");
-                break;
-
-            case GrabbableType.Panda:
-                SceneManager.LoadScene("Scenes/_03EPandaScene");
-                break;
-
-            case GrabbableType.Alligator:
-                SceneManager.LoadScene("Scenes/_03FAlligatorScene");
-                break;
+        if (!string.IsNullOrEmpty(sceneName))
+        {
+            SceneManager.LoadScene(sceneName);
         }
     }
 }

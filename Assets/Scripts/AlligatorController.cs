@@ -13,7 +13,7 @@ public class AlligatorController : MonoBehaviour
     private bool noseActivated = false;
     private bool firstLoopCompleted = false;
 
-    public void HandleDrop(DropZoneType zone, DraggableItem item)
+    public void HandleDrop(DropZoneType zone, Draggable2D item)
     {
         switch (zone)
         {
@@ -35,19 +35,19 @@ public class AlligatorController : MonoBehaviour
         }
     }
 
-    private void HandleHand(DraggableItem item)
+    private void HandleHand(Draggable2D item)
     {
         animator.SetTrigger("HandSlap");
         item.ReturnToStart(0.5f);
     }
 
-    private void HandleEyes(DraggableItem item)
+    private void HandleEyes(Draggable2D item)
     {
         animator.SetTrigger("EyeReject");
         item.ReturnToStart(0.3f);
     }
 
-    private void HandleNose(DraggableItem item)
+    private void HandleNose(Draggable2D item)
     {
         if (noseActivated) return;
 
@@ -57,7 +57,7 @@ public class AlligatorController : MonoBehaviour
         item.ReturnToStart(0.2f);
     }
 
-    private void HandleMouth(DraggableItem item)
+    private void HandleMouth(Draggable2D item)
     {
         animator.SetTrigger("CongratsStart");
         confetti.SetActive(true);

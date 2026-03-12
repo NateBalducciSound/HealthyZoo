@@ -1,48 +1,127 @@
 using UnityEngine;
-using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 
-public class DraggableItem : MonoBehaviour,
-    IBeginDragHandler, IDragHandler, IEndDragHandler
+[RequireComponent(typeof(Collider2D))]
+[RequireComponent(typeof(Rigidbody2D))]
+public class Draggable2D : MonoBehaviour
 {
-    public Vector3 startPosition;
-    public Transform startParent;
-
-    private Canvas canvas;
-    private CanvasGroup canvasGroup;
+    private Camera mainCamera;
+    private Vector3 startPosition;
+    private Vector3 offset;
+    private bool isDragging = false;
+    private bool wasHandled = false;
 
     private void Awake()
     {
-        canvas = GetComponentInParent<Canvas>();
-        canvasGroup = GetComponent<CanvasGroup>();
+        mainCamera = Camera.main;
         startPosition = transform.position;
-        startParent = transform.parent;
     }
 
-    public void OnBeginDrag(PointerEventData eventData)
+    private void Update()
     {
-        canvasGroup.blocksRaycasts = false;
-        transform.SetParent(canvas.transform);
+        HandleTouch();
+#if UNITY_EDITOR
+        HandleMouse(); // Allows testing in editor
+#endif
     }
 
-    public void OnDrag(PointerEventData eventData)
+    void HandleTouch()
     {
-        transform.position += (Vector3)eventData.delta / canvas.scaleFactor;
+        if (Touchscreen.current == null) return;
+
+        if (Touchscreen.current.primaryTouch.press.wasPressedThisFrame)
+        {
+            Vector2 screenPos = Touchscreen.current.primaryTouch.position.ReadValue();
+            Vector3 worldPos = ScreenToWorld(screenPos);
+
+            if (IsTouchingObject(worldPos))
+            {
+                isDragging = true;
+                offset = transform.position - worldPos;
+                wasHandled = false;
+            }
+        }
+
+        if (Touchscreen.current.primaryTouch.press.isPressed && isDragging)
+        {
+            Vector2 screenPos = Touchscreen.current.primaryTouch.position.ReadValue();
+            Vector3 worldPos = ScreenToWorld(screenPos);
+            transform.position = worldPos + offset;
+        }
+
+        if (Touchscreen.current.primaryTouch.press.wasReleasedThisFrame)
+        {
+            isDragging = false;
+
+            if (!wasHandled)
+                ReturnToStart();
+
+            wasHandled = false;
+        }
     }
 
-    public void OnEndDrag(PointerEventData eventData)
+#if UNITY_EDITOR
+    void HandleMouse()
     {
-        canvasGroup.blocksRaycasts = true;
+        if (Mouse.current == null) return;
+
+        if (Mouse.current.leftButton.wasPressedThisFrame)
+        {
+            Vector3 world = ScreenToWorld(Mouse.current.position.ReadValue());
+
+            if (IsTouchingObject(world))
+            {
+                isDragging = true;
+                offset = transform.position - world;
+                wasHandled = false;
+            }
+        }
+
+        if (Mouse.current.leftButton.isPressed && isDragging)
+        {
+            Vector3 world = ScreenToWorld(Mouse.current.position.ReadValue());
+            transform.position = world + offset;
+        }
+
+        if (Mouse.current.leftButton.wasReleasedThisFrame)
+        {
+            isDragging = false;
+
+            if (!wasHandled)
+                ReturnToStart();
+
+            wasHandled = false;
+        }
+    }
+#endif
+
+    Vector3 ScreenToWorld(Vector2 screenPos)
+    {
+        Vector3 world = mainCamera.ScreenToWorldPoint(
+            new Vector3(screenPos.x, screenPos.y, Mathf.Abs(mainCamera.transform.position.z))
+        );
+        world.z = 0;
+        return world;
+    }
+
+    bool IsTouchingObject(Vector3 worldPos)
+    {
+        Collider2D hit = Physics2D.OverlapPoint(worldPos);
+        return hit != null && hit.gameObject == gameObject;
+    }
+
+    public void MarkHandled()
+    {
+        wasHandled = true;
     }
 
     public void ReturnToStart(float delay = 0f)
     {
-        StartCoroutine(ReturnRoutine(delay));
+        Invoke(nameof(ResetPosition), delay);
     }
 
-    private System.Collections.IEnumerator ReturnRoutine(float delay)
+    void ResetPosition()
     {
-        yield return new WaitForSeconds(delay);
         transform.position = startPosition;
-        transform.SetParent(startParent);
     }
 }

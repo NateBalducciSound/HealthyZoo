@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.EventSystems;
 
 public enum DropZoneType
 {
@@ -9,14 +8,14 @@ public enum DropZoneType
     Mouth
 }
 
-public class DropZone : MonoBehaviour, IDropHandler
+public class DropZone2D : MonoBehaviour
 {
     public DropZoneType zoneType;
     public AlligatorController alligatorController;
 
-    public void OnDrop(PointerEventData eventData)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        DraggableItem draggable = eventData.pointerDrag.GetComponent<DraggableItem>();
+        Draggable2D draggable = other.GetComponent<Draggable2D>();
         if (draggable == null) return;
 
         alligatorController.HandleDrop(zoneType, draggable);

@@ -148,9 +148,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: feb8ab5c2feda47448ec4eb39f123bbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  mainImageComponent: {fileID: 0}
+  overlayImageComponent: {fileID: 0}
+  mainSpriteBW: {fileID: 0}
+  overlaySpriteBW: {fileID: 0}
+  mainCompletedSprite: {fileID: 0}
+  overlayCompletedSprite: {fileID: 0}
   playButtonPrefab: {fileID: 6593994255132046064, guid: b532888a7b9e34dabbad836db8ff270f, type: 3}
   buttonParent: {fileID: 298625174}
-  checkmarkObject: {fileID: 0}
   myGrabbable: 0
 --- !u!4 &104073255
 Transform:
@@ -274,7 +279,7 @@ Transform:
   m_GameObject: {fileID: 158115917}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13.85, y: 2, z: 0}
+  m_LocalPosition: {x: 249, y: 3.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -645,6 +650,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &851284139
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 851284141}
+  - component: {fileID: 851284140}
+  m_Layer: 0
+  m_Name: AnimationManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &851284140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 851284139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37a36567b0e07476c8aa6baf5c1eb170, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+--- !u!4 &851284141
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 851284139}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 11.4156, y: 9.03829, z: 49.65869}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &857997566
 GameObject:
   m_ObjectHideFlags: 0
@@ -827,7 +876,7 @@ Camera:
   far clip plane: 100
   field of view: 167
   orthographic: 1
-  orthographic size: 11.028571
+  orthographic size: 9.142858
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1419,7 +1468,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: -927801702, guid: 0ae42b7ec00284a4daf1b2e9bba4d29b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1440,7 +1489,7 @@ Transform:
   m_GameObject: {fileID: 1647523846}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.56, y: 17.86, z: -1.42}
+  m_LocalPosition: {x: -1.85, y: 0.5, z: -1.42}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1581,9 +1630,10 @@ MonoBehaviour:
   startAnimationState: GiraffeBeginningAnim
   loopAnimator: {fileID: 158115918}
   loopAnimationState: GiraffeLoopCongratsAnimation
+  loopPositionOffset: {x: -0.8, y: 1.8, z: 0}
   confettiAnimator: {fileID: 786842790}
   confettiAnimationState: GiraffeConfettiAnimation
-  confettiTriggerPoint: 0.5
+  confettiTriggerPoint: 0.7
   buttonParent: {fileID: 298625174}
   playButtonPrefab: {fileID: 6593994255132046064, guid: b532888a7b9e34dabbad836db8ff270f, type: 3}
 --- !u!4 &1797542462
@@ -1855,3 +1905,4 @@ SceneRoots:
   - {fileID: 158115920}
   - {fileID: 1647523849}
   - {fileID: 786842792}
+  - {fileID: 851284141}
