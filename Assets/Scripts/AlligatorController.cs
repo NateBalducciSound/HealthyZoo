@@ -10,19 +10,24 @@ public class AlligatorController : MonoBehaviour
     public GameObject confetti;
     public GameObject backButton;
 
-    private bool noseActivated = false;
-    private bool firstLoopCompleted = false;
+    private bool mouthIsOpen = false;
+    private bool mouthTaskComplete = false;
 
     public void HandleDrop(DropZoneType zone, Draggable2D item)
     {
+        // Don't process anything if the main task is already done
+        if (mouthTaskComplete) return;
+
         switch (zone)
         {
             case DropZoneType.Hand:
-                HandleHand(item);
+                animator.SetTrigger("HandSlap");
+                item.ReturnToStart(0.5f);
                 break;
 
             case DropZoneType.Eyes:
-                HandleEyes(item);
+                animator.SetTrigger("EyeReject");
+                item.ReturnToStart(0.3f);
                 break;
 
             case DropZoneType.Nose:
@@ -35,44 +40,34 @@ public class AlligatorController : MonoBehaviour
         }
     }
 
-    private void HandleHand(Draggable2D item)
-    {
-        animator.SetTrigger("HandSlap");
-        item.ReturnToStart(0.5f);
-    }
-
-    private void HandleEyes(Draggable2D item)
-    {
-        animator.SetTrigger("EyeReject");
-        item.ReturnToStart(0.3f);
-    }
-
     private void HandleNose(Draggable2D item)
     {
-        if (noseActivated) return;
+        if (mouthIsOpen) return;
 
-        noseActivated = true;
-        animator.SetTrigger("OpenMouth");
+        mouthIsOpen = true;
+        animator.SetTrigger("OpenMouth"); // Transition to 'MouthOpenIdle' state
         mouthDropZone.SetActive(true);
         item.ReturnToStart(0.2f);
     }
 
     private void HandleMouth(Draggable2D item)
     {
+        if (!mouthIsOpen || mouthTaskComplete) return;
+
+        mouthTaskComplete = true;
         animator.SetTrigger("CongratsStart");
-        confetti.SetActive(true);
-
-        if (!firstLoopCompleted)
-        {
-            Invoke(nameof(SpawnBackButton), 2f);
-            firstLoopCompleted = true;
-        }
-
+        
+        // Return item quickly so it doesn't block the view
         item.ReturnToStart(0.2f);
+
+        // We delay the confetti slightly to match the 'startup' animation finishing
+        // or you can call this via an Animation Event for perfect timing
+        Invoke(nameof(StartCelebration), 1.0f); 
     }
 
-    private void SpawnBackButton()
+    private void StartCelebration()
     {
+        confetti.SetActive(true);
         backButton.SetActive(true);
     }
 }
