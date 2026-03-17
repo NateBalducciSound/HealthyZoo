@@ -8,12 +8,14 @@ public class MenuManager : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
-    public void ScannerLoad(){ 
+  
+public void ScannerLoad()
+{
+    // If your AR scene is separate:
     SceneManager.LoadScene("AR_Prototype");
-    // Add get component later for Number of objects to track CPU usage and make sure no memory leaks happen from
-    // recurring animations
-    Debug.Log("Scanner Running: " + "INSERT ITEM NUMBER HERE");
-    }
+    
+}
+    
     public void QuitButton()
     {   
         Debug.Log("QUIT");

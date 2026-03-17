@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 848409ee8ba454f42a5ddff137688a27, type: 3}
+  m_Name: ReferenceImageLibrary
+  m_EditorClassIdentifier: Unity.XR.ARSubsystems::UnityEngine.XR.ARSubsystems.XRReferenceImageLibrary
+  m_GuidLow: 4764389397556099834
+  m_GuidHigh: 2943922766444873886
+  m_DataStore:
+    m_Storage: []
+  m_Images:
+  - m_SerializedGuid:
+      m_GuidLow: 5213630060391454591
+      m_GuidHigh: 9336541163346370238
+    m_SerializedTextureGuid:
+      m_GuidLow: 9549279607055991109
+      m_GuidHigh: 6253933198228814203
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: ArloBW
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 5394251812833623963
+      m_GuidHigh: 1237990195313894832
+    m_SerializedTextureGuid:
+      m_GuidLow: 11841371188390196665
+      m_GuidHigh: 1376778785080438712
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: GigiDefaultCL_bw_bw
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 5613880472673912019
+      m_GuidHigh: 16286200732038864776
+    m_SerializedTextureGuid:
+      m_GuidLow: 8408793032805481703
+      m_GuidHigh: 997875879000782363
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: PennyDefaultCL_bw_bw
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 4679241817014386263
+      m_GuidHigh: 3043491429120604325
+    m_SerializedTextureGuid:
+      m_GuidLow: 3757760510934254942
+      m_GuidHigh: 14293444063874398072
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: PingDefaultCL_bw_bw
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 5565149332653353741
+      m_GuidHigh: 429356281986827952
+    m_SerializedTextureGuid:
+      m_GuidLow: 8373395269491047648
+      m_GuidHigh: 12564541109272348107
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: RenDefaultCL_bw_bw
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 4858296159918921181
+      m_GuidHigh: 16597353150134658695
+    m_SerializedTextureGuid:
+      m_GuidLow: 11831717784195214432
+      m_GuidHigh: 11378078607949465258
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: SantiDefaultCL_bw_bw
+    m_Texture: {fileID: 0}
