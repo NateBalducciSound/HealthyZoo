@@ -92,6 +92,7 @@ public class PlayButtonSpawner : MonoBehaviour
 
         if (!string.IsNullOrEmpty(sceneName))
         {
+            Debug.Log("This is the scene loaded from MiniGameSelect:" + sceneName);
             SceneManager.LoadScene(sceneName);
         }
     }

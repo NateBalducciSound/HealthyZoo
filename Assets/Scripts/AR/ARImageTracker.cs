@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 public class ARImageTracker : MonoBehaviour
 {
+    //tracking image ref files and display animations for AR
     private ARTrackedImageManager trackedImageManager;
 
     void Awake()
@@ -35,7 +36,7 @@ public class ARImageTracker : MonoBehaviour
             UpdateImage(updatedImage);
         }
     }
-
+    //instance
     void UpdateImage(ARTrackedImage trackedImage)
     {
         // Get the Master Prefab instance that was just spawned

@@ -1,5 +1,14 @@
 using UnityEngine;
 
+// Moving this OUTSIDE the class makes it accessible to DropZone2D
+public enum DropZoneType
+{
+    Eyes,
+    Hand,
+    Nose,
+    Mouth
+}
+
 public class AlligatorController : MonoBehaviour
 {
     [Header("Animator")]
@@ -15,8 +24,10 @@ public class AlligatorController : MonoBehaviour
 
     public void HandleDrop(DropZoneType zone, Draggable2D item)
     {
-        // Don't process anything if the main task is already done
         if (mouthTaskComplete) return;
+
+        // Ensure the item knows it was dropped so it doesn't snap back instantly
+        item.MarkHandled();
 
         switch (zone)
         {
@@ -43,9 +54,8 @@ public class AlligatorController : MonoBehaviour
     private void HandleNose(Draggable2D item)
     {
         if (mouthIsOpen) return;
-
         mouthIsOpen = true;
-        animator.SetTrigger("OpenMouth"); // Transition to 'MouthOpenIdle' state
+        animator.SetTrigger("OpenMouth"); 
         mouthDropZone.SetActive(true);
         item.ReturnToStart(0.2f);
     }
@@ -53,15 +63,9 @@ public class AlligatorController : MonoBehaviour
     private void HandleMouth(Draggable2D item)
     {
         if (!mouthIsOpen || mouthTaskComplete) return;
-
         mouthTaskComplete = true;
         animator.SetTrigger("CongratsStart");
-        
-        // Return item quickly so it doesn't block the view
         item.ReturnToStart(0.2f);
-
-        // We delay the confetti slightly to match the 'startup' animation finishing
-        // or you can call this via an Animation Event for perfect timing
         Invoke(nameof(StartCelebration), 1.0f); 
     }
 

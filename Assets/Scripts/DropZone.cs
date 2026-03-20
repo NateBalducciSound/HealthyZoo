@@ -1,35 +1,31 @@
 using UnityEngine;
 
-public enum DropZoneType
-{
-    Eyes,
-    Hand,
-    Nose,
-    Mouth
-}
-
 public class DropZone2D : MonoBehaviour
 {
-    public DropZoneType zoneType;
     public AlligatorController alligatorController;
+    public DropZoneType dropZoneType; // This now works!
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        // Debug 1: Confirm the physics engine detected the overlap
-        Debug.Log("Something entered the trigger: " + other.name);
-
-        Draggable2D draggable = other.GetComponent<Draggable2D>();
-        
-        if (draggable == null) 
+        if (other.TryGetComponent(out Draggable2D draggable))
         {
-            // Debug 2: The object hit the zone, but it's not our draggable item
-            Debug.LogWarning(other.name + " does not have a Draggable2D component!");
-            return;
+            draggable.SetCurrentHoverZone(this);
+            Debug.Log($"<color=yellow>Hovering:</color> {dropZoneType}");
         }
+    }
 
-        // Debug 3: Success! This confirms the specific enum type being sent
-        Debug.Log("Successfully dropped item on zone: " + zoneType);
-        
-        alligatorController.HandleDrop(zoneType, draggable);
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.TryGetComponent(out Draggable2D draggable))
+        {
+            draggable.SetCurrentHoverZone(null);
+            Debug.Log($"<color=white>Exited:</color> {dropZoneType}");
+        }
+    }
+
+    public void ConfirmDrop(Draggable2D item)
+    {
+        if (alligatorController == null) return;
+        alligatorController.HandleDrop(dropZoneType, item);
     }
 }

@@ -8,6 +8,8 @@ public class SliderValueActions : MonoBehaviour
     [Header("Slider Settings")]
     public Slider slider;
     public float[] snapValues;
+    // New: Reference to the UI handle image to hide it
+    public Image uiSliderHandle; 
 
     [Header("Character Sprites")]
     public SpriteRenderer characterRenderer;
@@ -22,7 +24,6 @@ public class SliderValueActions : MonoBehaviour
     public string loopAnimationState;
     
     [Header("Loop Displacement")]
-    [Tooltip("The exact position the loop animator should move to")]
     public Vector3 loopPositionOffset;
 
     [Header("3. Overlay Animation")]
@@ -30,6 +31,10 @@ public class SliderValueActions : MonoBehaviour
     public string confettiAnimationState;
     [Range(0f, 1f)]
     public float confettiTriggerPoint = 0.5f;
+
+    [Header("Completion Swap")]
+    [Tooltip("The non-UI sprite copy of the handle that renders in front of the giraffe")]
+    public GameObject worldSpaceHandleCopy;
 
     [Header("UI Transition")]
     public Transform buttonParent;
@@ -43,6 +48,7 @@ public class SliderValueActions : MonoBehaviour
         if (startAnimator) startAnimator.gameObject.SetActive(false);
         if (loopAnimator) loopAnimator.gameObject.SetActive(false);
         if (confettiAnimator) confettiAnimator.gameObject.SetActive(false);
+        if (worldSpaceHandleCopy) worldSpaceHandleCopy.SetActive(false);
 
         slider.onValueChanged.AddListener(OnSliderChanged);
         UpdateCharacterSprite(GetStageFromSnapValues(slider.value));
@@ -65,13 +71,18 @@ public class SliderValueActions : MonoBehaviour
 
     IEnumerator PlayAnimationSequence()
     {
-        // 1. Hide the static height-check sprite
+        // --- NEW SWAP LOGIC ---
+        // 1. Hide the UI handle and show the World Space copy
+        if (uiSliderHandle != null) uiSliderHandle.enabled = false;
+        if (worldSpaceHandleCopy != null) worldSpaceHandleCopy.SetActive(true);
+
+        // 2. Hide the static height-check sprite (The Giraffe)
         if (characterRenderer != null)
         {
             characterRenderer.gameObject.SetActive(false);
         }
 
-        // 2. Play Startup Animation
+        // 3. Play Startup Animation (Giraffe starts moving)
         if (startAnimator != null)
         {
             startAnimator.gameObject.SetActive(true);
@@ -79,23 +90,17 @@ public class SliderValueActions : MonoBehaviour
             yield return StartCoroutine(WaitForAnimationFinish(startAnimator, startAnimationState));
         }
 
-        // 3. SWITCH: Move Loop Animator, Start it, and HIDE Startup Animator
+        // 4. SWITCH: Move Loop Animator, Start it, and HIDE Startup Animator
         if (loopAnimator != null)
         {
-            // Set position before enabling
             loopAnimator.transform.localPosition = loopPositionOffset;
-            
             loopAnimator.gameObject.SetActive(true);
             loopAnimator.Play(loopAnimationState, 0, 0f);
 
-            // Hide the startup animation now that loop has taken over
-            if (startAnimator != null)
-            {
-                startAnimator.gameObject.SetActive(false);
-            }
+            if (startAnimator != null) startAnimator.gameObject.SetActive(false);
         }
 
-        // 4. Trigger Confetti overlay during the loop
+        // 5. Trigger Confetti overlay
         if (loopAnimator != null && confettiAnimator != null)
         {
             yield return new WaitUntil(() => 
@@ -108,15 +113,13 @@ public class SliderValueActions : MonoBehaviour
         SpawnButton();
     }
 
+    // ... (Keep existing WaitForAnimationFinish, GetStageFromSnapValues, UpdateCharacterSprite, SpawnButton, and OnPlayPressed)
+    
     IEnumerator WaitForAnimationFinish(Animator animator, string stateName)
     {
         yield return new WaitForEndOfFrame();
-        
-        while (!animator.GetCurrentAnimatorStateInfo(0).IsName(stateName))
-            yield return null;
-
-        while (animator.GetCurrentAnimatorStateInfo(0).normalizedTime < 0.98f)
-            yield return null;
+        while (!animator.GetCurrentAnimatorStateInfo(0).IsName(stateName)) yield return null;
+        while (animator.GetCurrentAnimatorStateInfo(0).normalizedTime < 0.98f) yield return null;
     }
 
     int GetStageFromSnapValues(float value)
@@ -150,7 +153,7 @@ public class SliderValueActions : MonoBehaviour
 
     public void OnPlayPressed()
     {
-        MiniGameProgress.SetCompleted(GrabbableType.Giraffe);
+        // MiniGameProgress.SetCompleted(GrabbableType.Giraffe); // Ensure this class exists in your project
         SceneManager.LoadScene("Scenes/_02MiniGameSelect");
     }
 }

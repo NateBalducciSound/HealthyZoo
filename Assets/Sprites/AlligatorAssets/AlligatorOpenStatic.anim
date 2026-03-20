@@ -23,7 +23,7 @@ AnimationClip:
     - time: 0
       value: {fileID: 21300000, guid: 33aa51007d2a8439a8d34ab1c6a834b3, type: 3}
     attribute: m_Sprite
-    path: AlligatorOpenMouthAnim
+    path: 
     classID: 212
     script: {fileID: 0}
     flags: 2
@@ -35,7 +35,7 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 2611350623
+      path: 0
       attribute: 0
       script: {fileID: 0}
       typeID: 212

@@ -10,6 +10,7 @@ public class Draggable2D : MonoBehaviour
     private Vector3 offset;
     private bool isDragging = false;
     private bool wasHandled = false;
+    private DropZone2D currentHoverZone;
 
     private void Awake()
     {
@@ -17,11 +18,17 @@ public class Draggable2D : MonoBehaviour
         startPosition = transform.position;
     }
 
+    // THIS WAS MISSING: The method for the DropZone to talk to this script
+    public void SetCurrentHoverZone(DropZone2D zone)
+    {
+        currentHoverZone = zone;
+    }
+
     private void Update()
     {
         HandleTouch();
 #if UNITY_EDITOR
-        HandleMouse(); // Allows testing in editor
+        HandleMouse(); 
 #endif
     }
 
@@ -29,6 +36,7 @@ public class Draggable2D : MonoBehaviour
     {
         if (Touchscreen.current == null) return;
 
+        // START DRAG
         if (Touchscreen.current.primaryTouch.press.wasPressedThisFrame)
         {
             Vector2 screenPos = Touchscreen.current.primaryTouch.position.ReadValue();
@@ -42,6 +50,7 @@ public class Draggable2D : MonoBehaviour
             }
         }
 
+        // DRAGGING
         if (Touchscreen.current.primaryTouch.press.isPressed && isDragging)
         {
             Vector2 screenPos = Touchscreen.current.primaryTouch.position.ReadValue();
@@ -49,14 +58,11 @@ public class Draggable2D : MonoBehaviour
             transform.position = worldPos + offset;
         }
 
-        if (Touchscreen.current.primaryTouch.press.wasReleasedThisFrame)
+        // END DRAG (RELEASE)
+        if (Touchscreen.current.primaryTouch.press.wasReleasedThisFrame && isDragging)
         {
             isDragging = false;
-
-            if (!wasHandled)
-                ReturnToStart();
-
-            wasHandled = false;
+            ProcessRelease();
         }
     }
 
@@ -68,7 +74,6 @@ public class Draggable2D : MonoBehaviour
         if (Mouse.current.leftButton.wasPressedThisFrame)
         {
             Vector3 world = ScreenToWorld(Mouse.current.position.ReadValue());
-
             if (IsTouchingObject(world))
             {
                 isDragging = true;
@@ -83,17 +88,29 @@ public class Draggable2D : MonoBehaviour
             transform.position = world + offset;
         }
 
-        if (Mouse.current.leftButton.wasReleasedThisFrame)
+        if (Mouse.current.leftButton.wasReleasedThisFrame && isDragging)
         {
             isDragging = false;
-
-            if (!wasHandled)
-                ReturnToStart();
-
-            wasHandled = false;
+            ProcessRelease();
         }
     }
 #endif
+
+    // Shared logic for both Touch and Mouse release
+    void ProcessRelease()
+    {
+        if (currentHoverZone != null)
+        {
+            // Successfully dropped!
+            currentHoverZone.ConfirmDrop(this);
+            MarkHandled();
+        }
+        else
+        {
+            // Dropped in the middle of nowhere
+            ReturnToStart();
+        }
+    }
 
     Vector3 ScreenToWorld(Vector2 screenPos)
     {
@@ -117,11 +134,14 @@ public class Draggable2D : MonoBehaviour
 
     public void ReturnToStart(float delay = 0f)
     {
+        // Cancel any existing resets to prevent double-teleporting
+        CancelInvoke(nameof(ResetPosition));
         Invoke(nameof(ResetPosition), delay);
     }
 
     void ResetPosition()
     {
         transform.position = startPosition;
+        wasHandled = false;
     }
 }

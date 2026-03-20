@@ -35,7 +35,7 @@ MonoBehaviour:
       m_GuidHigh: 1376778785080438712
     m_Size: {x: 0, y: 0}
     m_SpecifySize: 0
-    m_Name: GigiDefaultCL_bw_bw
+    m_Name: GigiBW
     m_Texture: {fileID: 0}
   - m_SerializedGuid:
       m_GuidLow: 5613880472673912019
@@ -45,7 +45,7 @@ MonoBehaviour:
       m_GuidHigh: 997875879000782363
     m_Size: {x: 0, y: 0}
     m_SpecifySize: 0
-    m_Name: PennyDefaultCL_bw_bw
+    m_Name: PennyBW
     m_Texture: {fileID: 0}
   - m_SerializedGuid:
       m_GuidLow: 4679241817014386263
@@ -55,7 +55,7 @@ MonoBehaviour:
       m_GuidHigh: 14293444063874398072
     m_Size: {x: 0, y: 0}
     m_SpecifySize: 0
-    m_Name: PingDefaultCL_bw_bw
+    m_Name: PingBW
     m_Texture: {fileID: 0}
   - m_SerializedGuid:
       m_GuidLow: 5565149332653353741
@@ -65,7 +65,7 @@ MonoBehaviour:
       m_GuidHigh: 12564541109272348107
     m_Size: {x: 0, y: 0}
     m_SpecifySize: 0
-    m_Name: RenDefaultCL_bw_bw
+    m_Name: RenBW
     m_Texture: {fileID: 0}
   - m_SerializedGuid:
       m_GuidLow: 4858296159918921181
@@ -75,5 +75,5 @@ MonoBehaviour:
       m_GuidHigh: 11378078607949465258
     m_Size: {x: 0, y: 0}
     m_SpecifySize: 0
-    m_Name: SantiDefaultCL_bw_bw
+    m_Name: SantiBW
     m_Texture: {fileID: 0}

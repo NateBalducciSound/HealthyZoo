@@ -8,7 +8,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: AlligatorOpenMouthAnimation
-  m_Speed: 1
+  m_Speed: 0.33
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 9216795422057080231}
@@ -21,7 +21,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: cbe84d87a8a5247fdb9a1bd683abdb7a, type: 2}
+  m_Motion: {fileID: 7400000, guid: a1e3de6e5282447b0983d6eb103552a3, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -35,7 +35,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: AlligatorOpenStatic
-  m_Speed: 1
+  m_Speed: 0.33
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -4322133027367544139}
@@ -104,7 +104,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: AlligatorOpenMouthAnimation 0
-  m_Speed: 1
+  m_Speed: 0.33
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -1210263357685765049}
@@ -164,9 +164,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
-  m_TransitionOffset: 0
-  m_ExitTime: 0.06250006
+  m_TransitionDuration: 0.19442892
+  m_TransitionOffset: 0.9843454
+  m_ExitTime: 0.9860912
   m_HasExitTime: 1
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -180,7 +180,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: AlligatorCelebrationAnim
-  m_Speed: 0.5
+  m_Speed: 0.33
   m_CycleOffset: 0
   m_Transitions: []
   m_StateMachineBehaviours: []
@@ -214,6 +214,18 @@ AnimatorController:
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
   - m_Name: CongratsStart
+    m_Type: 9
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 9100000}
+  - m_Name: HandSlap
+    m_Type: 9
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 9100000}
+  - m_Name: EyeReject
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -280,7 +292,7 @@ AnimatorStateMachine:
     m_Position: {x: 730, y: 260, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -2310473093951065496}
-    m_Position: {x: 210, y: 120, z: 0}
+    m_Position: {x: 300, y: 100, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions:
@@ -306,10 +318,10 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
-  m_TransitionOffset: 0
-  m_ExitTime: 0.06250006
-  m_HasExitTime: 0
+  m_TransitionDuration: 0.018793643
+  m_TransitionOffset: 13.5314865
+  m_ExitTime: 0.9082146
+  m_HasExitTime: 1
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
