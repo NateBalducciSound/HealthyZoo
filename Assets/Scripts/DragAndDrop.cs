@@ -5,6 +5,10 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(Rigidbody2D))]
 public class Draggable2D : MonoBehaviour
 {
+    [Header("Spawn Settings")]
+    [Tooltip("Optional: Drop an empty GameObject here to define a custom respawn location.")]
+    public Transform spawnPoint; 
+
     private Camera mainCamera;
     private Vector3 startPosition;
     private Vector3 offset;
@@ -15,10 +19,20 @@ public class Draggable2D : MonoBehaviour
     private void Awake()
     {
         mainCamera = Camera.main;
-        startPosition = transform.position;
+        
+        // --- NEW SPAWN LOGIC ---
+        // If a spawn point is assigned, use it. Otherwise, use current position.
+        if (spawnPoint != null)
+        {
+            startPosition = spawnPoint.position;
+            transform.position = startPosition; // Snap to spawn point on start
+        }
+        else
+        {
+            startPosition = transform.position;
+        }
     }
 
-    // THIS WAS MISSING: The method for the DropZone to talk to this script
     public void SetCurrentHoverZone(DropZone2D zone)
     {
         currentHoverZone = zone;
@@ -36,7 +50,6 @@ public class Draggable2D : MonoBehaviour
     {
         if (Touchscreen.current == null) return;
 
-        // START DRAG
         if (Touchscreen.current.primaryTouch.press.wasPressedThisFrame)
         {
             Vector2 screenPos = Touchscreen.current.primaryTouch.position.ReadValue();
@@ -50,7 +63,6 @@ public class Draggable2D : MonoBehaviour
             }
         }
 
-        // DRAGGING
         if (Touchscreen.current.primaryTouch.press.isPressed && isDragging)
         {
             Vector2 screenPos = Touchscreen.current.primaryTouch.position.ReadValue();
@@ -58,7 +70,6 @@ public class Draggable2D : MonoBehaviour
             transform.position = worldPos + offset;
         }
 
-        // END DRAG (RELEASE)
         if (Touchscreen.current.primaryTouch.press.wasReleasedThisFrame && isDragging)
         {
             isDragging = false;
@@ -96,18 +107,16 @@ public class Draggable2D : MonoBehaviour
     }
 #endif
 
-    // Shared logic for both Touch and Mouse release
     void ProcessRelease()
     {
         if (currentHoverZone != null)
         {
-            // Successfully dropped!
             currentHoverZone.ConfirmDrop(this);
-            MarkHandled();
+            // We don't call MarkHandled here automatically anymore because 
+            // the Heron Controller might decide it was a "Wrong Position" drop.
         }
         else
         {
-            // Dropped in the middle of nowhere
             ReturnToStart();
         }
     }
@@ -134,14 +143,23 @@ public class Draggable2D : MonoBehaviour
 
     public void ReturnToStart(float delay = 0f)
     {
-        // Cancel any existing resets to prevent double-teleporting
         CancelInvoke(nameof(ResetPosition));
         Invoke(nameof(ResetPosition), delay);
     }
 
     void ResetPosition()
     {
-        transform.position = startPosition;
+        // --- UPDATED RESET LOGIC ---
+        // Always check the spawn point's latest position if it exists
+        if (spawnPoint != null)
+        {
+            transform.position = spawnPoint.position;
+        }
+        else
+        {
+            transform.position = startPosition;
+        }
+        
         wasHandled = false;
     }
 }

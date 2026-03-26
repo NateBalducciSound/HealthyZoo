@@ -16,8 +16,13 @@ public void ScannerLoad()
     
 }
     
+    public void LoadHome()
+    {
+        SceneManager.LoadScene(0);
+    }
+
     public void QuitButton()
-    {   
+    {
         Debug.Log("QUIT");
         Application.Quit();
     }
