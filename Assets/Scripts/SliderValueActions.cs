@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class SliderValueActions : MonoBehaviour
@@ -38,7 +37,10 @@ public class SliderValueActions : MonoBehaviour
 
     [Header("UI Transition")]
     public Transform buttonParent;
-    public GameObject playButtonPrefab;
+    public GameObject congratsPrefab;
+    public Vector3 congratsScale = Vector3.one;
+    public Vector3 congratsPosition = Vector3.zero;
+    public GrabbableType grabbableType;
 
     private int currentStage = -1;
     private bool completionTriggered = false;
@@ -144,16 +146,19 @@ public class SliderValueActions : MonoBehaviour
 
     void SpawnButton()
     {
-        if (playButtonPrefab != null)
-        {
-            GameObject btn = Instantiate(playButtonPrefab, buttonParent);
-            btn.GetComponent<Button>().onClick.AddListener(OnPlayPressed);
-        }
-    }
+        if (congratsPrefab == null || buttonParent == null) return;
 
-    public void OnPlayPressed()
-    {
-        // MiniGameProgress.SetCompleted(GrabbableType.Giraffe); // Ensure this class exists in your project
-        SceneManager.LoadScene("Scenes/_02MiniGameSelect");
+        MiniGameProgress.SetCompleted(grabbableType);
+
+        GameObject spawned = Instantiate(congratsPrefab, buttonParent);
+        if (spawned.TryGetComponent(out RectTransform rt))
+        {
+            rt.localPosition = congratsPosition;
+            rt.localRotation = Quaternion.identity;
+            rt.localScale = congratsScale;
+        }
+
+        if (spawned.TryGetComponent(out Button btn) && spawned.TryGetComponent(out SceneLoader loader))
+            btn.onClick.AddListener(loader.OnPlayPressed);
     }
 }

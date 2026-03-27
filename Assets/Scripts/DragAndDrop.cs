@@ -12,7 +12,8 @@ public class Draggable2D : MonoBehaviour
     private Camera mainCamera;
     private Vector3 startPosition;
     private Vector3 offset;
-    private bool isDragging = false;
+    public bool IsDragging { get; private set; }
+    private bool isDragging { get => IsDragging; set => IsDragging = value; }
     private bool wasHandled = false;
     private DropZone2D currentHoverZone;
 
@@ -109,16 +110,12 @@ public class Draggable2D : MonoBehaviour
 
     void ProcessRelease()
     {
+        if (wasHandled) return;
+
         if (currentHoverZone != null)
-        {
             currentHoverZone.ConfirmDrop(this);
-            // We don't call MarkHandled here automatically anymore because 
-            // the Heron Controller might decide it was a "Wrong Position" drop.
-        }
         else
-        {
             ReturnToStart();
-        }
     }
 
     Vector3 ScreenToWorld(Vector2 screenPos)

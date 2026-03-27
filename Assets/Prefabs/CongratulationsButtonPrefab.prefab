@@ -148,6 +148,7 @@ GameObject:
   - component: {fileID: 5911525375305533057}
   - component: {fileID: 4075788336139824267}
   - component: {fileID: 3384241840202553876}
+  - component: {fileID: 831186999819733041}
   m_Layer: 5
   m_Name: CongratulationsButtonPrefab
   m_TagString: Untagged
@@ -269,3 +270,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &831186999819733041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6593994255132046064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9df46f9b40f24bbdbbf7913ee4164e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SceneLoader
+  grabbableType: 1
+  scene:
+    m_Handle: 0
