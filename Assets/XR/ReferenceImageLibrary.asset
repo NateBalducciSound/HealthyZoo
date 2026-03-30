@@ -21,8 +21,8 @@ MonoBehaviour:
       m_GuidLow: 5213630060391454591
       m_GuidHigh: 9336541163346370238
     m_SerializedTextureGuid:
-      m_GuidLow: 9519221819954384583
-      m_GuidHigh: 9336734557632770267
+      m_GuidLow: 7259359206213886983
+      m_GuidHigh: 5393061197967769706
     m_Size: {x: 0.1778, y: 0.1778}
     m_SpecifySize: 1
     m_Name: ArloBW
@@ -31,8 +31,8 @@ MonoBehaviour:
       m_GuidLow: 5394251812833623963
       m_GuidHigh: 1237990195313894832
     m_SerializedTextureGuid:
-      m_GuidLow: 3799951896507959274
-      m_GuidHigh: 2387636804822584922
+      m_GuidLow: 17639444495814008406
+      m_GuidHigh: 11397361596424693019
     m_Size: {x: 0.1778, y: 0.1778}
     m_SpecifySize: 1
     m_Name: GigiBW
@@ -41,8 +41,8 @@ MonoBehaviour:
       m_GuidLow: 5613880472673912019
       m_GuidHigh: 16286200732038864776
     m_SerializedTextureGuid:
-      m_GuidLow: 6106379428015635233
-      m_GuidHigh: 13588422838242073338
+      m_GuidLow: 1442070637494421532
+      m_GuidHigh: 13441226173487642104
     m_Size: {x: 0.1778, y: 0.1778}
     m_SpecifySize: 1
     m_Name: PennyBW
@@ -51,8 +51,8 @@ MonoBehaviour:
       m_GuidLow: 4679241817014386263
       m_GuidHigh: 3043491429120604325
     m_SerializedTextureGuid:
-      m_GuidLow: 4935726284083757814
-      m_GuidHigh: 9846412759323279929
+      m_GuidLow: 6059914473962358071
+      m_GuidHigh: 16375247495573124040
     m_Size: {x: 0.1778, y: 0.1778}
     m_SpecifySize: 1
     m_Name: PingBW
@@ -61,8 +61,8 @@ MonoBehaviour:
       m_GuidLow: 5565149332653353741
       m_GuidHigh: 429356281986827952
     m_SerializedTextureGuid:
-      m_GuidLow: 4968898128261222520
-      m_GuidHigh: 7003421497887611256
+      m_GuidLow: 16446662707381588952
+      m_GuidHigh: 10213667602042040345
     m_Size: {x: 0.1778, y: 0.1778}
     m_SpecifySize: 1
     m_Name: RenBW
@@ -71,8 +71,8 @@ MonoBehaviour:
       m_GuidLow: 4858296159918921181
       m_GuidHigh: 16597353150134658695
     m_SerializedTextureGuid:
-      m_GuidLow: 14126999376303382191
-      m_GuidHigh: 13850456169240691672
+      m_GuidLow: 15332024685109715524
+      m_GuidHigh: 10684335952353767659
     m_Size: {x: 0.1778, y: 0.1778}
     m_SpecifySize: 1
     m_Name: SantiBW
