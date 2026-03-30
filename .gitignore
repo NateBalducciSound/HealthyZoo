@@ -28,6 +28,9 @@
 # Visual Studio cache directory
 .vs/
 
+# Builds too heavy
+IOSBUILDS/
+
 # Gradle cache directory
 .gradle/
 
