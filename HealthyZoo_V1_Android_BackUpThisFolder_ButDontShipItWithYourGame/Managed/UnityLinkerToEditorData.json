@@ -361,8 +361,6 @@
               "Assets/_01MainMenu.unity",
               "Assets/Scenes/_02MiniGameSelect.unity",
               "Assets/Scenes/_03AGiraffeScene.unity",
-              "Assets/Scenes/_03BHeronScene.unity",
-              "Assets/Scenes/_03CPorcupineScene.unity",
               "Assets/Scenes/_03DSlothScene.unity",
               "Assets/Scenes/_03EPandaScene.unity",
               "Assets/Scenes/_03FAlligatorScene.unity"
@@ -376,8 +374,6 @@
               "Assets/_01MainMenu.unity",
               "Assets/Scenes/_02MiniGameSelect.unity",
               "Assets/Scenes/_03AGiraffeScene.unity",
-              "Assets/Scenes/_03BHeronScene.unity",
-              "Assets/Scenes/_03CPorcupineScene.unity",
               "Assets/Scenes/_03DSlothScene.unity",
               "Assets/Scenes/_03EPandaScene.unity",
               "Assets/Scenes/_03FAlligatorScene.unity"
@@ -391,8 +387,6 @@
               "Assets/_01MainMenu.unity",
               "Assets/Scenes/_02MiniGameSelect.unity",
               "Assets/Scenes/_03AGiraffeScene.unity",
-              "Assets/Scenes/_03BHeronScene.unity",
-              "Assets/Scenes/_03CPorcupineScene.unity",
               "Assets/Scenes/_03DSlothScene.unity",
               "Assets/Scenes/_03EPandaScene.unity",
               "Assets/Scenes/_03FAlligatorScene.unity"
@@ -614,6 +608,7 @@
               "Assets/AR_Prototype.unity",
               "Assets/Scenes/_03AGiraffeScene.unity",
               "Assets/Scenes/_03BHeronScene.unity",
+              "Assets/Scenes/_03CPorcupineScene.unity",
               "Assets/Scenes/_03FAlligatorScene.unity"
             ],
             "dependencyType": 0,
@@ -1158,8 +1153,6 @@
               "Assets/_01MainMenu.unity",
               "Assets/Scenes/_02MiniGameSelect.unity",
               "Assets/Scenes/_03AGiraffeScene.unity",
-              "Assets/Scenes/_03BHeronScene.unity",
-              "Assets/Scenes/_03CPorcupineScene.unity",
               "Assets/Scenes/_03DSlothScene.unity",
               "Assets/Scenes/_03EPandaScene.unity",
               "Assets/Scenes/_03FAlligatorScene.unity"
@@ -1173,8 +1166,6 @@
               "Assets/_01MainMenu.unity",
               "Assets/Scenes/_02MiniGameSelect.unity",
               "Assets/Scenes/_03AGiraffeScene.unity",
-              "Assets/Scenes/_03BHeronScene.unity",
-              "Assets/Scenes/_03CPorcupineScene.unity",
               "Assets/Scenes/_03DSlothScene.unity",
               "Assets/Scenes/_03EPandaScene.unity",
               "Assets/Scenes/_03FAlligatorScene.unity"
@@ -1227,6 +1218,7 @@
             "name": "BoxCollider2D",
             "scenes": [
               "Assets/Scenes/_03BHeronScene.unity",
+              "Assets/Scenes/_03CPorcupineScene.unity",
               "Assets/Scenes/_03FAlligatorScene.unity"
             ],
             "dependencyType": 0,

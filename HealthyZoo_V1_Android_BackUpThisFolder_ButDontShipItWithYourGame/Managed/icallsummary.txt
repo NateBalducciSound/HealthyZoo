@@ -306,6 +306,7 @@ UnityEngine.Animator::GetAnimatorStateInfo_Injected
 UnityEngine.Animator::Play_Injected
 UnityEngine.Animator::ResetTriggerString_Injected
 UnityEngine.Animator::SetTriggerString_Injected
+UnityEngine.Animator::set_speed_Injected
 UnityEngine.Application::get_isBatchMode
 UnityEngine.Application::get_isFocused
 UnityEngine.Application::get_isPlaying
@@ -1621,7 +1622,9 @@ UnityEngine.SpriteMaskUtility::HasSpriteMaskInLayerRange_Injected
 UnityEngine.SpriteRenderer::get_flipX_Injected
 UnityEngine.SpriteRenderer::get_flipY_Injected
 UnityEngine.SpriteRenderer::get_sprite_Injected
+UnityEngine.SpriteRenderer::get_color_Injected
 UnityEngine.SpriteRenderer::get_size_Injected
+UnityEngine.SpriteRenderer::set_color_Injected
 UnityEngine.SpriteRenderer::set_hasSpriteChangeEvents_Injected
 UnityEngine.SpriteRenderer::set_sprite_Injected
 UnityEngine.SpriteRenderer::get_drawMode_Injected

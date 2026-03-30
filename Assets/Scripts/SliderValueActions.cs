@@ -28,12 +28,17 @@ public class SliderValueActions : MonoBehaviour
     [Header("3. Overlay Animation")]
     public Animator confettiAnimator;
     public string confettiAnimationState;
-    [Range(0f, 1f)]
-    public float confettiTriggerPoint = 0.5f;
+    [Tooltip("Seconds after loop animation starts before confetti plays")]
+    public float confettiDelay = 1f;
 
     [Header("Completion Swap")]
     [Tooltip("The non-UI sprite copy of the handle that renders in front of the giraffe")]
     public GameObject worldSpaceHandleCopy;
+
+    [Header("Dialogue")]
+    public DialogueController dialogueController;
+    [Tooltip("Seconds after startup animation begins before congrats button spawns and line plays")]
+    public float congratsDelay = 2f;
 
     [Header("UI Transition")]
     public Transform buttonParent;
@@ -58,6 +63,9 @@ public class SliderValueActions : MonoBehaviour
 
     void OnSliderChanged(float value)
     {
+        if (dialogueController != null)
+            dialogueController.OnPlayerStarted();
+
         int stage = GetStageFromSnapValues(value);
         if (stage == currentStage) return;
 
@@ -85,10 +93,12 @@ public class SliderValueActions : MonoBehaviour
         }
 
         // 3. Play Startup Animation (Giraffe starts moving)
+        // Also kick off the congrats spawn timer at the same moment
         if (startAnimator != null)
         {
             startAnimator.gameObject.SetActive(true);
             startAnimator.Play(startAnimationState, 0, 0f);
+            StartCoroutine(DelayedCongrats());
             yield return StartCoroutine(WaitForAnimationFinish(startAnimator, startAnimationState));
         }
 
@@ -102,17 +112,15 @@ public class SliderValueActions : MonoBehaviour
             if (startAnimator != null) startAnimator.gameObject.SetActive(false);
         }
 
-        // 5. Trigger Confetti overlay
-        if (loopAnimator != null && confettiAnimator != null)
+        // 5. Trigger Confetti overlay after a fixed delay
+        if (confettiAnimator != null)
         {
-            yield return new WaitUntil(() => 
-                loopAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime >= confettiTriggerPoint);
-
+            yield return new WaitForSeconds(confettiDelay);
             confettiAnimator.gameObject.SetActive(true);
             confettiAnimator.Play(confettiAnimationState, 0, 0f);
         }
 
-        SpawnButton();
+        // SpawnButton and congrats dialogue are now handled by DelayedCongrats()
     }
 
     // ... (Keep existing WaitForAnimationFinish, GetStageFromSnapValues, UpdateCharacterSprite, SpawnButton, and OnPlayPressed)
@@ -142,6 +150,14 @@ public class SliderValueActions : MonoBehaviour
         {
             characterRenderer.sprite = stageSprites[stage];
         }
+    }
+
+    IEnumerator DelayedCongrats()
+    {
+        yield return new WaitForSeconds(congratsDelay);
+        Debug.Log($"[Dialogue] DelayedCongrats fired — dialogueController assigned: {dialogueController != null}");
+        if (dialogueController != null) dialogueController.OnLevelCompleted();
+        SpawnButton();
     }
 
     void SpawnButton()
