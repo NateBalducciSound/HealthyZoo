@@ -149,6 +149,7 @@ GameObject:
   - component: {fileID: 4075788336139824267}
   - component: {fileID: 3384241840202553876}
   - component: {fileID: 831186999819733041}
+  - component: {fileID: -8720637226476599992}
   m_Layer: 5
   m_Name: CongratulationsButtonPrefabPorcupine
   m_TagString: Untagged
@@ -285,3 +286,15 @@ MonoBehaviour:
   grabbableType: 3
   scene:
     m_Handle: 0
+--- !u!114 &-8720637226476599992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6593994255132046064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b12da623aa3442b6aef334b3dccb1cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonClickSound

@@ -7,7 +7,10 @@ public class Draggable2D : MonoBehaviour
 {
     [Header("Spawn Settings")]
     [Tooltip("Optional: Drop an empty GameObject here to define a custom respawn location.")]
-    public Transform spawnPoint; 
+    public Transform spawnPoint;
+
+    [Header("Dialogue")]
+    public DialogueController dialogueController;
 
     private Camera mainCamera;
     private Vector3 startPosition;
@@ -15,6 +18,7 @@ public class Draggable2D : MonoBehaviour
     public bool IsDragging { get; private set; }
     private bool isDragging { get => IsDragging; set => IsDragging = value; }
     private bool wasHandled = false;
+    private bool _hasNotifiedDialogue = false;
     private DropZone2D currentHoverZone;
 
     private void Awake()
@@ -56,11 +60,12 @@ public class Draggable2D : MonoBehaviour
             Vector2 screenPos = Touchscreen.current.primaryTouch.position.ReadValue();
             Vector3 worldPos = ScreenToWorld(screenPos);
 
-            if (IsTouchingObject(worldPos))
+            if (IsTouchingObject(worldPos) && !IsDialogueLocked())
             {
                 isDragging = true;
                 offset = transform.position - worldPos;
                 wasHandled = false;
+                NotifyDialogueStarted();
             }
         }
 
@@ -86,11 +91,12 @@ public class Draggable2D : MonoBehaviour
         if (Mouse.current.leftButton.wasPressedThisFrame)
         {
             Vector3 world = ScreenToWorld(Mouse.current.position.ReadValue());
-            if (IsTouchingObject(world))
+            if (IsTouchingObject(world) && !IsDialogueLocked())
             {
                 isDragging = true;
                 offset = transform.position - world;
                 wasHandled = false;
+                NotifyDialogueStarted();
             }
         }
 
@@ -131,6 +137,15 @@ public class Draggable2D : MonoBehaviour
     {
         Collider2D hit = Physics2D.OverlapPoint(worldPos);
         return hit != null && hit.gameObject == gameObject;
+    }
+
+    bool IsDialogueLocked() => dialogueController != null && dialogueController.IsInputLocked;
+
+    void NotifyDialogueStarted()
+    {
+        if (_hasNotifiedDialogue) return;
+        _hasNotifiedDialogue = true;
+        if (dialogueController != null) dialogueController.OnPlayerStarted();
     }
 
     public void MarkHandled()

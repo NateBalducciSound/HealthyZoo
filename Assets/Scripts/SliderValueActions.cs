@@ -156,6 +156,7 @@ public class SliderValueActions : MonoBehaviour
     {
         yield return new WaitForSeconds(congratsDelay);
         Debug.Log($"[Dialogue] DelayedCongrats fired — dialogueController assigned: {dialogueController != null}");
+        AudioManager.PlayComplete();
         if (dialogueController != null) dialogueController.OnLevelCompleted();
         SpawnButton();
     }

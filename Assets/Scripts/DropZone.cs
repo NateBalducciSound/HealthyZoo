@@ -23,6 +23,8 @@ public class DropZone2D : MonoBehaviour
         }
     }
 
+    public Vector3 SnapPosition => new Vector3(transform.position.x, transform.position.y, 0f);
+
     public void ConfirmDrop(Draggable2D item)
     {
         if (alligatorController == null) return;

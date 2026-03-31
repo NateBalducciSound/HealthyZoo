@@ -16,8 +16,18 @@ public class AlligatorController : MonoBehaviour
 
     [Header("Gameplay Objects")]
     public GameObject mouthDropZone;
-    public GameObject confetti;
     public GameObject backButton;
+
+    [Header("Confetti")]
+    public Animator confettiAnimator;
+    public string confettiStateName = "Confetti";
+
+    [Header("Drop Zones to Disable After Nose")]
+    [Tooltip("Assign the Eyes, Feet, and Nose DropZone GameObjects here")]
+    public GameObject[] dropZonesToDisableAfterNose;
+
+    [Header("Dialogue")]
+    public DialogueController dialogueController;
 
     private bool mouthIsOpen = false;
     private bool mouthTaskComplete = false;
@@ -55,9 +65,12 @@ public class AlligatorController : MonoBehaviour
     {
         if (mouthIsOpen) return;
         mouthIsOpen = true;
-        animator.SetTrigger("OpenMouth"); 
+        animator.SetTrigger("OpenMouth");
         mouthDropZone.SetActive(true);
         item.ReturnToStart(0.2f);
+
+        foreach (var zone in dropZonesToDisableAfterNose)
+            if (zone != null) zone.SetActive(false);
     }
 
     private void HandleMouth(Draggable2D item)
@@ -71,7 +84,13 @@ public class AlligatorController : MonoBehaviour
 
     private void StartCelebration()
     {
-        confetti.SetActive(true);
+        AudioManager.PlayComplete();
+        if (dialogueController != null) dialogueController.OnLevelCompleted();
+        if (confettiAnimator != null)
+        {
+            confettiAnimator.gameObject.SetActive(true);
+            confettiAnimator.Play(confettiStateName);
+        }
         backButton.SetActive(true);
     }
 }

@@ -799,6 +799,155 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &303465987
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 303465990}
+  - component: {fileID: 303465989}
+  - component: {fileID: 303465988}
+  m_Layer: 0
+  m_Name: DialogueManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &303465988
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 303465987}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &303465989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 303465987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ab18b11fc007447180abcb24ce727d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueController
+  audioSource: {fileID: 303465988}
+  openingLine: {fileID: 8300000, guid: 85fe883906d03461e899bfb58bfd41e1, type: 3}
+  completionLine: {fileID: 8300000, guid: e9f1cbe2f789d41179da278c3da22ec7, type: 3}
+  nudgeDelay: 5
+  nudgeInterval: 6
+  nudgeLines:
+  - {fileID: 8300000, guid: e8bd0e779279e429b942e2853940654f, type: 3}
+--- !u!4 &303465990
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 303465987}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.92155, y: 0, z: 57.07733}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &404679490
 GameObject:
   m_ObjectHideFlags: 0
@@ -1064,6 +1213,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Draggable2D
   spawnPoint: {fileID: 1443739628}
+  dialogueController: {fileID: 0}
 --- !u!50 &490108030
 Rigidbody2D:
   serializedVersion: 5
@@ -1130,7 +1280,7 @@ MonoBehaviour:
     stateZero: {fileID: 21300000, guid: 4d4eb8ac2c8d74e73bd4eac49896e114, type: 3}
     stateOne: {fileID: 21300000, guid: 6db85846eb31e4b67aa3c268e179b997, type: 3}
     stateTwo: {fileID: 21300000, guid: 90bced594b4ce41699ad049709e84b50, type: 3}
-  crossfadeDuration: 0.2
+  crossfadeDuration: 0.3
   heartbeatAnimator: {fileID: 404679492}
   heartbeatSpeedFast: 1
   heartbeatSpeedNormal: 0.66
@@ -1140,9 +1290,11 @@ MonoBehaviour:
   loopStateName: HeronCelebrationLoopAnimation
   confettiAnimator: {fileID: 2092202612}
   confettiStateName: Confetti
+  dialogueController: {fileID: 303465989}
   congratsPrefab: {fileID: 6593994255132046064, guid: b532888a7b9e34dabbad836db8ff270f, type: 3}
   buttonParent: {fileID: 104073255}
-  congratsScale: {x: 0.3, y: 0.3, z: 0.3}
+  congratsScale: {x: 0.33, y: 0.8, z: 1}
+  congratsPosition: {x: 0, y: 0, z: 0}
   menuSceneName: _02MiniGameSelect
 --- !u!4 &630928307
 Transform:
@@ -2008,3 +2160,4 @@ SceneRoots:
   - {fileID: 1101660572}
   - {fileID: 1751366955}
   - {fileID: 630928307}
+  - {fileID: 303465990}

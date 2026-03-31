@@ -54,6 +54,9 @@ public class HeronLevelController : MonoBehaviour
     [Tooltip("Exact name of the Confetti state in the Animator Controller")]
     public string confettiStateName = "Confetti";
 
+    [Header("Dialogue")]
+    public DialogueController dialogueController;
+
     [Header("UI & Navigation")]
     public GameObject congratsPrefab;
     public Transform buttonParent;
@@ -62,8 +65,10 @@ public class HeronLevelController : MonoBehaviour
     public string menuSceneName = "_02MiniGameSelect";
 
     private bool isFinished = false;
+    private bool _playerStarted = false;
     private int currentSliderIndex = -1;
     private Coroutine crossfadeCoroutine;
+    private SpriteRenderer[] overlayRenderers;
 
     void Start()
     {
@@ -80,6 +85,29 @@ public class HeronLevelController : MonoBehaviour
             foreach (var set in spriteSets)
                 if (set.renderer) set.renderer.sprite = set.GetSprite(startIndex);
         }
+
+        if (dialogueController != null)
+        {
+            positionSlider.interactable = false;
+            dialogueController.OnInputUnlocked += () => positionSlider.interactable = true;
+        }
+
+        // Create overlay renderers for crossfading
+        overlayRenderers = new SpriteRenderer[spriteSets.Length];
+        for (int i = 0; i < spriteSets.Length; i++)
+        {
+            var src = spriteSets[i].renderer;
+            if (src == null) continue;
+            var go = new GameObject("OverlayRenderer_" + i);
+            go.transform.SetParent(src.transform.parent);
+            go.transform.localPosition = src.transform.localPosition;
+            go.transform.localScale = src.transform.localScale;
+            var sr = go.AddComponent<SpriteRenderer>();
+            sr.sortingLayerID = src.sortingLayerID;
+            sr.sortingOrder = src.sortingOrder + 1;
+            sr.color = new Color(1f, 1f, 1f, 0f);
+            overlayRenderers[i] = sr;
+        }
     }
 
     void OnDestroy()
@@ -93,6 +121,12 @@ public class HeronLevelController : MonoBehaviour
     void OnSliderChanged(float value)
     {
         if (isFinished) return;
+
+        if (!_playerStarted)
+        {
+            _playerStarted = true;
+            if (dialogueController != null) dialogueController.OnPlayerStarted();
+        }
 
         int index = Mathf.RoundToInt(value);
         if (index == currentSliderIndex) return;
@@ -117,43 +151,38 @@ public class HeronLevelController : MonoBehaviour
     {
         if (spriteSets == null || spriteSets.Length == 0) yield break;
 
-        float halfDuration = crossfadeDuration * 0.5f;
+        // Load new sprite onto overlays at zero alpha
+        for (int i = 0; i < spriteSets.Length; i++)
+        {
+            if (overlayRenderers[i] == null) continue;
+            overlayRenderers[i].sprite = spriteSets[i].GetSprite(index);
+            SetAlpha(overlayRenderers[i], 0f);
+        }
 
-        // Fade out from wherever alpha currently is
-        float startAlpha = spriteSets[0].renderer ? spriteSets[0].renderer.color.a : 1f;
+        // Fade old out, new in simultaneously
         float t = 0f;
-        while (t < halfDuration)
+        while (t < crossfadeDuration)
         {
             t += Time.deltaTime;
-            float alpha = Mathf.Lerp(startAlpha, 0f, t / halfDuration);
-            foreach (var set in spriteSets)
-                if (set.renderer) SetAlpha(set.renderer, alpha);
-            yield return null;
-        }
-
-        // Swap sprites at zero alpha
-        foreach (var set in spriteSets)
-        {
-            if (set.renderer)
+            float progress = Mathf.Clamp01(t / crossfadeDuration);
+            for (int i = 0; i < spriteSets.Length; i++)
             {
-                set.renderer.sprite = set.GetSprite(index);
-                SetAlpha(set.renderer, 0f);
+                if (spriteSets[i].renderer) SetAlpha(spriteSets[i].renderer, 1f - progress);
+                if (overlayRenderers[i] != null) SetAlpha(overlayRenderers[i], progress);
             }
-        }
-
-        // Fade in
-        t = 0f;
-        while (t < halfDuration)
-        {
-            t += Time.deltaTime;
-            float alpha = Mathf.Lerp(0f, 1f, t / halfDuration);
-            foreach (var set in spriteSets)
-                if (set.renderer) SetAlpha(set.renderer, alpha);
             yield return null;
         }
 
-        foreach (var set in spriteSets)
-            if (set.renderer) SetAlpha(set.renderer, 1f);
+        // Finalise — move new sprite onto primary renderer, clear overlay
+        for (int i = 0; i < spriteSets.Length; i++)
+        {
+            if (spriteSets[i].renderer)
+            {
+                spriteSets[i].renderer.sprite = spriteSets[i].GetSprite(index);
+                SetAlpha(spriteSets[i].renderer, 1f);
+            }
+            if (overlayRenderers[i] != null) SetAlpha(overlayRenderers[i], 0f);
+        }
     }
 
     static void SetAlpha(SpriteRenderer sr, float alpha)
@@ -211,7 +240,9 @@ public class HeronLevelController : MonoBehaviour
         if (confettiAnimator != null)
             confettiAnimator.Play(confettiStateName);
 
-        // Spawn back-to-menu button
+        // Dialogue completion line + spawn back-to-menu button
+        AudioManager.PlayComplete();
+        if (dialogueController != null) dialogueController.OnLevelCompleted();
         SpawnMenuButton();
     }
 

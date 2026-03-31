@@ -1,9 +1,13 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
+
+// Prefabs must be placed inside a folder named "Resources/ARCharacters/" in your project.
+// The imageName in each mapping must exactly match the prefab filename in that folder.
 
 [RequireComponent(typeof(ARTrackedImageManager))]
 public class ARImageTracker : MonoBehaviour
@@ -13,8 +17,10 @@ public class ARImageTracker : MonoBehaviour
     [Serializable]
     public struct ImagePrefabMapping
     {
+        [Tooltip("Must match the Reference Image Library name AND the prefab filename in Resources/ARCharacters/")]
         public string imageName;
-        public GameObject prefab;
+        [Tooltip("Override scale for this character. 0 = use global Spawn Scale")]
+        public float scaleOverride;
     }
 
     public ImagePrefabMapping[] imagePrefabs;
@@ -42,8 +48,12 @@ public class ARImageTracker : MonoBehaviour
 
     // ── Private ───────────────────────────────────────────────────────────────
 
+    private const string ResourcesPath = "ARCharacters/";
+
     private ARTrackedImageManager trackedImageManager;
     private Transform arCamera;
+    private GameObject _activeInstance;
+    private TrackedState _activeState;
 
     private class TrackedState
     {
@@ -51,11 +61,16 @@ public class ARImageTracker : MonoBehaviour
         public float scanTimer;
         public float lostTimer;
         public bool confirmed;
-        public GameObject instance;
         public float currentScale;
+        public float anchorScale;       // scale at the moment of spawn
+        public float anchorDistance;    // camera distance at the moment of spawn
+        public Vector3 anchorPosition;  // world position locked at spawn
+        public GameObject loadedPrefab;
+        public bool isLoading;
     }
 
     private readonly Dictionary<TrackableId, TrackedState> states = new();
+    private TrackedState _testState; // editor simulation only
 
     private Text statusText;
     private Image statusBackground;
@@ -70,10 +85,9 @@ public class ARImageTracker : MonoBehaviour
 
     void Start()
     {
-        // AR cameras are often not tagged MainCamera — search children of XR Origin first
         var cam = GetComponentInChildren<Camera>();
-        if (cam != null)                              arCamera = cam.transform;
-        else if (Camera.main != null)                 arCamera = Camera.main.transform;
+        if (cam != null)              arCamera = cam.transform;
+        else if (Camera.main != null) arCamera = Camera.main.transform;
         else
         {
             var found = FindFirstObjectByType<Camera>();
@@ -81,7 +95,9 @@ public class ARImageTracker : MonoBehaviour
         }
 
         if (arCamera == null)
-            Debug.LogWarning("[ARImageTracker] No camera found — spawning will not work.");
+            Debug.LogWarning("[ARImageTracker] No camera found.");
+
+        BuildTestButtons();
     }
 
     void OnEnable()
@@ -107,7 +123,7 @@ public class ARImageTracker : MonoBehaviour
         {
             if (states.TryGetValue(img.trackableId, out var s))
             {
-                DestroyInstance(s);
+                if (s.confirmed) DestroyActive();
                 states.Remove(img.trackableId);
             }
             RefreshStatusUI();
@@ -116,11 +132,16 @@ public class ARImageTracker : MonoBehaviour
 
     // ── Update ────────────────────────────────────────────────────────────────
 
+    // Tracks estimated camera displacement using accelerometer when image is lost
+    private Vector3 _accelVelocity = Vector3.zero;
+    private Vector3 _accelDisplacement = Vector3.zero;
+    private bool _accelTracking = false;
+
     void Update()
     {
         if (trackedImageManager == null || arCamera == null) return;
 
-        bool anyScanning = false;
+        bool anyScanning  = false;
         bool anyConfirmed = false;
         string confirmedName = null;
         float bestProgress = 0f;
@@ -133,15 +154,18 @@ public class ARImageTracker : MonoBehaviour
             {
                 state.lostTimer = 0f;
                 state.scanTimer += Time.deltaTime;
+                _accelTracking = false;
+                _accelVelocity = Vector3.zero;
+                _accelDisplacement = Vector3.zero;
 
-                if (state.confirmed && state.instance != null)
+                if (state.confirmed && _activeInstance != null)
                 {
-                    // Scale smoothly based on distance from camera
-                    float dist = Vector3.Distance(arCamera.position, state.instance.transform.position);
-                    float targetScale = spawnScale * (dist / Mathf.Max(spawnDistance, 0.01f));
+                    // Use the actual tracked image world position for accurate distance
+                    _activeInstance.transform.position = state.anchorPosition;
+                    float dist = Vector3.Distance(arCamera.position, img.transform.position);
+                    float targetScale = state.anchorScale * (dist / Mathf.Max(state.anchorDistance, 0.001f));
                     state.currentScale = Mathf.Lerp(state.currentScale, targetScale, scaleSmoothSpeed * Time.deltaTime);
-                    state.instance.transform.localScale = Vector3.one * Mathf.Max(state.currentScale, 0.001f);
-
+                    _activeInstance.transform.localScale = Vector3.one * Mathf.Max(state.currentScale, 0.001f);
                     anyConfirmed = true;
                     confirmedName = state.imageName;
                 }
@@ -151,7 +175,10 @@ public class ARImageTracker : MonoBehaviour
                     if (progress > bestProgress) bestProgress = progress;
                     anyScanning = true;
 
-                    if (state.scanTimer >= scanConfirmTime)
+                    if (!state.isLoading && state.scanTimer >= scanConfirmTime * 0.5f)
+                        StartCoroutine(LoadPrefabAsync(state));
+
+                    if (state.scanTimer >= scanConfirmTime && state.loadedPrefab != null)
                         Confirm(state);
                 }
             }
@@ -159,18 +186,88 @@ public class ARImageTracker : MonoBehaviour
             {
                 state.lostTimer += Time.deltaTime;
 
-                if (state.lostTimer >= lostGraceTime && state.confirmed)
+                if (state.confirmed && _activeInstance != null)
                 {
-                    DestroyInstance(state);
-                    state.confirmed = false;
-                    state.scanTimer = 0f;
+                    // Use accelerometer to estimate distance change while card is out of frame
+                    if (!_accelTracking)
+                    {
+                        _accelTracking = true;
+                        _accelVelocity = Vector3.zero;
+                        _accelDisplacement = Vector3.zero;
+                    }
+
+                    // Remove gravity component, integrate to get velocity then displacement
+                    Vector3 accel = Input.acceleration - Physics.gravity.normalized * Vector3.Dot(Input.acceleration, Physics.gravity.normalized);
+                    _accelVelocity    += accel * Time.deltaTime;
+                    _accelDisplacement += _accelVelocity * Time.deltaTime;
+
+                    float estimatedDist = Mathf.Max(state.anchorDistance + _accelDisplacement.magnitude, 0.01f);
+                    float targetScale   = state.anchorScale * (estimatedDist / Mathf.Max(state.anchorDistance, 0.001f));
+                    state.currentScale  = Mathf.Lerp(state.currentScale, targetScale, scaleSmoothSpeed * Time.deltaTime);
+                    _activeInstance.transform.localScale = Vector3.one * Mathf.Max(state.currentScale, 0.001f);
+
+                    anyConfirmed = true;
+                    confirmedName = state.imageName;
+
+                    // Original kill logic — destroy after grace time
+                    if (state.lostTimer >= lostGraceTime)
+                    {
+                        DestroyActive();
+                        state.confirmed = false;
+                        state.scanTimer = 0f;
+                    }
+                }
+                else if (!state.confirmed)
+                {
+                    if (state.lostTimer >= lostGraceTime)
+                        state.scanTimer = 0f;
                 }
             }
         }
 
-        if (anyConfirmed)       SetStatusConfirmed(confirmedName);
-        else if (anyScanning)   SetStatusScanning(bestProgress);
-        else                    SetStatusIdle();
+        // Test button scale update (editor/device testing)
+        if (_testState != null && _activeInstance != null && arCamera != null)
+        {
+            float dist = Vector3.Distance(arCamera.position, _activeInstance.transform.position);
+            float targetScale = _testState.anchorScale * (dist / Mathf.Max(_testState.anchorDistance, 0.001f));
+            _testState.currentScale = Mathf.Lerp(_testState.currentScale, targetScale, scaleSmoothSpeed * Time.deltaTime);
+            _activeInstance.transform.localScale = Vector3.one * Mathf.Max(_testState.currentScale, 0.001f);
+        }
+
+        if (anyConfirmed)     SetStatusConfirmed(confirmedName);
+        else if (anyScanning) SetStatusScanning(bestProgress);
+        else                  SetStatusIdle();
+    }
+
+    // ── Async Load ────────────────────────────────────────────────────────────
+
+    IEnumerator LoadPrefabAsync(TrackedState state)
+    {
+        state.isLoading = true;
+        string path = ResourcesPath + state.imageName;
+        Debug.Log($"[ARImageTracker] Starting async load: Resources/{path}");
+
+        ResourceRequest request = Resources.LoadAsync<GameObject>(path);
+        yield return request;
+
+        if (request.asset == null)
+        {
+            Debug.LogError($"[ARImageTracker] FAILED to load 'Resources/{path}'. " +
+                           $"Ensure the prefab exists at Assets/Resources/{path}.prefab " +
+                           $"and the name matches exactly (case-sensitive).");
+            yield break;
+        }
+
+        state.loadedPrefab = (GameObject)request.asset;
+        Debug.Log($"[ARImageTracker] Successfully loaded '{path}'. " +
+                  $"scanTimer={state.scanTimer:F2}, scanConfirmTime={scanConfirmTime:F2}");
+
+        // If the timer already passed while loading, confirm immediately
+        if (state.scanTimer >= scanConfirmTime && !state.confirmed)
+        {
+            Debug.Log($"[ARImageTracker] Timer already passed — confirming immediately.");
+            Confirm(state);
+        }
     }
 
     // ── Confirm ───────────────────────────────────────────────────────────────
@@ -178,20 +275,24 @@ public class ARImageTracker : MonoBehaviour
     void Confirm(TrackedState state)
     {
         state.confirmed = true;
+        DestroyActive();
 
-        GameObject prefab = FindPrefab(state.imageName);
-        if (prefab == null)
-        {
-            Debug.LogWarning($"[ARImageTracker] No prefab mapped for '{state.imageName}'");
-            return;
-        }
-
-        // Spawn centered in front of the camera
+        // Snapshot the world position and distance at the moment of scan
         Vector3 spawnPos = arCamera.position + arCamera.forward * spawnDistance;
-        state.instance = Instantiate(prefab, spawnPos, Quaternion.identity);
-        state.currentScale = spawnScale;
-        state.instance.transform.localScale = Vector3.one * spawnScale;
-        state.instance.SetActive(true);
+        float scale = GetScale(state.imageName);
+
+        float actualDist = arCamera != null
+            ? Vector3.Distance(arCamera.position, spawnPos)
+            : spawnDistance;
+
+        state.anchorPosition = spawnPos;
+        state.anchorDistance = Mathf.Max(actualDist, 0.01f);
+        state.anchorScale    = scale;
+        state.currentScale   = scale;
+
+        _activeInstance = Instantiate(state.loadedPrefab, spawnPos, Quaternion.identity);
+        _activeInstance.transform.localScale = Vector3.one * scale;
+        _activeState = state;
 
         if (scannedImages.Add(state.imageName))
             OnNewImageScanned?.Invoke(state.imageName);
@@ -199,21 +300,114 @@ public class ARImageTracker : MonoBehaviour
 
     // ── Helpers ───────────────────────────────────────────────────────────────
 
-    void DestroyInstance(TrackedState state)
+    float GetScale(string imageName)
     {
-        if (state.instance != null)
+        foreach (var m in imagePrefabs)
+            if (string.Equals(m.imageName.Trim(), imageName.Trim(), StringComparison.OrdinalIgnoreCase))
+                return m.scaleOverride > 0f ? m.scaleOverride : spawnScale;
+        return spawnScale;
+    }
+
+    void DestroyActive()
+    {
+        if (_activeInstance != null)
         {
-            Destroy(state.instance);
-            state.instance = null;
+            Destroy(_activeInstance);
+            _activeInstance = null;
+        }
+        _activeState = null;
+        _testState = null;
+    }
+
+    // ── Test Buttons (remove before release) ─────────────────────────────────
+
+    [Header("Test Buttons (disable for release)")]
+    public bool showTestButtons = true;
+
+    void BuildTestButtons()
+    {
+        if (!showTestButtons || imagePrefabs == null || imagePrefabs.Length == 0) return;
+
+        var canvasGO = new GameObject("TestButtonCanvas");
+        var canvas = canvasGO.AddComponent<Canvas>();
+        canvas.renderMode = RenderMode.ScreenSpaceOverlay;
+        canvas.sortingOrder = 9999;
+        var scaler = canvasGO.AddComponent<CanvasScaler>();
+        scaler.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
+        scaler.referenceResolution = new Vector2(1080, 1920);
+        canvasGO.AddComponent<GraphicRaycaster>();
+
+        float btnH = 80f, pad = 10f;
+
+        for (int i = 0; i < imagePrefabs.Length; i++)
+        {
+            string name = imagePrefabs[i].imageName;
+
+            var btnGO = new GameObject($"TestBtn_{name}");
+            btnGO.transform.SetParent(canvasGO.transform, false);
+
+            var img = btnGO.AddComponent<Image>();
+            img.color = new Color(0.2f, 0.6f, 1f, 0.9f);
+
+            var btn = btnGO.AddComponent<Button>();
+            int captured = i;
+            btn.onClick.AddListener(() => SimulateScan(imagePrefabs[captured].imageName));
+
+            var rect = btnGO.GetComponent<RectTransform>();
+            rect.anchorMin = rect.anchorMax = rect.pivot = new Vector2(0f, 1f);
+            rect.anchoredPosition = new Vector2(pad, -(pad + i * (btnH + pad)));
+            rect.sizeDelta = new Vector2(280f, btnH);
+
+            var textGO = new GameObject("Label");
+            textGO.transform.SetParent(btnGO.transform, false);
+            var txt = textGO.AddComponent<Text>();
+            txt.text = name;
+            txt.font = Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
+            txt.fontSize = 28;
+            txt.color = Color.white;
+            txt.alignment = TextAnchor.MiddleCenter;
+            var txtRect = textGO.GetComponent<RectTransform>();
+            txtRect.anchorMin = Vector2.zero;
+            txtRect.anchorMax = Vector2.one;
+            txtRect.offsetMin = txtRect.offsetMax = Vector2.zero;
         }
     }
 
-    GameObject FindPrefab(string name)
+    void SimulateScan(string imageName)
     {
-        foreach (var m in imagePrefabs)
-            if (string.Equals(m.imageName.Trim(), name.Trim(), StringComparison.OrdinalIgnoreCase))
-                return m.prefab;
-        return null;
+        Debug.Log($"[ARImageTracker] TEST: Simulating scan for '{imageName}'");
+
+        string path = ResourcesPath + imageName;
+        GameObject prefab = Resources.Load<GameObject>(path);
+
+        if (prefab == null)
+        {
+            Debug.LogError($"[ARImageTracker] TEST FAILED: Could not find prefab at 'Resources/{path}'. " +
+                           $"Make sure the file exists at Assets/Resources/{path}.prefab");
+            return;
+        }
+
+        Vector3 spawnPos = arCamera != null
+            ? arCamera.position + arCamera.forward * 3f
+            : new Vector3(0f, 0f, 3f);
+
+        Debug.Log($"[ARImageTracker] TEST: Prefab found, instantiating at {spawnPos}.");
+        DestroyActive();
+        float scale = GetScale(imageName);
+        _activeInstance = Instantiate(prefab, spawnPos, Quaternion.identity);
+        _activeInstance.transform.localScale = Vector3.one * scale;
+
+        _activeState = _testState = new TrackedState
+        {
+            imageName    = imageName,
+            confirmed    = true,
+            anchorPosition = spawnPos,
+            anchorDistance = Vector3.Distance(arCamera != null ? arCamera.position : Vector3.zero, spawnPos),
+            anchorScale  = scale,
+            currentScale = scale
+        };
+
+        Debug.Log($"[ARImageTracker] TEST: Spawned '{imageName}' successfully.");
     }
 
     // ── Status UI ─────────────────────────────────────────────────────────────

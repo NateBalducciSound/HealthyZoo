@@ -37,6 +37,8 @@ public class DialogueController : MonoBehaviour
     [Tooltip("Cycles through these in order, then loops back to the first")]
     [SerializeField] private AudioClip[] nudgeLines;
 
+    public bool IsInputLocked { get; private set; } = false;
+    public System.Action OnInputUnlocked;
     private bool _playerStarted = false;
     private int _nudgeIndex = 0;
     private Coroutine _nudgeRoutine;
@@ -60,8 +62,11 @@ public class DialogueController : MonoBehaviour
 
     void SetInputLocked(bool locked)
     {
+        IsInputLocked = locked;
         if (_eventSystem != null)
             _eventSystem.enabled = !locked;
+        if (!locked)
+            OnInputUnlocked?.Invoke();
     }
 
     // Call this from your gameplay script the moment the player interacts

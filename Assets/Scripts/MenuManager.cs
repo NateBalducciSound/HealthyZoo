@@ -4,17 +4,15 @@ using UnityEngine.XR.ARFoundation;
 
 public class MenuManager : MonoBehaviour
 {
-    public void PlayGame ()
+    public void PlayGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        AsyncSceneLoader.Load(SceneManager.GetActiveScene().buildIndex + 1);
     }
-  
-public void ScannerLoad()
-{
-    // If your AR scene is separate:
-    SceneManager.LoadScene("AR_Prototype");
-    
-}
+
+    public void ScannerLoad()
+    {
+        AsyncSceneLoader.Load("AR_Prototype");
+    }
     
     public void LoadHome()
     {

@@ -1,56 +1,68 @@
 using UnityEngine;
 using System;
+using System.Collections.Generic;
 
+// Characters are instantiated on first scan and destroyed when hidden.
+// Nothing is pre-loaded in the scene — assign Prefabs (not scene objects) in the Inspector.
 public class CharacterManager : MonoBehaviour
 {
     [Serializable]
     public struct CharacterMapping
     {
-        public string imageName; // MUST match the exact name in your Reference Image Library
-        public GameObject modelObject;
+        public string imageName;
+        public GameObject prefab;   // Assign prefab assets, NOT scene objects
     }
 
-    [Tooltip("Map your 6 Reference Image names to your 6 3D Models here.")]
+    [Tooltip("Map Reference Image names to character prefabs.")]
     public CharacterMapping[] characters;
 
-    // Turns on the correct model, turns off the rest
-    public void ActivateCharacter(string targetImageName)
-    {
-        foreach (var character in characters)
-        {
-            if (character.modelObject == null) continue;
+    [Tooltip("Where to spawn the character (leave null to use this transform).")]
+    public Transform spawnParent;
 
-            // Check for a match (ignoring case and accidental spaces)
-            bool isMatch = string.Equals(character.imageName.Trim(), targetImageName.Trim(), StringComparison.OrdinalIgnoreCase);
-            
+    private readonly Dictionary<string, GameObject> _instances = new();
+
+    public void ActivateCharacter(string targetImageName, Vector3 spawnPosition)
+    {
+        foreach (var mapping in characters)
+        {
+            if (mapping.prefab == null) continue;
+
+            bool isMatch = string.Equals(
+                mapping.imageName.Trim(), targetImageName.Trim(),
+                StringComparison.OrdinalIgnoreCase);
+
             if (isMatch)
             {
-                if (!character.modelObject.activeSelf)
+                if (!_instances.TryGetValue(mapping.imageName, out var obj) || obj == null)
                 {
-                    character.modelObject.SetActive(true);
-                    
-                    // Trigger spawn animation if you have one
-                    var anim = character.modelObject.GetComponent<Animator>();
-                    if (anim != null) anim.SetTrigger("Spawn");
+                    obj = Instantiate(mapping.prefab, spawnPosition, Quaternion.identity);
+                    _instances[mapping.imageName] = obj;
                 }
+
+                if (!obj.activeSelf)
+                    obj.SetActive(true);
             }
             else
             {
-                // Ensure non-matching models are hidden
-                character.modelObject.SetActive(false);
+                if (_instances.TryGetValue(mapping.imageName, out var other) && other != null)
+                {
+                    Destroy(other);
+                    _instances.Remove(mapping.imageName);
+                }
             }
         }
     }
 
-    // New method: Clears the screen when the camera looks away
+    public GameObject GetInstance(string imageName)
+    {
+        _instances.TryGetValue(imageName, out var obj);
+        return obj;
+    }
+
     public void HideAll()
     {
-        foreach (var character in characters)
-        {
-            if (character.modelObject != null)
-            {
-                character.modelObject.SetActive(false);
-            }
-        }
+        foreach (var kvp in _instances)
+            if (kvp.Value != null) Destroy(kvp.Value);
+        _instances.Clear();
     }
 }

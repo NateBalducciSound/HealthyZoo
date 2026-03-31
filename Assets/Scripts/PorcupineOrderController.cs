@@ -41,6 +41,9 @@ public class PorcupineOrderController : MonoBehaviour
     public Animator confettiAnimator;
     public string confettiStateName = "Confetti";
 
+    [Header("Dialogue")]
+    public DialogueController dialogueController;
+
     [Header("Congrats Prefab")]
     public GameObject congratsPrefab;
     public Transform buttonParent;
@@ -153,6 +156,8 @@ public class PorcupineOrderController : MonoBehaviour
 
     void TryBeginDrag(Vector3 worldPos)
     {
+        if (dialogueController != null && dialogueController.IsInputLocked) return;
+
         Collider2D hit = Physics2D.OverlapPoint(worldPos);
         if (hit == null) return;
 
@@ -164,6 +169,8 @@ public class PorcupineOrderController : MonoBehaviour
             draggedItem = item;
             draggedOriginalSlot = item.currentSlotIndex;
             dragOffset = item.renderer.transform.position - worldPos;
+
+            if (dialogueController != null) dialogueController.OnPlayerStarted();
 
             var pos = item.renderer.transform.position;
             pos.z -= dragSortingOffset;
@@ -316,6 +323,8 @@ public class PorcupineOrderController : MonoBehaviour
             confettiAnimator.Play(confettiStateName);
         }
 
+        AudioManager.PlayComplete();
+        if (dialogueController != null) dialogueController.OnLevelCompleted();
         SpawnCongrats();
     }
 
