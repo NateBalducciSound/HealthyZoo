@@ -9,7 +9,7 @@ public class SceneLoader : MonoBehaviour
     {
             MiniGameProgress.SetCompleted(grabbableType);
         Debug.Log("COMPLETED: " + grabbableType);
-        SceneManager.LoadScene("Scenes/_02MiniGameSelect"); 
+        AsyncSceneLoader.Load(DeviceDetector.GetSceneName("_02MiniGameSelect"));
     }
 
 }

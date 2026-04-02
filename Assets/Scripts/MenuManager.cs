@@ -6,7 +6,7 @@ public class MenuManager : MonoBehaviour
 {
     public void PlayGame()
     {
-        AsyncSceneLoader.Load(SceneManager.GetActiveScene().buildIndex + 1);
+        AsyncSceneLoader.Load(DeviceDetector.GetSceneName("_02MiniGameSelect"));
     }
 
     public void ScannerLoad()

@@ -96,6 +96,8 @@ public class SliderValueActions : MonoBehaviour
         // Also kick off the congrats spawn timer at the same moment
         if (startAnimator != null)
         {
+            if (characterRenderer != null)
+                startAnimator.transform.localScale = characterRenderer.transform.localScale;
             startAnimator.gameObject.SetActive(true);
             startAnimator.Play(startAnimationState, 0, 0f);
             StartCoroutine(DelayedCongrats());
@@ -105,6 +107,8 @@ public class SliderValueActions : MonoBehaviour
         // 4. SWITCH: Move Loop Animator, Start it, and HIDE Startup Animator
         if (loopAnimator != null)
         {
+            if (characterRenderer != null)
+                loopAnimator.transform.localScale = characterRenderer.transform.localScale;
             loopAnimator.transform.localPosition = loopPositionOffset;
             loopAnimator.gameObject.SetActive(true);
             loopAnimator.Play(loopAnimationState, 0, 0f);

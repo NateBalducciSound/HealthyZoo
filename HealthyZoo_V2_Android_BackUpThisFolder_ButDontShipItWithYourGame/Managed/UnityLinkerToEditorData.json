@@ -13,9 +13,13 @@
             "scenes": [
               "Assets/_01MainMenu.unity",
               "Assets/Scenes/_03AGiraffeScene.unity",
+              "Assets/Scenes/_03AGiraffeScene_Ipad.unity",
               "Assets/Scenes/_03BHeronScene.unity",
+              "Assets/Scenes/_03BHeronScene_Ipad.unity",
               "Assets/Scenes/_03CPorcupineScene.unity",
-              "Assets/Scenes/_03FAlligatorScene.unity"
+              "Assets/Scenes/_03CPorcupineScene_Ipad.unity",
+              "Assets/Scenes/_03FAlligatorScene.unity",
+              "Assets/Scenes/_03FAlligatorScene_Ipad.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -25,9 +29,13 @@
             "scenes": [
               "Assets/_01MainMenu.unity",
               "Assets/Scenes/_03AGiraffeScene.unity",
+              "Assets/Scenes/_03AGiraffeScene_Ipad.unity",
               "Assets/Scenes/_03BHeronScene.unity",
+              "Assets/Scenes/_03BHeronScene_Ipad.unity",
               "Assets/Scenes/_03CPorcupineScene.unity",
-              "Assets/Scenes/_03FAlligatorScene.unity"
+              "Assets/Scenes/_03CPorcupineScene_Ipad.unity",
+              "Assets/Scenes/_03FAlligatorScene.unity",
+              "Assets/Scenes/_03FAlligatorScene_Ipad.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -37,9 +45,13 @@
             "scenes": [
               "Assets/_01MainMenu.unity",
               "Assets/Scenes/_03AGiraffeScene.unity",
+              "Assets/Scenes/_03AGiraffeScene_Ipad.unity",
               "Assets/Scenes/_03BHeronScene.unity",
+              "Assets/Scenes/_03BHeronScene_Ipad.unity",
               "Assets/Scenes/_03CPorcupineScene.unity",
-              "Assets/Scenes/_03FAlligatorScene.unity"
+              "Assets/Scenes/_03CPorcupineScene_Ipad.unity",
+              "Assets/Scenes/_03FAlligatorScene.unity",
+              "Assets/Scenes/_03FAlligatorScene_Ipad.unity"
             ],
             "dependencyType": 1,
             "icon": null
@@ -73,12 +85,19 @@
               "Assets/_01MainMenu.unity",
               "Assets/AR_Prototype.unity",
               "Assets/Scenes/_02MiniGameSelect.unity",
+              "Assets/Scenes/_02MiniGameSelect_Ipad.unity",
               "Assets/Scenes/_03AGiraffeScene.unity",
+              "Assets/Scenes/_03AGiraffeScene_Ipad.unity",
               "Assets/Scenes/_03BHeronScene.unity",
+              "Assets/Scenes/_03BHeronScene_Ipad.unity",
               "Assets/Scenes/_03CPorcupineScene.unity",
+              "Assets/Scenes/_03CPorcupineScene_Ipad.unity",
               "Assets/Scenes/_03DSlothScene.unity",
+              "Assets/Scenes/_03DSlothScene_Ipad.unity",
               "Assets/Scenes/_03EPandaScene.unity",
-              "Assets/Scenes/_03FAlligatorScene.unity"
+              "Assets/Scenes/_03EPandaScene_Ipad.unity",
+              "Assets/Scenes/_03FAlligatorScene.unity",
+              "Assets/Scenes/_03FAlligatorScene_Ipad.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -88,10 +107,15 @@
             "scenes": [
               "Assets/_01MainMenu.unity",
               "Assets/Scenes/_02MiniGameSelect.unity",
+              "Assets/Scenes/_02MiniGameSelect_Ipad.unity",
               "Assets/Scenes/_03AGiraffeScene.unity",
+              "Assets/Scenes/_03AGiraffeScene_Ipad.unity",
               "Assets/Scenes/_03BHeronScene.unity",
+              "Assets/Scenes/_03BHeronScene_Ipad.unity",
               "Assets/Scenes/_03CPorcupineScene.unity",
-              "Assets/Scenes/_03FAlligatorScene.unity"
+              "Assets/Scenes/_03CPorcupineScene_Ipad.unity",
+              "Assets/Scenes/_03FAlligatorScene.unity",
+              "Assets/Scenes/_03FAlligatorScene_Ipad.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -102,12 +126,19 @@
               "Assets/_01MainMenu.unity",
               "Assets/AR_Prototype.unity",
               "Assets/Scenes/_02MiniGameSelect.unity",
+              "Assets/Scenes/_02MiniGameSelect_Ipad.unity",
               "Assets/Scenes/_03AGiraffeScene.unity",
+              "Assets/Scenes/_03AGiraffeScene_Ipad.unity",
               "Assets/Scenes/_03BHeronScene.unity",
+              "Assets/Scenes/_03BHeronScene_Ipad.unity",
               "Assets/Scenes/_03CPorcupineScene.unity",
+              "Assets/Scenes/_03CPorcupineScene_Ipad.unity",
               "Assets/Scenes/_03DSlothScene.unity",
+              "Assets/Scenes/_03DSlothScene_Ipad.unity",
               "Assets/Scenes/_03EPandaScene.unity",
-              "Assets/Scenes/_03FAlligatorScene.unity"
+              "Assets/Scenes/_03EPandaScene_Ipad.unity",
+              "Assets/Scenes/_03FAlligatorScene.unity",
+              "Assets/Scenes/_03FAlligatorScene_Ipad.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -123,10 +154,15 @@
             "scenes": [
               "Assets/_01MainMenu.unity",
               "Assets/Scenes/_02MiniGameSelect.unity",
+              "Assets/Scenes/_02MiniGameSelect_Ipad.unity",
               "Assets/Scenes/_03AGiraffeScene.unity",
+              "Assets/Scenes/_03AGiraffeScene_Ipad.unity",
               "Assets/Scenes/_03BHeronScene.unity",
+              "Assets/Scenes/_03BHeronScene_Ipad.unity",
               "Assets/Scenes/_03CPorcupineScene.unity",
-              "Assets/Scenes/_03FAlligatorScene.unity"
+              "Assets/Scenes/_03CPorcupineScene_Ipad.unity",
+              "Assets/Scenes/_03FAlligatorScene.unity",
+              "Assets/Scenes/_03FAlligatorScene_Ipad.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -136,10 +172,15 @@
             "scenes": [
               "Assets/_01MainMenu.unity",
               "Assets/Scenes/_02MiniGameSelect.unity",
+              "Assets/Scenes/_02MiniGameSelect_Ipad.unity",
               "Assets/Scenes/_03AGiraffeScene.unity",
+              "Assets/Scenes/_03AGiraffeScene_Ipad.unity",
               "Assets/Scenes/_03BHeronScene.unity",
+              "Assets/Scenes/_03BHeronScene_Ipad.unity",
               "Assets/Scenes/_03CPorcupineScene.unity",
-              "Assets/Scenes/_03FAlligatorScene.unity"
+              "Assets/Scenes/_03CPorcupineScene_Ipad.unity",
+              "Assets/Scenes/_03FAlligatorScene.unity",
+              "Assets/Scenes/_03FAlligatorScene_Ipad.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -173,12 +214,19 @@
               "Assets/_01MainMenu.unity",
               "Assets/AR_Prototype.unity",
               "Assets/Scenes/_02MiniGameSelect.unity",
+              "Assets/Scenes/_02MiniGameSelect_Ipad.unity",
               "Assets/Scenes/_03AGiraffeScene.unity",
+              "Assets/Scenes/_03AGiraffeScene_Ipad.unity",
               "Assets/Scenes/_03BHeronScene.unity",
+              "Assets/Scenes/_03BHeronScene_Ipad.unity",
               "Assets/Scenes/_03CPorcupineScene.unity",
+              "Assets/Scenes/_03CPorcupineScene_Ipad.unity",
               "Assets/Scenes/_03DSlothScene.unity",
+              "Assets/Scenes/_03DSlothScene_Ipad.unity",
               "Assets/Scenes/_03EPandaScene.unity",
-              "Assets/Scenes/_03FAlligatorScene.unity"
+              "Assets/Scenes/_03EPandaScene_Ipad.unity",
+              "Assets/Scenes/_03FAlligatorScene.unity",
+              "Assets/Scenes/_03FAlligatorScene_Ipad.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -201,12 +249,19 @@
               "Assets/_01MainMenu.unity",
               "Assets/AR_Prototype.unity",
               "Assets/Scenes/_02MiniGameSelect.unity",
+              "Assets/Scenes/_02MiniGameSelect_Ipad.unity",
               "Assets/Scenes/_03AGiraffeScene.unity",
+              "Assets/Scenes/_03AGiraffeScene_Ipad.unity",
               "Assets/Scenes/_03BHeronScene.unity",
+              "Assets/Scenes/_03BHeronScene_Ipad.unity",
               "Assets/Scenes/_03CPorcupineScene.unity",
+              "Assets/Scenes/_03CPorcupineScene_Ipad.unity",
               "Assets/Scenes/_03DSlothScene.unity",
+              "Assets/Scenes/_03DSlothScene_Ipad.unity",
               "Assets/Scenes/_03EPandaScene.unity",
-              "Assets/Scenes/_03FAlligatorScene.unity"
+              "Assets/Scenes/_03EPandaScene_Ipad.unity",
+              "Assets/Scenes/_03FAlligatorScene.unity",
+              "Assets/Scenes/_03FAlligatorScene_Ipad.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -229,12 +284,19 @@
               "Assets/_01MainMenu.unity",
               "Assets/AR_Prototype.unity",
               "Assets/Scenes/_02MiniGameSelect.unity",
+              "Assets/Scenes/_02MiniGameSelect_Ipad.unity",
               "Assets/Scenes/_03AGiraffeScene.unity",
+              "Assets/Scenes/_03AGiraffeScene_Ipad.unity",
               "Assets/Scenes/_03BHeronScene.unity",
+              "Assets/Scenes/_03BHeronScene_Ipad.unity",
               "Assets/Scenes/_03CPorcupineScene.unity",
+              "Assets/Scenes/_03CPorcupineScene_Ipad.unity",
               "Assets/Scenes/_03DSlothScene.unity",
+              "Assets/Scenes/_03DSlothScene_Ipad.unity",
               "Assets/Scenes/_03EPandaScene.unity",
-              "Assets/Scenes/_03FAlligatorScene.unity"
+              "Assets/Scenes/_03EPandaScene_Ipad.unity",
+              "Assets/Scenes/_03FAlligatorScene.unity",
+              "Assets/Scenes/_03FAlligatorScene_Ipad.unity"
             ],
             "dependencyType": 1,
             "icon": null
@@ -251,12 +313,19 @@
               "Assets/_01MainMenu.unity",
               "Assets/AR_Prototype.unity",
               "Assets/Scenes/_02MiniGameSelect.unity",
+              "Assets/Scenes/_02MiniGameSelect_Ipad.unity",
               "Assets/Scenes/_03AGiraffeScene.unity",
+              "Assets/Scenes/_03AGiraffeScene_Ipad.unity",
               "Assets/Scenes/_03BHeronScene.unity",
+              "Assets/Scenes/_03BHeronScene_Ipad.unity",
               "Assets/Scenes/_03CPorcupineScene.unity",
+              "Assets/Scenes/_03CPorcupineScene_Ipad.unity",
               "Assets/Scenes/_03DSlothScene.unity",
+              "Assets/Scenes/_03DSlothScene_Ipad.unity",
               "Assets/Scenes/_03EPandaScene.unity",
-              "Assets/Scenes/_03FAlligatorScene.unity"
+              "Assets/Scenes/_03EPandaScene_Ipad.unity",
+              "Assets/Scenes/_03FAlligatorScene.unity",
+              "Assets/Scenes/_03FAlligatorScene_Ipad.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -291,12 +360,19 @@
               "Assets/_01MainMenu.unity",
               "Assets/AR_Prototype.unity",
               "Assets/Scenes/_02MiniGameSelect.unity",
+              "Assets/Scenes/_02MiniGameSelect_Ipad.unity",
               "Assets/Scenes/_03AGiraffeScene.unity",
+              "Assets/Scenes/_03AGiraffeScene_Ipad.unity",
               "Assets/Scenes/_03BHeronScene.unity",
+              "Assets/Scenes/_03BHeronScene_Ipad.unity",
               "Assets/Scenes/_03CPorcupineScene.unity",
+              "Assets/Scenes/_03CPorcupineScene_Ipad.unity",
               "Assets/Scenes/_03DSlothScene.unity",
+              "Assets/Scenes/_03DSlothScene_Ipad.unity",
               "Assets/Scenes/_03EPandaScene.unity",
-              "Assets/Scenes/_03FAlligatorScene.unity"
+              "Assets/Scenes/_03EPandaScene_Ipad.unity",
+              "Assets/Scenes/_03FAlligatorScene.unity",
+              "Assets/Scenes/_03FAlligatorScene_Ipad.unity"
             ],
             "dependencyType": 1,
             "icon": null
@@ -307,12 +383,19 @@
               "Assets/_01MainMenu.unity",
               "Assets/AR_Prototype.unity",
               "Assets/Scenes/_02MiniGameSelect.unity",
+              "Assets/Scenes/_02MiniGameSelect_Ipad.unity",
               "Assets/Scenes/_03AGiraffeScene.unity",
+              "Assets/Scenes/_03AGiraffeScene_Ipad.unity",
               "Assets/Scenes/_03BHeronScene.unity",
+              "Assets/Scenes/_03BHeronScene_Ipad.unity",
               "Assets/Scenes/_03CPorcupineScene.unity",
+              "Assets/Scenes/_03CPorcupineScene_Ipad.unity",
               "Assets/Scenes/_03DSlothScene.unity",
+              "Assets/Scenes/_03DSlothScene_Ipad.unity",
               "Assets/Scenes/_03EPandaScene.unity",
-              "Assets/Scenes/_03FAlligatorScene.unity"
+              "Assets/Scenes/_03EPandaScene_Ipad.unity",
+              "Assets/Scenes/_03FAlligatorScene.unity",
+              "Assets/Scenes/_03FAlligatorScene_Ipad.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -341,12 +424,19 @@
               "Assets/_01MainMenu.unity",
               "Assets/AR_Prototype.unity",
               "Assets/Scenes/_02MiniGameSelect.unity",
+              "Assets/Scenes/_02MiniGameSelect_Ipad.unity",
               "Assets/Scenes/_03AGiraffeScene.unity",
+              "Assets/Scenes/_03AGiraffeScene_Ipad.unity",
               "Assets/Scenes/_03BHeronScene.unity",
+              "Assets/Scenes/_03BHeronScene_Ipad.unity",
               "Assets/Scenes/_03CPorcupineScene.unity",
+              "Assets/Scenes/_03CPorcupineScene_Ipad.unity",
               "Assets/Scenes/_03DSlothScene.unity",
+              "Assets/Scenes/_03DSlothScene_Ipad.unity",
               "Assets/Scenes/_03EPandaScene.unity",
-              "Assets/Scenes/_03FAlligatorScene.unity"
+              "Assets/Scenes/_03EPandaScene_Ipad.unity",
+              "Assets/Scenes/_03FAlligatorScene.unity",
+              "Assets/Scenes/_03FAlligatorScene_Ipad.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -369,12 +459,19 @@
               "Assets/_01MainMenu.unity",
               "Assets/AR_Prototype.unity",
               "Assets/Scenes/_02MiniGameSelect.unity",
+              "Assets/Scenes/_02MiniGameSelect_Ipad.unity",
               "Assets/Scenes/_03AGiraffeScene.unity",
+              "Assets/Scenes/_03AGiraffeScene_Ipad.unity",
               "Assets/Scenes/_03BHeronScene.unity",
+              "Assets/Scenes/_03BHeronScene_Ipad.unity",
               "Assets/Scenes/_03CPorcupineScene.unity",
+              "Assets/Scenes/_03CPorcupineScene_Ipad.unity",
               "Assets/Scenes/_03DSlothScene.unity",
+              "Assets/Scenes/_03DSlothScene_Ipad.unity",
               "Assets/Scenes/_03EPandaScene.unity",
-              "Assets/Scenes/_03FAlligatorScene.unity"
+              "Assets/Scenes/_03EPandaScene_Ipad.unity",
+              "Assets/Scenes/_03FAlligatorScene.unity",
+              "Assets/Scenes/_03FAlligatorScene_Ipad.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -382,7 +479,8 @@
           {
             "name": "Mesh",
             "scenes": [
-              "Assets/Scenes/_03FAlligatorScene.unity"
+              "Assets/Scenes/_03FAlligatorScene.unity",
+              "Assets/Scenes/_03FAlligatorScene_Ipad.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -390,7 +488,8 @@
           {
             "name": "MeshFilter",
             "scenes": [
-              "Assets/Scenes/_03FAlligatorScene.unity"
+              "Assets/Scenes/_03FAlligatorScene.unity",
+              "Assets/Scenes/_03FAlligatorScene_Ipad.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -398,7 +497,8 @@
           {
             "name": "MeshRenderer",
             "scenes": [
-              "Assets/Scenes/_03FAlligatorScene.unity"
+              "Assets/Scenes/_03FAlligatorScene.unity",
+              "Assets/Scenes/_03FAlligatorScene_Ipad.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -409,12 +509,19 @@
               "Assets/_01MainMenu.unity",
               "Assets/AR_Prototype.unity",
               "Assets/Scenes/_02MiniGameSelect.unity",
+              "Assets/Scenes/_02MiniGameSelect_Ipad.unity",
               "Assets/Scenes/_03AGiraffeScene.unity",
+              "Assets/Scenes/_03AGiraffeScene_Ipad.unity",
               "Assets/Scenes/_03BHeronScene.unity",
+              "Assets/Scenes/_03BHeronScene_Ipad.unity",
               "Assets/Scenes/_03CPorcupineScene.unity",
+              "Assets/Scenes/_03CPorcupineScene_Ipad.unity",
               "Assets/Scenes/_03DSlothScene.unity",
+              "Assets/Scenes/_03DSlothScene_Ipad.unity",
               "Assets/Scenes/_03EPandaScene.unity",
-              "Assets/Scenes/_03FAlligatorScene.unity"
+              "Assets/Scenes/_03EPandaScene_Ipad.unity",
+              "Assets/Scenes/_03FAlligatorScene.unity",
+              "Assets/Scenes/_03FAlligatorScene_Ipad.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -431,12 +538,19 @@
               "Assets/_01MainMenu.unity",
               "Assets/AR_Prototype.unity",
               "Assets/Scenes/_02MiniGameSelect.unity",
+              "Assets/Scenes/_02MiniGameSelect_Ipad.unity",
               "Assets/Scenes/_03AGiraffeScene.unity",
+              "Assets/Scenes/_03AGiraffeScene_Ipad.unity",
               "Assets/Scenes/_03BHeronScene.unity",
+              "Assets/Scenes/_03BHeronScene_Ipad.unity",
               "Assets/Scenes/_03CPorcupineScene.unity",
+              "Assets/Scenes/_03CPorcupineScene_Ipad.unity",
               "Assets/Scenes/_03DSlothScene.unity",
+              "Assets/Scenes/_03DSlothScene_Ipad.unity",
               "Assets/Scenes/_03EPandaScene.unity",
-              "Assets/Scenes/_03FAlligatorScene.unity"
+              "Assets/Scenes/_03EPandaScene_Ipad.unity",
+              "Assets/Scenes/_03FAlligatorScene.unity",
+              "Assets/Scenes/_03FAlligatorScene_Ipad.unity"
             ],
             "dependencyType": 1,
             "icon": null
@@ -447,12 +561,19 @@
               "Assets/_01MainMenu.unity",
               "Assets/AR_Prototype.unity",
               "Assets/Scenes/_02MiniGameSelect.unity",
+              "Assets/Scenes/_02MiniGameSelect_Ipad.unity",
               "Assets/Scenes/_03AGiraffeScene.unity",
+              "Assets/Scenes/_03AGiraffeScene_Ipad.unity",
               "Assets/Scenes/_03BHeronScene.unity",
+              "Assets/Scenes/_03BHeronScene_Ipad.unity",
               "Assets/Scenes/_03CPorcupineScene.unity",
+              "Assets/Scenes/_03CPorcupineScene_Ipad.unity",
               "Assets/Scenes/_03DSlothScene.unity",
+              "Assets/Scenes/_03DSlothScene_Ipad.unity",
               "Assets/Scenes/_03EPandaScene.unity",
-              "Assets/Scenes/_03FAlligatorScene.unity"
+              "Assets/Scenes/_03EPandaScene_Ipad.unity",
+              "Assets/Scenes/_03FAlligatorScene.unity",
+              "Assets/Scenes/_03FAlligatorScene_Ipad.unity"
             ],
             "dependencyType": 1,
             "icon": null
@@ -493,12 +614,19 @@
               "Assets/_01MainMenu.unity",
               "Assets/AR_Prototype.unity",
               "Assets/Scenes/_02MiniGameSelect.unity",
+              "Assets/Scenes/_02MiniGameSelect_Ipad.unity",
               "Assets/Scenes/_03AGiraffeScene.unity",
+              "Assets/Scenes/_03AGiraffeScene_Ipad.unity",
               "Assets/Scenes/_03BHeronScene.unity",
+              "Assets/Scenes/_03BHeronScene_Ipad.unity",
               "Assets/Scenes/_03CPorcupineScene.unity",
+              "Assets/Scenes/_03CPorcupineScene_Ipad.unity",
               "Assets/Scenes/_03DSlothScene.unity",
+              "Assets/Scenes/_03DSlothScene_Ipad.unity",
               "Assets/Scenes/_03EPandaScene.unity",
-              "Assets/Scenes/_03FAlligatorScene.unity"
+              "Assets/Scenes/_03EPandaScene_Ipad.unity",
+              "Assets/Scenes/_03FAlligatorScene.unity",
+              "Assets/Scenes/_03FAlligatorScene_Ipad.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -515,12 +643,19 @@
               "Assets/_01MainMenu.unity",
               "Assets/AR_Prototype.unity",
               "Assets/Scenes/_02MiniGameSelect.unity",
+              "Assets/Scenes/_02MiniGameSelect_Ipad.unity",
               "Assets/Scenes/_03AGiraffeScene.unity",
+              "Assets/Scenes/_03AGiraffeScene_Ipad.unity",
               "Assets/Scenes/_03BHeronScene.unity",
+              "Assets/Scenes/_03BHeronScene_Ipad.unity",
               "Assets/Scenes/_03CPorcupineScene.unity",
+              "Assets/Scenes/_03CPorcupineScene_Ipad.unity",
               "Assets/Scenes/_03DSlothScene.unity",
+              "Assets/Scenes/_03DSlothScene_Ipad.unity",
               "Assets/Scenes/_03EPandaScene.unity",
-              "Assets/Scenes/_03FAlligatorScene.unity"
+              "Assets/Scenes/_03EPandaScene_Ipad.unity",
+              "Assets/Scenes/_03FAlligatorScene.unity",
+              "Assets/Scenes/_03FAlligatorScene_Ipad.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -555,12 +690,19 @@
               "Assets/_01MainMenu.unity",
               "Assets/AR_Prototype.unity",
               "Assets/Scenes/_02MiniGameSelect.unity",
+              "Assets/Scenes/_02MiniGameSelect_Ipad.unity",
               "Assets/Scenes/_03AGiraffeScene.unity",
+              "Assets/Scenes/_03AGiraffeScene_Ipad.unity",
               "Assets/Scenes/_03BHeronScene.unity",
+              "Assets/Scenes/_03BHeronScene_Ipad.unity",
               "Assets/Scenes/_03CPorcupineScene.unity",
+              "Assets/Scenes/_03CPorcupineScene_Ipad.unity",
               "Assets/Scenes/_03DSlothScene.unity",
+              "Assets/Scenes/_03DSlothScene_Ipad.unity",
               "Assets/Scenes/_03EPandaScene.unity",
-              "Assets/Scenes/_03FAlligatorScene.unity"
+              "Assets/Scenes/_03EPandaScene_Ipad.unity",
+              "Assets/Scenes/_03FAlligatorScene.unity",
+              "Assets/Scenes/_03FAlligatorScene_Ipad.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -595,12 +737,19 @@
               "Assets/_01MainMenu.unity",
               "Assets/AR_Prototype.unity",
               "Assets/Scenes/_02MiniGameSelect.unity",
+              "Assets/Scenes/_02MiniGameSelect_Ipad.unity",
               "Assets/Scenes/_03AGiraffeScene.unity",
+              "Assets/Scenes/_03AGiraffeScene_Ipad.unity",
               "Assets/Scenes/_03BHeronScene.unity",
+              "Assets/Scenes/_03BHeronScene_Ipad.unity",
               "Assets/Scenes/_03CPorcupineScene.unity",
+              "Assets/Scenes/_03CPorcupineScene_Ipad.unity",
               "Assets/Scenes/_03DSlothScene.unity",
+              "Assets/Scenes/_03DSlothScene_Ipad.unity",
               "Assets/Scenes/_03EPandaScene.unity",
-              "Assets/Scenes/_03FAlligatorScene.unity"
+              "Assets/Scenes/_03EPandaScene_Ipad.unity",
+              "Assets/Scenes/_03FAlligatorScene.unity",
+              "Assets/Scenes/_03FAlligatorScene_Ipad.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -616,12 +765,19 @@
             "scenes": [
               "Assets/_01MainMenu.unity",
               "Assets/Scenes/_02MiniGameSelect.unity",
+              "Assets/Scenes/_02MiniGameSelect_Ipad.unity",
               "Assets/Scenes/_03AGiraffeScene.unity",
+              "Assets/Scenes/_03AGiraffeScene_Ipad.unity",
               "Assets/Scenes/_03BHeronScene.unity",
+              "Assets/Scenes/_03BHeronScene_Ipad.unity",
               "Assets/Scenes/_03CPorcupineScene.unity",
+              "Assets/Scenes/_03CPorcupineScene_Ipad.unity",
               "Assets/Scenes/_03DSlothScene.unity",
+              "Assets/Scenes/_03DSlothScene_Ipad.unity",
               "Assets/Scenes/_03EPandaScene.unity",
-              "Assets/Scenes/_03FAlligatorScene.unity"
+              "Assets/Scenes/_03EPandaScene_Ipad.unity",
+              "Assets/Scenes/_03FAlligatorScene.unity",
+              "Assets/Scenes/_03FAlligatorScene_Ipad.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -1162,7 +1318,8 @@
           {
             "name": "Collider",
             "scenes": [
-              "Assets/Scenes/_03FAlligatorScene.unity"
+              "Assets/Scenes/_03FAlligatorScene.unity",
+              "Assets/Scenes/_03FAlligatorScene_Ipad.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -1170,7 +1327,8 @@
           {
             "name": "MeshCollider",
             "scenes": [
-              "Assets/Scenes/_03FAlligatorScene.unity"
+              "Assets/Scenes/_03FAlligatorScene.unity",
+              "Assets/Scenes/_03FAlligatorScene_Ipad.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -1220,8 +1378,11 @@
             "name": "BoxCollider2D",
             "scenes": [
               "Assets/Scenes/_03BHeronScene.unity",
+              "Assets/Scenes/_03BHeronScene_Ipad.unity",
               "Assets/Scenes/_03CPorcupineScene.unity",
-              "Assets/Scenes/_03FAlligatorScene.unity"
+              "Assets/Scenes/_03CPorcupineScene_Ipad.unity",
+              "Assets/Scenes/_03FAlligatorScene.unity",
+              "Assets/Scenes/_03FAlligatorScene_Ipad.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -1254,7 +1415,9 @@
             "name": "Rigidbody2D",
             "scenes": [
               "Assets/Scenes/_03BHeronScene.unity",
-              "Assets/Scenes/_03FAlligatorScene.unity"
+              "Assets/Scenes/_03BHeronScene_Ipad.unity",
+              "Assets/Scenes/_03FAlligatorScene.unity",
+              "Assets/Scenes/_03FAlligatorScene_Ipad.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -1649,12 +1812,19 @@
               "Assets/_01MainMenu.unity",
               "Assets/AR_Prototype.unity",
               "Assets/Scenes/_02MiniGameSelect.unity",
+              "Assets/Scenes/_02MiniGameSelect_Ipad.unity",
               "Assets/Scenes/_03AGiraffeScene.unity",
+              "Assets/Scenes/_03AGiraffeScene_Ipad.unity",
               "Assets/Scenes/_03BHeronScene.unity",
+              "Assets/Scenes/_03BHeronScene_Ipad.unity",
               "Assets/Scenes/_03CPorcupineScene.unity",
+              "Assets/Scenes/_03CPorcupineScene_Ipad.unity",
               "Assets/Scenes/_03DSlothScene.unity",
+              "Assets/Scenes/_03DSlothScene_Ipad.unity",
               "Assets/Scenes/_03EPandaScene.unity",
-              "Assets/Scenes/_03FAlligatorScene.unity"
+              "Assets/Scenes/_03EPandaScene_Ipad.unity",
+              "Assets/Scenes/_03FAlligatorScene.unity",
+              "Assets/Scenes/_03FAlligatorScene_Ipad.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -1723,12 +1893,19 @@
               "Assets/_01MainMenu.unity",
               "Assets/AR_Prototype.unity",
               "Assets/Scenes/_02MiniGameSelect.unity",
+              "Assets/Scenes/_02MiniGameSelect_Ipad.unity",
               "Assets/Scenes/_03AGiraffeScene.unity",
+              "Assets/Scenes/_03AGiraffeScene_Ipad.unity",
               "Assets/Scenes/_03BHeronScene.unity",
+              "Assets/Scenes/_03BHeronScene_Ipad.unity",
               "Assets/Scenes/_03CPorcupineScene.unity",
+              "Assets/Scenes/_03CPorcupineScene_Ipad.unity",
               "Assets/Scenes/_03DSlothScene.unity",
+              "Assets/Scenes/_03DSlothScene_Ipad.unity",
               "Assets/Scenes/_03EPandaScene.unity",
-              "Assets/Scenes/_03FAlligatorScene.unity"
+              "Assets/Scenes/_03EPandaScene_Ipad.unity",
+              "Assets/Scenes/_03FAlligatorScene.unity",
+              "Assets/Scenes/_03FAlligatorScene_Ipad.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -1747,12 +1924,19 @@
               "Assets/_01MainMenu.unity",
               "Assets/AR_Prototype.unity",
               "Assets/Scenes/_02MiniGameSelect.unity",
+              "Assets/Scenes/_02MiniGameSelect_Ipad.unity",
               "Assets/Scenes/_03AGiraffeScene.unity",
+              "Assets/Scenes/_03AGiraffeScene_Ipad.unity",
               "Assets/Scenes/_03BHeronScene.unity",
+              "Assets/Scenes/_03BHeronScene_Ipad.unity",
               "Assets/Scenes/_03CPorcupineScene.unity",
+              "Assets/Scenes/_03CPorcupineScene_Ipad.unity",
               "Assets/Scenes/_03DSlothScene.unity",
+              "Assets/Scenes/_03DSlothScene_Ipad.unity",
               "Assets/Scenes/_03EPandaScene.unity",
-              "Assets/Scenes/_03FAlligatorScene.unity"
+              "Assets/Scenes/_03EPandaScene_Ipad.unity",
+              "Assets/Scenes/_03FAlligatorScene.unity",
+              "Assets/Scenes/_03FAlligatorScene_Ipad.unity"
             ],
             "dependencyType": 0,
             "icon": null

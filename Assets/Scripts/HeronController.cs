@@ -1,7 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
-using UnityEngine.SceneManagement;
 
 public class HeronLevelController : MonoBehaviour
 {
@@ -265,6 +264,6 @@ public class HeronLevelController : MonoBehaviour
 
     public void OnBackToMenuPressed()
     {
-        SceneManager.LoadScene(menuSceneName);
+        AsyncSceneLoader.Load(DeviceDetector.GetSceneName(menuSceneName));
     }
 }

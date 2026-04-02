@@ -53,7 +53,6 @@ public class ARImageTracker : MonoBehaviour
     private ARTrackedImageManager trackedImageManager;
     private Transform arCamera;
     private GameObject _activeInstance;
-    private TrackedState _activeState;
 
     private class TrackedState
     {
@@ -70,7 +69,6 @@ public class ARImageTracker : MonoBehaviour
     }
 
     private readonly Dictionary<TrackableId, TrackedState> states = new();
-    private TrackedState _testState; // editor simulation only
 
     private Text statusText;
     private Image statusBackground;
@@ -96,8 +94,6 @@ public class ARImageTracker : MonoBehaviour
 
         if (arCamera == null)
             Debug.LogWarning("[ARImageTracker] No camera found.");
-
-        BuildTestButtons();
     }
 
     void OnEnable()
@@ -225,16 +221,7 @@ public class ARImageTracker : MonoBehaviour
             }
         }
 
-        // Test button scale update (editor/device testing)
-        if (_testState != null && _activeInstance != null && arCamera != null)
-        {
-            float dist = Vector3.Distance(arCamera.position, _activeInstance.transform.position);
-            float targetScale = _testState.anchorScale * (dist / Mathf.Max(_testState.anchorDistance, 0.001f));
-            _testState.currentScale = Mathf.Lerp(_testState.currentScale, targetScale, scaleSmoothSpeed * Time.deltaTime);
-            _activeInstance.transform.localScale = Vector3.one * Mathf.Max(_testState.currentScale, 0.001f);
-        }
-
-        if (anyConfirmed)     SetStatusConfirmed(confirmedName);
+if (anyConfirmed)     SetStatusConfirmed(confirmedName);
         else if (anyScanning) SetStatusScanning(bestProgress);
         else                  SetStatusIdle();
     }
@@ -292,7 +279,6 @@ public class ARImageTracker : MonoBehaviour
 
         _activeInstance = Instantiate(state.loadedPrefab, spawnPos, Quaternion.identity);
         _activeInstance.transform.localScale = Vector3.one * scale;
-        _activeState = state;
 
         if (scannedImages.Add(state.imageName))
             OnNewImageScanned?.Invoke(state.imageName);
@@ -315,99 +301,6 @@ public class ARImageTracker : MonoBehaviour
             Destroy(_activeInstance);
             _activeInstance = null;
         }
-        _activeState = null;
-        _testState = null;
-    }
-
-    // ── Test Buttons (remove before release) ─────────────────────────────────
-
-    [Header("Test Buttons (disable for release)")]
-    public bool showTestButtons = true;
-
-    void BuildTestButtons()
-    {
-        if (!showTestButtons || imagePrefabs == null || imagePrefabs.Length == 0) return;
-
-        var canvasGO = new GameObject("TestButtonCanvas");
-        var canvas = canvasGO.AddComponent<Canvas>();
-        canvas.renderMode = RenderMode.ScreenSpaceOverlay;
-        canvas.sortingOrder = 9999;
-        var scaler = canvasGO.AddComponent<CanvasScaler>();
-        scaler.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
-        scaler.referenceResolution = new Vector2(1080, 1920);
-        canvasGO.AddComponent<GraphicRaycaster>();
-
-        float btnH = 80f, pad = 10f;
-
-        for (int i = 0; i < imagePrefabs.Length; i++)
-        {
-            string name = imagePrefabs[i].imageName;
-
-            var btnGO = new GameObject($"TestBtn_{name}");
-            btnGO.transform.SetParent(canvasGO.transform, false);
-
-            var img = btnGO.AddComponent<Image>();
-            img.color = new Color(0.2f, 0.6f, 1f, 0.9f);
-
-            var btn = btnGO.AddComponent<Button>();
-            int captured = i;
-            btn.onClick.AddListener(() => SimulateScan(imagePrefabs[captured].imageName));
-
-            var rect = btnGO.GetComponent<RectTransform>();
-            rect.anchorMin = rect.anchorMax = rect.pivot = new Vector2(0f, 1f);
-            rect.anchoredPosition = new Vector2(pad, -(pad + i * (btnH + pad)));
-            rect.sizeDelta = new Vector2(280f, btnH);
-
-            var textGO = new GameObject("Label");
-            textGO.transform.SetParent(btnGO.transform, false);
-            var txt = textGO.AddComponent<Text>();
-            txt.text = name;
-            txt.font = Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
-            txt.fontSize = 28;
-            txt.color = Color.white;
-            txt.alignment = TextAnchor.MiddleCenter;
-            var txtRect = textGO.GetComponent<RectTransform>();
-            txtRect.anchorMin = Vector2.zero;
-            txtRect.anchorMax = Vector2.one;
-            txtRect.offsetMin = txtRect.offsetMax = Vector2.zero;
-        }
-    }
-
-    void SimulateScan(string imageName)
-    {
-        Debug.Log($"[ARImageTracker] TEST: Simulating scan for '{imageName}'");
-
-        string path = ResourcesPath + imageName;
-        GameObject prefab = Resources.Load<GameObject>(path);
-
-        if (prefab == null)
-        {
-            Debug.LogError($"[ARImageTracker] TEST FAILED: Could not find prefab at 'Resources/{path}'. " +
-                           $"Make sure the file exists at Assets/Resources/{path}.prefab");
-            return;
-        }
-
-        Vector3 spawnPos = arCamera != null
-            ? arCamera.position + arCamera.forward * 3f
-            : new Vector3(0f, 0f, 3f);
-
-        Debug.Log($"[ARImageTracker] TEST: Prefab found, instantiating at {spawnPos}.");
-        DestroyActive();
-        float scale = GetScale(imageName);
-        _activeInstance = Instantiate(prefab, spawnPos, Quaternion.identity);
-        _activeInstance.transform.localScale = Vector3.one * scale;
-
-        _activeState = _testState = new TrackedState
-        {
-            imageName    = imageName,
-            confirmed    = true,
-            anchorPosition = spawnPos,
-            anchorDistance = Vector3.Distance(arCamera != null ? arCamera.position : Vector3.zero, spawnPos),
-            anchorScale  = scale,
-            currentScale = scale
-        };
-
-        Debug.Log($"[ARImageTracker] TEST: Spawned '{imageName}' successfully.");
     }
 
     // ── Status UI ─────────────────────────────────────────────────────────────

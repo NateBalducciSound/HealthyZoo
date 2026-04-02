@@ -97,6 +97,8 @@ extern void AudioManager_PlayComplete_m1637E42A6C31675AEC0EF674F04043990A18CF0F 
 extern void AudioManager__ctor_mA793A9DF6B975D03690B7C953972EFE41AE4D5E6 (void);
 extern void ButtonClickSound_Awake_m3E53219FF4F87DF377E1BCECE7DBC17604D905F6 (void);
 extern void ButtonClickSound__ctor_mE46C694C888195349648DDB3DED72687DD03848B (void);
+extern void DeviceDetector_get_IsTablet_mF1779DF49C19E6AAEE6B74AC1804E2E231E8DDB8 (void);
+extern void DeviceDetector_GetSceneName_m3A1CF9DCBABFE2674EEE558A4732766515768FE0 (void);
 extern void DevResetProgress_ResetProgress_m28FFADE47E0CF6E98BEEE336000723E070065182 (void);
 extern void DevResetProgress__ctor_mE6E5856799AB38F57BAE097D86D8606B32D7C425 (void);
 extern void DialogueController_get_IsInputLocked_m3A6E5E81AF5C912F6DB77BED0A67F36C1C34FDE9 (void);
@@ -288,7 +290,7 @@ extern void SceneTemplate_RotateCube__ctor_mC7E11C05D25FFF6F8D7EA06AAE5598B49736
 extern void StartPostSequence__ctor_m5535B7D269F35B0FB20CC128BC74E9E3256F0EDA (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033 (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1 (void);
-static Il2CppMethodPointer s_methodPointers[281] = 
+static Il2CppMethodPointer s_methodPointers[283] = 
 {
 	UniversalAdaptiveCanvas_Awake_m2CA5055CA0B42C711D06D7AEEC2CA8D81DADF382,
 	UniversalAdaptiveCanvas_Apply_m01FE07CBE0D8C30A939D42DD22DBC10144D886A3,
@@ -380,6 +382,8 @@ static Il2CppMethodPointer s_methodPointers[281] =
 	AudioManager__ctor_mA793A9DF6B975D03690B7C953972EFE41AE4D5E6,
 	ButtonClickSound_Awake_m3E53219FF4F87DF377E1BCECE7DBC17604D905F6,
 	ButtonClickSound__ctor_mE46C694C888195349648DDB3DED72687DD03848B,
+	DeviceDetector_get_IsTablet_mF1779DF49C19E6AAEE6B74AC1804E2E231E8DDB8,
+	DeviceDetector_GetSceneName_m3A1CF9DCBABFE2674EEE558A4732766515768FE0,
 	DevResetProgress_ResetProgress_m28FFADE47E0CF6E98BEEE336000723E070065182,
 	DevResetProgress__ctor_mE6E5856799AB38F57BAE097D86D8606B32D7C425,
 	DialogueController_get_IsInputLocked_m3A6E5E81AF5C912F6DB77BED0A67F36C1C34FDE9,
@@ -572,7 +576,7 @@ static Il2CppMethodPointer s_methodPointers[281] =
 	UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033,
 	UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1,
 };
-static const int32_t s_InvokerIndices[281] = 
+static const int32_t s_InvokerIndices[283] = 
 {
 	16629,
 	16629,
@@ -664,6 +668,8 @@ static const int32_t s_InvokerIndices[281] =
 	16629,
 	16629,
 	16629,
+	28781,
+	27211,
 	16629,
 	16629,
 	16207,
@@ -860,7 +866,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	281,
+	283,
 	s_methodPointers,
 	0,
 	NULL,

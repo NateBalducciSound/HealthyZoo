@@ -912,7 +912,6 @@ MonoBehaviour:
   spawnDistance: 0.5
   spawnScale: 0.25
   scaleSmoothSpeed: 6
-  showTestButtons: 1
 --- !u!114 &2512387470422636672
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1041,11 +1040,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6221821459216329268, guid: d684b90d5e70447f0a086034ebb49bf8, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -372
+      value: -380
       objectReference: {fileID: 0}
     - target: {fileID: 6221821459216329268, guid: d684b90d5e70447f0a086034ebb49bf8, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 800
+      value: 705.9
       objectReference: {fileID: 0}
     - target: {fileID: 6221821459216329268, guid: d684b90d5e70447f0a086034ebb49bf8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

@@ -23,7 +23,9 @@ public class SplashScreenController : MonoBehaviour
     [Tooltip("Seconds to fade out the splash panel when dismissed")]
     [SerializeField] private float fadeDuration = 0.5f;
 
-    private const string SeenKey = "SplashScreen_Seen";
+    // Static: survives scene loads within the same app session, resets on cold start
+    private static bool _shownThisSession = false;
+
     private CanvasGroup _canvasGroup;
     private bool _dismissed = false;
 
@@ -33,8 +35,8 @@ public class SplashScreenController : MonoBehaviour
         if (_canvasGroup == null)
             _canvasGroup = gameObject.AddComponent<CanvasGroup>();
 
-        // Only show on first ever launch — never again, even after reset
-        if (PlayerPrefs.GetInt(SeenKey, 0) == 1)
+        // Skip if already shown this session (e.g. returning from a mini game)
+        if (_shownThisSession)
         {
             _canvasGroup.alpha = 0f;
             _canvasGroup.blocksRaycasts = false;
@@ -42,8 +44,7 @@ public class SplashScreenController : MonoBehaviour
             return;
         }
 
-        PlayerPrefs.SetInt(SeenKey, 1);
-        PlayerPrefs.Save();
+        _shownThisSession = true;
 
         _canvasGroup.alpha = 1f;
         _canvasGroup.blocksRaycasts = true;

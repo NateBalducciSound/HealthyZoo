@@ -1026,7 +1026,7 @@ Camera:
   far clip plane: 100
   field of view: 167
   orthographic: 1
-  orthographic size: 11.028571
+  orthographic size: 6.5047617
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1870,7 +1870,7 @@ MonoBehaviour:
   dialogueController: {fileID: 919989833}
   congratsDelay: 2
   buttonParent: {fileID: 298625174}
-  congratsPrefab: {fileID: 6593994255132046064, guid: b532888a7b9e34dabbad836db8ff270f, type: 3}
+  congratsPrefab: {fileID: 6593994255132046064, guid: 9e3585a2d2dd5417697c96504b4a5892, type: 3}
   congratsScale: {x: 5, y: 8, z: 1}
   congratsPosition: {x: 0, y: -772, z: 0}
   grabbableType: 0
