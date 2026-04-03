@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 // Moving this OUTSIDE the class makes it accessible to DropZone2D
@@ -39,16 +40,18 @@ public class AlligatorController : MonoBehaviour
         // Ensure the item knows it was dropped so it doesn't snap back instantly
         item.MarkHandled();
 
+        item.Hide();
+
         switch (zone)
         {
             case DropZoneType.Hand:
                 animator.SetTrigger("HandSlap");
-                item.ReturnToStart(0.5f);
+                StartCoroutine(ReturnAfterAnimation(item));
                 break;
 
             case DropZoneType.Eyes:
                 animator.SetTrigger("EyeReject");
-                item.ReturnToStart(0.3f);
+                StartCoroutine(ReturnAfterAnimation(item));
                 break;
 
             case DropZoneType.Nose:
@@ -67,7 +70,7 @@ public class AlligatorController : MonoBehaviour
         mouthIsOpen = true;
         animator.SetTrigger("OpenMouth");
         mouthDropZone.SetActive(true);
-        item.ReturnToStart(0.2f);
+        item.ShowAtStart();
 
         foreach (var zone in dropZonesToDisableAfterNose)
             if (zone != null) zone.SetActive(false);
@@ -78,8 +81,23 @@ public class AlligatorController : MonoBehaviour
         if (!mouthIsOpen || mouthTaskComplete) return;
         mouthTaskComplete = true;
         animator.SetTrigger("CongratsStart");
-        item.ReturnToStart(0.2f);
-        Invoke(nameof(StartCelebration), 1.0f); 
+        item.ShowAtStart();
+        Invoke(nameof(StartCelebration), 1.0f);
+    }
+
+    // Waits one frame for the Animator to enter the new state, then waits for
+    // most of the clip before snapping the item back — slightly early so there
+    // is no visible gap between the animation ending and the item reappearing.
+    [Tooltip("Seconds before the end of the animation clip to respawn the tongue depressor")]
+    public float respawnEarlyBy = 0.15f;
+
+    private IEnumerator ReturnAfterAnimation(Draggable2D item)
+    {
+        yield return null; // let the Animator transition into the new state
+        AnimatorStateInfo state = animator.GetCurrentAnimatorStateInfo(0);
+        float waitTime = Mathf.Max(0f, state.length - respawnEarlyBy);
+        yield return new WaitForSeconds(waitTime);
+        item.ShowAtStart();
     }
 
     private void StartCelebration()

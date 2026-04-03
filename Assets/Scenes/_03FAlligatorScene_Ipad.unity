@@ -823,7 +823,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -4.8, y: 9.1}
+  m_AnchoredPosition: {x: -0.99, y: 9.74}
   m_SizeDelta: {x: 1.89, y: 3.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!50 &612562734
@@ -887,7 +887,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.18699887}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -897,7 +897,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.89, y: 3.8}
+  m_Size: {x: 1.89, y: 1.4194782}
   m_EdgeRadius: 0
 --- !u!1 &961739749
 GameObject:
@@ -1165,6 +1165,7 @@ MonoBehaviour:
   - {fileID: 1280969785}
   - {fileID: 1551762025}
   dialogueController: {fileID: 221412551}
+  respawnEarlyBy: 0.15
 --- !u!4 &1062466388
 Transform:
   m_ObjectHideFlags: 0
@@ -1408,15 +1409,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7821061757754064988, guid: b532888a7b9e34dabbad836db8ff270f, type: 3}
       propertyPath: m_LocalScale.x
-      value: 9
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7821061757754064988, guid: b532888a7b9e34dabbad836db8ff270f, type: 3}
       propertyPath: m_LocalScale.y
-      value: 9
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7821061757754064988, guid: b532888a7b9e34dabbad836db8ff270f, type: 3}
       propertyPath: m_LocalScale.z
-      value: 3
+      value: 2.3333335
       objectReference: {fileID: 0}
     - target: {fileID: 7821061757754064988, guid: b532888a7b9e34dabbad836db8ff270f, type: 3}
       propertyPath: m_LocalPosition.x

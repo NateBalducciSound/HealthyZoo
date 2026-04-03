@@ -722,8 +722,8 @@ MonoBehaviour:
   dialogueController: {fileID: 1508713120}
   congratsPrefab: {fileID: 6593994255132046064, guid: 3baf5b8fffe344e90962ff3b01b4cf3c, type: 3}
   buttonParent: {fileID: 316504134}
-  congratsPosition: {x: 0, y: 5, z: 0}
-  congratsScale: {x: 5, y: 7, z: 5}
+  congratsPosition: {x: 0, y: 8, z: 0}
+  congratsScale: {x: 4, y: 8, z: 5}
 --- !u!4 &559566815
 Transform:
   m_ObjectHideFlags: 0

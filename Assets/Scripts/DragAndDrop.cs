@@ -13,6 +13,7 @@ public class Draggable2D : MonoBehaviour
     public DialogueController dialogueController;
 
     private Camera mainCamera;
+    private Rigidbody2D rb;
     private Vector3 startPosition;
     private Vector3 offset;
     public bool IsDragging { get; private set; }
@@ -24,6 +25,7 @@ public class Draggable2D : MonoBehaviour
     private void Awake()
     {
         mainCamera = Camera.main;
+        rb = GetComponent<Rigidbody2D>();
         
         // --- NEW SPAWN LOGIC ---
         // If a spawn point is assigned, use it. Otherwise, use current position.
@@ -63,6 +65,7 @@ public class Draggable2D : MonoBehaviour
             if (IsTouchingObject(worldPos) && !IsDialogueLocked())
             {
                 isDragging = true;
+                if (rb != null) rb.isKinematic = true;
                 offset = transform.position - worldPos;
                 wasHandled = false;
                 NotifyDialogueStarted();
@@ -94,6 +97,7 @@ public class Draggable2D : MonoBehaviour
             if (IsTouchingObject(world) && !IsDialogueLocked())
             {
                 isDragging = true;
+                if (rb != null) rb.isKinematic = true;
                 offset = transform.position - world;
                 wasHandled = false;
                 NotifyDialogueStarted();
@@ -118,8 +122,17 @@ public class Draggable2D : MonoBehaviour
     {
         if (wasHandled) return;
 
-        if (currentHoverZone != null)
-            currentHoverZone.ConfirmDrop(this);
+        // Physics triggers can lag a frame behind transform movement, so do an
+        // immediate overlap check at the current position to catch fast drops.
+        DropZone2D zone = currentHoverZone;
+        if (zone == null)
+        {
+            Collider2D hit = Physics2D.OverlapPoint(transform.position);
+            if (hit != null) hit.TryGetComponent(out zone);
+        }
+
+        if (zone != null)
+            zone.ConfirmDrop(this);
         else
             ReturnToStart();
     }
@@ -146,6 +159,25 @@ public class Draggable2D : MonoBehaviour
         if (_hasNotifiedDialogue) return;
         _hasNotifiedDialogue = true;
         if (dialogueController != null) dialogueController.OnPlayerStarted();
+    }
+
+    public void Hide()
+    {
+        foreach (var r in GetComponentsInChildren<Renderer>())
+            r.enabled = false;
+    }
+
+    public void Show()
+    {
+        foreach (var r in GetComponentsInChildren<Renderer>())
+            r.enabled = true;
+    }
+
+    public void ShowAtStart()
+    {
+        transform.position = spawnPoint != null ? spawnPoint.position : startPosition;
+        wasHandled = false;
+        Show();
     }
 
     public void MarkHandled()
