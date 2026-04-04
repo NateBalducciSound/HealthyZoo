@@ -17,6 +17,11 @@ public class SplashScreenController : MonoBehaviour
     [Tooltip("Optional — if assigned, this text/image fades in after the voice line finishes")]
     [SerializeField] private GameObject continuePrompt;
 
+    [Header("Device Sprites")]
+    [SerializeField] private Image splashImage;
+    [SerializeField] private Sprite phoneSprite;
+    [SerializeField] private Sprite ipadSprite;
+
     [Header("Settings")]
     [Tooltip("Player can tap to dismiss before the voice line finishes")]
     [SerializeField] private bool allowSkip = true;
@@ -45,6 +50,13 @@ public class SplashScreenController : MonoBehaviour
         }
 
         _shownThisSession = true;
+
+        // Swap to the correct sprite for this device.
+        if (splashImage != null)
+        {
+            var sprite = DeviceDetector.IsTablet ? ipadSprite : phoneSprite;
+            if (sprite != null) splashImage.sprite = sprite;
+        }
 
         _canvasGroup.alpha = 1f;
         _canvasGroup.blocksRaycasts = true;

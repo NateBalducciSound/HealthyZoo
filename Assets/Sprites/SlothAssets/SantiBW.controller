@@ -8,7 +8,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: SlothStartupAnim
-  m_Speed: 0.66
+  m_Speed: 0.4
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -235259808321736197}
@@ -35,7 +35,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: SlothLoopAnim
-  m_Speed: 0.66
+  m_Speed: 0.4
   m_CycleOffset: 0
   m_Transitions: []
   m_StateMachineBehaviours: []

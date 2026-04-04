@@ -2,9 +2,8 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using System.Collections;
 
-// Plays a voice line the first time the player ever enters this scene.
-// Uses PlayerPrefs to remember if it has already played — won't repeat on future visits.
-// Attach to any GameObject in the scene (e.g. DialogueManager).
+// Plays a voice line once per app session each time the player enters this scene.
+// Resets when the app is closed and reopened. Attach to any GameObject in the scene.
 
 public class FirstVisitDialogue : MonoBehaviour
 {
@@ -18,6 +17,9 @@ public class FirstVisitDialogue : MonoBehaviour
     [Tooltip("Block all input while the line plays")]
     [SerializeField] private bool lockInputDuringLine = true;
 
+    // Tracks which keys have already played this session (resets on app restart).
+    private static readonly System.Collections.Generic.HashSet<string> _playedThisSession = new();
+
     private EventSystem _eventSystem;
 
     void Start()
@@ -27,14 +29,13 @@ public class FirstVisitDialogue : MonoBehaviour
 
         _eventSystem = EventSystem.current;
 
-        if (PlayerPrefs.GetInt(prefsKey, 0) == 0)
+        if (!_playedThisSession.Contains(prefsKey))
             StartCoroutine(PlayFirstVisit());
     }
 
     IEnumerator PlayFirstVisit()
     {
-        PlayerPrefs.SetInt(prefsKey, 1);
-        PlayerPrefs.Save();
+        _playedThisSession.Add(prefsKey);
 
         if (lockInputDuringLine && _eventSystem != null)
             _eventSystem.enabled = false;
@@ -46,11 +47,11 @@ public class FirstVisitDialogue : MonoBehaviour
             _eventSystem.enabled = true;
     }
 
-    // Call this from the Editor or a debug button to reset so the line plays again
+    // Call this from the Editor or a debug button to force it to play again this session.
     [ContextMenu("Reset First Visit")]
     public void ResetFirstVisit()
     {
-        PlayerPrefs.DeleteKey(prefsKey);
+        _playedThisSession.Remove(prefsKey);
         Debug.Log($"[FirstVisit] Reset key: {prefsKey}");
     }
 }

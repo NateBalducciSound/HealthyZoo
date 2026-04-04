@@ -59,7 +59,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: HeronCelebrationLoopAnimation
-  m_Speed: 0.66
+  m_Speed: 0.4
   m_CycleOffset: 0
   m_Transitions: []
   m_StateMachineBehaviours: []
@@ -288,7 +288,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: HeronStartUpAnimation
-  m_Speed: 0.66
+  m_Speed: 0.4
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -5915222947674284022}

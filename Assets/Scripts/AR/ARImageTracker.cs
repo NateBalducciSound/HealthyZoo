@@ -28,8 +28,8 @@ public class ARImageTracker : MonoBehaviour
     [Tooltip("Seconds of continuous tracking before the prefab appears.")]
     public float scanConfirmTime = 1.5f;
 
-    [Tooltip("Seconds of lost tracking before the prefab is destroyed.")]
-    public float lostGraceTime = 0.8f;
+    [Tooltip("Seconds a trackable must be lost before it can be rescanned.")]
+    public float rescanCooldown = 1.5f;
 
     [Tooltip("How far in front of the camera to spawn (metres).")]
     public float spawnDistance = 0.5f;
@@ -37,8 +37,8 @@ public class ARImageTracker : MonoBehaviour
     [Tooltip("Base world size of the sprite at spawnDistance.")]
     public float spawnScale = 0.1f;
 
-    [Tooltip("How smoothly the scale adjusts to distance changes.")]
-    public float scaleSmoothSpeed = 6f;
+    [Tooltip("Assign the 'Rectangle' GameObject from the Canvas here — hidden when a character is active, shown when scanning.")]
+    public GameObject scanningIndicator;
 
     // ── Scan Log ──────────────────────────────────────────────────────────────
 
@@ -54,16 +54,17 @@ public class ARImageTracker : MonoBehaviour
     private Transform arCamera;
     private GameObject _activeInstance;
 
+    private enum ScanState { Idle, Scanning, Active }
+    private ScanState _state = ScanState.Idle;
+
     private class TrackedState
     {
         public string imageName;
         public float scanTimer;
         public float lostTimer;
-        public bool confirmed;
-        public float currentScale;
-        public float anchorScale;       // scale at the moment of spawn
-        public float anchorDistance;    // camera distance at the moment of spawn
-        public Vector3 anchorPosition;  // world position locked at spawn
+        // True only during the cooldown after this trackable just spawned a character,
+        // preventing it from immediately re-triggering.
+        public bool onCooldown;
         public GameObject loadedPrefab;
         public bool isLoading;
     }
@@ -94,6 +95,8 @@ public class ARImageTracker : MonoBehaviour
 
         if (arCamera == null)
             Debug.LogWarning("[ARImageTracker] No camera found.");
+
+        ApplyState(ScanState.Idle);
     }
 
     void OnEnable()
@@ -116,30 +119,16 @@ public class ARImageTracker : MonoBehaviour
             states[img.trackableId] = new TrackedState { imageName = img.referenceImage.name };
 
         foreach (var img in eventArgs.removed)
-        {
-            if (states.TryGetValue(img.trackableId, out var s))
-            {
-                if (s.confirmed) DestroyActive();
-                states.Remove(img.trackableId);
-            }
-            RefreshStatusUI();
-        }
+            states.Remove(img.trackableId);
     }
 
     // ── Update ────────────────────────────────────────────────────────────────
-
-    // Tracks estimated camera displacement using accelerometer when image is lost
-    private Vector3 _accelVelocity = Vector3.zero;
-    private Vector3 _accelDisplacement = Vector3.zero;
-    private bool _accelTracking = false;
 
     void Update()
     {
         if (trackedImageManager == null || arCamera == null) return;
 
-        bool anyScanning  = false;
-        bool anyConfirmed = false;
-        string confirmedName = null;
+        bool anyScanning = false;
         float bestProgress = 0f;
 
         foreach (var img in trackedImageManager.trackables)
@@ -149,81 +138,56 @@ public class ARImageTracker : MonoBehaviour
             if (img.trackingState == TrackingState.Tracking)
             {
                 state.lostTimer = 0f;
+
+                // Still on cooldown after spawning — wait until the user points away first.
+                if (state.onCooldown) continue;
+
                 state.scanTimer += Time.deltaTime;
-                _accelTracking = false;
-                _accelVelocity = Vector3.zero;
-                _accelDisplacement = Vector3.zero;
+                float progress = Mathf.Clamp01(state.scanTimer / scanConfirmTime);
+                if (progress > bestProgress) bestProgress = progress;
+                anyScanning = true;
 
-                if (state.confirmed && _activeInstance != null)
+                // Preload the prefab halfway through the scan timer.
+                if (!state.isLoading && state.scanTimer >= scanConfirmTime * 0.5f)
+                    StartCoroutine(LoadPrefabAsync(state));
+
+                if (state.scanTimer >= scanConfirmTime && state.loadedPrefab != null)
                 {
-                    // Use the actual tracked image world position for accurate distance
-                    _activeInstance.transform.position = state.anchorPosition;
-                    float dist = Vector3.Distance(arCamera.position, img.transform.position);
-                    float targetScale = state.anchorScale * (dist / Mathf.Max(state.anchorDistance, 0.001f));
-                    state.currentScale = Mathf.Lerp(state.currentScale, targetScale, scaleSmoothSpeed * Time.deltaTime);
-                    _activeInstance.transform.localScale = Vector3.one * Mathf.Max(state.currentScale, 0.001f);
-                    anyConfirmed = true;
-                    confirmedName = state.imageName;
-                }
-                else if (!state.confirmed)
-                {
-                    float progress = Mathf.Clamp01(state.scanTimer / scanConfirmTime);
-                    if (progress > bestProgress) bestProgress = progress;
-                    anyScanning = true;
-
-                    if (!state.isLoading && state.scanTimer >= scanConfirmTime * 0.5f)
-                        StartCoroutine(LoadPrefabAsync(state));
-
-                    if (state.scanTimer >= scanConfirmTime && state.loadedPrefab != null)
-                        Confirm(state);
+                    Confirm(state);
+                    anyScanning = false;
+                    break;
                 }
             }
             else
             {
                 state.lostTimer += Time.deltaTime;
 
-                if (state.confirmed && _activeInstance != null)
+                // Once the image has been out of frame long enough, allow rescanning.
+                if (state.onCooldown && state.lostTimer >= rescanCooldown)
                 {
-                    // Use accelerometer to estimate distance change while card is out of frame
-                    if (!_accelTracking)
-                    {
-                        _accelTracking = true;
-                        _accelVelocity = Vector3.zero;
-                        _accelDisplacement = Vector3.zero;
-                    }
-
-                    // Remove gravity component, integrate to get velocity then displacement
-                    Vector3 accel = Input.acceleration - Physics.gravity.normalized * Vector3.Dot(Input.acceleration, Physics.gravity.normalized);
-                    _accelVelocity    += accel * Time.deltaTime;
-                    _accelDisplacement += _accelVelocity * Time.deltaTime;
-
-                    float estimatedDist = Mathf.Max(state.anchorDistance + _accelDisplacement.magnitude, 0.01f);
-                    float targetScale   = state.anchorScale * (estimatedDist / Mathf.Max(state.anchorDistance, 0.001f));
-                    state.currentScale  = Mathf.Lerp(state.currentScale, targetScale, scaleSmoothSpeed * Time.deltaTime);
-                    _activeInstance.transform.localScale = Vector3.one * Mathf.Max(state.currentScale, 0.001f);
-
-                    anyConfirmed = true;
-                    confirmedName = state.imageName;
-
-                    // Original kill logic — destroy after grace time
-                    if (state.lostTimer >= lostGraceTime)
-                    {
-                        DestroyActive();
-                        state.confirmed = false;
-                        state.scanTimer = 0f;
-                    }
-                }
-                else if (!state.confirmed)
-                {
-                    if (state.lostTimer >= lostGraceTime)
-                        state.scanTimer = 0f;
+                    state.onCooldown = false;
+                    state.scanTimer = 0f;
+                    state.isLoading = false;
+                    state.loadedPrefab = null;
                 }
             }
         }
 
-if (anyConfirmed)     SetStatusConfirmed(confirmedName);
-        else if (anyScanning) SetStatusScanning(bestProgress);
-        else                  SetStatusIdle();
+        if (anyScanning)
+        {
+            if (_state != ScanState.Scanning) ApplyState(ScanState.Scanning);
+            SetStatusScanning(bestProgress);
+        }
+        else if (_activeInstance != null)
+        {
+            if (_state != ScanState.Active) ApplyState(ScanState.Active);
+            SetStatusConfirmed();
+        }
+        else
+        {
+            if (_state != ScanState.Idle) ApplyState(ScanState.Idle);
+            SetStatusIdle();
+        }
     }
 
     // ── Async Load ────────────────────────────────────────────────────────────
@@ -232,7 +196,6 @@ if (anyConfirmed)     SetStatusConfirmed(confirmedName);
     {
         state.isLoading = true;
         string path = ResourcesPath + state.imageName;
-        Debug.Log($"[ARImageTracker] Starting async load: Resources/{path}");
 
         ResourceRequest request = Resources.LoadAsync<GameObject>(path);
         yield return request;
@@ -246,42 +209,74 @@ if (anyConfirmed)     SetStatusConfirmed(confirmedName);
         }
 
         state.loadedPrefab = (GameObject)request.asset;
-        Debug.Log($"[ARImageTracker] Successfully loaded '{path}'. " +
-                  $"scanTimer={state.scanTimer:F2}, scanConfirmTime={scanConfirmTime:F2}");
 
-        // If the timer already passed while loading, confirm immediately
-        if (state.scanTimer >= scanConfirmTime && !state.confirmed)
-        {
-            Debug.Log($"[ARImageTracker] Timer already passed — confirming immediately.");
+        if (state.scanTimer >= scanConfirmTime && !state.onCooldown)
             Confirm(state);
-        }
     }
 
     // ── Confirm ───────────────────────────────────────────────────────────────
 
     void Confirm(TrackedState state)
     {
-        state.confirmed = true;
+        // Put this trackable on cooldown so it won't immediately re-trigger.
+        state.onCooldown = true;
+        state.scanTimer = 0f;
+
+        // Reset all other states so they can be rescanned fresh.
+        foreach (var other in states.Values)
+        {
+            if (other == state) continue;
+            other.scanTimer = 0f;
+            other.lostTimer = 0f;
+            other.isLoading = false;
+            other.loadedPrefab = null;
+            other.onCooldown = false;
+        }
+
         DestroyActive();
 
-        // Snapshot the world position and distance at the moment of scan
         Vector3 spawnPos = arCamera.position + arCamera.forward * spawnDistance;
         float scale = GetScale(state.imageName);
 
-        float actualDist = arCamera != null
-            ? Vector3.Distance(arCamera.position, spawnPos)
-            : spawnDistance;
-
-        state.anchorPosition = spawnPos;
-        state.anchorDistance = Mathf.Max(actualDist, 0.01f);
-        state.anchorScale    = scale;
-        state.currentScale   = scale;
-
         _activeInstance = Instantiate(state.loadedPrefab, spawnPos, Quaternion.identity);
         _activeInstance.transform.localScale = Vector3.one * scale;
+        _activeInstance.AddComponent<ARCharacterDragger>();
+        state.loadedPrefab = null;
 
-        if (scannedImages.Add(state.imageName))
+        if (!scannedImages.Contains(state.imageName))
             OnNewImageScanned?.Invoke(state.imageName);
+        scannedImages.Add(state.imageName);
+
+        _confirmCount++;
+        if (_confirmCount % 2 == 0)
+            StartCoroutine(SilentCleanup());
+
+        ApplyState(ScanState.Active);
+    }
+
+    private int _confirmCount = 0;
+
+    IEnumerator SilentCleanup()
+    {
+        // Yield the unload as an async op so it spreads across frames with no hitch.
+        yield return Resources.UnloadUnusedAssets();
+        GC.Collect();
+    }
+
+    // ── State ─────────────────────────────────────────────────────────────────
+
+    void ApplyState(ScanState next)
+    {
+        _state = next;
+
+        bool characterActive = next == ScanState.Active;
+
+        // Rectangle: visible when idle or scanning, hidden when character is on screen.
+        if (scanningIndicator != null)
+            scanningIndicator.SetActive(!characterActive);
+
+        // Status overlay: hidden when character is active and not being rescanned.
+        statusBackground.gameObject.SetActive(next != ScanState.Active);
     }
 
     // ── Helpers ───────────────────────────────────────────────────────────────
@@ -305,13 +300,9 @@ if (anyConfirmed)     SetStatusConfirmed(confirmedName);
 
     // ── Status UI ─────────────────────────────────────────────────────────────
 
-    void RefreshStatusUI() => SetStatusIdle();
-
     void SetStatusIdle()
     {
-        statusText.text = scannedImages.Count > 0
-            ? $"Scanned: {string.Join(", ", scannedImages)}"
-            : "Point camera at an image...";
+        statusText.text = "Point camera at an image...";
         statusBackground.color = new Color(0f, 0f, 0f, 0.55f);
     }
 
@@ -323,9 +314,9 @@ if (anyConfirmed)     SetStatusConfirmed(confirmedName);
         statusBackground.color = new Color(0.7f, 0.5f, 0f, 0.75f);
     }
 
-    void SetStatusConfirmed(string imageName)
+    void SetStatusConfirmed()
     {
-        statusText.text = $"Showing: {imageName}  ({scannedImages.Count} scanned)";
+        statusText.text = "Scan Complete!";
         statusBackground.color = new Color(0f, 0.55f, 0.1f, 0.75f);
     }
 
@@ -360,7 +351,5 @@ if (anyConfirmed)     SetStatusConfirmed(confirmedName);
         textRect.anchorMax = Vector2.one;
         textRect.offsetMin = new Vector2(12f, 4f);
         textRect.offsetMax = new Vector2(-12f, -4f);
-
-        SetStatusIdle();
     }
 }

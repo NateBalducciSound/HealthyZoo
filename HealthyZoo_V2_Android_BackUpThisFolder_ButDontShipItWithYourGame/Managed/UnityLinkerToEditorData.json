@@ -11,7 +11,7 @@
           {
             "name": "AnimationClip",
             "scenes": [
-              "Assets/_01MainMenu.unity",
+              "Assets/Scenes/_01MainMenu.unity",
               "Assets/Scenes/_03AGiraffeScene.unity",
               "Assets/Scenes/_03AGiraffeScene_Ipad.unity",
               "Assets/Scenes/_03BHeronScene.unity",
@@ -27,7 +27,7 @@
           {
             "name": "Animator",
             "scenes": [
-              "Assets/_01MainMenu.unity",
+              "Assets/Scenes/_01MainMenu.unity",
               "Assets/Scenes/_03AGiraffeScene.unity",
               "Assets/Scenes/_03AGiraffeScene_Ipad.unity",
               "Assets/Scenes/_03BHeronScene.unity",
@@ -43,7 +43,7 @@
           {
             "name": "AnimatorController",
             "scenes": [
-              "Assets/_01MainMenu.unity",
+              "Assets/Scenes/_01MainMenu.unity",
               "Assets/Scenes/_03AGiraffeScene.unity",
               "Assets/Scenes/_03AGiraffeScene_Ipad.unity",
               "Assets/Scenes/_03BHeronScene.unity",
@@ -82,8 +82,7 @@
           {
             "name": "AudioBehaviour",
             "scenes": [
-              "Assets/_01MainMenu.unity",
-              "Assets/AR_Prototype.unity",
+              "Assets/Scenes/_01MainMenu.unity",
               "Assets/Scenes/_02MiniGameSelect.unity",
               "Assets/Scenes/_02MiniGameSelect_Ipad.unity",
               "Assets/Scenes/_03AGiraffeScene.unity",
@@ -97,7 +96,8 @@
               "Assets/Scenes/_03EPandaScene.unity",
               "Assets/Scenes/_03EPandaScene_Ipad.unity",
               "Assets/Scenes/_03FAlligatorScene.unity",
-              "Assets/Scenes/_03FAlligatorScene_Ipad.unity"
+              "Assets/Scenes/_03FAlligatorScene_Ipad.unity",
+              "Assets/Scenes/AR_Prototype.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -105,7 +105,7 @@
           {
             "name": "AudioClip",
             "scenes": [
-              "Assets/_01MainMenu.unity",
+              "Assets/Scenes/_01MainMenu.unity",
               "Assets/Scenes/_02MiniGameSelect.unity",
               "Assets/Scenes/_02MiniGameSelect_Ipad.unity",
               "Assets/Scenes/_03AGiraffeScene.unity",
@@ -123,8 +123,7 @@
           {
             "name": "AudioListener",
             "scenes": [
-              "Assets/_01MainMenu.unity",
-              "Assets/AR_Prototype.unity",
+              "Assets/Scenes/_01MainMenu.unity",
               "Assets/Scenes/_02MiniGameSelect.unity",
               "Assets/Scenes/_02MiniGameSelect_Ipad.unity",
               "Assets/Scenes/_03AGiraffeScene.unity",
@@ -138,7 +137,8 @@
               "Assets/Scenes/_03EPandaScene.unity",
               "Assets/Scenes/_03EPandaScene_Ipad.unity",
               "Assets/Scenes/_03FAlligatorScene.unity",
-              "Assets/Scenes/_03FAlligatorScene_Ipad.unity"
+              "Assets/Scenes/_03FAlligatorScene_Ipad.unity",
+              "Assets/Scenes/AR_Prototype.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -152,7 +152,7 @@
           {
             "name": "AudioResource",
             "scenes": [
-              "Assets/_01MainMenu.unity",
+              "Assets/Scenes/_01MainMenu.unity",
               "Assets/Scenes/_02MiniGameSelect.unity",
               "Assets/Scenes/_02MiniGameSelect_Ipad.unity",
               "Assets/Scenes/_03AGiraffeScene.unity",
@@ -170,7 +170,7 @@
           {
             "name": "AudioSource",
             "scenes": [
-              "Assets/_01MainMenu.unity",
+              "Assets/Scenes/_01MainMenu.unity",
               "Assets/Scenes/_02MiniGameSelect.unity",
               "Assets/Scenes/_02MiniGameSelect_Ipad.unity",
               "Assets/Scenes/_03AGiraffeScene.unity",
@@ -211,8 +211,7 @@
           {
             "name": "Camera",
             "scenes": [
-              "Assets/_01MainMenu.unity",
-              "Assets/AR_Prototype.unity",
+              "Assets/Scenes/_01MainMenu.unity",
               "Assets/Scenes/_02MiniGameSelect.unity",
               "Assets/Scenes/_02MiniGameSelect_Ipad.unity",
               "Assets/Scenes/_03AGiraffeScene.unity",
@@ -226,7 +225,8 @@
               "Assets/Scenes/_03EPandaScene.unity",
               "Assets/Scenes/_03EPandaScene_Ipad.unity",
               "Assets/Scenes/_03FAlligatorScene.unity",
-              "Assets/Scenes/_03FAlligatorScene_Ipad.unity"
+              "Assets/Scenes/_03FAlligatorScene_Ipad.unity",
+              "Assets/Scenes/AR_Prototype.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -246,8 +246,7 @@
           {
             "name": "Cubemap",
             "scenes": [
-              "Assets/_01MainMenu.unity",
-              "Assets/AR_Prototype.unity",
+              "Assets/Scenes/_01MainMenu.unity",
               "Assets/Scenes/_02MiniGameSelect.unity",
               "Assets/Scenes/_02MiniGameSelect_Ipad.unity",
               "Assets/Scenes/_03AGiraffeScene.unity",
@@ -261,7 +260,8 @@
               "Assets/Scenes/_03EPandaScene.unity",
               "Assets/Scenes/_03EPandaScene_Ipad.unity",
               "Assets/Scenes/_03FAlligatorScene.unity",
-              "Assets/Scenes/_03FAlligatorScene_Ipad.unity"
+              "Assets/Scenes/_03FAlligatorScene_Ipad.unity",
+              "Assets/Scenes/AR_Prototype.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -281,8 +281,7 @@
           {
             "name": "EditorExtension",
             "scenes": [
-              "Assets/_01MainMenu.unity",
-              "Assets/AR_Prototype.unity",
+              "Assets/Scenes/_01MainMenu.unity",
               "Assets/Scenes/_02MiniGameSelect.unity",
               "Assets/Scenes/_02MiniGameSelect_Ipad.unity",
               "Assets/Scenes/_03AGiraffeScene.unity",
@@ -296,7 +295,8 @@
               "Assets/Scenes/_03EPandaScene.unity",
               "Assets/Scenes/_03EPandaScene_Ipad.unity",
               "Assets/Scenes/_03FAlligatorScene.unity",
-              "Assets/Scenes/_03FAlligatorScene_Ipad.unity"
+              "Assets/Scenes/_03FAlligatorScene_Ipad.unity",
+              "Assets/Scenes/AR_Prototype.unity"
             ],
             "dependencyType": 1,
             "icon": null
@@ -310,8 +310,7 @@
           {
             "name": "GameObject",
             "scenes": [
-              "Assets/_01MainMenu.unity",
-              "Assets/AR_Prototype.unity",
+              "Assets/Scenes/_01MainMenu.unity",
               "Assets/Scenes/_02MiniGameSelect.unity",
               "Assets/Scenes/_02MiniGameSelect_Ipad.unity",
               "Assets/Scenes/_03AGiraffeScene.unity",
@@ -325,7 +324,8 @@
               "Assets/Scenes/_03EPandaScene.unity",
               "Assets/Scenes/_03EPandaScene_Ipad.unity",
               "Assets/Scenes/_03FAlligatorScene.unity",
-              "Assets/Scenes/_03FAlligatorScene_Ipad.unity"
+              "Assets/Scenes/_03FAlligatorScene_Ipad.unity",
+              "Assets/Scenes/AR_Prototype.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -357,8 +357,7 @@
           {
             "name": "LevelGameManager",
             "scenes": [
-              "Assets/_01MainMenu.unity",
-              "Assets/AR_Prototype.unity",
+              "Assets/Scenes/_01MainMenu.unity",
               "Assets/Scenes/_02MiniGameSelect.unity",
               "Assets/Scenes/_02MiniGameSelect_Ipad.unity",
               "Assets/Scenes/_03AGiraffeScene.unity",
@@ -372,7 +371,8 @@
               "Assets/Scenes/_03EPandaScene.unity",
               "Assets/Scenes/_03EPandaScene_Ipad.unity",
               "Assets/Scenes/_03FAlligatorScene.unity",
-              "Assets/Scenes/_03FAlligatorScene_Ipad.unity"
+              "Assets/Scenes/_03FAlligatorScene_Ipad.unity",
+              "Assets/Scenes/AR_Prototype.unity"
             ],
             "dependencyType": 1,
             "icon": null
@@ -380,8 +380,7 @@
           {
             "name": "Light",
             "scenes": [
-              "Assets/_01MainMenu.unity",
-              "Assets/AR_Prototype.unity",
+              "Assets/Scenes/_01MainMenu.unity",
               "Assets/Scenes/_02MiniGameSelect.unity",
               "Assets/Scenes/_02MiniGameSelect_Ipad.unity",
               "Assets/Scenes/_03AGiraffeScene.unity",
@@ -395,7 +394,8 @@
               "Assets/Scenes/_03EPandaScene.unity",
               "Assets/Scenes/_03EPandaScene_Ipad.unity",
               "Assets/Scenes/_03FAlligatorScene.unity",
-              "Assets/Scenes/_03FAlligatorScene_Ipad.unity"
+              "Assets/Scenes/_03FAlligatorScene_Ipad.unity",
+              "Assets/Scenes/AR_Prototype.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -421,8 +421,7 @@
           {
             "name": "LightmapSettings",
             "scenes": [
-              "Assets/_01MainMenu.unity",
-              "Assets/AR_Prototype.unity",
+              "Assets/Scenes/_01MainMenu.unity",
               "Assets/Scenes/_02MiniGameSelect.unity",
               "Assets/Scenes/_02MiniGameSelect_Ipad.unity",
               "Assets/Scenes/_03AGiraffeScene.unity",
@@ -436,7 +435,8 @@
               "Assets/Scenes/_03EPandaScene.unity",
               "Assets/Scenes/_03EPandaScene_Ipad.unity",
               "Assets/Scenes/_03FAlligatorScene.unity",
-              "Assets/Scenes/_03FAlligatorScene_Ipad.unity"
+              "Assets/Scenes/_03FAlligatorScene_Ipad.unity",
+              "Assets/Scenes/AR_Prototype.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -456,8 +456,7 @@
           {
             "name": "Material",
             "scenes": [
-              "Assets/_01MainMenu.unity",
-              "Assets/AR_Prototype.unity",
+              "Assets/Scenes/_01MainMenu.unity",
               "Assets/Scenes/_02MiniGameSelect.unity",
               "Assets/Scenes/_02MiniGameSelect_Ipad.unity",
               "Assets/Scenes/_03AGiraffeScene.unity",
@@ -471,7 +470,8 @@
               "Assets/Scenes/_03EPandaScene.unity",
               "Assets/Scenes/_03EPandaScene_Ipad.unity",
               "Assets/Scenes/_03FAlligatorScene.unity",
-              "Assets/Scenes/_03FAlligatorScene_Ipad.unity"
+              "Assets/Scenes/_03FAlligatorScene_Ipad.unity",
+              "Assets/Scenes/AR_Prototype.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -506,8 +506,7 @@
           {
             "name": "MonoBehaviour",
             "scenes": [
-              "Assets/_01MainMenu.unity",
-              "Assets/AR_Prototype.unity",
+              "Assets/Scenes/_01MainMenu.unity",
               "Assets/Scenes/_02MiniGameSelect.unity",
               "Assets/Scenes/_02MiniGameSelect_Ipad.unity",
               "Assets/Scenes/_03AGiraffeScene.unity",
@@ -521,7 +520,8 @@
               "Assets/Scenes/_03EPandaScene.unity",
               "Assets/Scenes/_03EPandaScene_Ipad.unity",
               "Assets/Scenes/_03FAlligatorScene.unity",
-              "Assets/Scenes/_03FAlligatorScene_Ipad.unity"
+              "Assets/Scenes/_03FAlligatorScene_Ipad.unity",
+              "Assets/Scenes/AR_Prototype.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -535,8 +535,7 @@
           {
             "name": "MonoScript",
             "scenes": [
-              "Assets/_01MainMenu.unity",
-              "Assets/AR_Prototype.unity",
+              "Assets/Scenes/_01MainMenu.unity",
               "Assets/Scenes/_02MiniGameSelect.unity",
               "Assets/Scenes/_02MiniGameSelect_Ipad.unity",
               "Assets/Scenes/_03AGiraffeScene.unity",
@@ -550,7 +549,8 @@
               "Assets/Scenes/_03EPandaScene.unity",
               "Assets/Scenes/_03EPandaScene_Ipad.unity",
               "Assets/Scenes/_03FAlligatorScene.unity",
-              "Assets/Scenes/_03FAlligatorScene_Ipad.unity"
+              "Assets/Scenes/_03FAlligatorScene_Ipad.unity",
+              "Assets/Scenes/AR_Prototype.unity"
             ],
             "dependencyType": 1,
             "icon": null
@@ -558,8 +558,7 @@
           {
             "name": "NamedObject",
             "scenes": [
-              "Assets/_01MainMenu.unity",
-              "Assets/AR_Prototype.unity",
+              "Assets/Scenes/_01MainMenu.unity",
               "Assets/Scenes/_02MiniGameSelect.unity",
               "Assets/Scenes/_02MiniGameSelect_Ipad.unity",
               "Assets/Scenes/_03AGiraffeScene.unity",
@@ -573,7 +572,8 @@
               "Assets/Scenes/_03EPandaScene.unity",
               "Assets/Scenes/_03EPandaScene_Ipad.unity",
               "Assets/Scenes/_03FAlligatorScene.unity",
-              "Assets/Scenes/_03FAlligatorScene_Ipad.unity"
+              "Assets/Scenes/_03FAlligatorScene_Ipad.unity",
+              "Assets/Scenes/AR_Prototype.unity"
             ],
             "dependencyType": 1,
             "icon": null
@@ -611,8 +611,7 @@
           {
             "name": "RectTransform",
             "scenes": [
-              "Assets/_01MainMenu.unity",
-              "Assets/AR_Prototype.unity",
+              "Assets/Scenes/_01MainMenu.unity",
               "Assets/Scenes/_02MiniGameSelect.unity",
               "Assets/Scenes/_02MiniGameSelect_Ipad.unity",
               "Assets/Scenes/_03AGiraffeScene.unity",
@@ -626,7 +625,8 @@
               "Assets/Scenes/_03EPandaScene.unity",
               "Assets/Scenes/_03EPandaScene_Ipad.unity",
               "Assets/Scenes/_03FAlligatorScene.unity",
-              "Assets/Scenes/_03FAlligatorScene_Ipad.unity"
+              "Assets/Scenes/_03FAlligatorScene_Ipad.unity",
+              "Assets/Scenes/AR_Prototype.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -640,8 +640,7 @@
           {
             "name": "RenderSettings",
             "scenes": [
-              "Assets/_01MainMenu.unity",
-              "Assets/AR_Prototype.unity",
+              "Assets/Scenes/_01MainMenu.unity",
               "Assets/Scenes/_02MiniGameSelect.unity",
               "Assets/Scenes/_02MiniGameSelect_Ipad.unity",
               "Assets/Scenes/_03AGiraffeScene.unity",
@@ -655,7 +654,8 @@
               "Assets/Scenes/_03EPandaScene.unity",
               "Assets/Scenes/_03EPandaScene_Ipad.unity",
               "Assets/Scenes/_03FAlligatorScene.unity",
-              "Assets/Scenes/_03FAlligatorScene_Ipad.unity"
+              "Assets/Scenes/_03FAlligatorScene_Ipad.unity",
+              "Assets/Scenes/AR_Prototype.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -687,8 +687,7 @@
           {
             "name": "Shader",
             "scenes": [
-              "Assets/_01MainMenu.unity",
-              "Assets/AR_Prototype.unity",
+              "Assets/Scenes/_01MainMenu.unity",
               "Assets/Scenes/_02MiniGameSelect.unity",
               "Assets/Scenes/_02MiniGameSelect_Ipad.unity",
               "Assets/Scenes/_03AGiraffeScene.unity",
@@ -702,7 +701,8 @@
               "Assets/Scenes/_03EPandaScene.unity",
               "Assets/Scenes/_03EPandaScene_Ipad.unity",
               "Assets/Scenes/_03FAlligatorScene.unity",
-              "Assets/Scenes/_03FAlligatorScene_Ipad.unity"
+              "Assets/Scenes/_03FAlligatorScene_Ipad.unity",
+              "Assets/Scenes/AR_Prototype.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -734,8 +734,7 @@
           {
             "name": "Sprite",
             "scenes": [
-              "Assets/_01MainMenu.unity",
-              "Assets/AR_Prototype.unity",
+              "Assets/Scenes/_01MainMenu.unity",
               "Assets/Scenes/_02MiniGameSelect.unity",
               "Assets/Scenes/_02MiniGameSelect_Ipad.unity",
               "Assets/Scenes/_03AGiraffeScene.unity",
@@ -749,7 +748,8 @@
               "Assets/Scenes/_03EPandaScene.unity",
               "Assets/Scenes/_03EPandaScene_Ipad.unity",
               "Assets/Scenes/_03FAlligatorScene.unity",
-              "Assets/Scenes/_03FAlligatorScene_Ipad.unity"
+              "Assets/Scenes/_03FAlligatorScene_Ipad.unity",
+              "Assets/Scenes/AR_Prototype.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -763,7 +763,7 @@
           {
             "name": "SpriteRenderer",
             "scenes": [
-              "Assets/_01MainMenu.unity",
+              "Assets/Scenes/_01MainMenu.unity",
               "Assets/Scenes/_02MiniGameSelect.unity",
               "Assets/Scenes/_02MiniGameSelect_Ipad.unity",
               "Assets/Scenes/_03AGiraffeScene.unity",
@@ -1809,8 +1809,7 @@
           {
             "name": "Font",
             "scenes": [
-              "Assets/_01MainMenu.unity",
-              "Assets/AR_Prototype.unity",
+              "Assets/Scenes/_01MainMenu.unity",
               "Assets/Scenes/_02MiniGameSelect.unity",
               "Assets/Scenes/_02MiniGameSelect_Ipad.unity",
               "Assets/Scenes/_03AGiraffeScene.unity",
@@ -1824,7 +1823,8 @@
               "Assets/Scenes/_03EPandaScene.unity",
               "Assets/Scenes/_03EPandaScene_Ipad.unity",
               "Assets/Scenes/_03FAlligatorScene.unity",
-              "Assets/Scenes/_03FAlligatorScene_Ipad.unity"
+              "Assets/Scenes/_03FAlligatorScene_Ipad.unity",
+              "Assets/Scenes/AR_Prototype.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -1890,8 +1890,7 @@
           {
             "name": "Canvas",
             "scenes": [
-              "Assets/_01MainMenu.unity",
-              "Assets/AR_Prototype.unity",
+              "Assets/Scenes/_01MainMenu.unity",
               "Assets/Scenes/_02MiniGameSelect.unity",
               "Assets/Scenes/_02MiniGameSelect_Ipad.unity",
               "Assets/Scenes/_03AGiraffeScene.unity",
@@ -1905,7 +1904,8 @@
               "Assets/Scenes/_03EPandaScene.unity",
               "Assets/Scenes/_03EPandaScene_Ipad.unity",
               "Assets/Scenes/_03FAlligatorScene.unity",
-              "Assets/Scenes/_03FAlligatorScene_Ipad.unity"
+              "Assets/Scenes/_03FAlligatorScene_Ipad.unity",
+              "Assets/Scenes/AR_Prototype.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -1913,7 +1913,7 @@
           {
             "name": "CanvasGroup",
             "scenes": [
-              "Assets/_01MainMenu.unity"
+              "Assets/Scenes/_01MainMenu.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -1921,8 +1921,7 @@
           {
             "name": "CanvasRenderer",
             "scenes": [
-              "Assets/_01MainMenu.unity",
-              "Assets/AR_Prototype.unity",
+              "Assets/Scenes/_01MainMenu.unity",
               "Assets/Scenes/_02MiniGameSelect.unity",
               "Assets/Scenes/_02MiniGameSelect_Ipad.unity",
               "Assets/Scenes/_03AGiraffeScene.unity",
@@ -1936,7 +1935,8 @@
               "Assets/Scenes/_03EPandaScene.unity",
               "Assets/Scenes/_03EPandaScene_Ipad.unity",
               "Assets/Scenes/_03FAlligatorScene.unity",
-              "Assets/Scenes/_03FAlligatorScene_Ipad.unity"
+              "Assets/Scenes/_03FAlligatorScene_Ipad.unity",
+              "Assets/Scenes/AR_Prototype.unity"
             ],
             "dependencyType": 0,
             "icon": null
