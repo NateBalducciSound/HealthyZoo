@@ -62,6 +62,8 @@ public class PorcupineOrderController : MonoBehaviour
 
     void Start()
     {
+        AsyncSceneLoader.Preload(DeviceDetector.GetSceneName("_02MiniGameSelect"));
+
         mainCamera = Camera.main;
 
         if (startupAnimator)  startupAnimator.enabled = false;

@@ -74,11 +74,11 @@ public static class AudioCompressionOptimizer
                     settings.compressionFormat = AudioCompressionFormat.Vorbis;
                     settings.quality           = VorbisQuality;
 
-                    importer.SetOverrideSampleSettings("iOS", settings);
-
                     // Disable preloading on streaming clips — they don't need it
                     if (isLong)
-                        importer.preloadAudioData = false;
+                        settings.preloadAudioData = false;
+
+                    importer.SetOverrideSampleSettings("iOS", settings);
 
                     AssetDatabase.ImportAsset(path, ImportAssetOptions.ForceUpdate);
                     changed++;

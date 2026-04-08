@@ -33,6 +33,11 @@ public class AlligatorController : MonoBehaviour
     private bool mouthIsOpen = false;
     private bool mouthTaskComplete = false;
 
+    void Start()
+    {
+        AsyncSceneLoader.Preload(DeviceDetector.GetSceneName("_02MiniGameSelect"));
+    }
+
     public void HandleDrop(DropZoneType zone, Draggable2D item)
     {
         if (mouthTaskComplete) return;

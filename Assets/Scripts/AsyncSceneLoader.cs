@@ -18,10 +18,13 @@ public class AsyncSceneLoader : MonoBehaviour
     public float fadeDuration = 0.3f;
 
     [Header("Font")]
-    [Tooltip("Assign the PaytoneOne TMP Font Asset here (generate it from the TTF via Window > TextMeshPro > Font Asset Creator)")]
+    [Tooltip("Assign the PaytoneOne TMP Font Asset here")]
     public TMP_FontAsset loadingFont;
 
     public static AsyncSceneLoader Instance { get; private set; }
+
+    // True while the loading overlay is on screen.
+    public static bool IsShowing => Instance != null && Instance._loading;
 
     private Canvas _canvas;
     private CanvasGroup _canvasGroup;
@@ -44,13 +47,36 @@ public class AsyncSceneLoader : MonoBehaviour
     public static void Load(string sceneName)
     {
         EnsureInstance();
-        Instance.StartLoad(sceneName);
+        Instance.StartLoad(sceneName, -1);
     }
 
     public static void Load(int buildIndex)
     {
         EnsureInstance();
-        Instance.StartLoad(buildIndex);
+        Instance.StartLoad(null, buildIndex);
+    }
+
+    // Silently pre-warms one scene in the background.
+    // Only called from MenuManager.Start() — do not add calls elsewhere.
+    public static void Preload(string sceneName)
+    {
+        EnsureInstance();
+        var inst = Instance;
+        if (inst._preloadedSceneName == sceneName) return;
+        if (inst._preloadOp != null) return;
+        inst._preloadedSceneName = sceneName;
+        inst._preloadOp = SceneManager.LoadSceneAsync(sceneName);
+        inst._preloadOp.allowSceneActivation = false;
+        inst.StartCoroutine(inst.PreloadRoutine());
+    }
+
+    private AsyncOperation _preloadOp;
+    private string _preloadedSceneName;
+
+    IEnumerator PreloadRoutine()
+    {
+        while (_preloadOp != null && _preloadOp.progress < 0.9f)
+            yield return null;
     }
 
     static void EnsureInstance()
@@ -62,9 +88,6 @@ public class AsyncSceneLoader : MonoBehaviour
 
     // ── Internal ──────────────────────────────────────────────────────────────
 
-    void StartLoad(string sceneName) => StartLoad(sceneName, -1);
-    void StartLoad(int buildIndex) => StartLoad(null, buildIndex);
-
     void StartLoad(string sceneName, int buildIndex)
     {
         if (_loading) return;
@@ -74,15 +97,39 @@ public class AsyncSceneLoader : MonoBehaviour
 
     IEnumerator LoadRoutine(string sceneName, int buildIndex)
     {
-        // Show overlay
         _canvas.gameObject.SetActive(true);
         yield return StartCoroutine(Fade(0f, 1f));
 
-        // Begin async load — hold at 0.9 until we allow activation
-        AsyncOperation op = buildIndex >= 0
-            ? SceneManager.LoadSceneAsync(buildIndex)
-            : SceneManager.LoadSceneAsync(sceneName);
-        op.allowSceneActivation = false;
+        // Start unloading previous scene's assets immediately — runs in background
+        // in parallel with the new scene load so cleanup doesn't block the player.
+        Resources.UnloadUnusedAssets();
+
+        // Use preloaded op if it matches, otherwise fresh load.
+        AsyncOperation op;
+        if (sceneName != null && sceneName == _preloadedSceneName && _preloadOp != null)
+        {
+            op = _preloadOp;
+            _preloadOp = null;
+            _preloadedSceneName = null;
+        }
+        else
+        {
+            // If a preload is pending for a different scene, Unity queues any new
+            // LoadSceneAsync behind it. We must activate and drain it first.
+            // The loading overlay is already fully visible so the player won't see it.
+            if (_preloadOp != null)
+            {
+                _preloadOp.allowSceneActivation = true;
+                while (!_preloadOp.isDone) yield return null;
+                _preloadOp = null;
+                _preloadedSceneName = null;
+            }
+
+            op = buildIndex >= 0
+                ? SceneManager.LoadSceneAsync(buildIndex)
+                : SceneManager.LoadSceneAsync(sceneName);
+            op.allowSceneActivation = false;
+        }
 
         while (op.progress < 0.9f)
         {
@@ -90,16 +137,15 @@ public class AsyncSceneLoader : MonoBehaviour
             yield return null;
         }
 
-        // Snap bar to full, brief pause so it registers visually
+        // Scene is ready — activate immediately and reveal it.
+        // Asset cleanup from the previous scene continues in the background.
         _barFill.fillAmount = 1f;
-        yield return new WaitForSecondsRealtime(0.15f);
-
-        // Activate the scene
         op.allowSceneActivation = true;
         while (!op.isDone)
             yield return null;
 
-        // Fade out overlay
+        yield return null; // one frame for initial GPU uploads
+
         yield return StartCoroutine(Fade(1f, 0f));
         _canvas.gameObject.SetActive(false);
         _loading = false;
@@ -132,7 +178,6 @@ public class AsyncSceneLoader : MonoBehaviour
         scaler.matchWidthOrHeight = 0.5f;
         _canvasGroup = canvasGO.AddComponent<CanvasGroup>();
 
-        // Full-screen background (#FEF9F3)
         var bg = new GameObject("Background");
         bg.transform.SetParent(canvasGO.transform, false);
         var bgImg = bg.AddComponent<Image>();
@@ -142,7 +187,6 @@ public class AsyncSceneLoader : MonoBehaviour
         bgRect.anchorMax = Vector2.one;
         bgRect.offsetMin = bgRect.offsetMax = Vector2.zero;
 
-        // "Loading..." label — centered, slightly above the bar
         var labelGO = new GameObject("LoadingLabel");
         labelGO.transform.SetParent(canvasGO.transform, false);
         _loadingText = labelGO.AddComponent<TextMeshProUGUI>();
@@ -156,7 +200,6 @@ public class AsyncSceneLoader : MonoBehaviour
         labelRect.anchorMax = new Vector2(0.9f, 0.62f);
         labelRect.offsetMin = labelRect.offsetMax = Vector2.zero;
 
-        // Bar track — warm tint of the background
         var track = new GameObject("BarTrack");
         track.transform.SetParent(canvasGO.transform, false);
         var trackImg = track.AddComponent<Image>();
@@ -166,7 +209,6 @@ public class AsyncSceneLoader : MonoBehaviour
         trackRect.anchorMax = new Vector2(0.9f, 0.50f);
         trackRect.offsetMin = trackRect.offsetMax = Vector2.zero;
 
-        // Bar fill (#E3994B)
         var fill = new GameObject("BarFill");
         fill.transform.SetParent(track.transform, false);
         _barFill = fill.AddComponent<Image>();

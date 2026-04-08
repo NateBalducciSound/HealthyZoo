@@ -1,0 +1,101 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: AnimalBackgroundImages_Atlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 0
+      compressionQuality: 0
+      maxTextureSize: 0
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 4
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_IgnorePlatformSupport: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    - serializedVersion: 4
+      m_BuildTarget: iOS
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: 51
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 1
+      m_IgnorePlatformSupport: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: a7c62de05d2b1454c95df208a6fe8c33, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+    packedSpriteRenderDataKeys:
+    - 18044410ddeaf423f8617bdb9dbc818a: 21300000
+    - 350068e0e11ca4652919ae3748316b05: 21300000
+    - 6db85846eb31e4b67aa3c268e179b997: 21300000
+    - d7989d761845143ac8a16b62ab0239cb: 21300000
+    - 5447b73777f3745518b66e159cb1f945: 21300000
+    - cb3e3fc89206b4148a55f40338882ce6: 21300000
+    - 90bced594b4ce41699ad049709e84b50: 21300000
+    - 4d4eb8ac2c8d74e73bd4eac49896e114: 21300000
+    - df41bd2d2d0304fb193ffcd1fde20e37: 21300000
+    - e31b924dca5ee4c6489c82d7edfbae4b: 21300000
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 18044410ddeaf423f8617bdb9dbc818a, type: 3}
+  - {fileID: 21300000, guid: 350068e0e11ca4652919ae3748316b05, type: 3}
+  - {fileID: 21300000, guid: 6db85846eb31e4b67aa3c268e179b997, type: 3}
+  - {fileID: 21300000, guid: d7989d761845143ac8a16b62ab0239cb, type: 3}
+  - {fileID: 21300000, guid: 5447b73777f3745518b66e159cb1f945, type: 3}
+  - {fileID: 21300000, guid: cb3e3fc89206b4148a55f40338882ce6, type: 3}
+  - {fileID: 21300000, guid: 90bced594b4ce41699ad049709e84b50, type: 3}
+  - {fileID: 21300000, guid: 4d4eb8ac2c8d74e73bd4eac49896e114, type: 3}
+  - {fileID: 21300000, guid: df41bd2d2d0304fb193ffcd1fde20e37, type: 3}
+  - {fileID: 21300000, guid: e31b924dca5ee4c6489c82d7edfbae4b, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - minigame-bg_ipad-arlo
+  - healthyzoo_minigame-pingbg
+  - healthyzoo_ren-bg-mid
+  - minigame-penny_bg-phone
+  - minigame-bg_ipad-penny
+  - healthyzoo_minigame-gigibg
+  - healthyzoo_ren-bg-night
+  - healthyzoo_ren-bg-high
+  - healthyzoo_minigame-Arlobg
+  - minigame-santi_bg-phone
+  m_RenderDataMap: {}
+  m_Tag: AnimalBackgroundImages_Atlas
+  m_IsVariant: 0

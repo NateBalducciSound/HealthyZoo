@@ -1,0 +1,131 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: UI_Atlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 0
+      compressionQuality: 0
+      maxTextureSize: 0
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 4
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_IgnorePlatformSupport: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    - serializedVersion: 4
+      m_BuildTarget: iOS
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: 50
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 1
+      m_IgnorePlatformSupport: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: f2dcf40a787184ce38d6bbe1432971ab, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+    packedSpriteRenderDataKeys:
+    - cf629a402c0df44d68ff199abaab0668: 21300000
+    - c16fbdb1ede2c43319d687e3cf74592f: 21300000
+    - 0ce55c535de874448806ccab21d59cd0: 21300000
+    - 71cce8839874048ff89d1e687e3a4937: 21300000
+    - 9e6c3b94ccfad4ac8a679e88dfce9234: 21300000
+    - f73efd95979bc444892d0eb9cdbba3bb: 21300000
+    - 9865e2b5a2fbe4b1dbb5e0ec0d8f23b9: 21300000
+    - 09a08516b58604bda81796863cdacca7: 21300000
+    - 336da5165a4684de0b96ee22b489535f: 21300000
+    - aa48a448fcc514e60a77e73b8f11265c: 21300000
+    - a290ff985bcc84e0ca230dfdff6f0225: 21300000
+    - 9d8988c94652947c3b56e99cfe1fd5a5: 21300000
+    - 05d3160a5b05244c5ac36bd0a80f885a: 21300000
+    - a659b73a22c1f4f8abc61cc94a8b48ff: 21300000
+    - 22a2fa3a5544b4c0f91fc744744d4a19: 21300000
+    - fcfa0c6a576c3416e9bc42c0f65928f6: 21300000
+    - 043c4f7cb5b734dc7b9b616df7e5e948: 21300000
+    - 249c1f1d926c7430d9b80f8265c9ec20: 21300000
+    - fd20b42e4a0ee4a169361fa271a0a7e3: 21300000
+    - 0ef2852f2591941a3810487f6f0f6554: 21300000
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: cf629a402c0df44d68ff199abaab0668, type: 3}
+  - {fileID: 21300000, guid: c16fbdb1ede2c43319d687e3cf74592f, type: 3}
+  - {fileID: 21300000, guid: 0ce55c535de874448806ccab21d59cd0, type: 3}
+  - {fileID: 21300000, guid: 71cce8839874048ff89d1e687e3a4937, type: 3}
+  - {fileID: 21300000, guid: 9e6c3b94ccfad4ac8a679e88dfce9234, type: 3}
+  - {fileID: 21300000, guid: f73efd95979bc444892d0eb9cdbba3bb, type: 3}
+  - {fileID: 21300000, guid: 9865e2b5a2fbe4b1dbb5e0ec0d8f23b9, type: 3}
+  - {fileID: 21300000, guid: 09a08516b58604bda81796863cdacca7, type: 3}
+  - {fileID: 21300000, guid: 336da5165a4684de0b96ee22b489535f, type: 3}
+  - {fileID: 21300000, guid: aa48a448fcc514e60a77e73b8f11265c, type: 3}
+  - {fileID: 21300000, guid: a290ff985bcc84e0ca230dfdff6f0225, type: 3}
+  - {fileID: 21300000, guid: 9d8988c94652947c3b56e99cfe1fd5a5, type: 3}
+  - {fileID: 21300000, guid: 05d3160a5b05244c5ac36bd0a80f885a, type: 3}
+  - {fileID: 21300000, guid: a659b73a22c1f4f8abc61cc94a8b48ff, type: 3}
+  - {fileID: 21300000, guid: 22a2fa3a5544b4c0f91fc744744d4a19, type: 3}
+  - {fileID: 21300000, guid: fcfa0c6a576c3416e9bc42c0f65928f6, type: 3}
+  - {fileID: 21300000, guid: 043c4f7cb5b734dc7b9b616df7e5e948, type: 3}
+  - {fileID: 21300000, guid: 249c1f1d926c7430d9b80f8265c9ec20, type: 3}
+  - {fileID: 21300000, guid: fd20b42e4a0ee4a169361fa271a0a7e3, type: 3}
+  - {fileID: 21300000, guid: 0ef2852f2591941a3810487f6f0f6554, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - DogPlaceholder
+  - base+pole
+  - HeronPlaceholder
+  - GiraffePlaceholder
+  - ElephantPlaceholder
+  - PorcupinePlaceholder
+  - homepage_ar-mobile-updated
+  - AlligatorPlaceholder
+  - healthyzoo-homepage_bg
+  - LemurPlaceholder
+  - homepage_ARcamera@300x
+  - splashscreen_tablet
+  - Rectangle
+  - PandaPlaceholder
+  - homepage_visitthezoo@300x
+  - GreenCheckmark
+  - WoodenFramePlaceHolder
+  - Congrats
+  - measuring bar00000
+  - SlothImage
+  m_RenderDataMap: {}
+  m_Tag: UI_Atlas
+  m_IsVariant: 0

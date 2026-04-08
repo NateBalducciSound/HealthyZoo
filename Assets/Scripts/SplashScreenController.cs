@@ -84,7 +84,17 @@ public class SplashScreenController : MonoBehaviour
 
     IEnumerator PlayIntro()
     {
-        if (introLine != null)
+        // Wait for the loading overlay to fully fade out before playing audio.
+        while (AsyncSceneLoader.IsShowing)
+            yield return null;
+
+        // Only play if the splash sprite is actually visible on screen.
+        bool spriteVisible = splashImage != null
+                             && splashImage.enabled
+                             && splashImage.gameObject.activeInHierarchy
+                             && _canvasGroup.alpha > 0f;
+
+        if (introLine != null && spriteVisible)
         {
             audioSource.PlayOneShot(introLine);
             yield return new WaitForSeconds(introLine.length);

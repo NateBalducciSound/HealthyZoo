@@ -71,6 +71,8 @@ public class HeronLevelController : MonoBehaviour
 
     void Start()
     {
+        AsyncSceneLoader.Preload(DeviceDetector.GetSceneName(menuSceneName));
+
         // Disable animator so it doesn't overwrite sprites while slider is active
         if (stethoscopeAnimator) stethoscopeAnimator.enabled = false;
 

@@ -37,7 +37,7 @@ public class ResetProgressButton : MonoBehaviour
     {
         MiniGameProgress.ResetAll();
         // Reload the scene so all character images switch back to B&W
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        AsyncSceneLoader.Load(SceneManager.GetActiveScene().name);
     }
 
     static bool AllGamesComplete()

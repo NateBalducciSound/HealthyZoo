@@ -74,22 +74,26 @@ public class PlayButtonSpawner : MonoBehaviour
                 btn.onClick.AddListener(OnPlayPressed);
             }
         }
+
+    }
+
+    private string GetSceneNameForGrabbable()
+    {
+        switch (myGrabbable)
+        {
+            case GrabbableType.Giraffe:   return "_03AGiraffeScene";
+            case GrabbableType.Heron:     return "_03BHeronScene";
+            case GrabbableType.Porcupine: return "_03CPorcupineScene";
+            case GrabbableType.Sloth:     return "_03DSlothScene";
+            case GrabbableType.Panda:     return "_03EPandaScene";
+            case GrabbableType.Alligator: return "_03FAlligatorScene";
+            default:                      return "";
+        }
     }
 
     public void OnPlayPressed()
     {
-        string sceneName = "";
-
-        switch (myGrabbable)
-        {
-            case GrabbableType.Giraffe:   sceneName = "_03AGiraffeScene"; break;
-            case GrabbableType.Heron:     sceneName = "_03BHeronScene"; break;
-            case GrabbableType.Porcupine: sceneName = "_03CPorcupineScene"; break;
-            case GrabbableType.Sloth:     sceneName = "_03DSlothScene"; break;
-            case GrabbableType.Panda:     sceneName = "_03EPandaScene"; break;
-            case GrabbableType.Alligator: sceneName = "_03FAlligatorScene"; break;
-        }
-
+        string sceneName = GetSceneNameForGrabbable();
         if (!string.IsNullOrEmpty(sceneName))
         {
             sceneName = DeviceDetector.GetSceneName(sceneName);

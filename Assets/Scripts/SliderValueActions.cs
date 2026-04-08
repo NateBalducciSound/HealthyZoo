@@ -52,6 +52,8 @@ public class SliderValueActions : MonoBehaviour
 
     void Start()
     {
+        AsyncSceneLoader.Preload(DeviceDetector.GetSceneName("_02MiniGameSelect"));
+
         if (startAnimator) startAnimator.gameObject.SetActive(false);
         if (loopAnimator) loopAnimator.gameObject.SetActive(false);
         if (confettiAnimator) confettiAnimator.gameObject.SetActive(false);

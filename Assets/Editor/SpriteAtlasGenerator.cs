@@ -21,7 +21,8 @@ public static class SpriteAtlasGenerator
         "Assets/Sprites/PandaAssets",
         "Assets/Sprites/PorcupineAssets",
         "Assets/Sprites/SlothAssets",
-        "Assets/Sprites/CharacterDefaultSprites",
+        // CharacterDefaultSprites intentionally excluded — these 6 thumbnails are used
+        // directly in MiniGameSelect and should load independently, not force-load a full atlas.
         "Assets/Sprites/AnimalBackgroundImages",
         "Assets/Sprites/UI",
         "Assets/Sprites/ScanImages",
