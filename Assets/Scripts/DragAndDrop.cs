@@ -148,8 +148,10 @@ public class Draggable2D : MonoBehaviour
 
     bool IsTouchingObject(Vector3 worldPos)
     {
-        Collider2D hit = Physics2D.OverlapPoint(worldPos);
-        return hit != null && hit.gameObject == gameObject;
+        Collider2D[] hits = Physics2D.OverlapPointAll(worldPos);
+        foreach (var hit in hits)
+            if (hit.gameObject == gameObject) return true;
+        return false;
     }
 
     bool IsDialogueLocked() => dialogueController != null && dialogueController.IsInputLocked;
