@@ -1,0 +1,1217 @@
+=======================================================
+  HEALTHYZOO ASSET AUDIT REPORT
+  Generated: 2026-04-15 13:49:22
+=======================================================
+
+───────────────────────────────────────────────────────
+  SECTION 1 — DUPLICATE FILENAMES (139 groups)
+  Same filename exists in multiple locations.
+  Unity includes EVERY copy in the build.
+───────────────────────────────────────────────────────
+
+  [loop00000.png]  (3 copies)
+    Assets/Sprites/HeronSpriteAssets/HeronLoopAnim/loop00000.png  (57 KB)
+    Assets/Sprites/PorcupineAssets/celebration loop/loop00000.png  (44 KB)
+    Assets/Sprites/SlothAssets/celebration loop/loop00000.png  (41 KB)
+    → Potential saving: 85 KB
+
+  [loop00001.png]  (3 copies)
+    Assets/Sprites/HeronSpriteAssets/HeronLoopAnim/loop00001.png  (57 KB)
+    Assets/Sprites/PorcupineAssets/celebration loop/loop00001.png  (44 KB)
+    Assets/Sprites/SlothAssets/celebration loop/loop00001.png  (41 KB)
+    → Potential saving: 85 KB
+
+  [loop00002.png]  (3 copies)
+    Assets/Sprites/HeronSpriteAssets/HeronLoopAnim/loop00002.png  (57 KB)
+    Assets/Sprites/PorcupineAssets/celebration loop/loop00002.png  (44 KB)
+    Assets/Sprites/SlothAssets/celebration loop/loop00002.png  (41 KB)
+    → Potential saving: 85 KB
+
+  [loop00003.png]  (3 copies)
+    Assets/Sprites/HeronSpriteAssets/HeronLoopAnim/loop00003.png  (57 KB)
+    Assets/Sprites/PorcupineAssets/celebration loop/loop00003.png  (44 KB)
+    Assets/Sprites/SlothAssets/celebration loop/loop00003.png  (41 KB)
+    → Potential saving: 85 KB
+
+  [loop00004.png]  (3 copies)
+    Assets/Sprites/HeronSpriteAssets/HeronLoopAnim/loop00004.png  (48 KB)
+    Assets/Sprites/PorcupineAssets/celebration loop/loop00004.png  (47 KB)
+    Assets/Sprites/SlothAssets/celebration loop/loop00004.png  (40 KB)
+    → Potential saving: 87 KB
+
+  [loop00005.png]  (3 copies)
+    Assets/Sprites/HeronSpriteAssets/HeronLoopAnim/loop00005.png  (48 KB)
+    Assets/Sprites/PorcupineAssets/celebration loop/loop00005.png  (47 KB)
+    Assets/Sprites/SlothAssets/celebration loop/loop00005.png  (40 KB)
+    → Potential saving: 87 KB
+
+  [loop00006.png]  (3 copies)
+    Assets/Sprites/HeronSpriteAssets/HeronLoopAnim/loop00006.png  (48 KB)
+    Assets/Sprites/PorcupineAssets/celebration loop/loop00006.png  (47 KB)
+    Assets/Sprites/SlothAssets/celebration loop/loop00006.png  (40 KB)
+    → Potential saving: 87 KB
+
+  [loop00007.png]  (3 copies)
+    Assets/Sprites/HeronSpriteAssets/HeronLoopAnim/loop00007.png  (48 KB)
+    Assets/Sprites/PorcupineAssets/celebration loop/loop00007.png  (47 KB)
+    Assets/Sprites/SlothAssets/celebration loop/loop00007.png  (40 KB)
+    → Potential saving: 87 KB
+
+  [loop00008.png]  (3 copies)
+    Assets/Sprites/HeronSpriteAssets/HeronLoopAnim/loop00008.png  (28 KB)
+    Assets/Sprites/PorcupineAssets/celebration loop/loop00008.png  (45 KB)
+    Assets/Sprites/SlothAssets/celebration loop/loop00008.png  (40 KB)
+    → Potential saving: 68 KB
+
+  [loop00009.png]  (3 copies)
+    Assets/Sprites/HeronSpriteAssets/HeronLoopAnim/loop00009.png  (28 KB)
+    Assets/Sprites/PorcupineAssets/celebration loop/loop00009.png  (45 KB)
+    Assets/Sprites/SlothAssets/celebration loop/loop00009.png  (40 KB)
+    → Potential saving: 68 KB
+
+  [loop00010.png]  (3 copies)
+    Assets/Sprites/HeronSpriteAssets/HeronLoopAnim/loop00010.png  (28 KB)
+    Assets/Sprites/PorcupineAssets/celebration loop/loop00010.png  (45 KB)
+    Assets/Sprites/SlothAssets/celebration loop/loop00010.png  (40 KB)
+    → Potential saving: 68 KB
+
+  [loop00011.png]  (3 copies)
+    Assets/Sprites/HeronSpriteAssets/HeronLoopAnim/loop00011.png  (28 KB)
+    Assets/Sprites/PorcupineAssets/celebration loop/loop00011.png  (49 KB)
+    Assets/Sprites/SlothAssets/celebration loop/loop00011.png  (40 KB)
+    → Potential saving: 68 KB
+
+  [loop00012.png]  (3 copies)
+    Assets/Sprites/HeronSpriteAssets/HeronLoopAnim/loop00012.png  (29 KB)
+    Assets/Sprites/PorcupineAssets/celebration loop/loop00012.png  (49 KB)
+    Assets/Sprites/SlothAssets/celebration loop/loop00012.png  (22 KB)
+    → Potential saving: 51 KB
+
+  [loop00013.png]  (3 copies)
+    Assets/Sprites/HeronSpriteAssets/HeronLoopAnim/loop00013.png  (29 KB)
+    Assets/Sprites/PorcupineAssets/celebration loop/loop00013.png  (48 KB)
+    Assets/Sprites/SlothAssets/celebration loop/loop00013.png  (22 KB)
+    → Potential saving: 51 KB
+
+  [loop00014.png]  (3 copies)
+    Assets/Sprites/HeronSpriteAssets/HeronLoopAnim/loop00014.png  (29 KB)
+    Assets/Sprites/PorcupineAssets/celebration loop/loop00014.png  (48 KB)
+    Assets/Sprites/SlothAssets/celebration loop/loop00014.png  (22 KB)
+    → Potential saving: 51 KB
+
+  [loop00015.png]  (3 copies)
+    Assets/Sprites/HeronSpriteAssets/HeronLoopAnim/loop00015.png  (29 KB)
+    Assets/Sprites/PorcupineAssets/celebration loop/loop00015.png  (48 KB)
+    Assets/Sprites/SlothAssets/celebration loop/loop00015.png  (22 KB)
+    → Potential saving: 51 KB
+
+  [alli new00001.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00001.png  (21 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00001.png  (21 KB)
+    → Potential saving: 21 KB
+
+  [alli new00002.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00002.png  (21 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00002.png  (21 KB)
+    → Potential saving: 21 KB
+
+  [alli new00003.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00003.png  (21 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00003.png  (21 KB)
+    → Potential saving: 21 KB
+
+  [alli new00004.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00004.png  (21 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00004.png  (21 KB)
+    → Potential saving: 21 KB
+
+  [alli new00005.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00005.png  (21 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00005.png  (21 KB)
+    → Potential saving: 21 KB
+
+  [alli new00006.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00006.png  (21 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00006.png  (21 KB)
+    → Potential saving: 21 KB
+
+  [alli new00007.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00007.png  (21 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00007.png  (21 KB)
+    → Potential saving: 21 KB
+
+  [alli new00008.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00008.png  (21 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00008.png  (21 KB)
+    → Potential saving: 21 KB
+
+  [alli new00009.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00009.png  (21 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00009.png  (21 KB)
+    → Potential saving: 21 KB
+
+  [alli new00010.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00010.png  (63 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00010.png  (63 KB)
+    → Potential saving: 63 KB
+
+  [alli new00011.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00011.png  (63 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00011.png  (63 KB)
+    → Potential saving: 63 KB
+
+  [alli new00012.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00012.png  (63 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00012.png  (63 KB)
+    → Potential saving: 63 KB
+
+  [alli new00013.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00013.png  (63 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00013.png  (63 KB)
+    → Potential saving: 63 KB
+
+  [alli new00014.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00014.png  (24 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00014.png  (24 KB)
+    → Potential saving: 24 KB
+
+  [alli new00015.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00015.png  (24 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00015.png  (24 KB)
+    → Potential saving: 24 KB
+
+  [alli new00016.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00016.png  (44 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00016.png  (44 KB)
+    → Potential saving: 44 KB
+
+  [alli new00017.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00017.png  (44 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00017.png  (44 KB)
+    → Potential saving: 44 KB
+
+  [alli new00018.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00018.png  (45 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00018.png  (45 KB)
+    → Potential saving: 45 KB
+
+  [alli new00019.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00019.png  (45 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00019.png  (45 KB)
+    → Potential saving: 45 KB
+
+  [alli new00020.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00020.png  (45 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00020.png  (45 KB)
+    → Potential saving: 45 KB
+
+  [alli new00021.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00021.png  (45 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00021.png  (45 KB)
+    → Potential saving: 45 KB
+
+  [alli new00022.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00022.png  (44 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00022.png  (44 KB)
+    → Potential saving: 44 KB
+
+  [alli new00023.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00023.png  (44 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00023.png  (44 KB)
+    → Potential saving: 44 KB
+
+  [alli new00024.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00024.png  (44 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00024.png  (44 KB)
+    → Potential saving: 44 KB
+
+  [alli new00025.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00025.png  (44 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00025.png  (44 KB)
+    → Potential saving: 44 KB
+
+  [alli new00026.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00026.png  (44 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00026.png  (44 KB)
+    → Potential saving: 44 KB
+
+  [alli new00027.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00027.png  (44 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00027.png  (44 KB)
+    → Potential saving: 44 KB
+
+  [alli new00028.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00028.png  (44 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00028.png  (44 KB)
+    → Potential saving: 44 KB
+
+  [alli new00029.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00029.png  (44 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00029.png  (44 KB)
+    → Potential saving: 44 KB
+
+  [alli new00030.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00030.png  (44 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00030.png  (44 KB)
+    → Potential saving: 44 KB
+
+  [alli new00031.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00031.png  (44 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00031.png  (44 KB)
+    → Potential saving: 44 KB
+
+  [alli new00032.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00032.png  (90 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00032.png  (90 KB)
+    → Potential saving: 90 KB
+
+  [alli new00033.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00033.png  (90 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00033.png  (90 KB)
+    → Potential saving: 90 KB
+
+  [alli new00034.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00034.png  (91 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00034.png  (91 KB)
+    → Potential saving: 91 KB
+
+  [alli new00035.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00035.png  (91 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00035.png  (91 KB)
+    → Potential saving: 91 KB
+
+  [alli new00036.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00036.png  (91 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00036.png  (91 KB)
+    → Potential saving: 91 KB
+
+  [alli new00037.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00037.png  (90 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00037.png  (90 KB)
+    → Potential saving: 90 KB
+
+  [alli new00038.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00038.png  (90 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00038.png  (90 KB)
+    → Potential saving: 90 KB
+
+  [alli new00039.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00039.png  (90 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00039.png  (90 KB)
+    → Potential saving: 90 KB
+
+  [alli new00040.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00040.png  (90 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00040.png  (90 KB)
+    → Potential saving: 90 KB
+
+  [alli new00041.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00041.png  (90 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00041.png  (90 KB)
+    → Potential saving: 90 KB
+
+  [alli new00042.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00042.png  (90 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00042.png  (90 KB)
+    → Potential saving: 90 KB
+
+  [alli new00043.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00043.png  (90 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00043.png  (90 KB)
+    → Potential saving: 90 KB
+
+  [alli new00044.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00044.png  (90 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00044.png  (90 KB)
+    → Potential saving: 90 KB
+
+  [alli new00045.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00045.png  (90 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00045.png  (90 KB)
+    → Potential saving: 90 KB
+
+  [alli new00046.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00046.png  (90 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00046.png  (90 KB)
+    → Potential saving: 90 KB
+
+  [alli new00047.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00047.png  (90 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00047.png  (90 KB)
+    → Potential saving: 90 KB
+
+  [alli new00048.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00048.png  (90 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00048.png  (90 KB)
+    → Potential saving: 90 KB
+
+  [alli new00049.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00049.png  (90 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00049.png  (90 KB)
+    → Potential saving: 90 KB
+
+  [alli new00050.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00050.png  (90 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00050.png  (90 KB)
+    → Potential saving: 90 KB
+
+  [alli new00051.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00051.png  (90 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00051.png  (90 KB)
+    → Potential saving: 90 KB
+
+  [alli new00052.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00052.png  (90 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00052.png  (90 KB)
+    → Potential saving: 90 KB
+
+  [alli new00053.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00053.png  (90 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00053.png  (90 KB)
+    → Potential saving: 90 KB
+
+  [alli new00054.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00054.png  (90 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00054.png  (90 KB)
+    → Potential saving: 90 KB
+
+  [alli new00055.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00055.png  (90 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00055.png  (90 KB)
+    → Potential saving: 90 KB
+
+  [alli new00056.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00056.png  (90 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00056.png  (90 KB)
+    → Potential saving: 90 KB
+
+  [alli new00057.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00057.png  (90 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00057.png  (90 KB)
+    → Potential saving: 90 KB
+
+  [alli new00058.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00058.png  (90 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00058.png  (90 KB)
+    → Potential saving: 90 KB
+
+  [alli new00059.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00059.png  (90 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00059.png  (90 KB)
+    → Potential saving: 90 KB
+
+  [alli new00060.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00060.png  (90 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00060.png  (90 KB)
+    → Potential saving: 90 KB
+
+  [alli new00061.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00061.png  (90 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00061.png  (90 KB)
+    → Potential saving: 90 KB
+
+  [alli new00062.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00062.png  (90 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00062.png  (90 KB)
+    → Potential saving: 90 KB
+
+  [alli new00063.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00063.png  (90 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00063.png  (90 KB)
+    → Potential saving: 90 KB
+
+  [alli new00064.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00064.png  (90 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00064.png  (90 KB)
+    → Potential saving: 90 KB
+
+  [alli new00065.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00065.png  (90 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00065.png  (90 KB)
+    → Potential saving: 90 KB
+
+  [alli new00066.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00066.png  (90 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00066.png  (90 KB)
+    → Potential saving: 90 KB
+
+  [alli new00067.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00067.png  (90 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00067.png  (90 KB)
+    → Potential saving: 90 KB
+
+  [alli new00068.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00068.png  (90 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00068.png  (90 KB)
+    → Potential saving: 90 KB
+
+  [alli new00069.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00069.png  (104 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00069.png  (104 KB)
+    → Potential saving: 104 KB
+
+  [alli new00070.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00070.png  (104 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00070.png  (104 KB)
+    → Potential saving: 104 KB
+
+  [alli new00071.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00071.png  (105 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00071.png  (105 KB)
+    → Potential saving: 105 KB
+
+  [alli new00072.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00072.png  (105 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00072.png  (105 KB)
+    → Potential saving: 105 KB
+
+  [alli new00073.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00073.png  (108 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00073.png  (108 KB)
+    → Potential saving: 108 KB
+
+  [alli new00074.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00074.png  (108 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00074.png  (108 KB)
+    → Potential saving: 108 KB
+
+  [alli new00075.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00075.png  (91 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00075.png  (91 KB)
+    → Potential saving: 91 KB
+
+  [alli new00076.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00076.png  (91 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00076.png  (91 KB)
+    → Potential saving: 91 KB
+
+  [alli new00077.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00077.png  (91 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00077.png  (91 KB)
+    → Potential saving: 91 KB
+
+  [alli new00078.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00078.png  (91 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00078.png  (91 KB)
+    → Potential saving: 91 KB
+
+  [alli new00079.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00079.png  (25 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00079.png  (25 KB)
+    → Potential saving: 25 KB
+
+  [alli new00080.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00080.png  (25 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00080.png  (25 KB)
+    → Potential saving: 25 KB
+
+  [alli new00081.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00081.png  (24 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00081.png  (24 KB)
+    → Potential saving: 24 KB
+
+  [alli new00082.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00082.png  (24 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00082.png  (24 KB)
+    → Potential saving: 24 KB
+
+  [alli new00083.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00083.png  (64 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00083.png  (64 KB)
+    → Potential saving: 64 KB
+
+  [alli new00084.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00084.png  (64 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00084.png  (64 KB)
+    → Potential saving: 64 KB
+
+  [alli new00085.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00085.png  (22 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00085.png  (22 KB)
+    → Potential saving: 22 KB
+
+  [alli new00086.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00086.png  (22 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00086.png  (22 KB)
+    → Potential saving: 22 KB
+
+  [alli new00087.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00087.png  (22 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00087.png  (22 KB)
+    → Potential saving: 22 KB
+
+  [alli new00088.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00088.png  (22 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00088.png  (22 KB)
+    → Potential saving: 22 KB
+
+  [alli new00089.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00089.png  (22 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00089.png  (22 KB)
+    → Potential saving: 22 KB
+
+  [alli new00090.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00090.png  (22 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00090.png  (22 KB)
+    → Potential saving: 22 KB
+
+  [alli new00091.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00091.png  (22 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00091.png  (22 KB)
+    → Potential saving: 22 KB
+
+  [alli new00092.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00092.png  (22 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00092.png  (22 KB)
+    → Potential saving: 22 KB
+
+  [alli new00093.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00093.png  (22 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00093.png  (22 KB)
+    → Potential saving: 22 KB
+
+  [alli new00094.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00094.png  (22 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00094.png  (22 KB)
+    → Potential saving: 22 KB
+
+  [alli new00095.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00095.png  (22 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00095.png  (22 KB)
+    → Potential saving: 22 KB
+
+  [alli new00096.png]  (2 copies)
+    Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/alli new00096.png  (22 KB)
+    Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00096.png  (22 KB)
+    → Potential saving: 22 KB
+
+  [healthyzoo_minigame-Arlobg.png]  (2 copies)
+    Assets/Sprites/AnimalBackgroundImages/healthyzoo_minigame-Arlobg.png  (658 KB)
+    Assets/UI/UI_MiniBackgrounds/healthyzoo_minigame-Arlobg.png  (658 KB)
+    → Potential saving: 658 KB
+
+  [healthyzoo_minigame-gigibg.png]  (2 copies)
+    Assets/Sprites/AnimalBackgroundImages/healthyzoo_minigame-gigibg.png  (854 KB)
+    Assets/UI/UI_MiniBackgrounds/healthyzoo_minigame-gigibg.png  (854 KB)
+    → Potential saving: 854 KB
+
+  [loop00016.png]  (2 copies)
+    Assets/Sprites/HeronSpriteAssets/HeronLoopAnim/loop00016.png  (29 KB)
+    Assets/Sprites/SlothAssets/celebration loop/loop00016.png  (47 KB)
+    → Potential saving: 29 KB
+
+  [loop00017.png]  (2 copies)
+    Assets/Sprites/HeronSpriteAssets/HeronLoopAnim/loop00017.png  (29 KB)
+    Assets/Sprites/SlothAssets/celebration loop/loop00017.png  (47 KB)
+    → Potential saving: 29 KB
+
+  [loop00018.png]  (2 copies)
+    Assets/Sprites/HeronSpriteAssets/HeronLoopAnim/loop00018.png  (29 KB)
+    Assets/Sprites/SlothAssets/celebration loop/loop00018.png  (47 KB)
+    → Potential saving: 29 KB
+
+  [loop00019.png]  (2 copies)
+    Assets/Sprites/HeronSpriteAssets/HeronLoopAnim/loop00019.png  (29 KB)
+    Assets/Sprites/SlothAssets/celebration loop/loop00019.png  (47 KB)
+    → Potential saving: 29 KB
+
+  [loop00020.png]  (2 copies)
+    Assets/Sprites/HeronSpriteAssets/HeronLoopAnim/loop00020.png  (29 KB)
+    Assets/Sprites/SlothAssets/celebration loop/loop00020.png  (41 KB)
+    → Potential saving: 29 KB
+
+  [loop00021.png]  (2 copies)
+    Assets/Sprites/HeronSpriteAssets/HeronLoopAnim/loop00021.png  (29 KB)
+    Assets/Sprites/SlothAssets/celebration loop/loop00021.png  (41 KB)
+    → Potential saving: 29 KB
+
+  [loop00022.png]  (2 copies)
+    Assets/Sprites/HeronSpriteAssets/HeronLoopAnim/loop00022.png  (32 KB)
+    Assets/Sprites/SlothAssets/celebration loop/loop00022.png  (41 KB)
+    → Potential saving: 32 KB
+
+  [loop00023.png]  (2 copies)
+    Assets/Sprites/HeronSpriteAssets/HeronLoopAnim/loop00023.png  (32 KB)
+    Assets/Sprites/SlothAssets/celebration loop/loop00023.png  (41 KB)
+    → Potential saving: 32 KB
+
+  [loop00024.png]  (2 copies)
+    Assets/Sprites/HeronSpriteAssets/HeronLoopAnim/loop00024.png  (32 KB)
+    Assets/Sprites/SlothAssets/celebration loop/loop00024.png  (47 KB)
+    → Potential saving: 32 KB
+
+  [loop00025.png]  (2 copies)
+    Assets/Sprites/HeronSpriteAssets/HeronLoopAnim/loop00025.png  (32 KB)
+    Assets/Sprites/SlothAssets/celebration loop/loop00025.png  (47 KB)
+    → Potential saving: 32 KB
+
+  [loop00026.png]  (2 copies)
+    Assets/Sprites/HeronSpriteAssets/HeronLoopAnim/loop00026.png  (32 KB)
+    Assets/Sprites/SlothAssets/celebration loop/loop00026.png  (47 KB)
+    → Potential saving: 32 KB
+
+  [loop00027.png]  (2 copies)
+    Assets/Sprites/HeronSpriteAssets/HeronLoopAnim/loop00027.png  (32 KB)
+    Assets/Sprites/SlothAssets/celebration loop/loop00027.png  (47 KB)
+    → Potential saving: 32 KB
+
+  [loop00028.png]  (2 copies)
+    Assets/Sprites/HeronSpriteAssets/HeronLoopAnim/loop00028.png  (32 KB)
+    Assets/Sprites/SlothAssets/celebration loop/loop00028.png  (40 KB)
+    → Potential saving: 32 KB
+
+  [loop00029.png]  (2 copies)
+    Assets/Sprites/HeronSpriteAssets/HeronLoopAnim/loop00029.png  (32 KB)
+    Assets/Sprites/SlothAssets/celebration loop/loop00029.png  (40 KB)
+    → Potential saving: 32 KB
+
+  [loop00030.png]  (2 copies)
+    Assets/Sprites/HeronSpriteAssets/HeronLoopAnim/loop00030.png  (29 KB)
+    Assets/Sprites/SlothAssets/celebration loop/loop00030.png  (40 KB)
+    → Potential saving: 29 KB
+
+  [loop00031.png]  (2 copies)
+    Assets/Sprites/HeronSpriteAssets/HeronLoopAnim/loop00031.png  (29 KB)
+    Assets/Sprites/SlothAssets/celebration loop/loop00031.png  (40 KB)
+    → Potential saving: 29 KB
+
+  [loop00032.png]  (2 copies)
+    Assets/Sprites/HeronSpriteAssets/HeronLoopAnim/loop00032.png  (29 KB)
+    Assets/Sprites/SlothAssets/celebration loop/loop00032.png  (22 KB)
+    → Potential saving: 22 KB
+
+  [loop00033.png]  (2 copies)
+    Assets/Sprites/HeronSpriteAssets/HeronLoopAnim/loop00033.png  (27 KB)
+    Assets/Sprites/SlothAssets/celebration loop/loop00033.png  (22 KB)
+    → Potential saving: 22 KB
+
+  [loop00034.png]  (2 copies)
+    Assets/Sprites/HeronSpriteAssets/HeronLoopAnim/loop00034.png  (27 KB)
+    Assets/Sprites/SlothAssets/celebration loop/loop00034.png  (22 KB)
+    → Potential saving: 22 KB
+
+  [loop00035.png]  (2 copies)
+    Assets/Sprites/HeronSpriteAssets/HeronLoopAnim/loop00035.png  (27 KB)
+    Assets/Sprites/SlothAssets/celebration loop/loop00035.png  (22 KB)
+    → Potential saving: 22 KB
+
+  [loop00036.png]  (2 copies)
+    Assets/Sprites/HeronSpriteAssets/HeronLoopAnim/loop00036.png  (30 KB)
+    Assets/Sprites/SlothAssets/celebration loop/loop00036.png  (40 KB)
+    → Potential saving: 30 KB
+
+  [loop00037.png]  (2 copies)
+    Assets/Sprites/HeronSpriteAssets/HeronLoopAnim/loop00037.png  (30 KB)
+    Assets/Sprites/SlothAssets/celebration loop/loop00037.png  (40 KB)
+    → Potential saving: 30 KB
+
+  [loop00038.png]  (2 copies)
+    Assets/Sprites/HeronSpriteAssets/HeronLoopAnim/loop00038.png  (30 KB)
+    Assets/Sprites/SlothAssets/celebration loop/loop00038.png  (40 KB)
+    → Potential saving: 30 KB
+
+  [loop00039.png]  (2 copies)
+    Assets/Sprites/HeronSpriteAssets/HeronLoopAnim/loop00039.png  (30 KB)
+    Assets/Sprites/SlothAssets/celebration loop/loop00039.png  (40 KB)
+    → Potential saving: 30 KB
+
+  [Splashscreen.png]  (2 copies)
+    Assets/Sprites/UI/Splashscreen.png  (80 KB)
+    Assets/UI/UI_ButtonsBase/Splashscreen.png  (80 KB)
+    → Potential saving: 80 KB
+
+  Total potential saving from deduplication: 9.3 MB
+
+───────────────────────────────────────────────────────
+  SECTION 2 — PLACEHOLDER / TEMP ASSETS (11 files)
+  Detected by folder name or filename keywords:
+  placeholder, temp, test, old, unused, backup, wip...
+───────────────────────────────────────────────────────
+
+  [folder contains 'temp']  Assets/Settings/Project Configuration/TemplateImage.png  (136 KB)
+  [folder contains 'placeholder']  Assets/Sprites/UI/Placeholder/AnimalPics/AlligatorPlaceholder.jpg  (37 KB)
+  [folder contains 'placeholder']  Assets/Sprites/UI/Placeholder/AnimalPics/DogPlaceholder.png  (5 KB)
+  [folder contains 'placeholder']  Assets/Sprites/UI/Placeholder/AnimalPics/ElephantPlaceholder.jpg  (1.3 MB)
+  [folder contains 'placeholder']  Assets/Sprites/UI/Placeholder/AnimalPics/GiraffePlaceholder.jpg  (1.7 MB)
+  [folder contains 'placeholder']  Assets/Sprites/UI/Placeholder/AnimalPics/HeronPlaceholder.jpg  (35 KB)
+  [folder contains 'placeholder']  Assets/Sprites/UI/Placeholder/AnimalPics/LemurPlaceholder.jpg  (2.1 MB)
+  [folder contains 'placeholder']  Assets/Sprites/UI/Placeholder/AnimalPics/PandaPlaceholder.jpg  (48 KB)
+  [folder contains 'placeholder']  Assets/Sprites/UI/Placeholder/AnimalPics/PorcupinePlaceholder.jpg  (57 KB)
+  [folder contains 'placeholder']  Assets/Sprites/UI/Placeholder/AnimalPics/SlothImage.jpg  (26 KB)
+  [folder contains 'placeholder']  Assets/Sprites/UI/Placeholder/WoodenFramePlaceHolder.png  (7 KB)
+
+  Total: 5.4 MB
+
+───────────────────────────────────────────────────────
+  SECTION 3 — UNUSED TEXTURES (452 files)
+  Not referenced by any Scene, Prefab, Material,
+  ScriptableObject, or Animator in the project.
+  NOTE: Assets under a Resources/ folder are listed
+  separately — they may be loaded via Resources.Load()
+  at runtime and cannot be statically verified.
+───────────────────────────────────────────────────────
+
+  Assets/Sprites/AlligatorAssets/AlligatorConfetti/Alligator confetti_00000.png  (10 KB)
+  Assets/Sprites/AlligatorAssets/AlligatorConfetti/Alligator confetti_00001.png  (11 KB)
+  Assets/Sprites/AlligatorAssets/AlligatorConfetti/Alligator confetti_00002.png  (15 KB)
+  Assets/Sprites/AlligatorAssets/AlligatorConfetti/Alligator confetti_00003.png  (22 KB)
+  Assets/Sprites/AlligatorAssets/AlligatorConfetti/Alligator confetti_00004.png  (26 KB)
+  Assets/Sprites/AlligatorAssets/AlligatorConfetti/Alligator confetti_00005.png  (31 KB)
+  Assets/Sprites/AlligatorAssets/AlligatorConfetti/Alligator confetti_00006.png  (35 KB)
+  Assets/Sprites/AlligatorAssets/AlligatorConfetti/Alligator confetti_00007.png  (40 KB)
+  Assets/Sprites/AlligatorAssets/AlligatorConfetti/Alligator confetti_00008.png  (43 KB)
+  Assets/Sprites/AlligatorAssets/AlligatorConfetti/Alligator confetti_00009.png  (48 KB)
+  Assets/Sprites/AlligatorAssets/AlligatorConfetti/Alligator confetti_00010.png  (54 KB)
+  Assets/Sprites/AlligatorAssets/AlligatorConfetti/Alligator confetti_00011.png  (59 KB)
+  Assets/Sprites/AlligatorAssets/AlligatorConfetti/Alligator confetti_00012.png  (62 KB)
+  Assets/Sprites/AlligatorAssets/AlligatorConfetti/Alligator confetti_00013.png  (64 KB)
+  Assets/Sprites/AlligatorAssets/AlligatorConfetti/Alligator confetti_00014.png  (65 KB)
+  Assets/Sprites/AlligatorAssets/AlligatorConfetti/Alligator confetti_00015.png  (66 KB)
+  Assets/Sprites/AlligatorAssets/AlligatorConfetti/Alligator confetti_00016.png  (66 KB)
+  Assets/Sprites/AlligatorAssets/AlligatorConfetti/Alligator confetti_00017.png  (67 KB)
+  Assets/Sprites/AlligatorAssets/AlligatorConfetti/Alligator confetti_00018.png  (66 KB)
+  Assets/Sprites/AlligatorAssets/AlligatorConfetti/Alligator confetti_00019.png  (64 KB)
+  Assets/Sprites/AlligatorAssets/AlligatorConfetti/Alligator confetti_00020.png  (65 KB)
+  Assets/Sprites/AlligatorAssets/AlligatorConfetti/Alligator confetti_00021.png  (64 KB)
+  Assets/Sprites/AlligatorAssets/AlligatorConfetti/Alligator confetti_00022.png  (64 KB)
+  Assets/Sprites/AlligatorAssets/AlligatorConfetti/Alligator confetti_00023.png  (61 KB)
+  Assets/Sprites/AlligatorAssets/AlligatorConfetti/Alligator confetti_00024.png  (59 KB)
+  Assets/Sprites/AlligatorAssets/AlligatorConfetti/Alligator confetti_00025.png  (56 KB)
+  Assets/Sprites/AlligatorAssets/AlligatorConfetti/Alligator confetti_00026.png  (52 KB)
+  Assets/Sprites/AlligatorAssets/AlligatorConfetti/Alligator confetti_00027.png  (48 KB)
+  Assets/Sprites/AlligatorAssets/AlligatorConfetti/Alligator confetti_00028.png  (43 KB)
+  Assets/Sprites/AlligatorAssets/AlligatorConfetti/Alligator confetti_00029.png  (43 KB)
+  Assets/Sprites/AlligatorAssets/AlligatorConfetti/Alligator confetti_00030.png  (45 KB)
+  Assets/Sprites/AlligatorAssets/AlligatorConfetti/Alligator confetti_00031.png  (45 KB)
+  Assets/Sprites/AlligatorAssets/AlligatorConfetti/Alligator confetti_00032.png  (41 KB)
+  Assets/Sprites/AlligatorAssets/AlligatorConfetti/Alligator confetti_00033.png  (40 KB)
+  Assets/Sprites/AlligatorAssets/AlligatorConfetti/Alligator confetti_00034.png  (38 KB)
+  Assets/Sprites/AlligatorAssets/AlligatorConfetti/Alligator confetti_00035.png  (35 KB)
+  Assets/Sprites/AlligatorAssets/AlligatorConfetti/Alligator confetti_00036.png  (33 KB)
+  Assets/Sprites/AlligatorAssets/AlligatorConfetti/Alligator confetti_00037.png  (29 KB)
+  Assets/Sprites/AlligatorAssets/AlligatorConfetti/Alligator confetti_00038.png  (27 KB)
+  Assets/Sprites/AlligatorAssets/AlligatorConfetti/Alligator confetti_00039.png  (25 KB)
+  Assets/Sprites/AlligatorAssets/AlligatorConfetti/Alligator confetti_00040.png  (23 KB)
+  Assets/Sprites/AlligatorAssets/AlligatorConfetti/Alligator confetti_00041.png  (23 KB)
+  Assets/Sprites/AlligatorAssets/AlligatorConfetti/Alligator confetti_00042.png  (22 KB)
+  Assets/Sprites/AlligatorAssets/AlligatorConfetti/Alligator confetti_00043.png  (19 KB)
+  Assets/Sprites/AlligatorAssets/AlligatorConfetti/Alligator confetti_00044.png  (18 KB)
+  Assets/Sprites/AlligatorAssets/AlligatorConfetti/Alligator confetti_00045.png  (15 KB)
+  Assets/Sprites/AlligatorAssets/AlligatorConfetti/Alligator confetti_00046.png  (14 KB)
+  Assets/Sprites/AlligatorAssets/AlligatorConfetti/Alligator confetti_00047.png  (11 KB)
+  Assets/Sprites/AlligatorAssets/AlligatorConfetti/Alligator confetti_00048.png  (11 KB)
+  Assets/Sprites/AlligatorAssets/AlligatorConfetti/Alligator confetti_00049.png  (10 KB)
+  Assets/Sprites/AlligatorAssets/AlligatorConfetti/Alligator confetti_00050.png  (9 KB)
+  Assets/Sprites/AlligatorAssets/AlligatorConfetti/Alligator confetti_00051.png  (8 KB)
+  Assets/Sprites/AlligatorAssets/AlligatorNewExportTD/AlliHalfBody.png  (21 KB)
+  Assets/Sprites/AlligatorAssets/ArloScanImage.png  (20 KB)
+  Assets/Sprites/AlligatorAssets/default state after game.png  (22 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00000.png  (21 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00001.png  (21 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00002.png  (21 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00003.png  (21 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00004.png  (21 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00005.png  (21 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00006.png  (21 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00007.png  (21 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00008.png  (21 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00009.png  (21 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00010.png  (63 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00011.png  (63 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00012.png  (63 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00013.png  (63 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00014.png  (24 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00015.png  (24 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00016.png  (44 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00017.png  (44 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00018.png  (45 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00019.png  (45 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00020.png  (45 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00021.png  (45 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00022.png  (44 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00023.png  (44 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00024.png  (44 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00025.png  (44 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00026.png  (44 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00027.png  (44 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00028.png  (44 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00029.png  (44 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00030.png  (44 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00031.png  (44 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00032.png  (90 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00033.png  (90 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00034.png  (91 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00035.png  (91 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00036.png  (91 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00037.png  (90 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00038.png  (90 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00039.png  (90 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00040.png  (90 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00041.png  (90 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00042.png  (90 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00043.png  (90 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00044.png  (90 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00045.png  (90 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00046.png  (90 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00047.png  (90 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00048.png  (90 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00049.png  (90 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00050.png  (90 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00051.png  (90 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00052.png  (90 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00053.png  (90 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00054.png  (90 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00055.png  (90 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00056.png  (90 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00057.png  (90 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00058.png  (90 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00059.png  (90 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00060.png  (90 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00061.png  (90 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00062.png  (90 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00063.png  (90 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00064.png  (90 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00065.png  (90 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00066.png  (90 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00067.png  (90 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00068.png  (90 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00069.png  (104 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00070.png  (104 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00071.png  (105 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00072.png  (105 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00073.png  (108 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00074.png  (108 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00075.png  (91 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00076.png  (91 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00077.png  (91 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00078.png  (91 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00079.png  (25 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00080.png  (25 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00081.png  (24 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00082.png  (24 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00083.png  (64 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00084.png  (64 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00085.png  (22 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00086.png  (22 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00087.png  (22 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00088.png  (22 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00089.png  (22 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00090.png  (22 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00091.png  (22 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00092.png  (22 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00093.png  (22 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00094.png  (22 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00095.png  (22 KB)
+  Assets/Sprites/AlligatorAssets/FullBodyArloAnims/ArloStartUp/alli new00096.png  (22 KB)
+  Assets/Sprites/AlligatorAssets/tongue depressor.png  (11 KB)
+  Assets/Sprites/AnimalBackgroundImages/healthyzoo_minigame-pingbg.png  (958 KB)
+  Assets/Sprites/AnimalBackgroundImages/minigame-santi_bg-phone.png  (1.8 MB)
+  Assets/Sprites/AnimPicsBW/GigiDefaultCL_bw_bw.png  (42 KB)
+  Assets/Sprites/CharacterDefaultSprites/ArloDefaultCL.PNG  (84 KB)
+  Assets/Sprites/GiraffeAssets/FinalPoseAnims/loop animation export.png  (2.3 MB)
+  Assets/Sprites/GiraffeAssets/FinalPoseAnims/LoopAnimB.png  (2.6 MB)
+  Assets/Sprites/GiraffeAssets/FinalPoseAnims/TongueDepressorFIx.png  (9 KB)
+  Assets/Sprites/HeronSpriteAssets/HeronSliderUI/dial00000.png  (8 KB)
+  Assets/Sprites/PandaAssets/PandaMiniGame/four states/Pandamachine_001.png  (42 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00000.png  (27 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00001.png  (27 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00002.png  (27 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00003.png  (27 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00004.png  (27 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00005.png  (27 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00006.png  (27 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00007.png  (27 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00008.png  (54 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00009.png  (54 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00010.png  (54 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00011.png  (51 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00012.png  (51 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00013.png  (51 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00014.png  (46 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00015.png  (46 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00016.png  (46 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00017.png  (28 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00018.png  (28 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00019.png  (28 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00020.png  (28 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00021.png  (28 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00022.png  (28 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00023.png  (26 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00024.png  (26 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00025.png  (27 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00026.png  (27 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00027.png  (33 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00028.png  (33 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00029.png  (33 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00030.png  (33 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00031.png  (33 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00032.png  (33 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00033.png  (33 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00034.png  (33 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00035.png  (33 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00036.png  (33 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00037.png  (33 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00038.png  (33 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00039.png  (33 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00040.png  (33 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00041.png  (33 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00042.png  (33 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00043.png  (33 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00044.png  (33 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00045.png  (33 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00046.png  (33 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00047.png  (33 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00048.png  (33 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00049.png  (33 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00050.png  (33 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00051.png  (33 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00052.png  (33 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00053.png  (33 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00054.png  (33 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00055.png  (33 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00056.png  (33 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00057.png  (33 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00058.png  (33 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00059.png  (33 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00060.png  (33 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00061.png  (32 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00062.png  (32 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00063.png  (32 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00064.png  (32 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00065.png  (32 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00066.png  (32 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00067.png  (32 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00068.png  (32 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00069.png  (32 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00070.png  (32 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00071.png  (32 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00072.png  (32 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00073.png  (67 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00074.png  (67 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00075.png  (67 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00076.png  (67 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00077.png  (67 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00078.png  (67 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00079.png  (67 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00080.png  (67 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00081.png  (66 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00082.png  (66 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00083.png  (66 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00084.png  (66 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00085.png  (66 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00086.png  (66 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00087.png  (60 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00088.png  (60 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00089.png  (66 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00090.png  (66 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00091.png  (66 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00092.png  (66 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00093.png  (66 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00094.png  (66 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00095.png  (66 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00096.png  (66 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00097.png  (66 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00098.png  (66 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00099.png  (66 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00100.png  (66 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00101.png  (60 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00102.png  (60 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00103.png  (60 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00104.png  (60 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00105.png  (60 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00106.png  (60 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00107.png  (60 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00108.png  (60 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00109.png  (60 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00110.png  (60 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00111.png  (60 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00112.png  (60 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00113.png  (60 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00114.png  (60 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00115.png  (60 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00116.png  (60 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00117.png  (60 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00118.png  (60 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00119.png  (61 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00120.png  (61 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00121.png  (60 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00122.png  (60 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00123.png  (60 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00124.png  (60 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00125.png  (60 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00126.png  (60 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00127.png  (61 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00128.png  (61 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00129.png  (61 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00130.png  (61 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00131.png  (60 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00132.png  (60 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00133.png  (60 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00134.png  (60 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00135.png  (61 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00136.png  (61 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00137.png  (61 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00138.png  (61 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00139.png  (61 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00140.png  (61 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00141.png  (61 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00142.png  (61 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00143.png  (61 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00144.png  (61 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00145.png  (61 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00146.png  (61 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00147.png  (61 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00148.png  (61 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00149.png  (61 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00150.png  (61 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00151.png  (61 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00152.png  (61 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00153.png  (61 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00154.png  (61 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00155.png  (60 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00156.png  (60 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00157.png  (60 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00158.png  (60 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00159.png  (60 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00160.png  (60 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00161.png  (60 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00162.png  (60 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00163.png  (60 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00164.png  (60 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00165.png  (25 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00166.png  (25 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00167.png  (25 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00168.png  (25 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00169.png  (25 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00170.png  (25 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00171.png  (25 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00172.png  (25 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00173.png  (25 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00174.png  (25 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00175.png  (25 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00176.png  (25 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00177.png  (25 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00178.png  (25 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00179.png  (25 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00180.png  (25 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00181.png  (25 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00182.png  (25 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00183.png  (32 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00184.png  (32 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00185.png  (50 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00186.png  (50 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00187.png  (47 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00188.png  (47 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00189.png  (39 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00190.png  (39 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00191.png  (38 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00192.png  (38 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00193.png  (36 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00194.png  (36 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00195.png  (41 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00196.png  (41 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00197.png  (40 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00198.png  (40 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00199.png  (40 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00200.png  (40 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00201.png  (41 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00202.png  (41 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00203.png  (41 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00204.png  (41 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00205.png  (41 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00206.png  (41 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00207.png  (41 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00208.png  (41 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00209.png  (33 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00210.png  (33 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00211.png  (33 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00212.png  (33 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00213.png  (33 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00214.png  (33 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00215.png  (33 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00216.png  (33 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00217.png  (33 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00218.png  (33 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00219.png  (33 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00220.png  (33 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00221.png  (33 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00222.png  (33 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00223.png  (26 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00224.png  (26 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00225.png  (34 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00226.png  (34 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00227.png  (34 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00228.png  (34 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00229.png  (34 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00230.png  (34 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00231.png  (44 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00232.png  (44 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00233.png  (44 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00234.png  (44 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00235.png  (47 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00236.png  (47 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00237.png  (47 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00238.png  (47 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00239.png  (30 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00240.png  (30 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00241.png  (30 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00242.png  (33 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00243.png  (33 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00244.png  (47 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00245.png  (47 KB)
+  Assets/Sprites/PorcupineAssets/animation part1/porcupine animation00246.png  (47 KB)
+  Assets/Sprites/PorcupineAssets/celebration loop/loop00000.png  (44 KB)
+  Assets/Sprites/PorcupineAssets/celebration loop/loop00001.png  (44 KB)
+  Assets/Sprites/PorcupineAssets/celebration loop/loop00002.png  (44 KB)
+  Assets/Sprites/PorcupineAssets/celebration loop/loop00003.png  (44 KB)
+  Assets/Sprites/PorcupineAssets/celebration loop/loop00004.png  (47 KB)
+  Assets/Sprites/PorcupineAssets/celebration loop/loop00005.png  (47 KB)
+  Assets/Sprites/PorcupineAssets/celebration loop/loop00006.png  (47 KB)
+  Assets/Sprites/PorcupineAssets/celebration loop/loop00007.png  (47 KB)
+  Assets/Sprites/PorcupineAssets/celebration loop/loop00008.png  (45 KB)
+  Assets/Sprites/PorcupineAssets/celebration loop/loop00009.png  (45 KB)
+  Assets/Sprites/PorcupineAssets/celebration loop/loop00010.png  (45 KB)
+  Assets/Sprites/PorcupineAssets/celebration loop/loop00011.png  (49 KB)
+  Assets/Sprites/PorcupineAssets/celebration loop/loop00012.png  (49 KB)
+  Assets/Sprites/PorcupineAssets/celebration loop/loop00013.png  (48 KB)
+  Assets/Sprites/PorcupineAssets/celebration loop/loop00014.png  (48 KB)
+  Assets/Sprites/PorcupineAssets/celebration loop/loop00015.png  (48 KB)
+  Assets/Sprites/ScanImages/ArloScanImage.jpg  (61 KB)
+  Assets/Sprites/ScanImages/GigiScanImage.jpg  (65 KB)
+  Assets/Sprites/ScanImages/PennyScanImage.jpg  (61 KB)
+  Assets/Sprites/ScanImages/PingScanImage.jpg  (62 KB)
+  Assets/Sprites/ScanImages/RenScanImage.jpg  (64 KB)
+  Assets/Sprites/ScanImages/SantiScanImage.jpg  (64 KB)
+  Assets/Sprites/UI/camera.png  (71 KB)
+  Assets/Sprites/UI/GreenCheckmark.jpg  (18 KB)
+  Assets/Sprites/UI/MainMenuAssetsUI/homepage_ARcamera@300x.png  (505 KB)
+  Assets/Sprites/UI/MainMenuAssetsUI/off@300x.png  (28 KB)
+  Assets/Sprites/UI/MainMenuAssetsUI/on@300x.png  (27 KB)
+  Assets/Sprites/UI/MainMenuAssetsUI/settings_window@300x.png  (547 KB)
+  Assets/Sprites/UI/MainMenuAssetsUI/slider_base@300x.png  (2 KB)
+  Assets/Sprites/UI/MainMenuAssetsUI/slider_mark@300x.png  (3 KB)
+  Assets/Sprites/UI/MainMenuAssetsUI/slider_progress@300x.png  (2 KB)
+  Assets/Sprites/UI/Placeholder/AnimalPics/AlligatorPlaceholder.jpg  (37 KB)
+  Assets/Sprites/UI/Placeholder/AnimalPics/ElephantPlaceholder.jpg  (1.3 MB)
+  Assets/Sprites/UI/Placeholder/AnimalPics/GiraffePlaceholder.jpg  (1.7 MB)
+  Assets/Sprites/UI/Placeholder/AnimalPics/HeronPlaceholder.jpg  (35 KB)
+  Assets/Sprites/UI/Placeholder/AnimalPics/PandaPlaceholder.jpg  (48 KB)
+  Assets/Sprites/UI/Placeholder/AnimalPics/PorcupinePlaceholder.jpg  (57 KB)
+  Assets/Sprites/UI/Placeholder/AnimalPics/SlothImage.jpg  (26 KB)
+  Assets/Sprites/UI/Placeholder/WoodenFramePlaceHolder.png  (7 KB)
+  Assets/Sprites/UI/Splashscreen.png  (80 KB)
+  Assets/UI/UI_MiniBackgrounds/healthyzoo_minigame-Arlobg.png  (658 KB)
+  Assets/UI/UI_MiniBackgrounds/healthyzoo_minigame-gigibg.png  (854 KB)
+  Assets/UI/UI_MiniBackgrounds/healthyzoo_minigame-Renbg.png  (563 KB)
+
+  Total: 34.1 MB
+
+=======================================================
+  SUMMARY
+=======================================================
+  Duplicate groups:       139
+  Placeholder files:      11
+  Unused textures:        452
+  Resources folder items: 0
+=======================================================
+

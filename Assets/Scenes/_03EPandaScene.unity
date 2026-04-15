@@ -135,7 +135,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &33988703
 Transform:
   m_ObjectHideFlags: 0
@@ -1046,6 +1046,7 @@ MonoBehaviour:
   congratsButton: {fileID: 288759309}
   dialogueController: {fileID: 0}
   menuSceneName: _02MiniGameSelect
+  zone4YThreshold: 5
 --- !u!4 &883705863
 Transform:
   m_ObjectHideFlags: 0
@@ -1650,7 +1651,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 4b44b1ef2e087496d831639135f3b650, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1702,6 +1703,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Draggable2D
   spawnPoint: {fileID: 1134485342}
+  lockXAxis: 0
   dialogueController: {fileID: 0}
 --- !u!1 &1335138826
 GameObject:
@@ -1899,7 +1901,7 @@ Transform:
   m_GameObject: {fileID: 1826755136}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 70.7, z: -3312.5496}
+  m_LocalPosition: {x: 0, y: 75.8, z: -3312.5496}
   m_LocalScale: {x: 35.657154, y: 20, z: 35.657154}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1918,7 +1920,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PandaPositionZone
   pandaController: {fileID: 883705862}
-  zoneIndex: 0
+  zoneIndex: 4
 --- !u!61 &1826755139
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1953,7 +1955,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.045202315, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1963,7 +1965,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2.046032, y: 1}
   m_EdgeRadius: 4
 --- !u!1 &1876533653
 GameObject:

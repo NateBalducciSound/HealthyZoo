@@ -9,6 +9,10 @@ public class Draggable2D : MonoBehaviour
     [Tooltip("Optional: Drop an empty GameObject here to define a custom respawn location.")]
     public Transform spawnPoint;
 
+    [Header("Constraints")]
+    [Tooltip("When enabled, the X position is locked to the spawn/start X so the object only moves vertically.")]
+    public bool lockXAxis = false;
+
     [Header("Dialogue")]
     public DialogueController dialogueController;
 
@@ -76,7 +80,9 @@ public class Draggable2D : MonoBehaviour
         {
             Vector2 screenPos = Touchscreen.current.primaryTouch.position.ReadValue();
             Vector3 worldPos = ScreenToWorld(screenPos);
-            transform.position = worldPos + offset;
+            Vector3 newPos = worldPos + offset;
+            if (lockXAxis) newPos.x = startPosition.x;
+            transform.position = newPos;
         }
 
         if (Touchscreen.current.primaryTouch.press.wasReleasedThisFrame && isDragging)
@@ -107,7 +113,9 @@ public class Draggable2D : MonoBehaviour
         if (Mouse.current.leftButton.isPressed && isDragging)
         {
             Vector3 world = ScreenToWorld(Mouse.current.position.ReadValue());
-            transform.position = world + offset;
+            Vector3 newPos = world + offset;
+            if (lockXAxis) newPos.x = startPosition.x;
+            transform.position = newPos;
         }
 
         if (Mouse.current.leftButton.wasReleasedThisFrame && isDragging)

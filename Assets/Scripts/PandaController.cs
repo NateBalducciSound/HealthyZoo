@@ -38,11 +38,16 @@ public class PandaController : MonoBehaviour
     [Header("Navigation")]
     public string menuSceneName = "_02MiniGameSelect";
 
+    [Header("Zone 4 (Top of Head) — Y Threshold Override")]
+    [Tooltip("If the scope's world Y position reaches or exceeds this value while dragging, zone 4 activates regardless of trigger colliders. Set this to just above the top of zone 3's collider.")]
+    public float zone4YThreshold = 2f;
+
     private const int EyeZoneIndex = 3;
 
-    private int  currentZone   = -1;
-    private bool isFinished    = false;
-    private bool playerStarted = false;
+    private int  currentZone    = -1;
+    private bool isFinished     = false;
+    private bool playerStarted  = false;
+    private bool _zone4Active   = false;
 
     void Start()
     {
@@ -69,20 +74,65 @@ public class PandaController : MonoBehaviour
         scopeDraggable?.Show();
     }
 
+    void Update()
+    {
+        if (isFinished || scopeDraggable == null) return;
+
+        bool aboveThreshold = scopeDraggable.transform.position.y >= zone4YThreshold;
+
+        if (aboveThreshold && !_zone4Active)
+        {
+            _zone4Active = true;
+            currentZone  = 4;
+            NotifyPlayerStarted();
+            scopeDraggable.Hide();
+            scopeDraggable.MarkHandled(); // prevent ReturnToStart when released here
+            for (int i = 0; i < combinedSprites.Length; i++)
+                if (combinedSprites[i] != null)
+                    combinedSprites[i].SetActive(i == 4);
+        }
+        else if (!aboveThreshold && _zone4Active)
+        {
+            _zone4Active = false;
+            // Let the trigger system resume — restore scope so normal zone logic takes over.
+            currentZone = -1;
+            scopeDraggable.Show();
+            if (combinedSprites.Length > 0 && combinedSprites[0] != null)
+                combinedSprites[0].SetActive(true);
+            for (int i = 1; i < combinedSprites.Length; i++)
+                if (combinedSprites[i] != null)
+                    combinedSprites[i].SetActive(false);
+        }
+    }
+
     // ── Called by PandaPositionZone ───────────────────────────────────────────
 
     public void OnScopeEnterZone(int zoneIndex)
     {
         if (isFinished) return;
+        // Zone 4 is driven entirely by the Y-threshold in Update — ignore trigger calls for it.
+        if (zoneIndex == 4) return;
+        // If the Y override is active, don't let lower zones clobber the zone 4 state.
+        if (_zone4Active) return;
         NotifyPlayerStarted();
 
         currentZone = zoneIndex;
-        scopeDraggable?.Hide();
 
-        // Show only the sprite for this zone; keep sprite 0 as fallback when zoneIndex == 0
+        // Zone 0 is the base "below zone 1" state — scope stays visible and draggable.
+        // For all higher zones, hide the scope so the combined sprite takes over.
+        if (zoneIndex == 0)
+            scopeDraggable?.Show();
+        else
+            scopeDraggable?.Hide();
+
+        // Show the sprite for this zone. If zoneIndex is out of range, fall back to sprite 0.
+        int spriteToShow = (zoneIndex < combinedSprites.Length) ? zoneIndex : 0;
+        if (zoneIndex >= combinedSprites.Length)
+            Debug.LogWarning($"[PandaController] zoneIndex {zoneIndex} is out of range — combinedSprites has {combinedSprites.Length} elements. Showing sprite 0 as fallback.");
+
         for (int i = 0; i < combinedSprites.Length; i++)
             if (combinedSprites[i] != null)
-                combinedSprites[i].SetActive(i == zoneIndex);
+                combinedSprites[i].SetActive(i == spriteToShow);
 
         if (zoneIndex == EyeZoneIndex)
         {
@@ -94,6 +144,8 @@ public class PandaController : MonoBehaviour
     public void OnScopeExitZone(int zoneIndex)
     {
         if (isFinished) return;
+        // Zone 4 exit is handled by the Y-threshold in Update.
+        if (zoneIndex == 4) return;
         if (currentZone != zoneIndex) return;
 
         currentZone = -1;
@@ -113,6 +165,8 @@ public class PandaController : MonoBehaviour
     public void OnScopeReleasedInZone(int zoneIndex, Draggable2D scope)
     {
         if (isFinished) return;
+        // Zone 4 releases are handled by the Y-threshold path; ignore trigger-based calls.
+        if (zoneIndex == 4) return;
 
         scope.MarkHandled();
 

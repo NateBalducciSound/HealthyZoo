@@ -16,7 +16,7 @@ using UnityEngine;
 /// </summary>
 public static class TextureCompressionOptimizer
 {
-    private const string SpritesRoot = "Assets/Sprites";
+    private static readonly string[] ScanRoots = new[] { "Assets/Sprites", "Assets/UI" };
     private const int MaxTextureSizeCap = 2048;
 
     [MenuItem("Tools/HealthyZoo/Optimize Texture Compression (iOS + Android ASTC)")]
@@ -24,14 +24,14 @@ public static class TextureCompressionOptimizer
     {
         bool confirmed = EditorUtility.DisplayDialog(
             "Optimize Texture Compression",
-            "Sets iOS and Android compression to ASTC 6x6/8x8 on all textures under Assets/Sprites. Caps max size to 2048.\n\nMake sure your project is committed to git first.\n\nProceed?",
+            "Sets iOS and Android compression to ASTC 6x6/8x8 on all textures under Assets/Sprites AND Assets/UI. Caps max size to 2048.\n\nMake sure your project is committed to git first.\n\nProceed?",
             "Yes, Optimize",
             "Cancel"
         );
 
         if (!confirmed) return;
 
-        string[] guids = AssetDatabase.FindAssets("t:Texture2D", new[] { SpritesRoot });
+        string[] guids = AssetDatabase.FindAssets("t:Texture2D", ScanRoots);
         int total   = guids.Length;
         int changed = 0;
         int skipped = 0;
@@ -51,7 +51,7 @@ public static class TextureCompressionOptimizer
                 TextureImporter importer = AssetImporter.GetAtPath(path) as TextureImporter;
                 if (importer == null) { skipped++; continue; }
 
-                bool isBackground = path.Contains("AnimalBackgroundImages") || path.Contains("Background");
+                bool isBackground = path.Contains("AnimalBackgroundImages") || path.Contains("Background") || path.Contains("Assets/UI/");
                 TextureImporterFormat targetFormat = isBackground
                     ? TextureImporterFormat.ASTC_8x8
                     : TextureImporterFormat.ASTC_6x6;

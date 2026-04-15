@@ -47,12 +47,13 @@ public static class SpriteAtlasGenerator
                 continue;
             }
 
-            string atlasName = Path.GetFileName(folder) + "_Atlas";
-            string atlasPath = $"{AtlasOutputFolder}/{atlasName}.spriteatlas";
+            string atlasName   = Path.GetFileName(folder) + "_Atlas";
+            string atlasPath   = $"{AtlasOutputFolder}/{atlasName}.spriteatlas";
+            string atlasPathV2 = $"{AtlasOutputFolder}/{atlasName}.spriteatlasv2";
 
-            if (File.Exists(atlasPath))
+            if (File.Exists(atlasPath) || File.Exists(atlasPathV2))
             {
-                Debug.Log($"[SpriteAtlasGenerator] Already exists, skipping: {atlasPath}");
+                Debug.Log($"[SpriteAtlasGenerator] Already exists, skipping: {atlasName}");
                 skipped++;
                 continue;
             }
