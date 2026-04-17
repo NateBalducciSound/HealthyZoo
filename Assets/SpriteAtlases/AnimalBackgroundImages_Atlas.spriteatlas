@@ -78,9 +78,11 @@ SpriteAtlas:
     packedSpriteRenderDataKeys:
     - 18044410ddeaf423f8617bdb9dbc818a: 21300000
     - 350068e0e11ca4652919ae3748316b05: 21300000
+    - 3fcc5931066e142fc81c42c54c60250b: 21300000
     - 6db85846eb31e4b67aa3c268e179b997: 21300000
     - d7989d761845143ac8a16b62ab0239cb: 21300000
     - 5447b73777f3745518b66e159cb1f945: 21300000
+    - 8e7fd987208094a329fc7b181d679e72: 21300000
     - cb3e3fc89206b4148a55f40338882ce6: 21300000
     - 90bced594b4ce41699ad049709e84b50: 21300000
     - 4d4eb8ac2c8d74e73bd4eac49896e114: 21300000
@@ -90,9 +92,11 @@ SpriteAtlas:
   m_PackedSprites:
   - {fileID: 21300000, guid: 18044410ddeaf423f8617bdb9dbc818a, type: 3}
   - {fileID: 21300000, guid: 350068e0e11ca4652919ae3748316b05, type: 3}
+  - {fileID: 21300000, guid: 3fcc5931066e142fc81c42c54c60250b, type: 3}
   - {fileID: 21300000, guid: 6db85846eb31e4b67aa3c268e179b997, type: 3}
   - {fileID: 21300000, guid: d7989d761845143ac8a16b62ab0239cb, type: 3}
   - {fileID: 21300000, guid: 5447b73777f3745518b66e159cb1f945, type: 3}
+  - {fileID: 21300000, guid: 8e7fd987208094a329fc7b181d679e72, type: 3}
   - {fileID: 21300000, guid: cb3e3fc89206b4148a55f40338882ce6, type: 3}
   - {fileID: 21300000, guid: 90bced594b4ce41699ad049709e84b50, type: 3}
   - {fileID: 21300000, guid: 4d4eb8ac2c8d74e73bd4eac49896e114, type: 3}
@@ -101,9 +105,11 @@ SpriteAtlas:
   m_PackedSpriteNamesToIndex:
   - minigame-bg_ipad-arlo
   - healthyzoo_minigame-pingbg
+  - minigame-bg_ipad-ping
   - healthyzoo_ren-bg-mid
   - minigame-penny_bg-phone
   - minigame-bg_ipad-penny
+  - minigame-bg_ipad_santi
   - healthyzoo_minigame-gigibg
   - healthyzoo_ren-bg-night
   - healthyzoo_ren-bg-high

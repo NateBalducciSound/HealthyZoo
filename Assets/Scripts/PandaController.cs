@@ -21,8 +21,8 @@ public class PandaController : MonoBehaviour
 
     [Header("Panda Animator")]
     public Animator pandaAnimator;
-    public string orangeGlowStateName     = "OrangeButton";
-    public string greenGlowStateName      = "GreenButton";
+    public string orangeGlowStateName      = "OrangeButton";
+    public string greenGlowStateName       = "GreenButton";
     public string loopCelebrationStateName = "PingLoopAnimation";
 
     [Header("Confetti")]
@@ -44,17 +44,15 @@ public class PandaController : MonoBehaviour
 
     private const int EyeZoneIndex = 3;
 
-    private int  currentZone    = -1;
-    private bool isFinished     = false;
-    private bool playerStarted  = false;
-    private bool _zone4Active   = false;
+    private int  currentZone   = -1;
+    private bool isFinished    = false;
+    private bool playerStarted = false;
+    private bool _zone4Active  = false;
 
     void Start()
     {
         AsyncSceneLoader.Preload(DeviceDetector.GetSceneName(menuSceneName));
 
-        // Normalise all combined sprites to the same sorting layer/order
-        // and ensure only sprite 0 is active at the start
         for (int i = 0; i < combinedSprites.Length; i++)
         {
             if (combinedSprites[i] == null) continue;
@@ -86,7 +84,7 @@ public class PandaController : MonoBehaviour
             currentZone  = 4;
             NotifyPlayerStarted();
             scopeDraggable.Hide();
-            scopeDraggable.MarkHandled(); // prevent ReturnToStart when released here
+            scopeDraggable.MarkHandled();
             for (int i = 0; i < combinedSprites.Length; i++)
                 if (combinedSprites[i] != null)
                     combinedSprites[i].SetActive(i == 4);
@@ -94,8 +92,7 @@ public class PandaController : MonoBehaviour
         else if (!aboveThreshold && _zone4Active)
         {
             _zone4Active = false;
-            // Let the trigger system resume — restore scope so normal zone logic takes over.
-            currentZone = -1;
+            currentZone  = -1;
             scopeDraggable.Show();
             if (combinedSprites.Length > 0 && combinedSprites[0] != null)
                 combinedSprites[0].SetActive(true);
@@ -110,22 +107,17 @@ public class PandaController : MonoBehaviour
     public void OnScopeEnterZone(int zoneIndex)
     {
         if (isFinished) return;
-        // Zone 4 is driven entirely by the Y-threshold in Update — ignore trigger calls for it.
         if (zoneIndex == 4) return;
-        // If the Y override is active, don't let lower zones clobber the zone 4 state.
         if (_zone4Active) return;
         NotifyPlayerStarted();
 
         currentZone = zoneIndex;
 
-        // Zone 0 is the base "below zone 1" state — scope stays visible and draggable.
-        // For all higher zones, hide the scope so the combined sprite takes over.
         if (zoneIndex == 0)
             scopeDraggable?.Show();
         else
             scopeDraggable?.Hide();
 
-        // Show the sprite for this zone. If zoneIndex is out of range, fall back to sprite 0.
         int spriteToShow = (zoneIndex < combinedSprites.Length) ? zoneIndex : 0;
         if (zoneIndex >= combinedSprites.Length)
             Debug.LogWarning($"[PandaController] zoneIndex {zoneIndex} is out of range — combinedSprites has {combinedSprites.Length} elements. Showing sprite 0 as fallback.");
@@ -144,14 +136,12 @@ public class PandaController : MonoBehaviour
     public void OnScopeExitZone(int zoneIndex)
     {
         if (isFinished) return;
-        // Zone 4 exit is handled by the Y-threshold in Update.
         if (zoneIndex == 4) return;
         if (currentZone != zoneIndex) return;
 
         currentZone = -1;
         scopeDraggable?.Show();
 
-        // Hide the active zone sprite and restore sprite 0
         if (zoneIndex < combinedSprites.Length && combinedSprites[zoneIndex] != null)
             combinedSprites[zoneIndex].SetActive(false);
 
@@ -165,18 +155,11 @@ public class PandaController : MonoBehaviour
     public void OnScopeReleasedInZone(int zoneIndex, Draggable2D scope)
     {
         if (isFinished) return;
-        // Zone 4 releases are handled by the Y-threshold path; ignore trigger-based calls.
         if (zoneIndex == 4) return;
 
         scope.MarkHandled();
 
-        // Eye zone: scope stays hidden, player must press the scan button
         if (zoneIndex == EyeZoneIndex) return;
-
-        // Non-eye zones: scope stays hidden at this zone position so the player
-        // can pick it up again from here rather than going all the way back to start.
-        // currentZone and the combined sprite remain as-is — OnScopeExitZone will
-        // clean up when the player grabs and drags out of this zone.
     }
 
     // ── Scan button (UI Button OnClick) ──────────────────────────────────────
@@ -199,16 +182,12 @@ public class PandaController : MonoBehaviour
     {
         if (dialogueController != null) dialogueController.OnLevelCompleted();
 
-        // GreenButton — Animator's exit-time transitions chain the rest:
-        // GreenButton → PandaSideways Animation → PingQRAnimations → PingLoopAnimation
         pandaAnimator?.Play(greenGlowStateName);
 
-        // Wait until the looping celebration state is reached
         yield return new WaitUntil(() =>
             pandaAnimator != null &&
             pandaAnimator.GetCurrentAnimatorStateInfo(0).IsName(loopCelebrationStateName));
 
-        // Wait one full loop cycle then spawn congrats
         yield return new WaitForSeconds(pandaAnimator.GetCurrentAnimatorStateInfo(0).length);
 
         AudioManager.PlayComplete();
