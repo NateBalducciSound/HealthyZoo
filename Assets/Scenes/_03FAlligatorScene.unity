@@ -564,12 +564,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueController
   audioSource: {fileID: 221412550}
-  openingLine: {fileID: 8300000, guid: 81f504c41c9644a189cac8905b6dc905, type: 3}
-  completionLine: {fileID: 8300000, guid: f14fd9d645f44460cbc19b7c678b9a02, type: 3}
+  openingLine: {fileID: 8300000, guid: f480c7cb29264449fa04da1d4c2d52a4, type: 3}
+  completionLine: {fileID: 8300000, guid: 717486b8b017644a98d751179412b0ec, type: 3}
   nudgeDelay: 5
   nudgeInterval: 6
   nudgeLines:
-  - {fileID: 8300000, guid: 953c4874282d74fc5a5bdc3afbb33eef, type: 3}
+  - {fileID: 8300000, guid: 30df9342b6a864a17b6d189b27408422, type: 3}
+  - {fileID: 8300000, guid: e488a15346dfc422d8a11eaf29c90080, type: 3}
 --- !u!4 &221412552
 Transform:
   m_ObjectHideFlags: 0
@@ -747,6 +748,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DraggableItem
   spawnPoint: {fileID: 0}
+  lockXAxis: 0
   dialogueController: {fileID: 0}
 --- !u!212 &612562732
 SpriteRenderer:
@@ -1164,6 +1166,7 @@ MonoBehaviour:
   - {fileID: 1280969785}
   - {fileID: 1551762025}
   dialogueController: {fileID: 221412551}
+  respawnEarlyBy: 0.15
 --- !u!4 &1062466388
 Transform:
   m_ObjectHideFlags: 0
@@ -1604,7 +1607,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.065027654, y: 0.14123893}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1614,7 +1617,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.6946801, y: 1.2824779}
   m_EdgeRadius: 0
 --- !u!1 &1373062910
 GameObject:
@@ -2313,6 +2316,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DragAndDrop
   spawnPoint: {fileID: 0}
+  lockXAxis: 0
   dialogueController: {fileID: 221412551}
 --- !u!4 &1971003074
 Transform:

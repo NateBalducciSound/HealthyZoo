@@ -3036,7 +3036,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Quaternion_IsEqualUsingDot_m
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 61705
+// Method Definition Index: 38847
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TextMeshPro_GenerateTextMesh_m92A3D91D20D8BB4E46C2E9E305EE4207B1B2A1DD (TextMeshPro_t4560AB28A3EAF503895A781A9C625273D833270E* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3616,7 +3616,7 @@ IL_0054:
 IL_0078:
 	{
 		//<source_info:./Library/PackageCache/com.unity.ugui@a73b706e285a/Runtime/TMP/TextMeshPro.cs:2199>
-		VirtualActionInvoker1< bool >::Invoke(130, __this, (bool)1);
+		VirtualActionInvoker1< bool >::Invoke(124, __this, (bool)1);
 		//<source_info:./Library/PackageCache/com.unity.ugui@a73b706e285a/Runtime/TMP/TextMeshPro.cs:2201>
 		((TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9*)__this)->___m_preferredWidth = (0.0f);
 		//<source_info:./Library/PackageCache/com.unity.ugui@a73b706e285a/Runtime/TMP/TextMeshPro.cs:2202>
@@ -7189,9 +7189,9 @@ IL_2004:
 		//<source_info:./Library/PackageCache/com.unity.ugui@a73b706e285a/Runtime/TMP/TextMeshPro.cs:3137>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_1002 = ((TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9*)__this)->___m_linkedTextComponent;
 		String_t* L_1003;
-		L_1003 = VirtualFuncInvoker0< String_t* >::Invoke(65, __this);
+		L_1003 = VirtualFuncInvoker0< String_t* >::Invoke(61, __this);
 		NullCheck(L_1002);
-		VirtualActionInvoker1< String_t* >::Invoke(66, L_1002, L_1003);
+		VirtualActionInvoker1< String_t* >::Invoke(62, L_1002, L_1003);
 		//<source_info:./Library/PackageCache/com.unity.ugui@a73b706e285a/Runtime/TMP/TextMeshPro.cs:3138>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_1004 = ((TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9*)__this)->___m_linkedTextComponent;
 		int32_t L_1005 = ((TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9*)__this)->___m_inputSource;
@@ -7205,7 +7205,7 @@ IL_2004:
 		//<source_info:./Library/PackageCache/com.unity.ugui@a73b706e285a/Runtime/TMP/TextMeshPro.cs:3140>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_1008 = ((TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9*)__this)->___m_linkedTextComponent;
 		NullCheck(L_1008);
-		VirtualActionInvoker2< bool, bool >::Invoke(106, L_1008, (bool)0, (bool)0);
+		VirtualActionInvoker2< bool, bool >::Invoke(101, L_1008, (bool)0, (bool)0);
 		//<source_info:./Library/PackageCache/com.unity.ugui@a73b706e285a/Runtime/TMP/TextMeshPro.cs:3142>
 		((TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9*)__this)->___m_isTextTruncated = (bool)1;
 	}
@@ -8090,9 +8090,9 @@ IL_274e:
 		//<source_info:./Library/PackageCache/com.unity.ugui@a73b706e285a/Runtime/TMP/TextMeshPro.cs:3463>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_1188 = ((TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9*)__this)->___m_linkedTextComponent;
 		String_t* L_1189;
-		L_1189 = VirtualFuncInvoker0< String_t* >::Invoke(65, __this);
+		L_1189 = VirtualFuncInvoker0< String_t* >::Invoke(61, __this);
 		NullCheck(L_1188);
-		VirtualActionInvoker1< String_t* >::Invoke(66, L_1188, L_1189);
+		VirtualActionInvoker1< String_t* >::Invoke(62, L_1188, L_1189);
 		//<source_info:./Library/PackageCache/com.unity.ugui@a73b706e285a/Runtime/TMP/TextMeshPro.cs:3464>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_1190 = ((TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9*)__this)->___m_linkedTextComponent;
 		int32_t L_1191 = ((TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9*)__this)->___m_inputSource;
@@ -8106,7 +8106,7 @@ IL_274e:
 		//<source_info:./Library/PackageCache/com.unity.ugui@a73b706e285a/Runtime/TMP/TextMeshPro.cs:3466>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_1194 = ((TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9*)__this)->___m_linkedTextComponent;
 		NullCheck(L_1194);
-		VirtualActionInvoker2< bool, bool >::Invoke(106, L_1194, (bool)0, (bool)0);
+		VirtualActionInvoker2< bool, bool >::Invoke(101, L_1194, (bool)0, (bool)0);
 		//<source_info:./Library/PackageCache/com.unity.ugui@a73b706e285a/Runtime/TMP/TextMeshPro.cs:3468>
 		((TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9*)__this)->___m_isTextTruncated = (bool)1;
 	}
@@ -8434,9 +8434,9 @@ IL_2a2b:
 		//<source_info:./Library/PackageCache/com.unity.ugui@a73b706e285a/Runtime/TMP/TextMeshPro.cs:3636>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_1256 = ((TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9*)__this)->___m_linkedTextComponent;
 		String_t* L_1257;
-		L_1257 = VirtualFuncInvoker0< String_t* >::Invoke(65, __this);
+		L_1257 = VirtualFuncInvoker0< String_t* >::Invoke(61, __this);
 		NullCheck(L_1256);
-		VirtualActionInvoker1< String_t* >::Invoke(66, L_1256, L_1257);
+		VirtualActionInvoker1< String_t* >::Invoke(62, L_1256, L_1257);
 		//<source_info:./Library/PackageCache/com.unity.ugui@a73b706e285a/Runtime/TMP/TextMeshPro.cs:3637>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_1258 = ((TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9*)__this)->___m_linkedTextComponent;
 		int32_t L_1259 = ((TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9*)__this)->___m_inputSource;
@@ -8450,7 +8450,7 @@ IL_2a2b:
 		//<source_info:./Library/PackageCache/com.unity.ugui@a73b706e285a/Runtime/TMP/TextMeshPro.cs:3639>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_1262 = ((TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9*)__this)->___m_linkedTextComponent;
 		NullCheck(L_1262);
-		VirtualActionInvoker2< bool, bool >::Invoke(106, L_1262, (bool)0, (bool)0);
+		VirtualActionInvoker2< bool, bool >::Invoke(101, L_1262, (bool)0, (bool)0);
 		//<source_info:./Library/PackageCache/com.unity.ugui@a73b706e285a/Runtime/TMP/TextMeshPro.cs:3641>
 		((TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9*)__this)->___m_isTextTruncated = (bool)1;
 	}
@@ -8601,7 +8601,7 @@ IL_2bc3:
 		float L_1303 = V_7;
 		float L_1304 = V_81;
 		Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B L_1305 = V_160;
-		VirtualActionInvoker3< float, float, Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B >::Invoke(120, __this, L_1303, L_1304, L_1305);
+		VirtualActionInvoker3< float, float, Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B >::Invoke(114, __this, L_1303, L_1304, L_1305);
 		goto IL_2bea;
 	}
 
@@ -8617,7 +8617,7 @@ IL_2bd9:
 	{
 		//<source_info:./Library/PackageCache/com.unity.ugui@a73b706e285a/Runtime/TMP/TextMeshPro.cs:3694>
 		Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B L_1307 = V_160;
-		VirtualActionInvoker1< Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B >::Invoke(121, __this, L_1307);
+		VirtualActionInvoker1< Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B >::Invoke(115, __this, L_1307);
 	}
 
 IL_2bea:
@@ -8774,9 +8774,9 @@ IL_2cd9:
 		//<source_info:./Library/PackageCache/com.unity.ugui@a73b706e285a/Runtime/TMP/TextMeshPro.cs:3734>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_1337 = ((TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9*)__this)->___m_linkedTextComponent;
 		String_t* L_1338;
-		L_1338 = VirtualFuncInvoker0< String_t* >::Invoke(65, __this);
+		L_1338 = VirtualFuncInvoker0< String_t* >::Invoke(61, __this);
 		NullCheck(L_1337);
-		VirtualActionInvoker1< String_t* >::Invoke(66, L_1337, L_1338);
+		VirtualActionInvoker1< String_t* >::Invoke(62, L_1337, L_1338);
 		//<source_info:./Library/PackageCache/com.unity.ugui@a73b706e285a/Runtime/TMP/TextMeshPro.cs:3735>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_1339 = ((TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9*)__this)->___m_linkedTextComponent;
 		int32_t L_1340 = ((TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9*)__this)->___m_inputSource;
@@ -8790,7 +8790,7 @@ IL_2cd9:
 		//<source_info:./Library/PackageCache/com.unity.ugui@a73b706e285a/Runtime/TMP/TextMeshPro.cs:3737>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_1343 = ((TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9*)__this)->___m_linkedTextComponent;
 		NullCheck(L_1343);
-		VirtualActionInvoker2< bool, bool >::Invoke(106, L_1343, (bool)0, (bool)0);
+		VirtualActionInvoker2< bool, bool >::Invoke(101, L_1343, (bool)0, (bool)0);
 		//<source_info:./Library/PackageCache/com.unity.ugui@a73b706e285a/Runtime/TMP/TextMeshPro.cs:3739>
 		((TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9*)__this)->___m_isTextTruncated = (bool)1;
 	}
@@ -11450,7 +11450,7 @@ IL_40d7:
 IL_40ed:
 	{
 		//<source_info:./Library/PackageCache/com.unity.ugui@a73b706e285a/Runtime/TMP/TextMeshPro.cs:4161>
-		VirtualActionInvoker1< bool >::Invoke(130, __this, (bool)1);
+		VirtualActionInvoker1< bool >::Invoke(124, __this, (bool)1);
 		//<source_info:./Library/PackageCache/com.unity.ugui@a73b706e285a/Runtime/TMP/TextMeshPro.cs:4164>
 		il2cpp_codegen_runtime_class_init_inline(TMPro_EventManager_t0234DB5BF625FC164B395C5C3B6F2CB8C89A3BA9_il2cpp_TypeInfo_var);
 		TMPro_EventManager_ON_TEXT_CHANGED_mC933ED67F225E90E2F7B5F0D176D62D3A560BFAE(__this, NULL);
@@ -13886,7 +13886,7 @@ IL_5afb:
 	{
 		//<source_info:./Library/PackageCache/com.unity.ugui@a73b706e285a/Runtime/TMP/TextMeshPro.cs:4547>
 		int32_t L_3123 = V_183;
-		VirtualActionInvoker1< int32_t >::Invoke(122, __this, L_3123);
+		VirtualActionInvoker1< int32_t >::Invoke(116, __this, L_3123);
 		goto IL_5b16;
 	}
 
@@ -13902,7 +13902,7 @@ IL_5b09:
 	{
 		//<source_info:./Library/PackageCache/com.unity.ugui@a73b706e285a/Runtime/TMP/TextMeshPro.cs:4551>
 		int32_t L_3125 = V_183;
-		VirtualActionInvoker1< int32_t >::Invoke(124, __this, L_3125);
+		VirtualActionInvoker1< int32_t >::Invoke(118, __this, L_3125);
 	}
 
 IL_5b16:
@@ -14997,7 +14997,7 @@ IL_63c7:
 		float L_3543 = V_55;
 		float L_3544 = V_52;
 		Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B L_3545 = V_48;
-		VirtualActionInvoker8< Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2, int32_t*, float, float, float, float, Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B >::Invoke(125, __this, L_3539, L_3540, (&V_35), L_3541, L_3542, L_3543, L_3544, L_3545);
+		VirtualActionInvoker8< Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2, int32_t*, float, float, float, float, Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B >::Invoke(119, __this, L_3539, L_3540, (&V_35), L_3541, L_3542, L_3543, L_3544, L_3545);
 		//<source_info:./Library/PackageCache/com.unity.ugui@a73b706e285a/Runtime/TMP/TextMeshPro.cs:4718>
 		V_55 = (0.0f);
 		//<source_info:./Library/PackageCache/com.unity.ugui@a73b706e285a/Runtime/TMP/TextMeshPro.cs:4719>
@@ -15115,7 +15115,7 @@ IL_6508:
 		float L_3582 = V_55;
 		float L_3583 = V_52;
 		Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B L_3584 = V_48;
-		VirtualActionInvoker8< Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2, int32_t*, float, float, float, float, Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B >::Invoke(125, __this, L_3578, L_3579, (&V_35), L_3580, L_3581, L_3582, L_3583, L_3584);
+		VirtualActionInvoker8< Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2, int32_t*, float, float, float, float, Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B >::Invoke(119, __this, L_3578, L_3579, (&V_35), L_3580, L_3581, L_3582, L_3583, L_3584);
 		//<source_info:./Library/PackageCache/com.unity.ugui@a73b706e285a/Runtime/TMP/TextMeshPro.cs:4739>
 		V_55 = (0.0f);
 		//<source_info:./Library/PackageCache/com.unity.ugui@a73b706e285a/Runtime/TMP/TextMeshPro.cs:4740>
@@ -15172,7 +15172,7 @@ IL_653b:
 		float L_3602 = V_55;
 		float L_3603 = V_52;
 		Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B L_3604 = V_48;
-		VirtualActionInvoker8< Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2, int32_t*, float, float, float, float, Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B >::Invoke(125, __this, L_3598, L_3599, (&V_35), L_3600, L_3601, L_3602, L_3603, L_3604);
+		VirtualActionInvoker8< Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2, int32_t*, float, float, float, float, Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B >::Invoke(119, __this, L_3598, L_3599, (&V_35), L_3600, L_3601, L_3602, L_3603, L_3604);
 		//<source_info:./Library/PackageCache/com.unity.ugui@a73b706e285a/Runtime/TMP/TextMeshPro.cs:4750>
 		V_55 = (0.0f);
 		//<source_info:./Library/PackageCache/com.unity.ugui@a73b706e285a/Runtime/TMP/TextMeshPro.cs:4751>
@@ -15245,7 +15245,7 @@ IL_65bd:
 		float L_3629 = V_55;
 		float L_3630 = V_52;
 		Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B L_3631 = V_48;
-		VirtualActionInvoker8< Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2, int32_t*, float, float, float, float, Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B >::Invoke(125, __this, L_3625, L_3626, (&V_35), L_3627, L_3628, L_3629, L_3630, L_3631);
+		VirtualActionInvoker8< Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2, int32_t*, float, float, float, float, Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B >::Invoke(119, __this, L_3625, L_3626, (&V_35), L_3627, L_3628, L_3629, L_3630, L_3631);
 		//<source_info:./Library/PackageCache/com.unity.ugui@a73b706e285a/Runtime/TMP/TextMeshPro.cs:4762>
 		V_55 = (0.0f);
 		//<source_info:./Library/PackageCache/com.unity.ugui@a73b706e285a/Runtime/TMP/TextMeshPro.cs:4763>
@@ -15295,7 +15295,7 @@ IL_666b:
 		float L_3648 = V_55;
 		float L_3649 = V_52;
 		Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B L_3650 = V_48;
-		VirtualActionInvoker8< Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2, int32_t*, float, float, float, float, Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B >::Invoke(125, __this, L_3644, L_3645, (&V_35), L_3646, L_3647, L_3648, L_3649, L_3650);
+		VirtualActionInvoker8< Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2, int32_t*, float, float, float, float, Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B >::Invoke(119, __this, L_3644, L_3645, (&V_35), L_3646, L_3647, L_3648, L_3649, L_3650);
 		//<source_info:./Library/PackageCache/com.unity.ugui@a73b706e285a/Runtime/TMP/TextMeshPro.cs:4777>
 		V_55 = (0.0f);
 		//<source_info:./Library/PackageCache/com.unity.ugui@a73b706e285a/Runtime/TMP/TextMeshPro.cs:4778>
@@ -15542,7 +15542,7 @@ IL_686b:
 		float L_3730 = V_59;
 		float L_3731 = V_51;
 		Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B L_3732 = V_49;
-		VirtualActionInvoker8< Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2, int32_t*, float, float, float, float, Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B >::Invoke(125, __this, L_3726, L_3727, (&V_35), L_3728, L_3729, L_3730, L_3731, L_3732);
+		VirtualActionInvoker8< Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2, int32_t*, float, float, float, float, Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B >::Invoke(119, __this, L_3726, L_3727, (&V_35), L_3728, L_3729, L_3730, L_3731, L_3732);
 		goto IL_6c34;
 	}
 
@@ -15639,7 +15639,7 @@ IL_6992:
 		float L_3767 = V_59;
 		float L_3768 = V_51;
 		Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B L_3769 = V_49;
-		VirtualActionInvoker8< Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2, int32_t*, float, float, float, float, Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B >::Invoke(125, __this, L_3763, L_3764, (&V_35), L_3765, L_3766, L_3767, L_3768, L_3769);
+		VirtualActionInvoker8< Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2, int32_t*, float, float, float, float, Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B >::Invoke(119, __this, L_3763, L_3764, (&V_35), L_3765, L_3766, L_3767, L_3768, L_3769);
 		goto IL_6c34;
 	}
 
@@ -15760,7 +15760,7 @@ IL_6aac:
 		float L_3816 = V_59;
 		float L_3817 = V_51;
 		Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B L_3818 = V_49;
-		VirtualActionInvoker8< Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2, int32_t*, float, float, float, float, Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B >::Invoke(125, __this, L_3812, L_3813, (&V_35), L_3814, L_3815, L_3816, L_3817, L_3818);
+		VirtualActionInvoker8< Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2, int32_t*, float, float, float, float, Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B >::Invoke(119, __this, L_3812, L_3813, (&V_35), L_3814, L_3815, L_3816, L_3817, L_3818);
 		goto IL_6c34;
 	}
 
@@ -15826,7 +15826,7 @@ IL_6ac7:
 		float L_3843 = V_59;
 		float L_3844 = V_51;
 		Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B L_3845 = V_49;
-		VirtualActionInvoker8< Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2, int32_t*, float, float, float, float, Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B >::Invoke(125, __this, L_3839, L_3840, (&V_35), L_3841, L_3842, L_3843, L_3844, L_3845);
+		VirtualActionInvoker8< Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2, int32_t*, float, float, float, float, Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B >::Invoke(119, __this, L_3839, L_3840, (&V_35), L_3841, L_3842, L_3843, L_3844, L_3845);
 		goto IL_6c34;
 	}
 
@@ -15874,7 +15874,7 @@ IL_6b5c:
 		float L_3863 = V_59;
 		float L_3864 = V_51;
 		Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B L_3865 = V_49;
-		VirtualActionInvoker8< Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2, int32_t*, float, float, float, float, Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B >::Invoke(125, __this, L_3859, L_3860, (&V_35), L_3861, L_3862, L_3863, L_3864, L_3865);
+		VirtualActionInvoker8< Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2, int32_t*, float, float, float, float, Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B >::Invoke(119, __this, L_3859, L_3860, (&V_35), L_3861, L_3862, L_3863, L_3864, L_3865);
 		goto IL_6c34;
 	}
 
@@ -15915,7 +15915,7 @@ IL_6bce:
 		float L_3882 = V_59;
 		float L_3883 = V_51;
 		Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B L_3884 = V_49;
-		VirtualActionInvoker8< Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2, int32_t*, float, float, float, float, Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B >::Invoke(125, __this, L_3878, L_3879, (&V_35), L_3880, L_3881, L_3882, L_3883, L_3884);
+		VirtualActionInvoker8< Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2, int32_t*, float, float, float, float, Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B >::Invoke(119, __this, L_3878, L_3879, (&V_35), L_3880, L_3881, L_3882, L_3883, L_3884);
 	}
 
 IL_6c34:
@@ -16169,7 +16169,7 @@ IL_6da4:
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_3957 = V_16;
 		HighlightState_tE4F50287E5E2E91D42AB77DEA281D88D3AD6A28B L_3958 = V_50;
 		Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B L_3959 = L_3958.___color;
-		VirtualActionInvoker4< Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2, int32_t*, Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B >::Invoke(126, __this, L_3956, L_3957, (&V_35), L_3959);
+		VirtualActionInvoker4< Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2, int32_t*, Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B >::Invoke(120, __this, L_3956, L_3957, (&V_35), L_3959);
 		//<source_info:./Library/PackageCache/com.unity.ugui@a73b706e285a/Runtime/TMP/TextMeshPro.cs:4930>
 		V_14 = (bool)1;
 		//<source_info:./Library/PackageCache/com.unity.ugui@a73b706e285a/Runtime/TMP/TextMeshPro.cs:4931>
@@ -16372,7 +16372,7 @@ IL_6f90:
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_4040 = V_16;
 		HighlightState_tE4F50287E5E2E91D42AB77DEA281D88D3AD6A28B L_4041 = V_50;
 		Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B L_4042 = L_4041.___color;
-		VirtualActionInvoker4< Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2, int32_t*, Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B >::Invoke(126, __this, L_4039, L_4040, (&V_35), L_4042);
+		VirtualActionInvoker4< Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2, int32_t*, Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B >::Invoke(120, __this, L_4039, L_4040, (&V_35), L_4042);
 		goto IL_7021;
 	}
 
@@ -16413,7 +16413,7 @@ IL_6fcf:
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_4051 = V_16;
 		HighlightState_tE4F50287E5E2E91D42AB77DEA281D88D3AD6A28B L_4052 = V_50;
 		Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B L_4053 = L_4052.___color;
-		VirtualActionInvoker4< Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2, int32_t*, Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B >::Invoke(126, __this, L_4050, L_4051, (&V_35), L_4053);
+		VirtualActionInvoker4< Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2, int32_t*, Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B >::Invoke(120, __this, L_4050, L_4051, (&V_35), L_4053);
 		goto IL_7021;
 	}
 
@@ -16441,7 +16441,7 @@ IL_6fe7:
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_4057 = V_16;
 		HighlightState_tE4F50287E5E2E91D42AB77DEA281D88D3AD6A28B L_4058 = V_50;
 		Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B L_4059 = L_4058.___color;
-		VirtualActionInvoker4< Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2, int32_t*, Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B >::Invoke(126, __this, L_4056, L_4057, (&V_35), L_4059);
+		VirtualActionInvoker4< Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2, int32_t*, Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B >::Invoke(120, __this, L_4056, L_4057, (&V_35), L_4059);
 		goto IL_7021;
 	}
 
@@ -16462,7 +16462,7 @@ IL_7007:
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_4062 = V_16;
 		HighlightState_tE4F50287E5E2E91D42AB77DEA281D88D3AD6A28B L_4063 = V_50;
 		Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B L_4064 = L_4063.___color;
-		VirtualActionInvoker4< Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2, int32_t*, Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B >::Invoke(126, __this, L_4061, L_4062, (&V_35), L_4064);
+		VirtualActionInvoker4< Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2, int32_t*, Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B >::Invoke(120, __this, L_4061, L_4062, (&V_35), L_4064);
 	}
 
 IL_7021:
@@ -16818,7 +16818,7 @@ IL_72cc:
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-// Method Definition Index: 42110
+// Method Definition Index: 26707
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_get_zero_m0C1249C3F25B1C70EAD3CC8B31259975A457AE39_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16841,7 +16841,7 @@ IL_0009:
 		return L_1;
 	}
 }
-// Method Definition Index: 41976
+// Method Definition Index: 26594
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B Color32_op_Implicit_m79AF5E0BDE9CE041CAC4D89CBFA66E71C6DD1B70_inline (Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___0_c, const RuntimeMethod* method) 
 {
 	Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B V_0;
@@ -16884,7 +16884,7 @@ IL_0065:
 		return L_17;
 	}
 }
-// Method Definition Index: 61882
+// Method Definition Index: 38979
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR TMP_Offset_t2262BE4E87D9662487777FF8FFE1B17B0E4438C6 TMP_Offset_get_zero_m8D8E8D2E46EAB0DFFED647AC5EEB41A5B2AA2339_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16900,7 +16900,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR TMP_Offset_t2262BE4E87D9662487777
 		return L_0;
 	}
 }
-// Method Definition Index: 42111
+// Method Definition Index: 26708
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_get_one_mC9B289F1E15C42C597180C9FE6FB492495B51D02_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16923,7 +16923,7 @@ IL_0009:
 		return L_1;
 	}
 }
-// Method Definition Index: 42143
+// Method Definition Index: 26738
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 Quaternion_get_identity_m7E701AE095ED10FD5EA0B50ABCFDE2EEFF2173A5_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16946,7 +16946,7 @@ IL_0009:
 		return L_1;
 	}
 }
-// Method Definition Index: 42208
+// Method Definition Index: 26797
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Mathf_Clamp_m4DC36EEFDBE5F07C16249DA568023C5ECCFF0E7B_inline (int32_t ___0_value, int32_t ___1_min, int32_t ___2_max, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
@@ -16997,7 +16997,7 @@ IL_001d:
 		return L_9;
 	}
 }
-// Method Definition Index: 63184
+// Method Definition Index: 40108
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR TMP_Asset_t135A047D4F5CBBA9CD356B762B55AB164122B969* TMP_TextElement_get_textAsset_m3FFA01E6D0068D1F8F578CBF2590A752683A61EA_inline (TMP_TextElement_t262A55214F712D4274485ABE5676E5254B84D0A5* __this, const RuntimeMethod* method) 
 {
 	{
@@ -17006,7 +17006,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR TMP_Asset_t135A047D4F5CBBA9CD356B
 		return L_0;
 	}
 }
-// Method Definition Index: 63188
+// Method Definition Index: 40112
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR uint32_t TMP_TextElement_get_glyphIndex_m149D0BB0350CFC7D3C46CA011669295DC8CF8E9E_inline (TMP_TextElement_t262A55214F712D4274485ABE5676E5254B84D0A5* __this, const RuntimeMethod* method) 
 {
 	{
@@ -17015,7 +17015,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR uint32_t TMP_TextElement_get_glyp
 		return L_0;
 	}
 }
-// Method Definition Index: 62781
+// Method Definition Index: 39715
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float TMP_SubMesh_get_padding_mF12E331397602A9A39ECB674B02412668752F766_inline (TMP_SubMesh_t03A386328B843ADDDC3D5C53D901B38294142214* __this, const RuntimeMethod* method) 
 {
 	{
@@ -17024,7 +17024,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float TMP_SubMesh_get_padding_mF1
 		return L_0;
 	}
 }
-// Method Definition Index: 63186
+// Method Definition Index: 40110
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Glyph_t700CF8EBE04ED4AEAB520885AAA1B309E02A103F* TMP_TextElement_get_glyph_mB86D5107DDF4ADB051309056E876FEAE843E3D07_inline (TMP_TextElement_t262A55214F712D4274485ABE5676E5254B84D0A5* __this, const RuntimeMethod* method) 
 {
 	{
@@ -17033,7 +17033,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Glyph_t700CF8EBE04ED4AEAB520885AA
 		return L_0;
 	}
 }
-// Method Definition Index: 62100
+// Method Definition Index: 39151
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR TMP_FontFeatureTable_t726A09E64FDF682A8FFE294BB6CFE7747F6C40EA* TMP_FontAsset_get_fontFeatureTable_mF00EEAEDD0448BE4667CB959CCE79ED45D2300AE_inline (TMP_FontAsset_t923BF2F78D7C5AC36376E168A1193B7CB4855160* __this, const RuntimeMethod* method) 
 {
 	{
@@ -17042,7 +17042,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR TMP_FontFeatureTable_t726A09E64FD
 		return L_0;
 	}
 }
-// Method Definition Index: 61554
+// Method Definition Index: 38706
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR GlyphAnchorPoint_t1E0A7753CCCC41F22D3C408C4F96DDEC70291929 MarkToBaseAdjustmentRecord_get_baseGlyphAnchorPoint_mFECF1D5AFAC10D1DBB0C5147325AE5D6D9083E31_inline (MarkToBaseAdjustmentRecord_t03C041CB56601B46F025C69B899BBAB750201C71* __this, const RuntimeMethod* method) 
 {
 	{
@@ -17051,7 +17051,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR GlyphAnchorPoint_t1E0A7753CCCC41F
 		return L_0;
 	}
 }
-// Method Definition Index: 61543
+// Method Definition Index: 38696
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float GlyphAnchorPoint_get_xCoordinate_m17636F751AE0D4897647F617EE2823093E8968A0_inline (GlyphAnchorPoint_t1E0A7753CCCC41F22D3C408C4F96DDEC70291929* __this, const RuntimeMethod* method) 
 {
 	{
@@ -17060,7 +17060,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float GlyphAnchorPoint_get_xCoord
 		return L_0;
 	}
 }
-// Method Definition Index: 61558
+// Method Definition Index: 38710
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR MarkPositionAdjustment_tEE7CE316B8F61A7D6725524435B6363E849C62ED MarkToBaseAdjustmentRecord_get_markPositionAdjustment_mC04ECF73BB1C639C692E34DF7DBBC21B09661E84_inline (MarkToBaseAdjustmentRecord_t03C041CB56601B46F025C69B899BBAB750201C71* __this, const RuntimeMethod* method) 
 {
 	{
@@ -17069,7 +17069,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR MarkPositionAdjustment_tEE7CE316B
 		return L_0;
 	}
 }
-// Method Definition Index: 61547
+// Method Definition Index: 38700
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float MarkPositionAdjustment_get_xPositionAdjustment_m20DA20230B832D18BD7AE7A715981046917833F3_inline (MarkPositionAdjustment_tEE7CE316B8F61A7D6725524435B6363E849C62ED* __this, const RuntimeMethod* method) 
 {
 	{
@@ -17078,7 +17078,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float MarkPositionAdjustment_get_
 		return L_0;
 	}
 }
-// Method Definition Index: 61545
+// Method Definition Index: 38698
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float GlyphAnchorPoint_get_yCoordinate_mF413FBEB1E2819FC6CFEA33234080D0359F06549_inline (GlyphAnchorPoint_t1E0A7753CCCC41F22D3C408C4F96DDEC70291929* __this, const RuntimeMethod* method) 
 {
 	{
@@ -17087,7 +17087,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float GlyphAnchorPoint_get_yCoord
 		return L_0;
 	}
 }
-// Method Definition Index: 61549
+// Method Definition Index: 38702
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float MarkPositionAdjustment_get_yPositionAdjustment_m0D9AA5E5D5AFFF371CBFE74D2133B47364CD238A_inline (MarkPositionAdjustment_tEE7CE316B8F61A7D6725524435B6363E849C62ED* __this, const RuntimeMethod* method) 
 {
 	{
@@ -17096,7 +17096,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float MarkPositionAdjustment_get_
 		return L_0;
 	}
 }
-// Method Definition Index: 61562
+// Method Definition Index: 38714
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR GlyphAnchorPoint_t1E0A7753CCCC41F22D3C408C4F96DDEC70291929 MarkToMarkAdjustmentRecord_get_baseMarkGlyphAnchorPoint_mA5B70EE56DD3ACAA43B0B8F517F99D6EBE8B6D4F_inline (MarkToMarkAdjustmentRecord_t5D12F757E4ECB2EA12EB404228D70FA4DDBD6654* __this, const RuntimeMethod* method) 
 {
 	{
@@ -17105,7 +17105,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR GlyphAnchorPoint_t1E0A7753CCCC41F
 		return L_0;
 	}
 }
-// Method Definition Index: 61566
+// Method Definition Index: 38718
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR MarkPositionAdjustment_tEE7CE316B8F61A7D6725524435B6363E849C62ED MarkToMarkAdjustmentRecord_get_combiningMarkPositionAdjustment_m9C1B756599DAE78BA91E728565A52EA49BFF60FC_inline (MarkToMarkAdjustmentRecord_t5D12F757E4ECB2EA12EB404228D70FA4DDBD6654* __this, const RuntimeMethod* method) 
 {
 	{
@@ -17114,7 +17114,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR MarkPositionAdjustment_tEE7CE316B
 		return L_0;
 	}
 }
-// Method Definition Index: 42086
+// Method Definition Index: 26686
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* __this, float ___0_x, float ___1_y, float ___2_z, const RuntimeMethod* method) 
 {
 	{
@@ -17127,7 +17127,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector3__ctor_m376936E6B999E
 		return;
 	}
 }
-// Method Definition Index: 42118
+// Method Definition Index: 26715
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_op_Addition_m78C0EC70CB66E8DCAC225743D82B268DAEE92067_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_a, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_b, const RuntimeMethod* method) 
 {
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
@@ -17158,7 +17158,7 @@ IL_0030:
 		return L_13;
 	}
 }
-// Method Definition Index: 42148
+// Method Definition Index: 26743
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Quaternion_op_Inequality_m4EC1EF263D0E42432A301F85CB52028D2973F5DA_inline (Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___0_lhs, Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___1_rhs, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
@@ -17177,7 +17177,7 @@ IL_000e:
 		return L_3;
 	}
 }
-// Method Definition Index: 42123
+// Method Definition Index: 26720
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_op_Division_mCC6BB24E372AB96B8380D1678446EF6A8BAE13BB_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_a, float ___1_d, const RuntimeMethod* method) 
 {
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
@@ -17205,7 +17205,7 @@ IL_0021:
 		return L_10;
 	}
 }
-// Method Definition Index: 42119
+// Method Definition Index: 26716
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_op_Subtraction_mE42023FF80067CB44A1D4A27EB7CF2B24CABB828_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_a, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_b, const RuntimeMethod* method) 
 {
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
@@ -17236,7 +17236,7 @@ IL_0030:
 		return L_13;
 	}
 }
-// Method Definition Index: 42192
+// Method Definition Index: 26782
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Max_mF5379E63D2BBAC76D090748695D833934F8AD051_inline (float ___0_a, float ___1_b, const RuntimeMethod* method) 
 {
 	float V_0 = 0.0f;
@@ -17273,7 +17273,7 @@ IL_000c:
 		return L_4;
 	}
 }
-// Method Definition Index: 42190
+// Method Definition Index: 26780
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Min_m747CA71A9483CDB394B13BD0AD048EE17E48FFE4_inline (float ___0_a, float ___1_b, const RuntimeMethod* method) 
 {
 	float V_0 = 0.0f;
@@ -17310,7 +17310,7 @@ IL_000c:
 		return L_4;
 	}
 }
-// Method Definition Index: 42230
+// Method Definition Index: 26819
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7* __this, float ___0_x, float ___1_y, const RuntimeMethod* method) 
 {
 	{
@@ -17321,7 +17321,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector2__ctor_m9525B79969AFF
 		return;
 	}
 }
-// Method Definition Index: 41973
+// Method Definition Index: 26591
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C1F Color_get_white_m068F5AF879B0FCA584E3693F762EA41BB65532C6_inline (const RuntimeMethod* method) 
 {
 	{
@@ -17331,7 +17331,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED02
 		return L_0;
 	}
 }
-// Method Definition Index: 41975
+// Method Definition Index: 26593
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Color32__ctor_mC9C6B443F0C7CA3F8B174158B2AF6F05E18EAC4E_inline (Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B* __this, uint8_t ___0_r, uint8_t ___1_g, uint8_t ___2_b, uint8_t ___3_a, const RuntimeMethod* method) 
 {
 	{
@@ -17347,7 +17347,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Color32__ctor_mC9C6B443F0C7C
 		return;
 	}
 }
-// Method Definition Index: 62860
+// Method Definition Index: 39791
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR TMP_FontAsset_t923BF2F78D7C5AC36376E168A1193B7CB4855160* TMP_Text_get_font_m1F5E907B9181A54212FBD8123242583C1CA4BE2A_inline (TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* __this, const RuntimeMethod* method) 
 {
 	{
@@ -17356,7 +17356,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR TMP_FontAsset_t923BF2F78D7C5AC363
 		return L_0;
 	}
 }
-// Method Definition Index: 42261
+// Method Definition Index: 26849
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector2_op_Implicit_m6D9CABB2C791A192867D7A4559D132BE86DD3EB7_inline (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___0_v, const RuntimeMethod* method) 
 {
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
@@ -17379,7 +17379,7 @@ IL_001a:
 		return L_5;
 	}
 }
-// Method Definition Index: 61872
+// Method Definition Index: 38976
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float TMP_Offset_get_right_m268492C5D14D1239A429A152ED04DD8790EC98C4_inline (TMP_Offset_t2262BE4E87D9662487777FF8FFE1B17B0E4438C6* __this, const RuntimeMethod* method) 
 {
 	{
@@ -17388,7 +17388,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float TMP_Offset_get_right_m26849
 		return L_0;
 	}
 }
-// Method Definition Index: 61876
+// Method Definition Index: 38978
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float TMP_Offset_get_bottom_m71E985879E87F76BE28A0FB0485F279866279845_inline (TMP_Offset_t2262BE4E87D9662487777FF8FFE1B17B0E4438C6* __this, const RuntimeMethod* method) 
 {
 	{
@@ -17397,7 +17397,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float TMP_Offset_get_bottom_m71E9
 		return L_0;
 	}
 }
-// Method Definition Index: 61874
+// Method Definition Index: 38977
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float TMP_Offset_get_top_m5BAE1A688A264A63524AD4C456CE88CB2086105E_inline (TMP_Offset_t2262BE4E87D9662487777FF8FFE1B17B0E4438C6* __this, const RuntimeMethod* method) 
 {
 	{
@@ -17406,7 +17406,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float TMP_Offset_get_top_m5BAE1A6
 		return L_0;
 	}
 }
-// Method Definition Index: 61870
+// Method Definition Index: 38975
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float TMP_Offset_get_left_mCDC93F42B720817E1119AA5360962F038A39E044_inline (TMP_Offset_t2262BE4E87D9662487777FF8FFE1B17B0E4438C6* __this, const RuntimeMethod* method) 
 {
 	{
@@ -17415,7 +17415,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float TMP_Offset_get_left_mCDC93F
 		return L_0;
 	}
 }
-// Method Definition Index: 63271
+// Method Definition Index: 40147
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t TMP_TextProcessingStack_1_get_Count_m9EAE0A093640CEAA2DB049AD6E89747865404C3A_gshared_inline (TMP_TextProcessingStack_1_t2DDA00FFC64AF6E3AFD475AB2086D16C34787E0F* __this, const RuntimeMethod* method) 
 {
 	{
@@ -17424,13 +17424,13 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t TMP_TextProcessingStack_1
 		return L_0;
 	}
 }
-// Method Definition Index: 604
+// Method Definition Index: 11918
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Action_1_Invoke_mF2422B2DD29F74CE66F791C3F68E288EC7C3DB9E_gshared_inline (Action_1_t6F9EB113EB3F16226AEF811A2744F4111C116C87* __this, RuntimeObject* ___0_obj, const RuntimeMethod* method) 
 {
 	typedef void (*FunctionPointerType) (RuntimeObject*, RuntimeObject*, const RuntimeMethod*);
 	((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_obj, reinterpret_cast<RuntimeMethod*>(__this->___method));
 }
-// Method Definition Index: 42209
+// Method Definition Index: 26798
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Clamp01_mA7E048DBDA832D399A581BE4D6DED9FA44CE0F14_inline (float ___0_value, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
@@ -17478,7 +17478,7 @@ IL_002d:
 		return L_5;
 	}
 }
-// Method Definition Index: 42147
+// Method Definition Index: 26742
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Quaternion_op_Equality_mE6F6B56FCED8478552BE02BBAF18C70B969217F9_inline (Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___0_lhs, Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___1_rhs, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
@@ -17499,7 +17499,7 @@ IL_0010:
 		return L_4;
 	}
 }
-// Method Definition Index: 41939
+// Method Definition Index: 26563
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Color__ctor_m3786F0D6E510D9CFA544523A955870BD2A514C8C_inline (Color_tD001788D726C3A7F1379BEED0260B9591F440C1F* __this, float ___0_r, float ___1_g, float ___2_b, float ___3_a, const RuntimeMethod* method) 
 {
 	{
@@ -17514,7 +17514,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Color__ctor_m3786F0D6E510D9C
 		return;
 	}
 }
-// Method Definition Index: 42149
+// Method Definition Index: 26744
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Quaternion_Dot_mF9D3BE33940A47979DADA7E81650AEB356D5D12B_inline (Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___0_a, Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___1_b, const RuntimeMethod* method) 
 {
 	float V_0 = 0.0f;
@@ -17545,7 +17545,7 @@ IL_003b:
 		return L_16;
 	}
 }
-// Method Definition Index: 42146
+// Method Definition Index: 26741
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Quaternion_IsEqualUsingDot_m9C672201C918C2D1E739F559DBE4406F95997CBD_inline (float ___0_dot, const RuntimeMethod* method) 
 {
 	bool V_0 = false;

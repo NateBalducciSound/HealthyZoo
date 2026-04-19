@@ -129,6 +129,7 @@ public class Draggable2D : MonoBehaviour
     void ProcessRelease()
     {
         if (wasHandled) return;
+        dialogueController?.ResetNudgeTimer();
 
         // Physics triggers can lag a frame behind transform movement, so do an
         // immediate overlap check at the current position to catch fast drops.
@@ -166,9 +167,16 @@ public class Draggable2D : MonoBehaviour
 
     void NotifyDialogueStarted()
     {
-        if (_hasNotifiedDialogue) return;
-        _hasNotifiedDialogue = true;
-        if (dialogueController != null) dialogueController.OnPlayerStarted();
+        if (dialogueController == null) return;
+        if (!_hasNotifiedDialogue)
+        {
+            _hasNotifiedDialogue = true;
+            dialogueController.OnPlayerStarted();
+        }
+        else
+        {
+            dialogueController.ResetNudgeTimer();
+        }
     }
 
     public void Hide()

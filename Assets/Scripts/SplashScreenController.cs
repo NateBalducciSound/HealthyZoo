@@ -22,6 +22,13 @@ public class SplashScreenController : MonoBehaviour
     [SerializeField] private Sprite phoneSprite;
     [SerializeField] private Sprite ipadSprite;
 
+    [Header("Inactivity Prompt")]
+    [SerializeField] private AudioClip inactivityPrompt;
+    [Tooltip("Seconds of silence after intro finishes before playing inactivity prompt")]
+    [SerializeField] private float inactivityDelay = 2f;
+    [Tooltip("If true, repeats the inactivity prompt on this interval until tapped")]
+    [SerializeField] private bool loopInactivityPrompt = true;
+
     [Header("Settings")]
     [Tooltip("Player can tap to dismiss before the voice line finishes")]
     [SerializeField] private bool allowSkip = true;
@@ -105,6 +112,22 @@ public class SplashScreenController : MonoBehaviour
             continuePrompt.SetActive(true);
 
         tapToContinueButton.interactable = true;
+
+        if (inactivityPrompt != null)
+            StartCoroutine(InactivityLoop());
+    }
+
+    IEnumerator InactivityLoop()
+    {
+        do
+        {
+            yield return new WaitForSeconds(inactivityDelay);
+            if (_dismissed) yield break;
+            audioSource.PlayOneShot(inactivityPrompt);
+            if (loopInactivityPrompt)
+                yield return new WaitForSeconds(inactivityPrompt.length);
+        }
+        while (loopInactivityPrompt && !_dismissed);
     }
 
     void OnTapped()

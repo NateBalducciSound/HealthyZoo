@@ -1526,12 +1526,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueController
   audioSource: {fileID: 1508713119}
-  openingLine: {fileID: 8300000, guid: 77ac085beca5641aebb4ccfbdd6eac25, type: 3}
-  completionLine: {fileID: 8300000, guid: b9e983ea1e1c14e82ad1f6938aac7534, type: 3}
+  openingLine: {fileID: 8300000, guid: 40fc590d48d2241c09403638c639d44d, type: 3}
+  completionLine: {fileID: 8300000, guid: 48827857ae29140fca852dbff07974c6, type: 3}
   nudgeDelay: 5
   nudgeInterval: 6
   nudgeLines:
-  - {fileID: 8300000, guid: 5f0df10209acf4a20bd89504af492ffe, type: 3}
+  - {fileID: 8300000, guid: 0ed97cb57c0334d088991d421ebbd011, type: 3}
+  - {fileID: 8300000, guid: b41735f5cf1974a1f98c2cbb4e080367, type: 3}
 --- !u!4 &1508713121
 Transform:
   m_ObjectHideFlags: 0

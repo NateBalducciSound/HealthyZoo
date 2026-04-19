@@ -88,10 +88,14 @@ public class AsyncSceneLoader : MonoBehaviour
 
     // ── Internal ──────────────────────────────────────────────────────────────
 
+    // Fires just before any scene load begins — use to trigger audio fades, etc.
+    public static event System.Action OnBeforeLoad;
+
     void StartLoad(string sceneName, int buildIndex)
     {
         if (_loading) return;
         _loading = true;
+        OnBeforeLoad?.Invoke();
         StartCoroutine(LoadRoutine(sceneName, buildIndex));
     }
 

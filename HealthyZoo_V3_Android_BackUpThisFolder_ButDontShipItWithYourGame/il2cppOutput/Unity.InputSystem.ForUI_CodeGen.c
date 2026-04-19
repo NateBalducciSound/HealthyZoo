@@ -7,8 +7,6 @@
 
 
 
-extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mCD691173FEACF51DCB8D53B34BC6140B9BEB3A76 (void);
-extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mA660CF8ABA574A485B1D54809512ED4EA57B669E (void);
 extern void InputSystemProvider__cctor_m1B2BFA7F3942CE7D68EEC2A06652C6C735660EF4 (void);
 extern void InputSystemProvider_Bootstrap_mF57FB7E3DF3C1AB59A2D4822BEC6ECEEA8C0FC59 (void);
 extern void InputSystemProvider_get_m_EventModifiers_m2D14FEBCDB24DF81613022ED674A7B8FD1E23484 (void);
@@ -18,17 +16,13 @@ extern void InputSystemProvider_Shutdown_m774496048F3226A9D191A325861C32A40E4A8F
 extern void InputSystemProvider_OnActionsChange_m618715DBF6DE2F8F1878DD07818CAC357A801A70 (void);
 extern void InputSystemProvider_Update_m91A0AF7C15FAC8BBEC39294F72F0B81F189FA7BC (void);
 extern void InputSystemProvider_ResetSeenEvents_mBA2D49FDFCD954E16BCBDE0BC13531D13931C6A6 (void);
-extern void InputSystemProvider_ActionAssetIsNotNull_m0C734F788C816435FB56DEF61806361FE4201904 (void);
 extern void InputSystemProvider_DirectionNavigation_m290A765306EB534FFFBB734A7A8B0618DC6F107C (void);
 extern void InputSystemProvider_GetActiveDeviceFromDirection_m60315AA9FD16AC1763248E6DA1CB3DD093405426 (void);
 extern void InputSystemProvider_ReadCurrentNavigationMoveVector_mC3B2CA0A67F54365FDB7D55CA32947DC4EA727B6 (void);
 extern void InputSystemProvider_ReadNextPreviousDirection_m2E81D119E980821A588FEC0DF01D6D2120D5A481 (void);
 extern void InputSystemProvider_SortEvents_m30A8CD28CC0393BE86AE3BAE512B8B2C68448252 (void);
 extern void InputSystemProvider_OnFocusChanged_m26E57523E8B8B5B625533FED0B3B78F073666D26 (void);
-extern void InputSystemProvider_RequestCurrentState_mAB15EDB3F4541CF0768B97EC31CA49D34068DFF4 (void);
-extern void InputSystemProvider_get_playerCount_m310585C79A32DAED57EFAD7B475C7297E2873E27 (void);
 extern void InputSystemProvider_ScreenBottomLeftToPanelPosition_m308B3B69392686A03D43F0092A559C9A365A1B5F (void);
-extern void InputSystemProvider_ToPointerStateEvent_m4F98D6F618DB9E7EEF2B9954AE57354860F074EE (void);
 extern void InputSystemProvider_GetEventSource_m63A170F8A9B01B53E16BBDF00C2919ACBB473765 (void);
 extern void InputSystemProvider_GetEventSource_mCE28EEE24E33E04390982A31592F76AB42D4C0EA (void);
 extern void InputSystemProvider_GetPointerStateForSource_m10B409854E888648AE86BD385E498515DA0DE8B7 (void);
@@ -47,16 +41,13 @@ extern void InputSystemProvider_UnregisterFixedActions_mB077AF4ABC124DBB7505807E
 extern void InputSystemProvider_RegisterActions_mE12FE41FF3E5248E0804E1C67FD297041EC4699C (void);
 extern void InputSystemProvider_UnregisterActions_m5EBE4FD1FAF87C2DD977809D8FA850944BED6B94 (void);
 extern void InputSystemProvider_SelectInputActionAsset_mE2D69DEC9392B64292563D7D8FB8E332856CB904 (void);
-extern void InputSystemProvider_SetOnRegisterActions_mC6D2674BAA52A586E82BA07E909318C6C2B34D4E (void);
 extern void InputSystemProvider__ctor_mAD0ACD0FD13335A66C2F60AA9D5DAFD7D9C5775E (void);
 extern void Actions__cctor_m53FB77B02ADA0CC1D896B61377466B15993D7782 (void);
 extern void U3CU3Ec__cctor_m23871B7E94A81DCA5B54632B239F65BF95C2FD3E (void);
 extern void U3CU3Ec__ctor_m6BD3143DCD50739AFCB2155BC88628BBCC8AEACE (void);
 extern void U3CU3Ec_U3CUpdateU3Eb__33_0_mBB86435D4D8C58687960D1F7C09025E26EEE652A (void);
-static Il2CppMethodPointer s_methodPointers[46] = 
+static Il2CppMethodPointer s_methodPointers[39] = 
 {
-	UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mCD691173FEACF51DCB8D53B34BC6140B9BEB3A76,
-	UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mA660CF8ABA574A485B1D54809512ED4EA57B669E,
 	InputSystemProvider__cctor_m1B2BFA7F3942CE7D68EEC2A06652C6C735660EF4,
 	InputSystemProvider_Bootstrap_mF57FB7E3DF3C1AB59A2D4822BEC6ECEEA8C0FC59,
 	InputSystemProvider_get_m_EventModifiers_m2D14FEBCDB24DF81613022ED674A7B8FD1E23484,
@@ -66,17 +57,13 @@ static Il2CppMethodPointer s_methodPointers[46] =
 	InputSystemProvider_OnActionsChange_m618715DBF6DE2F8F1878DD07818CAC357A801A70,
 	InputSystemProvider_Update_m91A0AF7C15FAC8BBEC39294F72F0B81F189FA7BC,
 	InputSystemProvider_ResetSeenEvents_mBA2D49FDFCD954E16BCBDE0BC13531D13931C6A6,
-	InputSystemProvider_ActionAssetIsNotNull_m0C734F788C816435FB56DEF61806361FE4201904,
 	InputSystemProvider_DirectionNavigation_m290A765306EB534FFFBB734A7A8B0618DC6F107C,
 	InputSystemProvider_GetActiveDeviceFromDirection_m60315AA9FD16AC1763248E6DA1CB3DD093405426,
 	InputSystemProvider_ReadCurrentNavigationMoveVector_mC3B2CA0A67F54365FDB7D55CA32947DC4EA727B6,
 	InputSystemProvider_ReadNextPreviousDirection_m2E81D119E980821A588FEC0DF01D6D2120D5A481,
 	InputSystemProvider_SortEvents_m30A8CD28CC0393BE86AE3BAE512B8B2C68448252,
 	InputSystemProvider_OnFocusChanged_m26E57523E8B8B5B625533FED0B3B78F073666D26,
-	InputSystemProvider_RequestCurrentState_mAB15EDB3F4541CF0768B97EC31CA49D34068DFF4,
-	InputSystemProvider_get_playerCount_m310585C79A32DAED57EFAD7B475C7297E2873E27,
 	InputSystemProvider_ScreenBottomLeftToPanelPosition_m308B3B69392686A03D43F0092A559C9A365A1B5F,
-	InputSystemProvider_ToPointerStateEvent_m4F98D6F618DB9E7EEF2B9954AE57354860F074EE,
 	InputSystemProvider_GetEventSource_m63A170F8A9B01B53E16BBDF00C2919ACBB473765,
 	InputSystemProvider_GetEventSource_mCE28EEE24E33E04390982A31592F76AB42D4C0EA,
 	InputSystemProvider_GetPointerStateForSource_m10B409854E888648AE86BD385E498515DA0DE8B7,
@@ -95,67 +82,59 @@ static Il2CppMethodPointer s_methodPointers[46] =
 	InputSystemProvider_RegisterActions_mE12FE41FF3E5248E0804E1C67FD297041EC4699C,
 	InputSystemProvider_UnregisterActions_m5EBE4FD1FAF87C2DD977809D8FA850944BED6B94,
 	InputSystemProvider_SelectInputActionAsset_mE2D69DEC9392B64292563D7D8FB8E332856CB904,
-	InputSystemProvider_SetOnRegisterActions_mC6D2674BAA52A586E82BA07E909318C6C2B34D4E,
 	InputSystemProvider__ctor_mAD0ACD0FD13335A66C2F60AA9D5DAFD7D9C5775E,
 	Actions__cctor_m53FB77B02ADA0CC1D896B61377466B15993D7782,
 	U3CU3Ec__cctor_m23871B7E94A81DCA5B54632B239F65BF95C2FD3E,
 	U3CU3Ec__ctor_m6BD3143DCD50739AFCB2155BC88628BBCC8AEACE,
 	U3CU3Ec_U3CUpdateU3Eb__33_0_mBB86435D4D8C58687960D1F7C09025E26EEE652A,
 };
-static const int32_t s_InvokerIndices[46] = 
+static const int32_t s_InvokerIndices[39] = 
 {
-	28972,
-	16629,
-	28925,
-	28925,
-	16258,
-	16243,
-	16629,
-	16629,
-	16629,
-	16629,
-	16629,
-	16207,
-	12396,
-	10740,
-	16158,
-	16337,
-	23223,
-	12357,
-	8857,
-	16605,
-	23708,
-	2398,
-	10455,
-	10194,
-	7702,
-	12295,
-	23250,
-	12941,
-	12941,
-	12941,
-	2927,
-	12941,
-	12941,
-	12941,
-	12941,
-	16629,
-	16629,
-	16629,
-	16629,
-	16629,
-	27603,
-	16629,
-	28925,
-	28925,
-	16629,
-	4370,
+	19550,
+	19550,
+	12293,
+	12279,
+	12610,
+	12610,
+	12610,
+	12610,
+	12610,
+	9553,
+	8273,
+	12209,
+	12360,
+	16486,
+	9516,
+	16806,
+	8053,
+	7837,
+	5836,
+	9473,
+	16507,
+	9940,
+	9940,
+	9940,
+	2122,
+	9940,
+	9940,
+	9940,
+	9940,
+	12610,
+	12610,
+	12610,
+	12610,
+	12610,
+	12610,
+	19550,
+	19550,
+	12610,
+	3225,
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_Unity_InputSystem_ForUI_CodeGenModule;
 const Il2CppCodeGenModule g_Unity_InputSystem_ForUI_CodeGenModule = 
 {
 	"Unity.InputSystem.ForUI.dll",
-	46,
+	39,
 	s_methodPointers,
 	0,
 	NULL,

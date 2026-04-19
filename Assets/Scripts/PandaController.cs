@@ -168,6 +168,7 @@ public class PandaController : MonoBehaviour
     {
         Debug.Log($"[PandaController] OnScanButtonPressed — isFinished:{isFinished} currentZone:{currentZone} EyeZoneIndex:{EyeZoneIndex}");
         if (isFinished) return;
+        if (dialogueController != null && dialogueController.IsInputLocked) return;
         if (currentZone != EyeZoneIndex) return;
 
         isFinished = true;
@@ -197,9 +198,16 @@ public class PandaController : MonoBehaviour
 
     void NotifyPlayerStarted()
     {
-        if (playerStarted) return;
-        playerStarted = true;
-        if (dialogueController != null) dialogueController.OnPlayerStarted();
+        if (dialogueController == null) return;
+        if (!playerStarted)
+        {
+            playerStarted = true;
+            dialogueController.OnPlayerStarted();
+        }
+        else
+        {
+            dialogueController.ResetNudgeTimer();
+        }
     }
 
     public void OnBackToMenuPressed()

@@ -40,6 +40,7 @@ public class DialogueController : MonoBehaviour
     public bool IsInputLocked { get; private set; } = false;
     public System.Action OnInputUnlocked;
     private bool _playerStarted = false;
+    private bool _finished = false;
     private int _nudgeIndex = 0;
     private Coroutine _nudgeRoutine;
     private EventSystem _eventSystem;
@@ -69,29 +70,32 @@ public class DialogueController : MonoBehaviour
             OnInputUnlocked?.Invoke();
     }
 
-    // Call this from your gameplay script the moment the player interacts
+    // Call the moment the player first interacts — stops intro audio and starts inactivity timer.
     public void OnPlayerStarted()
     {
         if (_playerStarted) return;
         _playerStarted = true;
-
-        if (_nudgeRoutine != null)
-            StopCoroutine(_nudgeRoutine);
-
         audioSource.Stop();
+        ResetNudgeTimer();
     }
 
-    // Call this from SpawnButton() when the congrats button appears
+    // Call on every subsequent interaction to restart the inactivity countdown.
+    public void ResetNudgeTimer()
+    {
+        if (_finished) return;
+        if (_nudgeRoutine != null) StopCoroutine(_nudgeRoutine);
+        if (nudgeLines.Length > 0)
+            _nudgeRoutine = StartCoroutine(NudgeLoop(nudgeDelay));
+    }
+
+    // Call when the minigame is won — permanently stops all nudging.
     public void OnLevelCompleted()
     {
         Debug.Log($"[Dialogue] OnLevelCompleted called — completionLine assigned: {completionLine != null}");
-        if (completionLine == null) return;
-
-        if (_nudgeRoutine != null)
-            StopCoroutine(_nudgeRoutine);
-
+        _finished = true;
+        if (_nudgeRoutine != null) StopCoroutine(_nudgeRoutine);
         audioSource.Stop();
-        audioSource.PlayOneShot(completionLine);
+        if (completionLine != null) audioSource.PlayOneShot(completionLine);
     }
 
     IEnumerator PlayOpeningThenNudge()
@@ -112,7 +116,7 @@ public class DialogueController : MonoBehaviour
     {
         yield return new WaitForSeconds(initialDelay);
 
-        while (!_playerStarted)
+        while (!_finished)
         {
             if (nudgeLines.Length > 0)
             {

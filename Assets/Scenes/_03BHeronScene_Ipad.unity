@@ -927,12 +927,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueController
   audioSource: {fileID: 303465988}
-  openingLine: {fileID: 8300000, guid: 85fe883906d03461e899bfb58bfd41e1, type: 3}
-  completionLine: {fileID: 8300000, guid: e9f1cbe2f789d41179da278c3da22ec7, type: 3}
+  openingLine: {fileID: 8300000, guid: c1b1234a1c9e94fa2858cbcbd6cbb964, type: 3}
+  completionLine: {fileID: 8300000, guid: 8f2974b5d11114cdb9648116584cc9fe, type: 3}
   nudgeDelay: 5
   nudgeInterval: 6
   nudgeLines:
-  - {fileID: 8300000, guid: e8bd0e779279e429b942e2853940654f, type: 3}
+  - {fileID: 8300000, guid: 0fbd35ebec3e542ba97cc1d27b7d61ea, type: 3}
+  - {fileID: 8300000, guid: 068ca4a77711247a2b9f937fdba9b47e, type: 3}
 --- !u!4 &303465990
 Transform:
   m_ObjectHideFlags: 0
@@ -1213,6 +1214,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Draggable2D
   spawnPoint: {fileID: 1443739628}
+  lockXAxis: 0
   dialogueController: {fileID: 0}
 --- !u!50 &490108030
 Rigidbody2D:

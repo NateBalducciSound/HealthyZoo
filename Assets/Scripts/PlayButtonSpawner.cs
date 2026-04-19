@@ -22,6 +22,12 @@ public class PlayButtonSpawner : MonoBehaviour
     public GameObject playButtonPrefab;
     public Transform buttonParent;
 
+    [Header("Completed Animation")]
+    [Tooltip("Animator on the character Image GameObject. Enabled only when minigame is completed.")]
+    public Animator idleAnimator;
+    [Tooltip("Trigger parameter name in the Animator Controller that starts the idle loop.")]
+    public string idleTrigger = "PlayIdle";
+
     [Header("Mini Game Identity")]
     public GrabbableType myGrabbable;
 
@@ -52,11 +58,21 @@ public class PlayButtonSpawner : MonoBehaviour
 
         if (completed)
         {
-            mainImageComponent.sprite = mainCompletedSprite;
             overlayImageComponent.sprite = overlayCompletedSprite;
+            if (idleAnimator != null)
+            {
+                idleAnimator.enabled = true;
+                if (!string.IsNullOrEmpty(idleTrigger))
+                    idleAnimator.SetTrigger(idleTrigger);
+            }
+            else
+            {
+                mainImageComponent.sprite = mainCompletedSprite;
+            }
         }
         else
         {
+            if (idleAnimator != null) idleAnimator.enabled = false;
             mainImageComponent.sprite = mainSpriteBW;
             overlayImageComponent.sprite = overlaySpriteBW;
         }

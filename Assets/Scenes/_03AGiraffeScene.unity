@@ -801,12 +801,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueController
   audioSource: {fileID: 919989835}
-  openingLine: {fileID: 8300000, guid: 240a359a22b7a43dd9a0ba2b21f571dd, type: 3}
-  completionLine: {fileID: 8300000, guid: 8bc5e18b8dfb4411bbef1801832330ba, type: 3}
+  openingLine: {fileID: 8300000, guid: 75faf95fad9dd4d6bad802599ddd0d7d, type: 3}
+  completionLine: {fileID: 8300000, guid: 935a9cbe6e3284b8daa26ebf844d2a79, type: 3}
   nudgeDelay: 5
   nudgeInterval: 6
   nudgeLines:
-  - {fileID: 8300000, guid: a71b388b23b7949929c1c0db3371de7b, type: 3}
+  - {fileID: 8300000, guid: 121983ab857424a5486abb53dc69a72a, type: 3}
 --- !u!4 &919989834
 Transform:
   m_ObjectHideFlags: 0
@@ -1336,7 +1336,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.9, z: 10}
-  m_LocalScale: {x: 0.64, y: 0.64, z: 0.64}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}

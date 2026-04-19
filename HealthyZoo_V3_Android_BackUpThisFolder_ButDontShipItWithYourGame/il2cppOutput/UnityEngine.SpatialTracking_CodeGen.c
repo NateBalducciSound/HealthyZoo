@@ -7,12 +7,8 @@
 
 
 
-extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mCE359C5A5A58D8621F30428690D32D7A877B0256 (void);
-extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_m65BD3D2B2847C50307ED758599CA8462DAEDBB0D (void);
-extern void TrackedPoseDriverDataDescription__ctor_m76D45B5826854354DF5D5F3962767B0ED49FD5E7 (void);
 extern void TrackedPoseDriverDataDescription__cctor_mB66097427DE427D6DAC5B5A68CC2D35E7526BE27 (void);
 extern void PoseDataSource_GetNodePoseData_m07EE5781C7E0EB625084A340D115C34C47B07B8E (void);
-extern void PoseDataSource_TryGetDataFromSource_m9CCF52B621C860AB223A2F1B621C99E0106455F1 (void);
 extern void PoseDataSource_GetDataFromSource_mD37A9CC706B99D7A2535DEA7CB0D40F7F47B277A (void);
 extern void PoseDataSource__cctor_m2CA606CD693A292EED74511BED8CEC06870BA3F3 (void);
 extern void TrackedPoseDriver_get_deviceType_m17B7178484ECE7F92482DE4C601BBBD70246B743 (void);
@@ -34,7 +30,6 @@ extern void TrackedPoseDriver_set_originPose_m2C46FCA44C17A58EF0A9F1479F64D612B8
 extern void TrackedPoseDriver_CacheLocalPosition_m8D577E735DA73CDEB6CCAD152E457B141CB7A7D5 (void);
 extern void TrackedPoseDriver_ResetToCachedLocalPosition_m7FD46724D2BF37DFD65CEFB2DBD1A6F03BD3A90D (void);
 extern void TrackedPoseDriver_Awake_m1939FF8E60FD6C4D91FFCDFE3B861F83BB6C7EEE (void);
-extern void TrackedPoseDriver_OnDestroy_m34A5CEA220217311DF4076BFA69F1013D0F2DAAA (void);
 extern void TrackedPoseDriver_OnEnable_m36C815D001B992B28CD69CA2F282EC7660C8E9F7 (void);
 extern void TrackedPoseDriver_OnDisable_mC6EB0D19C5ECC17A8F17DB478C978CAE0280790F (void);
 extern void TrackedPoseDriver_FixedUpdate_m43910F40F01F60740C97F82D3157AFAE3587551A (void);
@@ -48,14 +43,10 @@ extern void TrackedPoseDriver__ctor_mCB5636C22D685907A7D30BEA4FF3D5BD2FE5D3F0 (v
 extern void BasePoseProvider_GetPoseFromProvider_m815E60EB1A0C2D449B60F60DDD0D49DCF7E68A69 (void);
 extern void BasePoseProvider_TryGetPoseFromProvider_m6961C33D08BB411C9E425EDE5813480319F9BFB0 (void);
 extern void BasePoseProvider__ctor_mB1BA00DFB674FA54CD28933D4335F6162B378020 (void);
-static Il2CppMethodPointer s_methodPointers[41] = 
+static Il2CppMethodPointer s_methodPointers[36] = 
 {
-	UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mCE359C5A5A58D8621F30428690D32D7A877B0256,
-	UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_m65BD3D2B2847C50307ED758599CA8462DAEDBB0D,
-	TrackedPoseDriverDataDescription__ctor_m76D45B5826854354DF5D5F3962767B0ED49FD5E7,
 	TrackedPoseDriverDataDescription__cctor_mB66097427DE427D6DAC5B5A68CC2D35E7526BE27,
 	PoseDataSource_GetNodePoseData_m07EE5781C7E0EB625084A340D115C34C47B07B8E,
-	PoseDataSource_TryGetDataFromSource_m9CCF52B621C860AB223A2F1B621C99E0106455F1,
 	PoseDataSource_GetDataFromSource_mD37A9CC706B99D7A2535DEA7CB0D40F7F47B277A,
 	PoseDataSource__cctor_m2CA606CD693A292EED74511BED8CEC06870BA3F3,
 	TrackedPoseDriver_get_deviceType_m17B7178484ECE7F92482DE4C601BBBD70246B743,
@@ -77,7 +68,6 @@ static Il2CppMethodPointer s_methodPointers[41] =
 	TrackedPoseDriver_CacheLocalPosition_m8D577E735DA73CDEB6CCAD152E457B141CB7A7D5,
 	TrackedPoseDriver_ResetToCachedLocalPosition_m7FD46724D2BF37DFD65CEFB2DBD1A6F03BD3A90D,
 	TrackedPoseDriver_Awake_m1939FF8E60FD6C4D91FFCDFE3B861F83BB6C7EEE,
-	TrackedPoseDriver_OnDestroy_m34A5CEA220217311DF4076BFA69F1013D0F2DAAA,
 	TrackedPoseDriver_OnEnable_m36C815D001B992B28CD69CA2F282EC7660C8E9F7,
 	TrackedPoseDriver_OnDisable_mC6EB0D19C5ECC17A8F17DB478C978CAE0280790F,
 	TrackedPoseDriver_FixedUpdate_m43910F40F01F60740C97F82D3157AFAE3587551A,
@@ -92,55 +82,50 @@ static Il2CppMethodPointer s_methodPointers[41] =
 	BasePoseProvider_TryGetPoseFromProvider_m6961C33D08BB411C9E425EDE5813480319F9BFB0,
 	BasePoseProvider__ctor_mB1BA00DFB674FA54CD28933D4335F6162B378020,
 };
-static const int32_t s_InvokerIndices[41] = 
+static const int32_t s_InvokerIndices[36] = 
 {
-	28989,
-	16629,
-	16629,
-	28925,
-	23225,
-	22848,
-	23225,
-	28925,
-	16337,
-	12488,
-	16337,
-	12488,
-	3852,
-	16406,
-	12557,
-	2308,
-	16337,
-	12488,
-	16337,
-	12488,
-	16207,
-	12357,
-	16437,
-	12588,
-	16629,
-	16629,
-	16629,
-	16629,
-	16629,
-	16629,
-	16629,
-	16629,
-	16629,
-	2881,
-	10830,
-	16207,
-	16629,
-	16629,
-	10016,
-	8661,
-	16629,
+	19550,
+	16487,
+	16487,
+	19550,
+	12360,
+	9630,
+	12360,
+	9630,
+	2790,
+	12419,
+	9685,
+	1672,
+	12360,
+	9630,
+	12360,
+	9630,
+	12247,
+	9516,
+	12447,
+	9713,
+	12610,
+	12610,
+	12610,
+	12610,
+	12610,
+	12610,
+	12610,
+	12610,
+	2109,
+	8347,
+	12247,
+	12610,
+	12610,
+	7690,
+	6588,
+	12610,
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_UnityEngine_SpatialTracking_CodeGenModule;
 const Il2CppCodeGenModule g_UnityEngine_SpatialTracking_CodeGenModule = 
 {
 	"UnityEngine.SpatialTracking.dll",
-	41,
+	36,
 	s_methodPointers,
 	0,
 	NULL,

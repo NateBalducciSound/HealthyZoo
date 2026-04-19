@@ -74,6 +74,31 @@ public class ARImageTracker : MonoBehaviour
     private Text statusText;
     private Image statusBackground;
 
+    // ── On-Screen Debug Log ───────────────────────────────────────────────────
+    private Text _debugText;
+    private readonly System.Text.StringBuilder _debugLog = new();
+    private const int MaxDebugLines = 18;
+    private int _debugLineCount = 0;
+
+    void DebugLog(string msg, bool isWarning = false, bool isError = false)
+    {
+        string prefix = isError ? "ERR " : isWarning ? "WRN " : "LOG ";
+        string line = $"{prefix}{msg}";
+
+        if (isError)        Debug.LogError($"[ARImageTracker] {msg}");
+        else if (isWarning) Debug.LogWarning($"[ARImageTracker] {msg}");
+        else                Debug.Log($"[ARImageTracker] {msg}");
+
+        _debugLineCount++;
+        if (_debugLineCount > MaxDebugLines)
+        {
+            int nl = _debugLog.ToString().IndexOf('\n');
+            if (nl >= 0) _debugLog.Remove(0, nl + 1);
+        }
+        _debugLog.AppendLine(line);
+        if (_debugText != null) _debugText.text = _debugLog.ToString();
+    }
+
     // ── Lifecycle ─────────────────────────────────────────────────────────────
 
     void Awake()
@@ -116,10 +141,27 @@ public class ARImageTracker : MonoBehaviour
     void OnChanged(ARTrackedImagesChangedEventArgs eventArgs)
     {
         foreach (var img in eventArgs.added)
-            states[img.trackableId] = new TrackedState { imageName = img.referenceImage.name };
+        {
+            string name = img.referenceImage.name;
+            DebugLog($"DETECTED: \"{name}\"");
+
+            bool matched = false;
+            foreach (var m in imagePrefabs)
+                if (string.Equals(m.imageName.Trim(), name.Trim(), StringComparison.OrdinalIgnoreCase))
+                    matched = true;
+
+            if (!matched)
+                DebugLog($"No imagePrefabs match for \"{name}\". Entries: [{string.Join(", ", System.Linq.Enumerable.Select(imagePrefabs, m => $"\"{m.imageName}\""))}]", isWarning: true);
+
+            states[img.trackableId] = new TrackedState { imageName = name };
+        }
 
         foreach (var img in eventArgs.removed)
+        {
+            if (states.TryGetValue(img.trackableId, out var s))
+                DebugLog($"LOST: \"{s.imageName}\"");
             states.Remove(img.trackableId);
+        }
     }
 
     // ── Update ────────────────────────────────────────────────────────────────
@@ -151,11 +193,18 @@ public class ARImageTracker : MonoBehaviour
                 if (!state.isLoading && state.scanTimer >= scanConfirmTime * 0.5f)
                     StartCoroutine(LoadPrefabAsync(state));
 
-                if (state.scanTimer >= scanConfirmTime && state.loadedPrefab != null)
+                if (state.scanTimer >= scanConfirmTime)
                 {
-                    Confirm(state);
-                    anyScanning = false;
-                    break;
+                    if (state.loadedPrefab != null)
+                    {
+                        Confirm(state);
+                        anyScanning = false;
+                        break;
+                    }
+                    else
+                    {
+                        DebugLog($"Timer done for \"{state.imageName}\" but prefab null (isLoading={state.isLoading})", isWarning: true);
+                    }
                 }
             }
             else
@@ -197,18 +246,22 @@ public class ARImageTracker : MonoBehaviour
         state.isLoading = true;
         string path = ResourcesPath + state.imageName;
 
-        ResourceRequest request = Resources.LoadAsync<GameObject>(path);
-        yield return request;
+        DebugLog($"Loading: Resources/{path}");
 
-        if (request.asset == null)
+        // Synchronous load — avoids Resources.LoadAsync getting stuck on device.
+        // The load triggers halfway through the scan timer so there is plenty of
+        // time before Confirm is needed.
+        GameObject prefab = Resources.Load<GameObject>(path);
+        yield return null; // one-frame yield so this stays a coroutine
+
+        if (prefab == null)
         {
-            Debug.LogError($"[ARImageTracker] FAILED to load 'Resources/{path}'. " +
-                           $"Ensure the prefab exists at Assets/Resources/{path}.prefab " +
-                           $"and the name matches exactly (case-sensitive).");
+            DebugLog($"FAILED to load Resources/{path} — check prefab exists and name matches exactly.", isError: true);
             yield break;
         }
 
-        state.loadedPrefab = (GameObject)request.asset;
+        DebugLog($"Loaded OK: {state.imageName}");
+        state.loadedPrefab = prefab;
 
         if (state.scanTimer >= scanConfirmTime && !state.onCooldown)
             Confirm(state);
@@ -351,5 +404,31 @@ public class ARImageTracker : MonoBehaviour
         textRect.anchorMax = Vector2.one;
         textRect.offsetMin = new Vector2(12f, 4f);
         textRect.offsetMax = new Vector2(-12f, -4f);
+
+        // On-screen debug log panel — bottom of screen
+        GameObject debugBgGO = new GameObject("DebugLogBG");
+        debugBgGO.transform.SetParent(canvasGO.transform, false);
+        Image debugBg = debugBgGO.AddComponent<Image>();
+        debugBg.color = new Color(0f, 0f, 0f, 0.7f);
+        RectTransform debugBgRect = debugBgGO.GetComponent<RectTransform>();
+        debugBgRect.anchorMin = new Vector2(0f, 0f);
+        debugBgRect.anchorMax = new Vector2(1f, 0f);
+        debugBgRect.pivot = new Vector2(0.5f, 0f);
+        debugBgRect.anchoredPosition = new Vector2(0f, 0f);
+        debugBgRect.sizeDelta = new Vector2(0f, 320f);
+
+        GameObject debugTextGO = new GameObject("DebugLogText");
+        debugTextGO.transform.SetParent(debugBgGO.transform, false);
+        _debugText = debugTextGO.AddComponent<Text>();
+        _debugText.font = Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
+        _debugText.fontSize = 18;
+        _debugText.alignment = TextAnchor.LowerLeft;
+        _debugText.color = Color.green;
+        _debugText.text = "[AR Debug Log]";
+        RectTransform debugTextRect = debugTextGO.GetComponent<RectTransform>();
+        debugTextRect.anchorMin = Vector2.zero;
+        debugTextRect.anchorMax = Vector2.one;
+        debugTextRect.offsetMin = new Vector2(8f, 6f);
+        debugTextRect.offsetMax = new Vector2(-8f, -6f);
     }
 }

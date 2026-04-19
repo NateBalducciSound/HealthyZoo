@@ -50,9 +50,11 @@ public class SlothController : MonoBehaviour
     public string menuSceneName = "_02MiniGameSelect";
 
     // ── State ─────────────────────────────────────────────────────────────────
-    private int activeIndex = -1;   // which sloth is currently shown
+    private int activeIndex = -1;
     private bool isFinished = false;
     private bool playerStarted = false;
+
+    public bool IsInputLocked => dialogueController != null && dialogueController.IsInputLocked;
 
     // ─────────────────────────────────────────────────────────────────────────
 
@@ -79,10 +81,12 @@ public class SlothController : MonoBehaviour
     public void OnPositionTapped(int index)
     {
         if (isFinished) return;
+        if (IsInputLocked) return;
         if (index == activeIndex) return;
         if (index < 0 || index >= slothPositions.Length) return;
 
         NotifyPlayerStarted();
+        dialogueController?.ResetNudgeTimer();
 
         // Deactivate previous, activate new
         if (activeIndex >= 0 && activeIndex < slothPositions.Length)
@@ -112,6 +116,7 @@ public class SlothController : MonoBehaviour
         else
         {
             cuff.ReturnToStart();
+            dialogueController?.ResetNudgeTimer();
         }
     }
 

@@ -21,9 +21,9 @@ MonoBehaviour:
       m_GuidLow: 5213630060391454591
       m_GuidHigh: 9336541163346370238
     m_SerializedTextureGuid:
-      m_GuidLow: 7259359206213886983
-      m_GuidHigh: 5393061197967769706
-    m_Size: {x: 0.1778, y: 0.1778}
+      m_GuidLow: 1500031030293211459
+      m_GuidHigh: 10320679683570167720
+    m_Size: {x: 0.1778, y: 0.23009412}
     m_SpecifySize: 1
     m_Name: ArloBW
     m_Texture: {fileID: 0}
@@ -31,9 +31,9 @@ MonoBehaviour:
       m_GuidLow: 5394251812833623963
       m_GuidHigh: 1237990195313894832
     m_SerializedTextureGuid:
-      m_GuidLow: 17639444495814008406
-      m_GuidHigh: 11397361596424693019
-    m_Size: {x: 0.1778, y: 0.1778}
+      m_GuidLow: 4923777024423747266
+      m_GuidHigh: 3295984865785148489
+    m_Size: {x: 0.1778, y: 0.23009412}
     m_SpecifySize: 1
     m_Name: GigiBW
     m_Texture: {fileID: 0}
@@ -41,9 +41,9 @@ MonoBehaviour:
       m_GuidLow: 5613880472673912019
       m_GuidHigh: 16286200732038864776
     m_SerializedTextureGuid:
-      m_GuidLow: 1442070637494421532
-      m_GuidHigh: 13441226173487642104
-    m_Size: {x: 0.1778, y: 0.1778}
+      m_GuidLow: 3751081066841788591
+      m_GuidHigh: 12614987350056232168
+    m_Size: {x: 0.1778, y: 0.23009412}
     m_SpecifySize: 1
     m_Name: PennyBW
     m_Texture: {fileID: 0}
@@ -51,9 +51,9 @@ MonoBehaviour:
       m_GuidLow: 4679241817014386263
       m_GuidHigh: 3043491429120604325
     m_SerializedTextureGuid:
-      m_GuidLow: 6059914473962358071
-      m_GuidHigh: 16375247495573124040
-    m_Size: {x: 0.1778, y: 0.1778}
+      m_GuidLow: 2645289832994612648
+      m_GuidHigh: 11275738660054909290
+    m_Size: {x: 0.1778, y: 0.23009412}
     m_SpecifySize: 1
     m_Name: PingBW
     m_Texture: {fileID: 0}
@@ -61,9 +61,9 @@ MonoBehaviour:
       m_GuidLow: 5565149332653353741
       m_GuidHigh: 429356281986827952
     m_SerializedTextureGuid:
-      m_GuidLow: 16446662707381588952
-      m_GuidHigh: 10213667602042040345
-    m_Size: {x: 0.1778, y: 0.1778}
+      m_GuidLow: 9540561179732652564
+      m_GuidHigh: 9162000005148872106
+    m_Size: {x: 0.1778, y: 0.23009412}
     m_SpecifySize: 1
     m_Name: RenBW
     m_Texture: {fileID: 0}
@@ -71,9 +71,9 @@ MonoBehaviour:
       m_GuidLow: 4858296159918921181
       m_GuidHigh: 16597353150134658695
     m_SerializedTextureGuid:
-      m_GuidLow: 15332024685109715524
-      m_GuidHigh: 10684335952353767659
-    m_Size: {x: 0.1778, y: 0.1778}
+      m_GuidLow: 11817581737462434301
+      m_GuidHigh: 7470058078634701674
+    m_Size: {x: 0.1778, y: 0.23009412}
     m_SpecifySize: 1
     m_Name: SantiBW
     m_Texture: {fileID: 0}
