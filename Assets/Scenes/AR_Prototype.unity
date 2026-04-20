@@ -147,7 +147,7 @@ AudioSource:
   m_GameObject: {fileID: 41003433}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 6c8de38a7bafb4120a25cff414f169d8, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
@@ -282,7 +282,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ARMusicPlayer
   audioSource: {fileID: 41003434}
   musicClip: {fileID: 8300000, guid: b9908669b7e134de89d9dc8d224db56c, type: 3}
-  delay: 0
+  fadeInDuration: 1
+  fadeOutDuration: 0.8
+  playOnSceneLoad: 0
+  musicSceneNames:
+  - 02MiniGameSelect
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0

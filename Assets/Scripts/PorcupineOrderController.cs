@@ -302,6 +302,17 @@ public class PorcupineOrderController : MonoBehaviour
     {
         MiniGameProgress.SetCompleted(GrabbableType.Porcupine);
 
+        if (confettiAnimator != null)
+        {
+            confettiAnimator.gameObject.SetActive(true);
+            confettiAnimator.Play(confettiStateName);
+        }
+
+        AudioManager.PlayComplete();
+
+        // Dialogue fires 1s after win; button spawns when it finishes (runs alongside animations).
+        StartCoroutine(DialogueThenButton());
+
         if (startupAnimator != null)
         {
             startupAnimator.enabled = true;
@@ -318,15 +329,13 @@ public class PorcupineOrderController : MonoBehaviour
             loopAnimator.enabled = true;
             loopAnimator.Play(loopStateName);
         }
+    }
 
-        if (confettiAnimator != null)
-        {
-            confettiAnimator.gameObject.SetActive(true);
-            confettiAnimator.Play(confettiStateName);
-        }
-
-        AudioManager.PlayComplete();
+    IEnumerator DialogueThenButton()
+    {
+        yield return new WaitForSeconds(1f);
         if (dialogueController != null) dialogueController.OnLevelCompleted();
+        yield return new WaitForSeconds(dialogueController != null ? dialogueController.CompletionLineDuration : 0f);
         SpawnCongrats();
     }
 

@@ -12,6 +12,8 @@
             "name": "AnimationClip",
             "scenes": [
               "Assets/Scenes/_01MainMenu.unity",
+              "Assets/Scenes/_02MiniGameSelect.unity",
+              "Assets/Scenes/_02MiniGameSelect_Ipad.unity",
               "Assets/Scenes/_03AGiraffeScene.unity",
               "Assets/Scenes/_03AGiraffeScene_Ipad.unity",
               "Assets/Scenes/_03BHeronScene.unity",
@@ -32,6 +34,8 @@
             "name": "Animator",
             "scenes": [
               "Assets/Scenes/_01MainMenu.unity",
+              "Assets/Scenes/_02MiniGameSelect.unity",
+              "Assets/Scenes/_02MiniGameSelect_Ipad.unity",
               "Assets/Scenes/_03AGiraffeScene.unity",
               "Assets/Scenes/_03AGiraffeScene_Ipad.unity",
               "Assets/Scenes/_03BHeronScene.unity",
@@ -52,6 +56,8 @@
             "name": "AnimatorController",
             "scenes": [
               "Assets/Scenes/_01MainMenu.unity",
+              "Assets/Scenes/_02MiniGameSelect.unity",
+              "Assets/Scenes/_02MiniGameSelect_Ipad.unity",
               "Assets/Scenes/_03AGiraffeScene.unity",
               "Assets/Scenes/_03AGiraffeScene_Ipad.unity",
               "Assets/Scenes/_03BHeronScene.unity",
@@ -126,8 +132,13 @@
               "Assets/Scenes/_03BHeronScene_Ipad.unity",
               "Assets/Scenes/_03CPorcupineScene.unity",
               "Assets/Scenes/_03CPorcupineScene_Ipad.unity",
+              "Assets/Scenes/_03DSlothScene.unity",
+              "Assets/Scenes/_03DSlothScene_Ipad.unity",
+              "Assets/Scenes/_03EPandaScene.unity",
+              "Assets/Scenes/_03EPandaScene_Ipad.unity",
               "Assets/Scenes/_03FAlligatorScene.unity",
-              "Assets/Scenes/_03FAlligatorScene_Ipad.unity"
+              "Assets/Scenes/_03FAlligatorScene_Ipad.unity",
+              "Assets/Scenes/AR_Prototype.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -162,6 +173,75 @@
             "icon": null
           },
           {
+            "name": "AudioMixer",
+            "scenes": [
+              "Assets/Scenes/_01MainMenu.unity",
+              "Assets/Scenes/_02MiniGameSelect.unity",
+              "Assets/Scenes/_02MiniGameSelect_Ipad.unity",
+              "Assets/Scenes/_03AGiraffeScene.unity",
+              "Assets/Scenes/_03AGiraffeScene_Ipad.unity",
+              "Assets/Scenes/_03BHeronScene.unity",
+              "Assets/Scenes/_03BHeronScene_Ipad.unity",
+              "Assets/Scenes/_03CPorcupineScene.unity",
+              "Assets/Scenes/_03CPorcupineScene_Ipad.unity",
+              "Assets/Scenes/_03DSlothScene.unity",
+              "Assets/Scenes/_03DSlothScene_Ipad.unity",
+              "Assets/Scenes/_03EPandaScene.unity",
+              "Assets/Scenes/_03EPandaScene_Ipad.unity",
+              "Assets/Scenes/_03FAlligatorScene.unity",
+              "Assets/Scenes/_03FAlligatorScene_Ipad.unity",
+              "Assets/Scenes/AR_Prototype.unity"
+            ],
+            "dependencyType": 0,
+            "icon": null
+          },
+          {
+            "name": "AudioMixerGroup",
+            "scenes": [
+              "Assets/Scenes/_01MainMenu.unity",
+              "Assets/Scenes/_02MiniGameSelect.unity",
+              "Assets/Scenes/_02MiniGameSelect_Ipad.unity",
+              "Assets/Scenes/_03AGiraffeScene.unity",
+              "Assets/Scenes/_03AGiraffeScene_Ipad.unity",
+              "Assets/Scenes/_03BHeronScene.unity",
+              "Assets/Scenes/_03BHeronScene_Ipad.unity",
+              "Assets/Scenes/_03CPorcupineScene.unity",
+              "Assets/Scenes/_03CPorcupineScene_Ipad.unity",
+              "Assets/Scenes/_03DSlothScene.unity",
+              "Assets/Scenes/_03DSlothScene_Ipad.unity",
+              "Assets/Scenes/_03EPandaScene.unity",
+              "Assets/Scenes/_03EPandaScene_Ipad.unity",
+              "Assets/Scenes/_03FAlligatorScene.unity",
+              "Assets/Scenes/_03FAlligatorScene_Ipad.unity",
+              "Assets/Scenes/AR_Prototype.unity"
+            ],
+            "dependencyType": 0,
+            "icon": null
+          },
+          {
+            "name": "AudioMixerSnapshot",
+            "scenes": [
+              "Assets/Scenes/_01MainMenu.unity",
+              "Assets/Scenes/_02MiniGameSelect.unity",
+              "Assets/Scenes/_02MiniGameSelect_Ipad.unity",
+              "Assets/Scenes/_03AGiraffeScene.unity",
+              "Assets/Scenes/_03AGiraffeScene_Ipad.unity",
+              "Assets/Scenes/_03BHeronScene.unity",
+              "Assets/Scenes/_03BHeronScene_Ipad.unity",
+              "Assets/Scenes/_03CPorcupineScene.unity",
+              "Assets/Scenes/_03CPorcupineScene_Ipad.unity",
+              "Assets/Scenes/_03DSlothScene.unity",
+              "Assets/Scenes/_03DSlothScene_Ipad.unity",
+              "Assets/Scenes/_03EPandaScene.unity",
+              "Assets/Scenes/_03EPandaScene_Ipad.unity",
+              "Assets/Scenes/_03FAlligatorScene.unity",
+              "Assets/Scenes/_03FAlligatorScene_Ipad.unity",
+              "Assets/Scenes/AR_Prototype.unity"
+            ],
+            "dependencyType": 0,
+            "icon": null
+          },
+          {
             "name": "AudioResource",
             "scenes": [
               "Assets/Scenes/_01MainMenu.unity",
@@ -173,8 +253,13 @@
               "Assets/Scenes/_03BHeronScene_Ipad.unity",
               "Assets/Scenes/_03CPorcupineScene.unity",
               "Assets/Scenes/_03CPorcupineScene_Ipad.unity",
+              "Assets/Scenes/_03DSlothScene.unity",
+              "Assets/Scenes/_03DSlothScene_Ipad.unity",
+              "Assets/Scenes/_03EPandaScene.unity",
+              "Assets/Scenes/_03EPandaScene_Ipad.unity",
               "Assets/Scenes/_03FAlligatorScene.unity",
-              "Assets/Scenes/_03FAlligatorScene_Ipad.unity"
+              "Assets/Scenes/_03FAlligatorScene_Ipad.unity",
+              "Assets/Scenes/AR_Prototype.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -191,8 +276,13 @@
               "Assets/Scenes/_03BHeronScene_Ipad.unity",
               "Assets/Scenes/_03CPorcupineScene.unity",
               "Assets/Scenes/_03CPorcupineScene_Ipad.unity",
+              "Assets/Scenes/_03DSlothScene.unity",
+              "Assets/Scenes/_03DSlothScene_Ipad.unity",
+              "Assets/Scenes/_03EPandaScene.unity",
+              "Assets/Scenes/_03EPandaScene_Ipad.unity",
               "Assets/Scenes/_03FAlligatorScene.unity",
-              "Assets/Scenes/_03FAlligatorScene_Ipad.unity"
+              "Assets/Scenes/_03FAlligatorScene_Ipad.unity",
+              "Assets/Scenes/AR_Prototype.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -1770,7 +1860,8 @@
           {
             "name": "CanvasGroup",
             "scenes": [
-              "Assets/Scenes/_01MainMenu.unity"
+              "Assets/Scenes/_01MainMenu.unity",
+              "Assets/Scenes/_02MiniGameSelect.unity"
             ],
             "dependencyType": 0,
             "icon": null

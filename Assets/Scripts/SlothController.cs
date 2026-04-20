@@ -124,30 +124,18 @@ public class SlothController : MonoBehaviour
 
     IEnumerator SuccessSequence(Draggable2D cuff)
     {
-        // Hide the cuff
         cuff.gameObject.SetActive(false);
-
-        // Save progress
         MiniGameProgress.SetCompleted(GrabbableType.Sloth);
 
-        // Fire the reward trigger
-        if (rewardAnimator != null)
-            rewardAnimator.SetTrigger("Reward");
-
-        yield return new WaitForSeconds(0.5f);
-
-        // Confetti
-        if (confettiAnimator != null)
-            confettiAnimator.Play(confettiStateName);
-
-        // Audio / dialogue
+        if (confettiAnimator != null) confettiAnimator.Play(confettiStateName);
+        if (rewardAnimator != null) rewardAnimator.SetTrigger("Reward");
         AudioManager.PlayComplete();
-        if (dialogueController != null)
-            dialogueController.OnLevelCompleted();
 
-        // Show congrats button
-        if (congratsButton != null)
-            congratsButton.SetActive(true);
+        yield return new WaitForSeconds(1f);
+        if (dialogueController != null) dialogueController.OnLevelCompleted();
+        yield return new WaitForSeconds(dialogueController != null ? dialogueController.CompletionLineDuration : 0f);
+
+        if (congratsButton != null) congratsButton.SetActive(true);
     }
 
     // ── Helpers ───────────────────────────────────────────────────────────────

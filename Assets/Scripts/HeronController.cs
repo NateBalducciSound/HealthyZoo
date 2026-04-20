@@ -215,35 +215,32 @@ public class HeronLevelController : MonoBehaviour
         item.gameObject.SetActive(false);
         positionSlider.interactable = false;
 
-        // Lock both sprites to state 1 (just right) — animator drives them from here
         foreach (var set in spriteSets)
             if (set.renderer) set.renderer.sprite = set.GetSprite(1);
 
-        // Save progress
         MiniGameProgress.SetCompleted(GrabbableType.Heron);
 
-        // Enable animator and play startup directly
+        if (confettiAnimator != null) confettiAnimator.Play(confettiStateName);
+        AudioManager.PlayComplete();
+
         stethoscopeAnimator.enabled = true;
         stethoscopeAnimator.Play(startupStateName);
 
-        // Wait one frame for animator to register the Play call
-        yield return null;
+        // Dialogue fires 1s after win (runs alongside animations).
+        StartCoroutine(DialogueThenButton());
 
-        // Read the clip length and wait for it to finish
+        yield return null;
         float clipLength = stethoscopeAnimator.GetCurrentAnimatorStateInfo(0).length;
-        Debug.Log($"[HeronController] Startup clip length: {clipLength}s");
         yield return new WaitForSeconds(clipLength);
 
         stethoscopeAnimator.Play(loopStateName);
-        Debug.Log("[HeronController] Loop started");
+    }
 
-        // Confetti plays once when loop begins
-        if (confettiAnimator != null)
-            confettiAnimator.Play(confettiStateName);
-
-        // Dialogue completion line + spawn back-to-menu button
-        AudioManager.PlayComplete();
+    IEnumerator DialogueThenButton()
+    {
+        yield return new WaitForSeconds(1f);
         if (dialogueController != null) dialogueController.OnLevelCompleted();
+        yield return new WaitForSeconds(dialogueController != null ? dialogueController.CompletionLineDuration : 0f);
         SpawnMenuButton();
     }
 

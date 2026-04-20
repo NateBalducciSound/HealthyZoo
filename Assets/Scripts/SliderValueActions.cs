@@ -83,30 +83,28 @@ public class SliderValueActions : MonoBehaviour
 
     IEnumerator PlayAnimationSequence()
     {
-        // --- NEW SWAP LOGIC ---
-        // 1. Hide the UI handle and show the World Space copy
         if (uiSliderHandle != null) uiSliderHandle.enabled = false;
         if (worldSpaceHandleCopy != null) worldSpaceHandleCopy.SetActive(true);
+        if (characterRenderer != null) characterRenderer.gameObject.SetActive(false);
 
-        // 2. Hide the static height-check sprite (The Giraffe)
-        if (characterRenderer != null)
+        // Confetti fires immediately with startup animation.
+        if (confettiAnimator != null)
         {
-            characterRenderer.gameObject.SetActive(false);
+            confettiAnimator.gameObject.SetActive(true);
+            confettiAnimator.Play(confettiAnimationState, 0, 0f);
         }
 
-        // 3. Play Startup Animation (Giraffe starts moving)
-        // Also kick off the congrats spawn timer at the same moment
+        AudioManager.PlayComplete();
+
         if (startAnimator != null)
         {
             if (characterRenderer != null)
                 startAnimator.transform.localScale = characterRenderer.transform.localScale;
             startAnimator.gameObject.SetActive(true);
             startAnimator.Play(startAnimationState, 0, 0f);
-            StartCoroutine(DelayedCongrats());
             yield return StartCoroutine(WaitForAnimationFinish(startAnimator, startAnimationState));
         }
 
-        // 4. SWITCH: Move Loop Animator, Start it, and HIDE Startup Animator
         if (loopAnimator != null)
         {
             if (characterRenderer != null)
@@ -114,19 +112,15 @@ public class SliderValueActions : MonoBehaviour
             loopAnimator.transform.localPosition = loopPositionOffset;
             loopAnimator.gameObject.SetActive(true);
             loopAnimator.Play(loopAnimationState, 0, 0f);
-
             if (startAnimator != null) startAnimator.gameObject.SetActive(false);
         }
 
-        // 5. Trigger Confetti overlay after a fixed delay
-        if (confettiAnimator != null)
-        {
-            yield return new WaitForSeconds(confettiDelay);
-            confettiAnimator.gameObject.SetActive(true);
-            confettiAnimator.Play(confettiAnimationState, 0, 0f);
-        }
+        // Dialogue fires 1s after win; button spawns when dialogue finishes.
+        yield return new WaitForSeconds(1f);
+        if (dialogueController != null) dialogueController.OnLevelCompleted();
+        yield return new WaitForSeconds(dialogueController != null ? dialogueController.CompletionLineDuration : 0f);
 
-        // SpawnButton and congrats dialogue are now handled by DelayedCongrats()
+        SpawnButton();
     }
 
     // ... (Keep existing WaitForAnimationFinish, GetStageFromSnapValues, UpdateCharacterSprite, SpawnButton, and OnPlayPressed)
@@ -156,15 +150,6 @@ public class SliderValueActions : MonoBehaviour
         {
             characterRenderer.sprite = stageSprites[stage];
         }
-    }
-
-    IEnumerator DelayedCongrats()
-    {
-        yield return new WaitForSeconds(congratsDelay);
-        Debug.Log($"[Dialogue] DelayedCongrats fired — dialogueController assigned: {dialogueController != null}");
-        AudioManager.PlayComplete();
-        if (dialogueController != null) dialogueController.OnLevelCompleted();
-        SpawnButton();
     }
 
     void SpawnButton()

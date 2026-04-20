@@ -181,19 +181,15 @@ public class PandaController : MonoBehaviour
 
     IEnumerator WinSequence()
     {
-        if (dialogueController != null) dialogueController.OnLevelCompleted();
-
-        pandaAnimator?.Play(greenGlowStateName);
-
-        yield return new WaitUntil(() =>
-            pandaAnimator != null &&
-            pandaAnimator.GetCurrentAnimatorStateInfo(0).IsName(loopCelebrationStateName));
-
-        yield return new WaitForSeconds(pandaAnimator.GetCurrentAnimatorStateInfo(0).length);
-
-        AudioManager.PlayComplete();
         if (confettiAnimator != null) confettiAnimator.Play(confettiStateName);
-        if (congratsButton   != null) congratsButton.SetActive(true);
+        pandaAnimator?.Play(greenGlowStateName);
+        AudioManager.PlayComplete();
+
+        yield return new WaitForSeconds(1f);
+        if (dialogueController != null) dialogueController.OnLevelCompleted();
+        yield return new WaitForSeconds(dialogueController != null ? dialogueController.CompletionLineDuration : 0f);
+
+        if (congratsButton != null) congratsButton.SetActive(true);
     }
 
     void NotifyPlayerStarted()

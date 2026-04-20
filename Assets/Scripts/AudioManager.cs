@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class AudioManager : MonoBehaviour
 {
@@ -11,6 +12,9 @@ public class AudioManager : MonoBehaviour
     [Range(0f, 1f)] public float clickVolume    = 1f;
     [Range(0f, 1f)] public float completeVolume = 1f;
 
+    [Header("Mixer")]
+    public AudioMixerGroup mixerGroup;
+
     private AudioSource _source;
 
     void Awake()
@@ -20,6 +24,7 @@ public class AudioManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
         _source = gameObject.AddComponent<AudioSource>();
         _source.playOnAwake = false;
+        if (mixerGroup != null) _source.outputAudioMixerGroup = mixerGroup;
     }
 
     public static void PlayClick()

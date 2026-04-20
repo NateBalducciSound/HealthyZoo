@@ -77,36 +77,48 @@ SpriteAtlas:
     cachedData: {fileID: 0}
     packedSpriteRenderDataKeys:
     - c16fbdb1ede2c43319d687e3cf74592f: 21300000
+    - 91328b73399ad4afab1dc1ee59e970f7: 21300000
     - 9865e2b5a2fbe4b1dbb5e0ec0d8f23b9: 21300000
     - 336da5165a4684de0b96ee22b489535f: 21300000
     - a290ff985bcc84e0ca230dfdff6f0225: 21300000
+    - 9c10c119f4fea485e8422ba674b93356: 21300000
+    - f0e25869fc9c5451e9293b234becd6ad: 21300000
     - 9d8988c94652947c3b56e99cfe1fd5a5: 21300000
     - 05d3160a5b05244c5ac36bd0a80f885a: 21300000
     - 22a2fa3a5544b4c0f91fc744744d4a19: 21300000
     - fcfa0c6a576c3416e9bc42c0f65928f6: 21300000
+    - 891b8c9a08cc24b6ab1fcf2d6a5d3d4e: 21300000
     - 249c1f1d926c7430d9b80f8265c9ec20: 21300000
     - fd20b42e4a0ee4a169361fa271a0a7e3: 21300000
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
   - {fileID: 21300000, guid: c16fbdb1ede2c43319d687e3cf74592f, type: 3}
+  - {fileID: 21300000, guid: 91328b73399ad4afab1dc1ee59e970f7, type: 3}
   - {fileID: 21300000, guid: 9865e2b5a2fbe4b1dbb5e0ec0d8f23b9, type: 3}
   - {fileID: 21300000, guid: 336da5165a4684de0b96ee22b489535f, type: 3}
   - {fileID: 21300000, guid: a290ff985bcc84e0ca230dfdff6f0225, type: 3}
+  - {fileID: 21300000, guid: 9c10c119f4fea485e8422ba674b93356, type: 3}
+  - {fileID: 21300000, guid: f0e25869fc9c5451e9293b234becd6ad, type: 3}
   - {fileID: 21300000, guid: 9d8988c94652947c3b56e99cfe1fd5a5, type: 3}
   - {fileID: 21300000, guid: 05d3160a5b05244c5ac36bd0a80f885a, type: 3}
   - {fileID: 21300000, guid: 22a2fa3a5544b4c0f91fc744744d4a19, type: 3}
   - {fileID: 21300000, guid: fcfa0c6a576c3416e9bc42c0f65928f6, type: 3}
+  - {fileID: 21300000, guid: 891b8c9a08cc24b6ab1fcf2d6a5d3d4e, type: 3}
   - {fileID: 21300000, guid: 249c1f1d926c7430d9b80f8265c9ec20, type: 3}
   - {fileID: 21300000, guid: fd20b42e4a0ee4a169361fa271a0a7e3, type: 3}
   m_PackedSpriteNamesToIndex:
   - base+pole
+  - slider_mark@300x
   - homepage_ar-mobile-updated
   - healthyzoo-homepage_bg
   - homepage_ARcamera@300x
+  - slider_base@300x
+  - settings_window@300x
   - splashscreen_tablet
   - Rectangle
   - homepage_visitthezoo@300x
   - GreenCheckmark
+  - slider_progress@300x
   - Congrats
   - measuring bar00000
   m_RenderDataMap: {}

@@ -23,6 +23,7 @@ public class AlligatorController : MonoBehaviour
     public Animator confettiAnimator;
     public string confettiStateName = "Confetti";
 
+
     [Header("Drop Zones to Disable After Nose")]
     [Tooltip("Assign the Eyes, Feet, and Nose DropZone GameObjects here")]
     public GameObject[] dropZonesToDisableAfterNose;
@@ -87,7 +88,7 @@ public class AlligatorController : MonoBehaviour
         mouthTaskComplete = true;
         animator.SetTrigger("CongratsStart");
         item.ShowAtStart();
-        Invoke(nameof(StartCelebration), 1.0f);
+        StartCoroutine(CelebrationSequence());
     }
 
     // Waits one frame for the Animator to enter the new state, then waits for
@@ -105,15 +106,22 @@ public class AlligatorController : MonoBehaviour
         item.ShowAtStart();
     }
 
-    private void StartCelebration()
+    IEnumerator CelebrationSequence()
     {
-        AudioManager.PlayComplete();
-        if (dialogueController != null) dialogueController.OnLevelCompleted();
+        MiniGameProgress.SetCompleted(GrabbableType.Alligator);
+
         if (confettiAnimator != null)
         {
             confettiAnimator.gameObject.SetActive(true);
             confettiAnimator.Play(confettiStateName);
         }
+
+        AudioManager.PlayComplete();
+
+        yield return new WaitForSeconds(1f);
+        if (dialogueController != null) dialogueController.OnLevelCompleted();
+        yield return new WaitForSeconds(dialogueController != null ? dialogueController.CompletionLineDuration : 0f);
+
         backButton.SetActive(true);
     }
 }

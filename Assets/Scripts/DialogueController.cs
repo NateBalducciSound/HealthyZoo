@@ -39,6 +39,7 @@ public class DialogueController : MonoBehaviour
 
     public bool IsInputLocked { get; private set; } = false;
     public System.Action OnInputUnlocked;
+    public float CompletionLineDuration => completionLine != null ? completionLine.length : 0f;
     private bool _playerStarted = false;
     private bool _finished = false;
     private int _nudgeIndex = 0;

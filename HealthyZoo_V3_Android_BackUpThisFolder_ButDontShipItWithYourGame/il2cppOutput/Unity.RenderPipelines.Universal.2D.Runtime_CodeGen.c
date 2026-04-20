@@ -162,7 +162,7 @@ static const int32_t s_InvokerIndices[53] =
 	4372,
 	3607,
 	8446,
-	19550,
+	19553,
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_Unity_RenderPipelines_Universal_2D_Runtime_CodeGenModule;
 const Il2CppCodeGenModule g_Unity_RenderPipelines_Universal_2D_Runtime_CodeGenModule = 
