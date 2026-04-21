@@ -348,7 +348,7 @@ MonoBehaviour:
   startingPositionIndex: 0
   correctPositionIndex: 2
   rewardAnimator: {fileID: 1385250309}
-  confettiAnimator: {fileID: 0}
+  confettiAnimator: {fileID: 218344187}
   confettiStateName: Confetti
   congratsButton: {fileID: 662360926}
   dialogueController: {fileID: 0}
@@ -495,6 +495,84 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1001 &218344186
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5199099769867100597, guid: 3fe95d66a25214b05a86078c0ebd6bc9, type: 3}
+      propertyPath: m_Name
+      value: confetti_00000
+      objectReference: {fileID: 0}
+    - target: {fileID: 7657774307647200834, guid: 3fe95d66a25214b05a86078c0ebd6bc9, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7657774307647200834, guid: 3fe95d66a25214b05a86078c0ebd6bc9, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7657774307647200834, guid: 3fe95d66a25214b05a86078c0ebd6bc9, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7657774307647200834, guid: 3fe95d66a25214b05a86078c0ebd6bc9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.03373
+      objectReference: {fileID: 0}
+    - target: {fileID: 7657774307647200834, guid: 3fe95d66a25214b05a86078c0ebd6bc9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.94517
+      objectReference: {fileID: 0}
+    - target: {fileID: 7657774307647200834, guid: 3fe95d66a25214b05a86078c0ebd6bc9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 53.54325
+      objectReference: {fileID: 0}
+    - target: {fileID: 7657774307647200834, guid: 3fe95d66a25214b05a86078c0ebd6bc9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7657774307647200834, guid: 3fe95d66a25214b05a86078c0ebd6bc9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7657774307647200834, guid: 3fe95d66a25214b05a86078c0ebd6bc9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7657774307647200834, guid: 3fe95d66a25214b05a86078c0ebd6bc9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7657774307647200834, guid: 3fe95d66a25214b05a86078c0ebd6bc9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7657774307647200834, guid: 3fe95d66a25214b05a86078c0ebd6bc9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7657774307647200834, guid: 3fe95d66a25214b05a86078c0ebd6bc9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7657774307647200834, guid: 3fe95d66a25214b05a86078c0ebd6bc9, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3fe95d66a25214b05a86078c0ebd6bc9, type: 3}
+--- !u!95 &218344187 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2190737275721878769, guid: 3fe95d66a25214b05a86078c0ebd6bc9, type: 3}
+  m_PrefabInstance: {fileID: 218344186}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &298625170
 GameObject:
   m_ObjectHideFlags: 0
@@ -2533,3 +2611,4 @@ SceneRoots:
   - {fileID: 1538644510}
   - {fileID: 777581567}
   - {fileID: 1510137564}
+  - {fileID: 218344186}

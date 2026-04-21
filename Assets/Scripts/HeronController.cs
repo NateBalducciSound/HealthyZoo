@@ -197,22 +197,33 @@ public class HeronLevelController : MonoBehaviour
 
     public void ProcessHeronDrop(Draggable2D item)
     {
-        Debug.Log($"[HeronController] ProcessHeronDrop called. Slider value: {positionSlider.value}, isFinished: {isFinished}");
         if (Mathf.RoundToInt(positionSlider.value) == 1 && !isFinished)
         {
             isFinished = true;
-            StartCoroutine(SuccessSequence(item));
+            StartCoroutine(SuccessSequence(item.gameObject));
         }
         else
         {
             item.ReturnToStart();
-            Debug.Log($"[HeronController] Incorrect position (slider={positionSlider.value}) or already finished.");
         }
     }
 
-    IEnumerator SuccessSequence(Draggable2D item)
+    public void ProcessHeronDrop(UIDraggable item)
     {
-        item.gameObject.SetActive(false);
+        if (Mathf.RoundToInt(positionSlider.value) == 1 && !isFinished)
+        {
+            isFinished = true;
+            StartCoroutine(SuccessSequence(item.gameObject));
+        }
+        else
+        {
+            item.ReturnToStart();
+        }
+    }
+
+    IEnumerator SuccessSequence(GameObject itemGO)
+    {
+        itemGO.SetActive(false);
         positionSlider.interactable = false;
 
         foreach (var set in spriteSets)
