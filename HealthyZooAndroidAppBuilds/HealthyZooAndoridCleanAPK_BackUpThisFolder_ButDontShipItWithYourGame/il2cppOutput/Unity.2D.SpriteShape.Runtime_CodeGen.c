@@ -14,7 +14,7 @@ static Il2CppMethodPointer s_methodPointers[1] =
 };
 static const int32_t s_InvokerIndices[1] = 
 {
-	19544,
+	19563,
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_Unity_2D_SpriteShape_Runtime_CodeGenModule;
 const Il2CppCodeGenModule g_Unity_2D_SpriteShape_Runtime_CodeGenModule = 

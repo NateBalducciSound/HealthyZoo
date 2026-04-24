@@ -200,7 +200,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Clamp_mEB9AEA827D27D2
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 52894
+// Method Definition Index: 52864
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* TextureExtensions_ToDebugString_m3D2E7212B276ED7737C4937631F57FEC03B8E87C (Texture_t791CBB51219779964E0E8A2ED7C1AA5F92A4A700* ___0_texture, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -335,7 +335,7 @@ IL_000f:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 52895
+// Method Definition Index: 52865
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float UnitConversionUtility_ConvertBrightnessToLumens_m6F15E8AB3B466F3FE6FEEB33D5CE471BCD9E8DED (float ___0_brightness, const RuntimeMethod* method) 
 {
 	{
@@ -346,7 +346,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float UnitConversionUtility_ConvertBrightness
 		return L_1;
 	}
 }
-// Method Definition Index: 52896
+// Method Definition Index: 52866
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float UnitConversionUtility_ConvertLumensToBrightness_mB801F5903C041B3C3C76D1915180504542D2AFEC (float ___0_lumens, const RuntimeMethod* method) 
 {
 	{
@@ -360,7 +360,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float UnitConversionUtility_ConvertLumensToBr
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-// Method Definition Index: 26796
+// Method Definition Index: 26827
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Clamp_mEB9AEA827D27D20FCC787F7375156AF46BB12BBF_inline (float ___0_value, float ___1_min, float ___2_max, const RuntimeMethod* method) 
 {
 	bool V_0 = false;

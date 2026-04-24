@@ -18,7 +18,12 @@ public class DropZone2D : MonoBehaviour
     {
         if (other.TryGetComponent(out Draggable2D draggable))
         {
-            draggable.SetCurrentHoverZone(null);
+            // Only clear if we're still the active zone — prevents an exit from
+            // one zone wiping out a enter that already fired from the next zone.
+            if (draggable.CurrentHoverZone == this)
+            {
+                draggable.SetCurrentHoverZone(null);
+            }
             Debug.Log($"<color=white>Exited:</color> {dropZoneType}");
         }
     }

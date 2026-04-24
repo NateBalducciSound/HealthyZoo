@@ -78,10 +78,13 @@ SpriteAtlas:
     packedSpriteRenderDataKeys:
     - c16fbdb1ede2c43319d687e3cf74592f: 21300000
     - 91328b73399ad4afab1dc1ee59e970f7: 21300000
+    - cc66d874afaa2453993538150ddca9f4: 21300000
     - 9865e2b5a2fbe4b1dbb5e0ec0d8f23b9: 21300000
     - 336da5165a4684de0b96ee22b489535f: 21300000
+    - 4dad2566aa89249baadbac74a273f56f: 21300000
     - a290ff985bcc84e0ca230dfdff6f0225: 21300000
     - 9c10c119f4fea485e8422ba674b93356: 21300000
+    - 31956c39ddfcc4f76952d48f3073a7ce: 21300000
     - f0e25869fc9c5451e9293b234becd6ad: 21300000
     - 9d8988c94652947c3b56e99cfe1fd5a5: 21300000
     - 05d3160a5b05244c5ac36bd0a80f885a: 21300000
@@ -89,16 +92,22 @@ SpriteAtlas:
     - fcfa0c6a576c3416e9bc42c0f65928f6: 21300000
     - 891b8c9a08cc24b6ab1fcf2d6a5d3d4e: 21300000
     - 249c1f1d926c7430d9b80f8265c9ec20: 21300000
+    - c5072fad9f3a74bbebbb0818b54cae6c: 21300000
     - fd20b42e4a0ee4a169361fa271a0a7e3: 21300000
     - ce8625de685374196b293095d22d5f74: 21300000
+    - 27c73e4f993a64a2098973b8b56a90b0: 21300000
+    - a2cd80af077614dd9baf199043189845: 21300000
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
   - {fileID: 21300000, guid: c16fbdb1ede2c43319d687e3cf74592f, type: 3}
   - {fileID: 21300000, guid: 91328b73399ad4afab1dc1ee59e970f7, type: 3}
+  - {fileID: 21300000, guid: cc66d874afaa2453993538150ddca9f4, type: 3}
   - {fileID: 21300000, guid: 9865e2b5a2fbe4b1dbb5e0ec0d8f23b9, type: 3}
   - {fileID: 21300000, guid: 336da5165a4684de0b96ee22b489535f, type: 3}
+  - {fileID: 21300000, guid: 4dad2566aa89249baadbac74a273f56f, type: 3}
   - {fileID: 21300000, guid: a290ff985bcc84e0ca230dfdff6f0225, type: 3}
   - {fileID: 21300000, guid: 9c10c119f4fea485e8422ba674b93356, type: 3}
+  - {fileID: 21300000, guid: 31956c39ddfcc4f76952d48f3073a7ce, type: 3}
   - {fileID: 21300000, guid: f0e25869fc9c5451e9293b234becd6ad, type: 3}
   - {fileID: 21300000, guid: 9d8988c94652947c3b56e99cfe1fd5a5, type: 3}
   - {fileID: 21300000, guid: 05d3160a5b05244c5ac36bd0a80f885a, type: 3}
@@ -106,15 +115,21 @@ SpriteAtlas:
   - {fileID: 21300000, guid: fcfa0c6a576c3416e9bc42c0f65928f6, type: 3}
   - {fileID: 21300000, guid: 891b8c9a08cc24b6ab1fcf2d6a5d3d4e, type: 3}
   - {fileID: 21300000, guid: 249c1f1d926c7430d9b80f8265c9ec20, type: 3}
+  - {fileID: 21300000, guid: c5072fad9f3a74bbebbb0818b54cae6c, type: 3}
   - {fileID: 21300000, guid: fd20b42e4a0ee4a169361fa271a0a7e3, type: 3}
   - {fileID: 21300000, guid: ce8625de685374196b293095d22d5f74, type: 3}
+  - {fileID: 21300000, guid: 27c73e4f993a64a2098973b8b56a90b0, type: 3}
+  - {fileID: 21300000, guid: a2cd80af077614dd9baf199043189845, type: 3}
   m_PackedSpriteNamesToIndex:
   - base+pole
   - slider_mark@300x
+  - map_ren-ipad-cl
   - homepage_ar-mobile-updated
   - healthyzoo-homepage_bg
+  - map_gigi-ipad-cl
   - homepage_ARcamera@300x
   - slider_base@300x
+  - map_ren-ipad-bw
   - settings_window@300x
   - splashscreen_tablet
   - Rectangle
@@ -122,8 +137,11 @@ SpriteAtlas:
   - GreenCheckmark
   - slider_progress@300x
   - Congrats
+  - map_gigi-ipad-bw
   - measuring bar00000
   - Caption Box
+  - toolbar_arlo
+  - toolbar_penny
   m_RenderDataMap: {}
   m_Tag: UI_Atlas
   m_IsVariant: 0

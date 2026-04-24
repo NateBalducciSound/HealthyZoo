@@ -508,8 +508,8 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1687671388}
   - {fileID: 966749872}
+  - {fileID: 1687671388}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -681,6 +681,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb5393ff783a9496f9543b99f166454f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MenuManager
+  loadingFont: {fileID: 0}
 --- !u!4 &1447049064
 Transform:
   m_ObjectHideFlags: 0
@@ -707,6 +708,7 @@ GameObject:
   - component: {fileID: 1642824236}
   - component: {fileID: 1642824235}
   - component: {fileID: 1642824234}
+  - component: {fileID: 1642824237}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -775,6 +777,45 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1642824237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1642824233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab68ce6587aab0146b8dabefbd806791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.XR.Interaction.Toolkit::UnityEngine.XR.Interaction.Toolkit.UI.XRUIInputModule
+  m_SendPointerHoverToParent: 1
+  m_ClickSpeed: 0.3
+  m_MoveDeadzone: 0.6
+  m_RepeatDelay: 0.5
+  m_RepeatRate: 0.1
+  m_TrackedDeviceDragThresholdMultiplier: 2
+  m_TrackedScrollDeltaMultiplier: 5
+  m_BypassUIToolkitEvents: 0
+  m_ActiveInputMode: 0
+  m_EnableXRInput: 1
+  m_EnableMouseInput: 1
+  m_EnableTouchInput: 1
+  m_EnableGamepadInput: 1
+  m_EnableJoystickInput: 1
+  m_PointAction: {fileID: 0}
+  m_LeftClickAction: {fileID: 0}
+  m_MiddleClickAction: {fileID: 0}
+  m_RightClickAction: {fileID: 0}
+  m_ScrollWheelAction: {fileID: 0}
+  m_NavigateAction: {fileID: 0}
+  m_SubmitAction: {fileID: 0}
+  m_CancelAction: {fileID: 0}
+  m_EnableBuiltinActionsAsFallback: 1
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
 --- !u!224 &1687671388 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6221821459216329268, guid: d684b90d5e70447f0a086034ebb49bf8, type: 3}
@@ -1217,7 +1258,15 @@ PrefabInstance:
     - target: {fileID: 3112068765291729076, guid: d684b90d5e70447f0a086034ebb49bf8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1447049063}
+      objectReference: {fileID: 6658926083285137056}
+    - target: {fileID: 3112068765291729076, guid: d684b90d5e70447f0a086034ebb49bf8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GoHome
+      objectReference: {fileID: 0}
+    - target: {fileID: 3112068765291729076, guid: d684b90d5e70447f0a086034ebb49bf8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ARHomeButton, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 3662762054724916989, guid: d684b90d5e70447f0a086034ebb49bf8, type: 3}
       propertyPath: m_Name
       value: HomeButton
@@ -1305,8 +1354,28 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3662762054724916989, guid: d684b90d5e70447f0a086034ebb49bf8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6658926083285137056}
   m_SourcePrefab: {fileID: 100100000, guid: d684b90d5e70447f0a086034ebb49bf8, type: 3}
+--- !u!1 &6658926083285137055 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3662762054724916989, guid: d684b90d5e70447f0a086034ebb49bf8, type: 3}
+  m_PrefabInstance: {fileID: 6658926083285137054}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6658926083285137056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6658926083285137055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9c7e287f4ff9425ead59129ca9d89ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ARHomeButton
 --- !u!1001 &8752705094215144399
 PrefabInstance:
   m_ObjectHideFlags: 0

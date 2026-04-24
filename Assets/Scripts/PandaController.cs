@@ -69,6 +69,9 @@ public class PandaController : MonoBehaviour
         if (scanButton     != null) scanButton.SetActive(false);
         if (congratsButton != null) congratsButton.SetActive(false);
 
+        if (scopeDraggable != null && dialogueController != null)
+            scopeDraggable.dialogueController = dialogueController;
+
         scopeDraggable?.Show();
     }
 

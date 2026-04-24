@@ -10,13 +10,21 @@ public class PlayButtonSpawner : MonoBehaviour
     [Tooltip("The Image component on the UI that shows the overlay")]
     public Image overlayImageComponent;
 
-    [Header("Sprite Assets (B&W / Default)")]
-    public Sprite mainSpriteBW;           
-    public Sprite overlaySpriteBW;        
+    [Header("Sprite Assets (B&W / Default) — Phone")]
+    public Sprite mainSpriteBW;
+    public Sprite overlaySpriteBW;
 
-    [Header("Sprite Assets (Colored / Completed)")]
+    [Header("Sprite Assets (Colored / Completed) — Phone")]
     public Sprite mainCompletedSprite;
     public Sprite overlayCompletedSprite;
+
+    [Header("Sprite Assets (B&W / Default) — iPad (falls back to Phone if empty)")]
+    public Sprite mainSpriteBW_iPad;
+    public Sprite overlaySpriteBW_iPad;
+
+    [Header("Sprite Assets (Colored / Completed) — iPad (falls back to Phone if empty)")]
+    public Sprite mainCompletedSprite_iPad;
+    public Sprite overlayCompletedSprite_iPad;
 
     [Header("Play Button Settings")]
     public GameObject playButtonPrefab;
@@ -55,10 +63,16 @@ public class PlayButtonSpawner : MonoBehaviour
         }
 
         bool completed = MiniGameProgress.IsCompleted(myGrabbable);
+        bool isTablet = DeviceDetector.IsTablet;
+
+        Sprite bw      = (isTablet && mainSpriteBW_iPad      != null) ? mainSpriteBW_iPad      : mainSpriteBW;
+        Sprite bwOver  = (isTablet && overlaySpriteBW_iPad   != null) ? overlaySpriteBW_iPad   : overlaySpriteBW;
+        Sprite cl      = (isTablet && mainCompletedSprite_iPad    != null) ? mainCompletedSprite_iPad    : mainCompletedSprite;
+        Sprite clOver  = (isTablet && overlayCompletedSprite_iPad != null) ? overlayCompletedSprite_iPad : overlayCompletedSprite;
 
         if (completed)
         {
-            overlayImageComponent.sprite = overlayCompletedSprite;
+            overlayImageComponent.sprite = clOver;
             if (idleAnimator != null)
             {
                 idleAnimator.enabled = true;
@@ -67,14 +81,14 @@ public class PlayButtonSpawner : MonoBehaviour
             }
             else
             {
-                mainImageComponent.sprite = mainCompletedSprite;
+                mainImageComponent.sprite = cl;
             }
         }
         else
         {
             if (idleAnimator != null) idleAnimator.enabled = false;
-            mainImageComponent.sprite = mainSpriteBW;
-            overlayImageComponent.sprite = overlaySpriteBW;
+            mainImageComponent.sprite = bw;
+            overlayImageComponent.sprite = bwOver;
         }
     }
 

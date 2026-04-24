@@ -284,6 +284,10 @@ MonoBehaviour:
   overlaySpriteBW: {fileID: 21300000, guid: d09fad7433c9f4d78b849457d371f7fc, type: 3}
   mainCompletedSprite: {fileID: 21300000, guid: cddaa768a675b4f6297d9b9c9d582f2b, type: 3}
   overlayCompletedSprite: {fileID: 21300000, guid: d09fad7433c9f4d78b849457d371f7fc, type: 3}
+  mainSpriteBW_iPad: {fileID: 21300000, guid: c5072fad9f3a74bbebbb0818b54cae6c, type: 3}
+  overlaySpriteBW_iPad: {fileID: 0}
+  mainCompletedSprite_iPad: {fileID: 21300000, guid: 4dad2566aa89249baadbac74a273f56f, type: 3}
+  overlayCompletedSprite_iPad: {fileID: 0}
   playButtonPrefab: {fileID: 3197394493052294629, guid: 06c0b6e24193c410597fd6d57fd25061, type: 3}
   buttonParent: {fileID: 298625174}
   idleAnimator: {fileID: 0}
@@ -334,8 +338,8 @@ RectTransform:
   m_GameObject: {fileID: 169635453}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.1, y: 1.1, z: 1.1}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1392299883}
   - {fileID: 1970705101}
@@ -343,7 +347,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -33, y: -160}
+  m_AnchoredPosition: {x: 9, y: -70}
   m_SizeDelta: {x: 457.4, y: 457.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &169635455
@@ -504,11 +508,72 @@ MonoBehaviour:
   overlaySpriteBW: {fileID: 21300000, guid: 07e1715d502c1467ba93d772a9647084, type: 3}
   mainCompletedSprite: {fileID: 21300000, guid: a59ab9e3f8e424234a5124fccd39ac94, type: 3}
   overlayCompletedSprite: {fileID: 21300000, guid: 07e1715d502c1467ba93d772a9647084, type: 3}
+  mainSpriteBW_iPad: {fileID: 0}
+  overlaySpriteBW_iPad: {fileID: 0}
+  mainCompletedSprite_iPad: {fileID: 0}
+  overlayCompletedSprite_iPad: {fileID: 0}
   playButtonPrefab: {fileID: 3197394493052294629, guid: 06c0b6e24193c410597fd6d57fd25061, type: 3}
   buttonParent: {fileID: 298625174}
   idleAnimator: {fileID: 0}
   idleTrigger: PlayIdle
   myGrabbable: 4
+--- !u!1001 &197801181
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6392687008486265527, guid: 914d8de27700e472ba24507f929ca458, type: 3}
+      propertyPath: m_Name
+      value: MusicManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 8082673847284356943, guid: 914d8de27700e472ba24507f929ca458, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.449
+      objectReference: {fileID: 0}
+    - target: {fileID: 8082673847284356943, guid: 914d8de27700e472ba24507f929ca458, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8082673847284356943, guid: 914d8de27700e472ba24507f929ca458, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 24.72585
+      objectReference: {fileID: 0}
+    - target: {fileID: 8082673847284356943, guid: 914d8de27700e472ba24507f929ca458, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8082673847284356943, guid: 914d8de27700e472ba24507f929ca458, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8082673847284356943, guid: 914d8de27700e472ba24507f929ca458, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8082673847284356943, guid: 914d8de27700e472ba24507f929ca458, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8082673847284356943, guid: 914d8de27700e472ba24507f929ca458, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8082673847284356943, guid: 914d8de27700e472ba24507f929ca458, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8082673847284356943, guid: 914d8de27700e472ba24507f929ca458, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 914d8de27700e472ba24507f929ca458, type: 3}
 --- !u!1 &203844586
 GameObject:
   m_ObjectHideFlags: 0
@@ -732,13 +797,14 @@ RectTransform:
   m_Children:
   - {fileID: 788685350}
   - {fileID: 1968856236}
-  - {fileID: 169635454}
   - {fileID: 1565057251}
   - {fileID: 993949028}
   - {fileID: 1575736482}
   - {fileID: 1902975714}
+  - {fileID: 169635454}
   - {fileID: 14562562}
   - {fileID: 1474339544}
+  - {fileID: 1480323010}
   - {fileID: 863693395}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -910,6 +976,10 @@ MonoBehaviour:
   overlaySpriteBW: {fileID: 21300000, guid: acfa1104aa0a64f21967da7ed6f2d625, type: 3}
   mainCompletedSprite: {fileID: 21300000, guid: 43b92b3e4235748ccb1d5826474db1ec, type: 3}
   overlayCompletedSprite: {fileID: 21300000, guid: acfa1104aa0a64f21967da7ed6f2d625, type: 3}
+  mainSpriteBW_iPad: {fileID: 0}
+  overlaySpriteBW_iPad: {fileID: 0}
+  mainCompletedSprite_iPad: {fileID: 0}
+  overlayCompletedSprite_iPad: {fileID: 0}
   playButtonPrefab: {fileID: 3197394493052294629, guid: 06c0b6e24193c410597fd6d57fd25061, type: 3}
   buttonParent: {fileID: 298625174}
   idleAnimator: {fileID: 0}
@@ -965,6 +1035,10 @@ MonoBehaviour:
   overlaySpriteBW: {fileID: 21300000, guid: 6df1f21023a6b4759b1fc1e5c3696d3c, type: 3}
   mainCompletedSprite: {fileID: 21300000, guid: fd6da36100b9b4f8eb6dafb9c44a5e52, type: 3}
   overlayCompletedSprite: {fileID: 21300000, guid: 6df1f21023a6b4759b1fc1e5c3696d3c, type: 3}
+  mainSpriteBW_iPad: {fileID: 21300000, guid: 31956c39ddfcc4f76952d48f3073a7ce, type: 3}
+  overlaySpriteBW_iPad: {fileID: 0}
+  mainCompletedSprite_iPad: {fileID: 21300000, guid: cc66d874afaa2453993538150ddca9f4, type: 3}
+  overlayCompletedSprite_iPad: {fileID: 0}
   playButtonPrefab: {fileID: 3197394493052294629, guid: 06c0b6e24193c410597fd6d57fd25061, type: 3}
   buttonParent: {fileID: 298625174}
   idleAnimator: {fileID: 0}
@@ -1179,6 +1253,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AllCompletePanel
       objectReference: {fileID: 0}
+    - target: {fileID: 3354606141889032964, guid: fc5dcc2d020684237ba50154b2c0045a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7802016649197250110, guid: fc5dcc2d020684237ba50154b2c0045a, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1348,7 +1426,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.99607843, g: 0.9764706, b: 0.9529412, a: 1}
   m_FlipX: 0
@@ -2174,6 +2252,10 @@ MonoBehaviour:
   overlaySpriteBW: {fileID: 21300000, guid: 23c21690c2f274ec5927f979b0e7fb52, type: 3}
   mainCompletedSprite: {fileID: 21300000, guid: 2a0dbeeb9d00845d1917f24eb0731d9d, type: 3}
   overlayCompletedSprite: {fileID: 21300000, guid: 23c21690c2f274ec5927f979b0e7fb52, type: 3}
+  mainSpriteBW_iPad: {fileID: 0}
+  overlaySpriteBW_iPad: {fileID: 0}
+  mainCompletedSprite_iPad: {fileID: 0}
+  overlayCompletedSprite_iPad: {fileID: 0}
   playButtonPrefab: {fileID: 3197394493052294629, guid: 06c0b6e24193c410597fd6d57fd25061, type: 3}
   buttonParent: {fileID: 298625174}
   idleAnimator: {fileID: 0}
@@ -2350,6 +2432,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SettingsRoot
       objectReference: {fileID: 0}
+    - target: {fileID: 4619757299269663185, guid: a80abad21f3004f509413d1e12350ccb, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5066775938895281148, guid: a80abad21f3004f509413d1e12350ccb, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -2501,6 +2587,108 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1476085583}
   m_CullTransparentMesh: 1
+--- !u!1001 &1480323009
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 298625174}
+    m_Modifications:
+    - target: {fileID: 1256804295787154112, guid: 6c8682ae8189942989c1250ec244ab85, type: 3}
+      propertyPath: m_Name
+      value: ResetMiniGameProgressButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 6126903065280617884, guid: 6c8682ae8189942989c1250ec244ab85, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6126903065280617884, guid: 6c8682ae8189942989c1250ec244ab85, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6126903065280617884, guid: 6c8682ae8189942989c1250ec244ab85, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6126903065280617884, guid: 6c8682ae8189942989c1250ec244ab85, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6126903065280617884, guid: 6c8682ae8189942989c1250ec244ab85, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6126903065280617884, guid: 6c8682ae8189942989c1250ec244ab85, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6126903065280617884, guid: 6c8682ae8189942989c1250ec244ab85, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6126903065280617884, guid: 6c8682ae8189942989c1250ec244ab85, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6126903065280617884, guid: 6c8682ae8189942989c1250ec244ab85, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6126903065280617884, guid: 6c8682ae8189942989c1250ec244ab85, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6126903065280617884, guid: 6c8682ae8189942989c1250ec244ab85, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6126903065280617884, guid: 6c8682ae8189942989c1250ec244ab85, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6126903065280617884, guid: 6c8682ae8189942989c1250ec244ab85, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6126903065280617884, guid: 6c8682ae8189942989c1250ec244ab85, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6126903065280617884, guid: 6c8682ae8189942989c1250ec244ab85, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6126903065280617884, guid: 6c8682ae8189942989c1250ec244ab85, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 442
+      objectReference: {fileID: 0}
+    - target: {fileID: 6126903065280617884, guid: 6c8682ae8189942989c1250ec244ab85, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 859
+      objectReference: {fileID: 0}
+    - target: {fileID: 6126903065280617884, guid: 6c8682ae8189942989c1250ec244ab85, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6126903065280617884, guid: 6c8682ae8189942989c1250ec244ab85, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6126903065280617884, guid: 6c8682ae8189942989c1250ec244ab85, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6c8682ae8189942989c1250ec244ab85, type: 3}
+--- !u!224 &1480323010 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 6126903065280617884, guid: 6c8682ae8189942989c1250ec244ab85, type: 3}
+  m_PrefabInstance: {fileID: 1480323009}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1565057250
 GameObject:
   m_ObjectHideFlags: 0
@@ -2531,7 +2719,7 @@ RectTransform:
   m_GameObject: {fileID: 1565057250}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 102.999756}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.1, y: 1.1, z: 1.1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 502498697}
@@ -2540,7 +2728,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 394, y: -513}
+  m_AnchoredPosition: {x: 394.00006, y: -468}
   m_SizeDelta: {x: 468.4, y: 882.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1565057252
@@ -2690,7 +2878,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -413, y: -34}
+  m_AnchoredPosition: {x: -443, y: -34}
   m_SizeDelta: {x: 459.2, y: 833.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1575736483
@@ -2713,7 +2901,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: bfab98ba78e6e444cbe5f20b3e5f1a29, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 31956c39ddfcc4f76952d48f3073a7ce, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2964,6 +3152,10 @@ MonoBehaviour:
   overlaySpriteBW: {fileID: 21300000, guid: 9a2e612b053d94f94a2e459cb46517d1, type: 3}
   mainCompletedSprite: {fileID: 21300000, guid: 58c02777ba3d94a5cbcd1634987b72bb, type: 3}
   overlayCompletedSprite: {fileID: 21300000, guid: 9a2e612b053d94f94a2e459cb46517d1, type: 3}
+  mainSpriteBW_iPad: {fileID: 0}
+  overlaySpriteBW_iPad: {fileID: 0}
+  mainCompletedSprite_iPad: {fileID: 0}
+  overlayCompletedSprite_iPad: {fileID: 0}
   playButtonPrefab: {fileID: 3197394493052294629, guid: 06c0b6e24193c410597fd6d57fd25061, type: 3}
   buttonParent: {fileID: 298625174}
   idleAnimator: {fileID: 0}
@@ -3008,7 +3200,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -248, y: 616}
+  m_AnchoredPosition: {x: -248, y: 660}
   m_SizeDelta: {x: 525, y: 523}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1902975715
@@ -3158,7 +3350,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 394, y: 409}
+  m_AnchoredPosition: {x: 437, y: 409}
   m_SizeDelta: {x: 480.4, y: 765.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1968856237
@@ -3195,7 +3387,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2e5068d26aacc4c5386ec7482ce4aec9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c5072fad9f3a74bbebbb0818b54cae6c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3493,3 +3685,4 @@ SceneRoots:
   - {fileID: 815029362}
   - {fileID: 5837997410900536111}
   - {fileID: 950137110}
+  - {fileID: 197801181}

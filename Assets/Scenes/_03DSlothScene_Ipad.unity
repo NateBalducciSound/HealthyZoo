@@ -292,6 +292,10 @@ MonoBehaviour:
   overlaySpriteBW: {fileID: 0}
   mainCompletedSprite: {fileID: 0}
   overlayCompletedSprite: {fileID: 0}
+  mainSpriteBW_iPad: {fileID: 0}
+  overlaySpriteBW_iPad: {fileID: 0}
+  mainCompletedSprite_iPad: {fileID: 0}
+  overlayCompletedSprite_iPad: {fileID: 0}
   playButtonPrefab: {fileID: 3197394493052294629, guid: 06c0b6e24193c410597fd6d57fd25061, type: 3}
   buttonParent: {fileID: 298625174}
   idleAnimator: {fileID: 0}
@@ -351,7 +355,7 @@ MonoBehaviour:
   confettiAnimator: {fileID: 218344187}
   confettiStateName: Confetti
   congratsButton: {fileID: 662360926}
-  dialogueController: {fileID: 0}
+  dialogueController: {fileID: 1510137563}
   menuSceneName: _02MiniGameSelect
 --- !u!4 &165878639
 Transform:
@@ -563,6 +567,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9113197395586244876, guid: 3fe95d66a25214b05a86078c0ebd6bc9, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -767,6 +775,10 @@ PrefabInstance:
     - target: {fileID: 4619757299269663185, guid: a80abad21f3004f509413d1e12350ccb, type: 3}
       propertyPath: m_Name
       value: SettingsRoot
+      objectReference: {fileID: 0}
+    - target: {fileID: 4619757299269663185, guid: a80abad21f3004f509413d1e12350ccb, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5066775938895281148, guid: a80abad21f3004f509413d1e12350ccb, type: 3}
       propertyPath: m_AnchorMax.x

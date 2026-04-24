@@ -22,6 +22,7 @@ public class Draggable2D : MonoBehaviour
     private Vector3 offset;
     public bool IsDragging { get; private set; }
     private bool isDragging { get => IsDragging; set => IsDragging = value; }
+    public DropZone2D CurrentHoverZone => currentHoverZone;
     private bool wasHandled = false;
     private bool _hasNotifiedDialogue = false;
     private DropZone2D currentHoverZone;
@@ -148,10 +149,16 @@ public class Draggable2D : MonoBehaviour
 
     Vector3 ScreenToWorld(Vector2 screenPos)
     {
-        Vector3 world = mainCamera.ScreenToWorldPoint(
-            new Vector3(screenPos.x, screenPos.y, Mathf.Abs(mainCamera.transform.position.z))
+        // Use the object's actual depth from the camera so this works whether the
+        // object is a plain world-space sprite or a child of a Screen Space–Camera canvas.
+        float depth = Vector3.Dot(
+            transform.position - mainCamera.transform.position,
+            mainCamera.transform.forward
         );
-        world.z = 0;
+        Vector3 world = mainCamera.ScreenToWorldPoint(
+            new Vector3(screenPos.x, screenPos.y, depth)
+        );
+        world.z = transform.position.z;
         return world;
     }
 

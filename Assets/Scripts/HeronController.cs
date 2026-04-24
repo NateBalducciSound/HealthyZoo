@@ -56,6 +56,12 @@ public class HeronLevelController : MonoBehaviour
     [Header("Dialogue")]
     public DialogueController dialogueController;
 
+    [Header("Toolbar")]
+    public Image toolbarImage;
+    public SpriteRenderer toolbarSprite;
+    [Min(0f)]
+    public float toolbarFadeDuration = 0.5f;
+
     [Header("UI & Navigation")]
     public GameObject congratsPrefab;
     public Transform buttonParent;
@@ -221,10 +227,41 @@ public class HeronLevelController : MonoBehaviour
         }
     }
 
+    IEnumerator FadeOutToolbar()
+    {
+        if (toolbarImage == null && toolbarSprite == null) yield break;
+
+        float elapsed = 0f;
+        float imageStart  = toolbarImage  != null ? toolbarImage.color.a  : 0f;
+        float spriteStart = toolbarSprite != null ? toolbarSprite.color.a : 0f;
+
+        while (elapsed < toolbarFadeDuration)
+        {
+            elapsed += Time.deltaTime;
+            if (toolbarImage != null)
+            {
+                Color c = toolbarImage.color;
+                c.a = Mathf.Lerp(imageStart, 0f, elapsed / toolbarFadeDuration);
+                toolbarImage.color = c;
+            }
+            if (toolbarSprite != null)
+            {
+                Color c = toolbarSprite.color;
+                c.a = Mathf.Lerp(spriteStart, 0f, elapsed / toolbarFadeDuration);
+                toolbarSprite.color = c;
+            }
+            yield return null;
+        }
+
+        if (toolbarImage  != null) toolbarImage.gameObject.SetActive(false);
+        if (toolbarSprite != null) toolbarSprite.gameObject.SetActive(false);
+    }
+
     IEnumerator SuccessSequence(GameObject itemGO)
     {
         itemGO.SetActive(false);
         positionSlider.interactable = false;
+        StartCoroutine(FadeOutToolbar());
 
         foreach (var set in spriteSets)
             if (set.renderer) set.renderer.sprite = set.GetSprite(1);
