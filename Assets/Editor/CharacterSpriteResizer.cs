@@ -6,32 +6,29 @@ using UnityEngine;
 using Debug = UnityEngine.Debug;
 
 /// <summary>
-/// Resizes character sprite folders to 25% and updates spritePixelsToUnits proportionally
-/// so world-space sizes remain unchanged.
+/// Resizes character sprite folders (25% or 50%) and updates spritePixelsToUnits
+/// proportionally so world-space sizes remain unchanged.
 ///
-/// Run via: Tools > HealthyZoo > Resize Character Sprites > [Character]
-/// Safe to re-run — skips frames already at or below half original size.
+/// Run via: Tools > HealthyZoo > Resize Character Sprites (25%) > [Character]
+///          Tools > HealthyZoo > Resize Character Sprites (50%) > [Character]
+/// Safe to re-run — skips frames already at or below the target size.
 /// </summary>
 public static class CharacterSpriteResizer
 {
     // ── Character definitions ──────────────────────────────────────────────
-    // originalPPU: value currently in .meta files (used to calculate target)
-    // skipThresholdWidth: frames at or below this width are already small enough
     struct CharacterConfig
     {
         public string folder;
         public int    originalPPU;
-        public int    targetPPU;       // originalPPU / 4  (round to nearest int)
-        public int    skipThresholdW;  // skip if w <= this (already resized)
     }
 
     static readonly CharacterConfig[] Characters =
     {
-        new CharacterConfig { folder = "Assets/Sprites/GiraffeAssets",     originalPPU = 100, targetPPU = 25, skipThresholdW = 540 },
-        new CharacterConfig { folder = "Assets/Sprites/HeronSpriteAssets", originalPPU = 250, targetPPU = 63, skipThresholdW = 540 },
-        new CharacterConfig { folder = "Assets/Sprites/PandaAssets",       originalPPU = 300, targetPPU = 75, skipThresholdW = 540 },
-        new CharacterConfig { folder = "Assets/Sprites/PorcupineAssets",   originalPPU = 300, targetPPU = 75, skipThresholdW = 540 },
-        new CharacterConfig { folder = "Assets/Sprites/SlothAssets",       originalPPU = 250, targetPPU = 63, skipThresholdW = 540 },
+        new CharacterConfig { folder = "Assets/Sprites/GiraffeAssets",     originalPPU = 100 },
+        new CharacterConfig { folder = "Assets/Sprites/HeronSpriteAssets", originalPPU = 250 },
+        new CharacterConfig { folder = "Assets/Sprites/PandaAssets",       originalPPU = 300 },
+        new CharacterConfig { folder = "Assets/Sprites/PorcupineAssets",   originalPPU = 300 },
+        new CharacterConfig { folder = "Assets/Sprites/SlothAssets",       originalPPU = 250 },
     };
 
     // Common Homebrew paths — Unity editor doesn't inherit shell PATH
@@ -42,33 +39,50 @@ public static class CharacterSpriteResizer
         "/usr/bin",
     };
 
-    // ── Menu items ─────────────────────────────────────────────────────────
+    // ── 25% menu items ─────────────────────────────────────────────────────
 
-    [MenuItem("Tools/HealthyZoo/Resize Character Sprites/Giraffe (GiraffeAssets)")]
-    static void ResizeGiraffe() => ResizeCharacter("Assets/Sprites/GiraffeAssets");
+    [MenuItem("Tools/HealthyZoo/Resize Character Sprites (25%)/Giraffe (GiraffeAssets)")]
+    static void ResizeGiraffe25() => ResizeCharacter("Assets/Sprites/GiraffeAssets", 25);
 
-    [MenuItem("Tools/HealthyZoo/Resize Character Sprites/Heron (HeronSpriteAssets)")]
-    static void ResizeHeron() => ResizeCharacter("Assets/Sprites/HeronSpriteAssets");
+    [MenuItem("Tools/HealthyZoo/Resize Character Sprites (25%)/Heron (HeronSpriteAssets)")]
+    static void ResizeHeron25() => ResizeCharacter("Assets/Sprites/HeronSpriteAssets", 25);
 
-    [MenuItem("Tools/HealthyZoo/Resize Character Sprites/Panda (PandaAssets)")]
-    static void ResizePanda() => ResizeCharacter("Assets/Sprites/PandaAssets");
+    [MenuItem("Tools/HealthyZoo/Resize Character Sprites (25%)/Panda (PandaAssets)")]
+    static void ResizePanda25() => ResizeCharacter("Assets/Sprites/PandaAssets", 25);
 
-    [MenuItem("Tools/HealthyZoo/Resize Character Sprites/Porcupine (PorcupineAssets)")]
-    static void ResizePorcupine() => ResizeCharacter("Assets/Sprites/PorcupineAssets");
+    [MenuItem("Tools/HealthyZoo/Resize Character Sprites (25%)/Porcupine (PorcupineAssets)")]
+    static void ResizePorcupine25() => ResizeCharacter("Assets/Sprites/PorcupineAssets", 25);
 
-    [MenuItem("Tools/HealthyZoo/Resize Character Sprites/Sloth (SlothAssets)")]
-    static void ResizeSloth() => ResizeCharacter("Assets/Sprites/SlothAssets");
+    [MenuItem("Tools/HealthyZoo/Resize Character Sprites (25%)/Sloth (SlothAssets)")]
+    static void ResizeSloth25() => ResizeCharacter("Assets/Sprites/SlothAssets", 25);
 
-    [MenuItem("Tools/HealthyZoo/Resize Character Sprites/ALL Characters")]
-    static void ResizeAll()
-    {
-        foreach (var c in Characters)
-            ResizeCharacter(c.folder);
-    }
+    [MenuItem("Tools/HealthyZoo/Resize Character Sprites (25%)/ALL Characters")]
+    static void ResizeAll25() { foreach (var c in Characters) ResizeCharacter(c.folder, 25); }
+
+    // ── 50% menu items ─────────────────────────────────────────────────────
+
+    [MenuItem("Tools/HealthyZoo/Resize Character Sprites (50%)/Giraffe (GiraffeAssets)")]
+    static void ResizeGiraffe50() => ResizeCharacter("Assets/Sprites/GiraffeAssets", 50);
+
+    [MenuItem("Tools/HealthyZoo/Resize Character Sprites (50%)/Heron (HeronSpriteAssets)")]
+    static void ResizeHeron50() => ResizeCharacter("Assets/Sprites/HeronSpriteAssets", 50);
+
+    [MenuItem("Tools/HealthyZoo/Resize Character Sprites (50%)/Panda (PandaAssets)")]
+    static void ResizePanda50() => ResizeCharacter("Assets/Sprites/PandaAssets", 50);
+
+    [MenuItem("Tools/HealthyZoo/Resize Character Sprites (50%)/Porcupine (PorcupineAssets)")]
+    static void ResizePorcupine50() => ResizeCharacter("Assets/Sprites/PorcupineAssets", 50);
+
+    [MenuItem("Tools/HealthyZoo/Resize Character Sprites (50%)/Sloth (SlothAssets)")]
+    static void ResizeSloth50() => ResizeCharacter("Assets/Sprites/SlothAssets", 50);
+
+    [MenuItem("Tools/HealthyZoo/Resize Character Sprites (50%)/ALL Characters")]
+    static void ResizeAll50() { foreach (var c in Characters) ResizeCharacter(c.folder, 50); }
+
 
     // ── Core logic ─────────────────────────────────────────────────────────
 
-    static void ResizeCharacter(string assetFolder)
+    static void ResizeCharacter(string assetFolder, int percent)
     {
         CharacterConfig config = default;
         bool found = false;
@@ -105,6 +119,11 @@ public static class CharacterSpriteResizer
             return;
         }
 
+        // Calculate target PPU: scale proportionally so world-space size is preserved
+        int targetPPU = Mathf.RoundToInt(config.originalPPU * (percent / 100f));
+        // Skip frames already at or near the target size (threshold = 75% of original short edge)
+        int skipThreshold = Mathf.RoundToInt(1080 * (percent / 100f) * 0.75f);
+
         int resized = 0, skipped = 0, failed = 0;
         string charName = Path.GetFileName(assetFolder);
 
@@ -116,7 +135,7 @@ public static class CharacterSpriteResizer
                 string meta = png + ".meta";
 
                 EditorUtility.DisplayProgressBar(
-                    $"Resizing {charName}",
+                    $"Resizing {charName} ({percent}%)",
                     Path.GetFileName(png),
                     (float)i / pngFiles.Length);
 
@@ -124,15 +143,15 @@ public static class CharacterSpriteResizer
                 if (w <= 0) { skipped++; continue; }
 
                 // Skip if already at or below target size
-                if (w <= config.skipThresholdW && h <= config.skipThresholdW)
+                if (w <= skipThreshold && h <= skipThreshold)
                 {
                     skipped++;
                     continue;
                 }
 
                 bool ok = Path.GetFileName(tool) == "magick"
-                    ? RunCommand(tool, $"mogrify -resize 25% \"{png}\"")
-                    : RunCommand(tool, $"\"{png}\" -resize 25% \"{png}\"");
+                    ? RunCommand(tool, $"mogrify -resize {percent}% \"{png}\"")
+                    : RunCommand(tool, $"\"{png}\" -resize {percent}% \"{png}\"");
 
                 if (!ok)
                 {
@@ -142,7 +161,7 @@ public static class CharacterSpriteResizer
                 }
 
                 if (File.Exists(meta))
-                    UpdateMetaPPU(meta, config.originalPPU, config.targetPPU);
+                    UpdateMetaPPU(meta, config.originalPPU, targetPPU);
 
                 resized++;
             }
@@ -155,9 +174,9 @@ public static class CharacterSpriteResizer
         AssetDatabase.Refresh();
 
         EditorUtility.DisplayDialog(
-            $"Resize Complete — {charName}",
+            $"Resize Complete — {charName} ({percent}%)",
             $"Resized:  {resized}\nSkipped (already small): {skipped}\nFailed:  {failed}\n\n" +
-            $"PPU updated: {config.originalPPU} → {config.targetPPU}\n\n" +
+            $"PPU updated: {config.originalPPU} → {targetPPU}\n\n" +
             "Wait for Unity to finish reimporting before building.",
             "OK");
     }
