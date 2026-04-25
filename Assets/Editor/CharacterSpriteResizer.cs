@@ -79,6 +79,46 @@ public static class CharacterSpriteResizer
     [MenuItem("Tools/HealthyZoo/Resize Character Sprites (50%)/ALL Characters")]
     static void ResizeAll50() { foreach (var c in Characters) ResizeCharacter(c.folder, 50); }
 
+    // ── 65% menu items (35% reduction) ────────────────────────────────────
+
+    [MenuItem("Tools/HealthyZoo/Resize Character Sprites (65% — 35% reduction)/Giraffe (GiraffeAssets)")]
+    static void ResizeGiraffe65() => ResizeCharacter("Assets/Sprites/GiraffeAssets", 65);
+
+    [MenuItem("Tools/HealthyZoo/Resize Character Sprites (65% — 35% reduction)/Heron (HeronSpriteAssets)")]
+    static void ResizeHeron65() => ResizeCharacter("Assets/Sprites/HeronSpriteAssets", 65);
+
+    [MenuItem("Tools/HealthyZoo/Resize Character Sprites (65% — 35% reduction)/Panda (PandaAssets)")]
+    static void ResizePanda65() => ResizeCharacter("Assets/Sprites/PandaAssets", 65);
+
+    [MenuItem("Tools/HealthyZoo/Resize Character Sprites (65% — 35% reduction)/Porcupine (PorcupineAssets)")]
+    static void ResizePorcupine65() => ResizeCharacter("Assets/Sprites/PorcupineAssets", 65);
+
+    [MenuItem("Tools/HealthyZoo/Resize Character Sprites (65% — 35% reduction)/Sloth (SlothAssets)")]
+    static void ResizeSloth65() => ResizeCharacter("Assets/Sprites/SlothAssets", 65);
+
+    [MenuItem("Tools/HealthyZoo/Resize Character Sprites (65% — 35% reduction)/ALL Characters")]
+    static void ResizeAll65() { foreach (var c in Characters) ResizeCharacter(c.folder, 65); }
+
+    // ── 70% menu items (30% reduction) ────────────────────────────────────
+
+    [MenuItem("Tools/HealthyZoo/Resize Character Sprites (70% — 30% reduction)/Giraffe (GiraffeAssets)")]
+    static void ResizeGiraffe70() => ResizeCharacter("Assets/Sprites/GiraffeAssets", 70);
+
+    [MenuItem("Tools/HealthyZoo/Resize Character Sprites (70% — 30% reduction)/Heron (HeronSpriteAssets)")]
+    static void ResizeHeron70() => ResizeCharacter("Assets/Sprites/HeronSpriteAssets", 70);
+
+    [MenuItem("Tools/HealthyZoo/Resize Character Sprites (70% — 30% reduction)/Panda (PandaAssets)")]
+    static void ResizePanda70() => ResizeCharacter("Assets/Sprites/PandaAssets", 70);
+
+    [MenuItem("Tools/HealthyZoo/Resize Character Sprites (70% — 30% reduction)/Porcupine (PorcupineAssets)")]
+    static void ResizePorcupine70() => ResizeCharacter("Assets/Sprites/PorcupineAssets", 70);
+
+    [MenuItem("Tools/HealthyZoo/Resize Character Sprites (70% — 30% reduction)/Sloth (SlothAssets)")]
+    static void ResizeSloth70() => ResizeCharacter("Assets/Sprites/SlothAssets", 70);
+
+    [MenuItem("Tools/HealthyZoo/Resize Character Sprites (70% — 30% reduction)/ALL Characters")]
+    static void ResizeAll70() { foreach (var c in Characters) ResizeCharacter(c.folder, 70); }
+
 
     // ── Core logic ─────────────────────────────────────────────────────────
 

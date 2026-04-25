@@ -1,49 +1,50 @@
 using System.Diagnostics;
 using System.IO;
+using System.Text.RegularExpressions;
 using UnityEditor;
 using UnityEngine;
 using Debug = UnityEngine.Debug;
 
 /// <summary>
-/// Resizes all PNG frames under Assets/Sprites/NeutralAnimations to 25% of their
-/// original size using ImageMagick, then updates each .meta file to keep the
-/// sprites the same world-space size in Unity (spritePixelsToUnits 100 → 25).
+/// Resizes all PNG frames under Assets/Sprites/NeutralAnimations using ImageMagick,
+/// then updates each .meta file to keep sprites the same world-space size in Unity.
 ///
-/// Run via: Tools > HealthyZoo > Resize Neutral Animations (25%)
-/// Safe to re-run — skips files that are already at target size.
+/// Run via: Tools > HealthyZoo > Resize Neutral Animations > [percentage]
+/// Safe to re-run — skips files already at or below the target size.
 /// </summary>
 public static class NeutralAnimationResizer
 {
-    private const string SourceFolder  = "Assets/Sprites/NeutralAnimations";
-    private const float  ScaleFactor   = 0.25f;
-    private const int    OriginalPPU   = 100;
-    private const int    TargetPPU     = 25; // OriginalPPU * ScaleFactor
+    private const string SourceFolder = "Assets/Sprites/NeutralAnimations";
+    private const int    OriginalPPU  = 100;
 
-    // Common Homebrew install paths Unity can't find via PATH
     private static readonly string[] SearchPaths =
     {
-        "/opt/homebrew/bin",   // Apple Silicon
-        "/usr/local/bin",       // Intel Mac
+        "/opt/homebrew/bin",
+        "/usr/local/bin",
         "/usr/bin",
     };
 
-    private static string FindTool(string name)
-    {
-        foreach (string dir in SearchPaths)
-        {
-            string full = Path.Combine(dir, name);
-            if (File.Exists(full)) return full;
-        }
-        return null;
-    }
+    // ── Menu items ─────────────────────────────────────────────────────────
 
     [MenuItem("Tools/HealthyZoo/Resize Neutral Animations (25%)")]
-    public static void ResizeAll()
-    {
-        string magick  = FindTool("magick");
-        string convert = FindTool("convert");
+    public static void Resize25() => ResizeAll(25);
 
-        if (magick == null && convert == null)
+    [MenuItem("Tools/HealthyZoo/Resize Neutral Animations (50%)")]
+    public static void Resize50() => ResizeAll(50);
+
+    [MenuItem("Tools/HealthyZoo/Resize Neutral Animations (65% — 35% reduction)")]
+    public static void Resize65() => ResizeAll(65);
+
+    [MenuItem("Tools/HealthyZoo/Resize Neutral Animations (70% — 30% reduction)")]
+    public static void Resize70() => ResizeAll(70);
+
+    // ── Core logic ─────────────────────────────────────────────────────────
+
+    static void ResizeAll(int percent)
+    {
+        string tool = FindTool("magick") ?? FindTool("convert");
+
+        if (tool == null)
         {
             EditorUtility.DisplayDialog(
                 "ImageMagick Not Found",
@@ -53,9 +54,7 @@ public static class NeutralAnimationResizer
             return;
         }
 
-        string tool = magick ?? convert;
         string absoluteFolder = Path.GetFullPath(SourceFolder);
-
         string[] pngFiles = Directory.GetFiles(absoluteFolder, "*.png", SearchOption.AllDirectories);
 
         if (pngFiles.Length == 0)
@@ -64,9 +63,10 @@ public static class NeutralAnimationResizer
             return;
         }
 
-        int resized = 0;
-        int skipped = 0;
-        int failed  = 0;
+        int targetPPU     = Mathf.RoundToInt(OriginalPPU * (percent / 100f));
+        int skipThreshold = Mathf.RoundToInt(1920 * (percent / 100f) * 0.75f);
+
+        int resized = 0, skipped = 0, failed = 0;
 
         try
         {
@@ -76,33 +76,22 @@ public static class NeutralAnimationResizer
                 string meta = png + ".meta";
 
                 EditorUtility.DisplayProgressBar(
-                    "Resizing Neutral Animations",
+                    $"Resizing Neutral Animations ({percent}%)",
                     Path.GetFileName(png),
                     (float)i / pngFiles.Length);
 
-                // Check if already resized by reading current dimensions
                 var (w, h) = GetPngDimensions(png);
-                if (w <= 0)
-                {
-                    Debug.LogWarning($"[NeutralAnimationResizer] Could not read dimensions, skipping: {png}");
-                    skipped++;
-                    continue;
-                }
+                if (w <= 0) { skipped++; continue; }
 
-                // Skip if already at or below target size — do NOT update PPU either,
-                // since the sprites are already correctly sized and placed in scenes.
-                // Original frames are 1920x1080 — target is 480x270.
-                if (w <= 960 && h <= 540)
+                if (w <= skipThreshold && h <= skipThreshold)
                 {
                     skipped++;
                     continue;
                 }
 
-                // Resize in-place via ImageMagick
-                // `magick mogrify` edits in-place; legacy `convert` writes to same path explicitly
                 bool ok = Path.GetFileName(tool) == "magick"
-                    ? RunCommand(tool, $"mogrify -resize 25% \"{png}\"")
-                    : RunCommand(tool, $"\"{png}\" -resize 25% \"{png}\"");
+                    ? RunCommand(tool, $"mogrify -resize {percent}% \"{png}\"")
+                    : RunCommand(tool, $"\"{png}\" -resize {percent}% \"{png}\"");
 
                 if (!ok)
                 {
@@ -111,9 +100,8 @@ public static class NeutralAnimationResizer
                     continue;
                 }
 
-                // Update .meta: set spritePixelsToUnits to TargetPPU
                 if (File.Exists(meta))
-                    UpdateMetaPPU(meta);
+                    UpdateMetaPPU(meta, targetPPU);
 
                 resized++;
             }
@@ -126,36 +114,31 @@ public static class NeutralAnimationResizer
         AssetDatabase.Refresh();
 
         EditorUtility.DisplayDialog(
-            "Resize Complete",
+            $"Resize Complete — Neutral Animations ({percent}%)",
             $"Resized: {resized}\nSkipped (already small): {skipped}\nFailed: {failed}\n\n" +
-            "Unity is reimporting. Wait for the progress bar to finish before building.",
+            $"PPU updated: {OriginalPPU} → {targetPPU}\n\n" +
+            "Wait for Unity to finish reimporting before building.",
             "OK");
     }
 
-    private static void UpdateMetaPPU(string metaPath)
+    static void UpdateMetaPPU(string metaPath, int newPPU)
     {
-        string text = File.ReadAllText(metaPath);
-
-        // Replace spritePixelsToUnits value
-        System.Text.RegularExpressions.Regex regex = new System.Text.RegularExpressions.Regex(
-            @"(spritePixelsToUnits:\s*)\d+");
-
+        string text  = File.ReadAllText(metaPath);
+        var    regex = new Regex(@"(spritePixelsToUnits:\s*)\d+");
         if (regex.IsMatch(text))
         {
-            text = regex.Replace(text, $"${{1}}{TargetPPU}");
+            text = regex.Replace(text, $"${{1}}{newPPU}");
             File.WriteAllText(metaPath, text);
         }
     }
 
-    private static (int w, int h) GetPngDimensions(string path)
+    static (int w, int h) GetPngDimensions(string path)
     {
         try
         {
             using var fs = new FileStream(path, FileMode.Open, FileAccess.Read);
             using var br = new BinaryReader(fs);
-            br.ReadBytes(8);  // PNG signature
-            br.ReadBytes(4);  // IHDR chunk length
-            br.ReadBytes(4);  // "IHDR"
+            br.ReadBytes(8); br.ReadBytes(4); br.ReadBytes(4);
             byte[] wb = br.ReadBytes(4);
             byte[] hb = br.ReadBytes(4);
             if (System.BitConverter.IsLittleEndian)
@@ -168,7 +151,7 @@ public static class NeutralAnimationResizer
         catch { return (-1, -1); }
     }
 
-    private static bool RunCommand(string cmd, string args)
+    static bool RunCommand(string cmd, string args)
     {
         var psi = new ProcessStartInfo(cmd, args)
         {
@@ -182,4 +165,13 @@ public static class NeutralAnimationResizer
         return p.ExitCode == 0;
     }
 
+    static string FindTool(string name)
+    {
+        foreach (string dir in SearchPaths)
+        {
+            string full = Path.Combine(dir, name);
+            if (File.Exists(full)) return full;
+        }
+        return null;
+    }
 }
