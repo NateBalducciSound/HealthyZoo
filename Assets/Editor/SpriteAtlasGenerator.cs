@@ -23,9 +23,11 @@ public static class SpriteAtlasGenerator
         "Assets/Sprites/SlothAssets",
         // CharacterDefaultSprites intentionally excluded — these 6 thumbnails are used
         // directly in MiniGameSelect and should load independently, not force-load a full atlas.
+        "Assets/Sprites/NeutralAnimations",
         "Assets/Sprites/AnimalBackgroundImages",
         "Assets/Sprites/UI",
-        "Assets/Sprites/ScanImages",
+        // ScanImages intentionally excluded — QR code textures must stay uncompressed
+        // and readable for ARKit reference image library export.
     };
 
     private const string AtlasOutputFolder = "Assets/SpriteAtlases";
