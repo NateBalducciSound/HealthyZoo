@@ -1,56 +1,61 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-[DefaultExecutionOrder(-10)]
 [RequireComponent(typeof(Collider2D))]
 public class PandaPositionZone : MonoBehaviour
 {
     public PandaController pandaController;
 
-    [Tooltip("0=Feet, 1=Belly, 2=Chest, 3=Eyes, 4=TopOfHead")]
+    [Tooltip("0=Ground, 1=Feet, 2=Belly, 3=Eyes, 4=TopOfHead")]
     public int zoneIndex;
 
-    private Draggable2D hoveredDraggable;
+    private Camera mainCamera;
 
     void Awake()
     {
+        mainCamera = Camera.main;
         GetComponent<Collider2D>().isTrigger = true;
-    }
-
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (!other.TryGetComponent(out Draggable2D draggable)) return;
-        if (!draggable.IsDragging) return;
-
-        hoveredDraggable = draggable;
-        pandaController?.OnScopeEnterZone(zoneIndex);
-    }
-
-    void OnTriggerExit2D(Collider2D other)
-    {
-        if (!other.TryGetComponent(out Draggable2D draggable)) return;
-        if (draggable != hoveredDraggable) return;
-
-        hoveredDraggable = null;
-        pandaController?.OnScopeExitZone(zoneIndex);
     }
 
     void Update()
     {
-        if (hoveredDraggable == null || !hoveredDraggable.IsDragging) return;
-
-        bool released = false;
+        HandleTouch();
 #if UNITY_EDITOR
-        if (Mouse.current != null && Mouse.current.leftButton.wasReleasedThisFrame)
-            released = true;
+        HandleMouse();
 #endif
-        if (Touchscreen.current != null && Touchscreen.current.primaryTouch.press.wasReleasedThisFrame)
-            released = true;
+    }
 
-        if (!released) return;
+    void HandleTouch()
+    {
+        if (Touchscreen.current == null) return;
+        if (!Touchscreen.current.primaryTouch.press.wasPressedThisFrame) return;
 
-        var item = hoveredDraggable;
-        hoveredDraggable = null;
-        pandaController?.OnScopeReleasedInZone(zoneIndex, item);
+        Vector2 screenPos = Touchscreen.current.primaryTouch.position.ReadValue();
+        if (IsTappingThis(screenPos))
+            pandaController?.OnZoneTapped(zoneIndex);
+    }
+
+#if UNITY_EDITOR
+    void HandleMouse()
+    {
+        if (Mouse.current == null) return;
+        if (!Mouse.current.leftButton.wasPressedThisFrame) return;
+
+        Vector2 screenPos = Mouse.current.position.ReadValue();
+        if (IsTappingThis(screenPos))
+            pandaController?.OnZoneTapped(zoneIndex);
+    }
+#endif
+
+    bool IsTappingThis(Vector2 screenPos)
+    {
+        Vector3 world = mainCamera.ScreenToWorldPoint(
+            new Vector3(screenPos.x, screenPos.y, Mathf.Abs(mainCamera.transform.position.z)));
+        world.z = 0f;
+
+        Collider2D[] hits = Physics2D.OverlapPointAll(world);
+        foreach (var hit in hits)
+            if (hit.gameObject == gameObject) return true;
+        return false;
     }
 }

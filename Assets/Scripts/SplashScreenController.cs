@@ -10,7 +10,7 @@ public class SplashScreenController : MonoBehaviour
 {
     [Header("Audio")]
     [SerializeField] private AudioSource audioSource;
-    [SerializeField] private AudioClip introLine;
+    [SerializeField] private LocalizedClip introLine;
 
     [Header("UI")]
     [SerializeField] private Button tapToContinueButton;
@@ -23,7 +23,7 @@ public class SplashScreenController : MonoBehaviour
     [SerializeField] private Sprite ipadSprite;
 
     [Header("Inactivity Prompt")]
-    [SerializeField] private AudioClip inactivityPrompt;
+    [SerializeField] private LocalizedClip inactivityPrompt;
     [Tooltip("Seconds of silence after intro finishes before playing inactivity prompt")]
     [SerializeField] private float inactivityDelay = 2f;
     [Tooltip("If true, repeats the inactivity prompt on this interval until tapped")]
@@ -85,7 +85,7 @@ public class SplashScreenController : MonoBehaviour
         else
             tapToContinueButton.interactable = false;
 
-        Debug.Log($"[Splash] AudioSource: {audioSource != null} | IntroLine: {introLine != null}");
+        Debug.Log($"[Splash] AudioSource: {audioSource != null} | IntroLine: {introLine.english != null}");
         StartCoroutine(PlayIntro());
     }
 
@@ -101,10 +101,11 @@ public class SplashScreenController : MonoBehaviour
                              && splashImage.gameObject.activeInHierarchy
                              && _canvasGroup.alpha > 0f;
 
-        if (introLine != null && spriteVisible)
+        AudioClip resolvedIntro = LanguageManager.Resolve(introLine);
+        if (resolvedIntro != null && spriteVisible)
         {
-            audioSource.PlayOneShot(introLine);
-            yield return new WaitForSeconds(introLine.length);
+            audioSource.PlayOneShot(resolvedIntro);
+            yield return new WaitForSeconds(resolvedIntro.length);
         }
 
         // Voice line finished — show continue prompt and enable tap if skip was off
@@ -113,8 +114,9 @@ public class SplashScreenController : MonoBehaviour
 
         tapToContinueButton.interactable = true;
 
-        if (inactivityPrompt != null)
+        if (LanguageManager.Resolve(inactivityPrompt) != null)
             StartCoroutine(InactivityLoop());
+
     }
 
     IEnumerator InactivityLoop()
@@ -123,9 +125,13 @@ public class SplashScreenController : MonoBehaviour
         {
             yield return new WaitForSeconds(inactivityDelay);
             if (_dismissed) yield break;
-            audioSource.PlayOneShot(inactivityPrompt);
-            if (loopInactivityPrompt)
-                yield return new WaitForSeconds(inactivityPrompt.length);
+            AudioClip resolved = LanguageManager.Resolve(inactivityPrompt);
+            if (resolved != null)
+            {
+                audioSource.PlayOneShot(resolved);
+                if (loopInactivityPrompt)
+                    yield return new WaitForSeconds(resolved.length);
+            }
         }
         while (loopInactivityPrompt && !_dismissed);
     }

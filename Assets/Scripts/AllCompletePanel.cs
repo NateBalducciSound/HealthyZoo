@@ -15,7 +15,7 @@ public class AllCompletePanel : MonoBehaviour
 
     [Header("Voice Line")]
     [Tooltip("Optional — blocks tap-to-close until the clip finishes.")]
-    public AudioClip voiceLine;
+    public LocalizedClip voiceLine;
     public AudioSource audioSource;
 
     [Header("Close Button")]
@@ -80,10 +80,11 @@ public class AllCompletePanel : MonoBehaviour
         _cg.blocksRaycasts = true;
 
         // Play voice line and lock dismissal until it finishes.
-        if (voiceLine != null && audioSource != null)
+        AudioClip resolved = LanguageManager.Resolve(voiceLine);
+        if (resolved != null && audioSource != null)
         {
-            audioSource.PlayOneShot(voiceLine);
-            yield return new WaitForSeconds(voiceLine.length);
+            audioSource.PlayOneShot(resolved);
+            yield return new WaitForSeconds(resolved.length);
         }
 
         _canDismiss = true;

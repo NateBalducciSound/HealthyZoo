@@ -549,6 +549,7 @@ RectTransform:
   m_Children:
   - {fileID: 316504134}
   - {fileID: 1157819116}
+  - {fileID: 884638558}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -908,7 +909,7 @@ BoxCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0.018555075, y: 0.0074710846}
   m_SpriteTilingProperty:
-    border: {x: 0.37333333, y: 4.8833337, z: 2.4166667, w: 0.7066667}
+    border: {x: 0.53333336, y: 6.9761906, z: 3.4523811, w: 1.0095239}
     pivot: {x: 0.20840679, y: 0.829806}
     oldSize: {x: 3.6, y: 6.4}
     newSize: {x: 3.6, y: 6.4}
@@ -918,6 +919,129 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.8687208, y: 0.85758305}
   m_EdgeRadius: 0
+--- !u!1001 &884638557
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 298625174}
+    m_Modifications:
+    - target: {fileID: 1842311755499723306, guid: a219c2d51919f40aba01dbf15f27ca6a, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1842311755499723306, guid: a219c2d51919f40aba01dbf15f27ca6a, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1842311755499723306, guid: a219c2d51919f40aba01dbf15f27ca6a, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1842311755499723306, guid: a219c2d51919f40aba01dbf15f27ca6a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1842311755499723306, guid: a219c2d51919f40aba01dbf15f27ca6a, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1842311755499723306, guid: a219c2d51919f40aba01dbf15f27ca6a, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1842311755499723306, guid: a219c2d51919f40aba01dbf15f27ca6a, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1842311755499723306, guid: a219c2d51919f40aba01dbf15f27ca6a, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1842311755499723306, guid: a219c2d51919f40aba01dbf15f27ca6a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 4.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1842311755499723306, guid: a219c2d51919f40aba01dbf15f27ca6a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 4.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1842311755499723306, guid: a219c2d51919f40aba01dbf15f27ca6a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 4.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1842311755499723306, guid: a219c2d51919f40aba01dbf15f27ca6a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1842311755499723306, guid: a219c2d51919f40aba01dbf15f27ca6a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1842311755499723306, guid: a219c2d51919f40aba01dbf15f27ca6a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1842311755499723306, guid: a219c2d51919f40aba01dbf15f27ca6a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1842311755499723306, guid: a219c2d51919f40aba01dbf15f27ca6a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1842311755499723306, guid: a219c2d51919f40aba01dbf15f27ca6a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1842311755499723306, guid: a219c2d51919f40aba01dbf15f27ca6a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1842311755499723306, guid: a219c2d51919f40aba01dbf15f27ca6a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1842311755499723306, guid: a219c2d51919f40aba01dbf15f27ca6a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -710
+      objectReference: {fileID: 0}
+    - target: {fileID: 1842311755499723306, guid: a219c2d51919f40aba01dbf15f27ca6a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1842311755499723306, guid: a219c2d51919f40aba01dbf15f27ca6a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1842311755499723306, guid: a219c2d51919f40aba01dbf15f27ca6a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5862244198052837395, guid: a219c2d51919f40aba01dbf15f27ca6a, type: 3}
+      propertyPath: m_Name
+      value: TextBoxPhone
+      objectReference: {fileID: 0}
+    - target: {fileID: 5862244198052837395, guid: a219c2d51919f40aba01dbf15f27ca6a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a219c2d51919f40aba01dbf15f27ca6a, type: 3}
+--- !u!224 &884638558 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 1842311755499723306, guid: a219c2d51919f40aba01dbf15f27ca6a, type: 3}
+  m_PrefabInstance: {fileID: 884638557}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &884638559 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5862244198052837395, guid: a219c2d51919f40aba01dbf15f27ca6a, type: 3}
+  m_PrefabInstance: {fileID: 884638557}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &887869752
 GameObject:
   m_ObjectHideFlags: 0
@@ -1283,19 +1407,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4619757299269663185, guid: a80abad21f3004f509413d1e12350ccb, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5066775938895281148, guid: a80abad21f3004f509413d1e12350ccb, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5066775938895281148, guid: a80abad21f3004f509413d1e12350ccb, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5066775938895281148, guid: a80abad21f3004f509413d1e12350ccb, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7113045436283634966, guid: a80abad21f3004f509413d1e12350ccb, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -1303,11 +1427,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8192087940184330248, guid: a80abad21f3004f509413d1e12350ccb, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8192087940184330248, guid: a80abad21f3004f509413d1e12350ccb, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1446,7 +1570,7 @@ BoxCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0.07864344, y: -0.01944244}
   m_SpriteTilingProperty:
-    border: {x: 1.3533334, y: 4.306667, z: 1.2066667, w: 0.41333336}
+    border: {x: 1.9333334, y: 6.1523814, z: 1.7238096, w: 0.5904762}
     pivot: {x: 0.515677, y: 0.80687827}
     oldSize: {x: 3.6, y: 6.4}
     newSize: {x: 3.6, y: 6.4}
@@ -1663,13 +1787,43 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueController
   audioSource: {fileID: 1508713119}
-  openingLine: {fileID: 8300000, guid: 40fc590d48d2241c09403638c639d44d, type: 3}
-  completionLine: {fileID: 8300000, guid: 48827857ae29140fca852dbff07974c6, type: 3}
+  captionBox: {fileID: 884638559}
+  captionLingerTime: 0.1
+  openingLine:
+    english: {fileID: 8300000, guid: 40fc590d48d2241c09403638c639d44d, type: 3}
+    spanish: {fileID: 8300000, guid: f2b019c11f1884ea4ae75c2718ea5459, type: 3}
+  openingCaption:
+    english: Penny the porcupine is very nervous about getting a shot. Your job is
+      to help her get ready by dragging the cleaning wipe, syringe, and Band-Aid
+      into the correct order.
+    spanish: Penny, la puercoespin, esta muy nerviosa por recibir una inyeccion.
+      Tu tarea es ayudarla a prepararse arrastrando la toallita limpiadora, la jeringa
+      y la curita para colocarlas en el orden correcto.
+  completionLine:
+    english: {fileID: 8300000, guid: 48827857ae29140fca852dbff07974c6, type: 3}
+    spanish: {fileID: 8300000, guid: f0b21d01fbece4689b1262ae1aef2aed, type: 3}
+  completionCaption:
+    english: You did a great job helping Penny get ready - it was over before she
+      knew it! Porcupines have natural antibiotics in their bodies to prevent infections
+      in case they accidentally poke themselves.
+    spanish: Hiciste un gran trabajo ayudando a Penny a prepararse; todo termino
+      antes de que se diera cuenta! Los puercoespines tienen antibioticos naturales
+      en su organismo para prevenir infecciones en caso de que se pinchen accidentalmente.
+  nudgeOnFixedTimer: 0
   nudgeDelay: 5
   nudgeInterval: 6
   nudgeLines:
-  - {fileID: 8300000, guid: 0ed97cb57c0334d088991d421ebbd011, type: 3}
-  - {fileID: 8300000, guid: b41735f5cf1974a1f98c2cbb4e080367, type: 3}
+  - english: {fileID: 8300000, guid: 0ed97cb57c0334d088991d421ebbd011, type: 3}
+    spanish: {fileID: 8300000, guid: e85d155755732429b8150b30b9d933b7, type: 3}
+  - english: {fileID: 8300000, guid: b41735f5cf1974a1f98c2cbb4e080367, type: 3}
+    spanish: {fileID: 8300000, guid: 5dd3551f37b9a43ed95cb73467ba8938, type: 3}
+  nudgeCaptions:
+  - english: Think about the three things to do... drag them so the wipe is first,
+      then the syringe, and finally the band-aid.
+    spanish: Piensa en las tres cosas que hay que hacer... deberiamos usar la toallita
+      para limpiarle el brazo primero?
+  - english: Try the swab first to clean Penny's arm.
+    spanish: Prueba primero con el hisopo para limpiar el brazo de Penny.
 --- !u!4 &1508713121
 Transform:
   m_ObjectHideFlags: 0
@@ -1846,7 +2000,7 @@ BoxCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0.01823908, y: -0.035772324}
   m_SpriteTilingProperty:
-    border: {x: 2.45, y: 4.746667, z: 0.19, w: 0.6166667}
+    border: {x: 3.5000002, y: 6.7809525, z: 0.27142859, w: 0.8809524}
     pivot: {x: 0.80727017, y: 0.82098764}
     oldSize: {x: 3.6, y: 6.4}
     newSize: {x: 3.6, y: 6.4}

@@ -87,7 +87,7 @@ public class AlligatorController : MonoBehaviour
         if (!mouthIsOpen || mouthTaskComplete) return;
         mouthTaskComplete = true;
         animator.SetTrigger("CongratsStart");
-        item.ShowAtStart();
+        item.Hide();
         StartCoroutine(CelebrationSequence());
     }
 
@@ -103,6 +103,7 @@ public class AlligatorController : MonoBehaviour
         AnimatorStateInfo state = animator.GetCurrentAnimatorStateInfo(0);
         float waitTime = Mathf.Max(0f, state.length - respawnEarlyBy);
         yield return new WaitForSeconds(waitTime);
+        if (mouthTaskComplete) yield break;
         item.ShowAtStart();
     }
 

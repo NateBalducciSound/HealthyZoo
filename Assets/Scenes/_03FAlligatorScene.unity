@@ -570,13 +570,44 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueController
   audioSource: {fileID: 221412550}
-  openingLine: {fileID: 8300000, guid: f480c7cb29264449fa04da1d4c2d52a4, type: 3}
-  completionLine: {fileID: 8300000, guid: 717486b8b017644a98d751179412b0ec, type: 3}
+  captionBox: {fileID: 435422276}
+  captionLingerTime: 1
+  openingLine:
+    english: {fileID: 8300000, guid: f480c7cb29264449fa04da1d4c2d52a4, type: 3}
+    spanish: {fileID: 8300000, guid: 410a553292e9240959f73d8e42f27a2f, type: 3}
+  openingCaption:
+    english: Let's find a way to see if Arlo might have a sore throat. To get him
+      to say "ahhhhh" drag the tongue depressor and touch his face. Be sure to touch
+      him gently.
+    spanish: Busquemos la manera de ver si Arlo podria tener dolor de garganta. Para
+      lograr que diga "ahhhhh", desliza el bajalenguas y tocalo en la cara. Asegurate
+      de tocarlo con suavidad.
+  completionLine:
+    english: {fileID: 8300000, guid: 717486b8b017644a98d751179412b0ec, type: 3}
+    spanish: {fileID: 8300000, guid: 83896313ff2d848f082cdeb2cd02b42f, type: 3}
+  completionCaption:
+    english: Arlo's throat looks good! Baby alligators make cute chirping sounds
+      before they hatch from their eggs, then they use their tails to swim super
+      fast in the water!
+    spanish: La garganta de Arlo se ve bien! Los caimanes bebes emiten lindos sonidos
+      de cantito de pajaros antes de salir de sus huevos; luego usan sus colas para
+      nadar super rapido en el agua!
+  nudgeOnFixedTimer: 0
   nudgeDelay: 5
   nudgeInterval: 6
   nudgeLines:
-  - {fileID: 8300000, guid: 30df9342b6a864a17b6d189b27408422, type: 3}
-  - {fileID: 8300000, guid: e488a15346dfc422d8a11eaf29c90080, type: 3}
+  - english: {fileID: 8300000, guid: 30df9342b6a864a17b6d189b27408422, type: 3}
+    spanish: {fileID: 8300000, guid: afd1a9f2e75e04f02b402a0c6ad52cac, type: 3}
+  - english: {fileID: 8300000, guid: e488a15346dfc422d8a11eaf29c90080, type: 3}
+    spanish: {fileID: 8300000, guid: be7cdf09287304c89a34d2884c219680, type: 3}
+  nudgeCaptions:
+  - english: The tongue depressor is the flat wooden stick up above Arlo's head.
+      Drag it down and touch the area near his nose to see if he reacts.
+    spanish: El bajalenguas es el palito de madera plano que se encuentra sobre la
+      cabeza de Arlo. Arrastralo hacia abajo y toca la zona cercana a su nariz para
+      ver si reacciona.
+  - english: Alligators like to open their mouth when you touch their nose.
+    spanish: A los caimanes les gusta abrir la boca cuando les tocas la nariz.
 --- !u!4 &221412552
 Transform:
   m_ObjectHideFlags: 0
@@ -687,6 +718,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 435422275}
   - {fileID: 1230461024}
   - {fileID: 2003493272}
   - {fileID: 1936416279}
@@ -722,6 +754,16 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!224 &435422275 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 1842311755499723306, guid: a219c2d51919f40aba01dbf15f27ca6a, type: 3}
+  m_PrefabInstance: {fileID: 2734566428680179344}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &435422276 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5862244198052837395, guid: a219c2d51919f40aba01dbf15f27ca6a, type: 3}
+  m_PrefabInstance: {fileID: 2734566428680179344}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &612562730
 GameObject:
   m_ObjectHideFlags: 0
@@ -1736,19 +1778,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4619757299269663185, guid: a80abad21f3004f509413d1e12350ccb, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5066775938895281148, guid: a80abad21f3004f509413d1e12350ccb, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5066775938895281148, guid: a80abad21f3004f509413d1e12350ccb, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5066775938895281148, guid: a80abad21f3004f509413d1e12350ccb, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7113045436283634966, guid: a80abad21f3004f509413d1e12350ccb, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -1756,11 +1798,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8192087940184330248, guid: a80abad21f3004f509413d1e12350ccb, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8192087940184330248, guid: a80abad21f3004f509413d1e12350ccb, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2932,6 +2974,103 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!1001 &2734566428680179344
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 298625174}
+    m_Modifications:
+    - target: {fileID: 1842311755499723306, guid: a219c2d51919f40aba01dbf15f27ca6a, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1842311755499723306, guid: a219c2d51919f40aba01dbf15f27ca6a, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1842311755499723306, guid: a219c2d51919f40aba01dbf15f27ca6a, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1842311755499723306, guid: a219c2d51919f40aba01dbf15f27ca6a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1842311755499723306, guid: a219c2d51919f40aba01dbf15f27ca6a, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1842311755499723306, guid: a219c2d51919f40aba01dbf15f27ca6a, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1842311755499723306, guid: a219c2d51919f40aba01dbf15f27ca6a, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1842311755499723306, guid: a219c2d51919f40aba01dbf15f27ca6a, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1842311755499723306, guid: a219c2d51919f40aba01dbf15f27ca6a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1842311755499723306, guid: a219c2d51919f40aba01dbf15f27ca6a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1842311755499723306, guid: a219c2d51919f40aba01dbf15f27ca6a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1842311755499723306, guid: a219c2d51919f40aba01dbf15f27ca6a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1842311755499723306, guid: a219c2d51919f40aba01dbf15f27ca6a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1842311755499723306, guid: a219c2d51919f40aba01dbf15f27ca6a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1842311755499723306, guid: a219c2d51919f40aba01dbf15f27ca6a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1842311755499723306, guid: a219c2d51919f40aba01dbf15f27ca6a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1842311755499723306, guid: a219c2d51919f40aba01dbf15f27ca6a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -1182
+      objectReference: {fileID: 0}
+    - target: {fileID: 1842311755499723306, guid: a219c2d51919f40aba01dbf15f27ca6a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1842311755499723306, guid: a219c2d51919f40aba01dbf15f27ca6a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1842311755499723306, guid: a219c2d51919f40aba01dbf15f27ca6a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5862244198052837395, guid: a219c2d51919f40aba01dbf15f27ca6a, type: 3}
+      propertyPath: m_Name
+      value: TextBox
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a219c2d51919f40aba01dbf15f27ca6a, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -47,6 +47,8 @@ public class ARHomeButton : MonoBehaviour
         }
     }
 
+    public void GoHome() => StartCoroutine(GoHomeRoutine());
+
     IEnumerator GoHomeRoutine()
     {
         var arSession = FindObjectOfType<ARSession>();

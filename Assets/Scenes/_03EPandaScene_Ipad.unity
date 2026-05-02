@@ -227,7 +227,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!61 &35086389
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -341,7 +341,7 @@ Transform:
   m_GameObject: {fileID: 35086388}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.33, y: 1.2, z: 0}
+  m_LocalPosition: {x: 0.181, y: 1.454, z: 0}
   m_LocalScale: {x: 6, y: 6, z: 6}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -374,6 +374,133 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!1001 &140509438
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 298625174}
+    m_Modifications:
+    - target: {fileID: 4350157547731124406, guid: 41fee0255130b49e0b3bc1f26af8924a, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350157547731124406, guid: 41fee0255130b49e0b3bc1f26af8924a, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350157547731124406, guid: 41fee0255130b49e0b3bc1f26af8924a, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350157547731124406, guid: 41fee0255130b49e0b3bc1f26af8924a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350157547731124406, guid: 41fee0255130b49e0b3bc1f26af8924a, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350157547731124406, guid: 41fee0255130b49e0b3bc1f26af8924a, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350157547731124406, guid: 41fee0255130b49e0b3bc1f26af8924a, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350157547731124406, guid: 41fee0255130b49e0b3bc1f26af8924a, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350157547731124406, guid: 41fee0255130b49e0b3bc1f26af8924a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350157547731124406, guid: 41fee0255130b49e0b3bc1f26af8924a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350157547731124406, guid: 41fee0255130b49e0b3bc1f26af8924a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350157547731124406, guid: 41fee0255130b49e0b3bc1f26af8924a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350157547731124406, guid: 41fee0255130b49e0b3bc1f26af8924a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350157547731124406, guid: 41fee0255130b49e0b3bc1f26af8924a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350157547731124406, guid: 41fee0255130b49e0b3bc1f26af8924a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350157547731124406, guid: 41fee0255130b49e0b3bc1f26af8924a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350157547731124406, guid: 41fee0255130b49e0b3bc1f26af8924a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350157547731124406, guid: 41fee0255130b49e0b3bc1f26af8924a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350157547731124406, guid: 41fee0255130b49e0b3bc1f26af8924a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350157547731124406, guid: 41fee0255130b49e0b3bc1f26af8924a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -522
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350157547731124406, guid: 41fee0255130b49e0b3bc1f26af8924a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350157547731124406, guid: 41fee0255130b49e0b3bc1f26af8924a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350157547731124406, guid: 41fee0255130b49e0b3bc1f26af8924a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350157547731124406, guid: 41fee0255130b49e0b3bc1f26af8924a, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8400631623218979471, guid: 41fee0255130b49e0b3bc1f26af8924a, type: 3}
+      propertyPath: m_Name
+      value: TextBox
+      objectReference: {fileID: 0}
+    - target: {fileID: 8400631623218979471, guid: 41fee0255130b49e0b3bc1f26af8924a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 41fee0255130b49e0b3bc1f26af8924a, type: 3}
+--- !u!224 &140509439 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 4350157547731124406, guid: 41fee0255130b49e0b3bc1f26af8924a, type: 3}
+  m_PrefabInstance: {fileID: 140509438}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &140509440 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8400631623218979471, guid: 41fee0255130b49e0b3bc1f26af8924a, type: 3}
+  m_PrefabInstance: {fileID: 140509438}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &151301833
 GameObject:
   m_ObjectHideFlags: 0
@@ -815,7 +942,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.02431196, y: -0.3326382}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -825,7 +952,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2.4037066, y: 1.6652764}
   m_EdgeRadius: 0
 --- !u!1 &298625170
 GameObject:
@@ -923,6 +1050,7 @@ RectTransform:
   m_Children:
   - {fileID: 288759308}
   - {fileID: 603905807}
+  - {fileID: 140509439}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1085,7 +1213,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68bdfa29c62654b85a42d8e8d054eb8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PandaController
-  scopeDraggable: {fileID: 1246194125}
+  scopeObject: {fileID: 1246194120}
   combinedSprites:
   - {fileID: 33988702}
   - {fileID: 1335138826}
@@ -1094,17 +1222,15 @@ MonoBehaviour:
   - {fileID: 889026153}
   sortingLayerName: Default
   sortingOrder: 0
-  scanButton: {fileID: 0}
+  scanButton: {fileID: 35086388}
   pandaAnimator: {fileID: 1076327139}
   orangeGlowStateName: OrangeButton
   greenGlowStateName: GreenButton
-  loopCelebrationStateName: PingQRAnimations
-  confettiAnimator: {fileID: 0}
+  confettiAnimator: {fileID: 1443910606}
   confettiStateName: Confetti
   congratsButton: {fileID: 288759309}
   dialogueController: {fileID: 2084266842}
   menuSceneName: _02MiniGameSelect
-  zone4YThreshold: 7
 --- !u!4 &883705863
 Transform:
   m_ObjectHideFlags: 0
@@ -1853,6 +1979,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1443910606 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2190737275721878769, guid: 3fe95d66a25214b05a86078c0ebd6bc9, type: 3}
+  m_PrefabInstance: {fileID: 1820607882}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1455454204
 GameObject:
   m_ObjectHideFlags: 0
@@ -2131,7 +2262,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.045202315, y: 0}
+  m_Offset: {x: 0.045202255, y: 0.43648487}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2141,8 +2272,8 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 2.046032, y: 1}
-  m_EdgeRadius: 4
+  m_Size: {x: 2.046032, y: 2.507907}
+  m_EdgeRadius: 0
 --- !u!1 &1876533653
 GameObject:
   m_ObjectHideFlags: 0
@@ -2170,7 +2301,7 @@ Transform:
   m_GameObject: {fileID: 1876533653}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -2.29, z: 0}
+  m_LocalPosition: {x: 0, y: -2.45, z: 0}
   m_LocalScale: {x: 1.4978783, y: 1.4978783, z: 1.4978783}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2224,7 +2355,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.12305951, y: -0.23329891}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2234,7 +2365,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 3.8234963, y: 1.4665978}
   m_EdgeRadius: 0
 --- !u!1 &1935982969
 GameObject:
@@ -2407,7 +2538,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.013231754, y: -0.42349726}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2417,7 +2548,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2.3364363, y: 1.3541671}
   m_EdgeRadius: 0
 --- !u!1 &2073074272
 GameObject:
@@ -2590,7 +2721,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.02588129, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2600,7 +2731,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2.9498405, y: 1}
   m_EdgeRadius: 0
 --- !u!1 &2084266840
 GameObject:
@@ -2730,14 +2861,44 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueController
   audioSource: {fileID: 2084266841}
-  openingLine: {fileID: 8300000, guid: 2f1d4e64fdca842188e3457603362e60, type: 3}
-  completionLine: {fileID: 8300000, guid: a31bf9ce384014b3388f5097cd7707f0, type: 3}
-  nudgeDelay: 5
-  nudgeInterval: 6
+  captionBox: {fileID: 140509440}
+  captionLingerTime: 0.2
+  openingLine:
+    english: {fileID: 8300000, guid: 2f1d4e64fdca842188e3457603362e60, type: 3}
+    spanish: {fileID: 8300000, guid: a8fd6fc836e2c4713abc51f97475ef05, type: 3}
+  openingCaption:
+    english: Ping seems a little nervous about getting her eyes checked. Let's try
+      tapping her to move the light into the right place for her eye exam.
+    spanish: Ping parece un poco nerviosa de que le revisen los ojos. Intentemos
+      darle unos toques para colocar la luz en el lugar correcto para su examen ocular.
+  completionLine:
+    english: {fileID: 8300000, guid: a31bf9ce384014b3388f5097cd7707f0, type: 3}
+    spanish: {fileID: 8300000, guid: 9e113000603ca424a906b687e0fdbfcb, type: 3}
+  completionCaption:
+    english: Yea Ping! She doesn't seem nervous anymore. Panda bears have black and
+      white fur that helps them hide in forests. And their favorite food is bamboo!
+    spanish: Vamos, Ping! Ya no parece nerviosa. Los osos panda tienen un pelaje
+      blanco y negro que les ayuda a esconderse en los bosques. Y su comida favorita
+      es el bambu!
+  nudgeOnFixedTimer: 1
+  nudgeDelay: 4
+  nudgeInterval: 3
   nudgeLines:
-  - {fileID: 8300000, guid: 96c8aa7aa20e74ee3bd0cfb4e044b45a, type: 3}
-  - {fileID: 8300000, guid: 976abc1c3408143bbaddf601b7452f2a, type: 3}
-  - {fileID: 8300000, guid: 37805b18973924390b8d74f8ea4d8476, type: 3}
+  - english: {fileID: 8300000, guid: 96c8aa7aa20e74ee3bd0cfb4e044b45a, type: 3}
+    spanish: {fileID: 8300000, guid: 4e4536b24752d4395adcb6091c4f1e11, type: 3}
+  - english: {fileID: 8300000, guid: 976abc1c3408143bbaddf601b7452f2a, type: 3}
+    spanish: {fileID: 8300000, guid: 4929aa8bfc34c4d35aefb356bc821b90, type: 3}
+  - english: {fileID: 8300000, guid: 37805b18973924390b8d74f8ea4d8476, type: 3}
+    spanish: {fileID: 8300000, guid: 3dd6d934e71e4422096308afe38d6fcb, type: 3}
+  nudgeCaptions:
+  - english: Once you have the scope over Ping's eye tap the button to turn it on.
+      The light needs to shine into the center of her eye, the center is called the
+      'pupil'.
+    spanish: La luz debe incidir en el centro de su ojo; el centro se llama "pupila".
+  - english: Can you find a way to turn on the light?
+    spanish: Puedes encontrar la manera de encender la luz?
+  - english: Is that a button on top?
+    spanish: Es eso un boton en la parte de arriba?
 --- !u!4 &2084266843
 Transform:
   m_ObjectHideFlags: 0
