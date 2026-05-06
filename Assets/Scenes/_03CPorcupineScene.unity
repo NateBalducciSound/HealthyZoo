@@ -1788,39 +1788,40 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueController
   audioSource: {fileID: 1508713119}
   captionBox: {fileID: 884638559}
+  spanishFont: {fileID: 11400000, guid: ec752da0268ee4eb48f9eab01ba26e37, type: 2}
   captionLingerTime: 0.1
   openingLine:
-    english: {fileID: 8300000, guid: 40fc590d48d2241c09403638c639d44d, type: 3}
-    spanish: {fileID: 8300000, guid: f2b019c11f1884ea4ae75c2718ea5459, type: 3}
+    english: {fileID: 8300000, guid: 35d1d1c0677d54e88b3fca6436986ec7, type: 3}
+    spanish: {fileID: 8300000, guid: ea30fd75f487e430b9fa244c36148284, type: 3}
   openingCaption:
     english: Penny the porcupine is very nervous about getting a shot. Your job is
       to help her get ready by dragging the cleaning wipe, syringe, and Band-Aid
       into the correct order.
-    spanish: Penny, la puercoespin, esta muy nerviosa por recibir una inyeccion.
+    spanish: Penny, la puercoespín, está muy nerviosa por recibir una inyección.
       Tu tarea es ayudarla a prepararse arrastrando la toallita limpiadora, la jeringa
       y la curita para colocarlas en el orden correcto.
   completionLine:
-    english: {fileID: 8300000, guid: 48827857ae29140fca852dbff07974c6, type: 3}
-    spanish: {fileID: 8300000, guid: f0b21d01fbece4689b1262ae1aef2aed, type: 3}
+    english: {fileID: 8300000, guid: 5fa13346cfbab45b8995e9142bb9d154, type: 3}
+    spanish: {fileID: 8300000, guid: da63a554de9e640eaa9016c862c61d8c, type: 3}
   completionCaption:
     english: You did a great job helping Penny get ready - it was over before she
       knew it! Porcupines have natural antibiotics in their bodies to prevent infections
       in case they accidentally poke themselves.
-    spanish: Hiciste un gran trabajo ayudando a Penny a prepararse; todo termino
-      antes de que se diera cuenta! Los puercoespines tienen antibioticos naturales
+    spanish: Hiciste un gran trabajo ayudando a Penny a prepararse; ¡todo terminó
+      antes de que se diera cuenta! Los puercoespines tienen antibióticos naturales
       en su organismo para prevenir infecciones en caso de que se pinchen accidentalmente.
   nudgeOnFixedTimer: 0
   nudgeDelay: 5
   nudgeInterval: 6
   nudgeLines:
-  - english: {fileID: 8300000, guid: 0ed97cb57c0334d088991d421ebbd011, type: 3}
-    spanish: {fileID: 8300000, guid: e85d155755732429b8150b30b9d933b7, type: 3}
-  - english: {fileID: 8300000, guid: b41735f5cf1974a1f98c2cbb4e080367, type: 3}
-    spanish: {fileID: 8300000, guid: 5dd3551f37b9a43ed95cb73467ba8938, type: 3}
+  - english: {fileID: 8300000, guid: 25eaed56c7f2c4c879fc1cc8feaad576, type: 3}
+    spanish: {fileID: 8300000, guid: 9e2fd267fcd944e07b459b2609c93f30, type: 3}
+  - english: {fileID: 8300000, guid: a0a2d66112eb34290bd57e1888474e54, type: 3}
+    spanish: {fileID: 8300000, guid: b0e87842af15b43e49e8179ca4af7866, type: 3}
   nudgeCaptions:
   - english: Think about the three things to do... drag them so the wipe is first,
       then the syringe, and finally the band-aid.
-    spanish: Piensa en las tres cosas que hay que hacer... deberiamos usar la toallita
+    spanish: Piensa en las tres cosas que hay que hacer... ¿deberíamos usar la toallita
       para limpiarle el brazo primero?
   - english: Try the swab first to clean Penny's arm.
     spanish: Prueba primero con el hisopo para limpiar el brazo de Penny.

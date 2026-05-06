@@ -940,30 +940,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueController
   audioSource: {fileID: 919989835}
   captionBox: {fileID: 1031189735}
+  spanishFont: {fileID: 11400000, guid: ec752da0268ee4eb48f9eab01ba26e37, type: 2}
   captionLingerTime: 1
   openingLine:
-    english: {fileID: 8300000, guid: 75faf95fad9dd4d6bad802599ddd0d7d, type: 3}
-    spanish: {fileID: 8300000, guid: 06c7bd7c8e7684fc4a7bb55b544aafdc, type: 3}
+    english: {fileID: 8300000, guid: a096fcb77a7d5449695487e40d303557, type: 3}
+    spanish: {fileID: 8300000, guid: 834a057e5e56d421fa4003a2dcdad56e, type: 3}
   openingCaption:
     english: Imagine if you had as long a neck as Gigi the Giraffe! Drag the height
       bar up gently, a little at a time, to help her be the tallest she can be.
-    spanish: Imagina si tuvieras un cuello tan largo como el de Gigi la Jirafa! Arrastra
+    spanish: ¡Imagina si tuvieras un cuello tan largo como el de Gigi la Jirafa! Arrastra
       suavemente la barra de altura hacia arriba, poco a poco, para ayudarla a ser
-      lo mas alta posible.
+      lo más alta posible.
   completionLine:
-    english: {fileID: 8300000, guid: 935a9cbe6e3284b8daa26ebf844d2a79, type: 3}
+    english: {fileID: 8300000, guid: 505bc1078600f4e498efb9bf0ad5c067, type: 3}
     spanish: {fileID: 8300000, guid: ec84d6947f7804016bfc3992295da16c, type: 3}
   completionCaption:
     english: Well done! Look how happy she is. A baby giraffe learns to stand up
       and walk just a few hours after it is born!
-    spanish: Bien hecho! Mira que feliz esta. Una cria de jirafa aprende a ponerse
-      de pie y a caminar apenas unas horas despues de nacer!
+    spanish: ¡Bien hecho! Mira qué feliz está. ¡Una cría de jirafa aprende a ponerse
+      de pie y a caminar apenas unas horas después de nacer!
   nudgeOnFixedTimer: 0
   nudgeDelay: 5
   nudgeInterval: 6
   nudgeLines:
-  - english: {fileID: 8300000, guid: 121983ab857424a5486abb53dc69a72a, type: 3}
-    spanish: {fileID: 8300000, guid: 7a974ccda953b4d3c85851345d48696b, type: 3}
+  - english: {fileID: 8300000, guid: e2a290cd40bb04f2788c748b682d8c26, type: 3}
+    spanish: {fileID: 8300000, guid: afa368ee295794076bb7b7f7d3950369, type: 3}
   nudgeCaptions:
   - english: You can drag the height bar higher or lower.
     spanish: Puedes arrastrar la barra de altura hacia arriba o hacia abajo.

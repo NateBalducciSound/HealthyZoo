@@ -2862,43 +2862,44 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueController
   audioSource: {fileID: 2084266841}
   captionBox: {fileID: 140509440}
+  spanishFont: {fileID: 11400000, guid: ec752da0268ee4eb48f9eab01ba26e37, type: 2}
   captionLingerTime: 0.2
   openingLine:
-    english: {fileID: 8300000, guid: 2f1d4e64fdca842188e3457603362e60, type: 3}
-    spanish: {fileID: 8300000, guid: a8fd6fc836e2c4713abc51f97475ef05, type: 3}
+    english: {fileID: 8300000, guid: 6d25ef48144ea473abbf9432cb9bfb36, type: 3}
+    spanish: {fileID: 8300000, guid: 1b7cf209b621e457f9542460135e406d, type: 3}
   openingCaption:
     english: Ping seems a little nervous about getting her eyes checked. Let's try
       tapping her to move the light into the right place for her eye exam.
     spanish: Ping parece un poco nerviosa de que le revisen los ojos. Intentemos
       darle unos toques para colocar la luz en el lugar correcto para su examen ocular.
   completionLine:
-    english: {fileID: 8300000, guid: a31bf9ce384014b3388f5097cd7707f0, type: 3}
-    spanish: {fileID: 8300000, guid: 9e113000603ca424a906b687e0fdbfcb, type: 3}
+    english: {fileID: 8300000, guid: ddc8a9f3a7c664d2e9ca6e6902a11b16, type: 3}
+    spanish: {fileID: 8300000, guid: 83f7152feb5ef46368e74247d42b8a0c, type: 3}
   completionCaption:
     english: Yea Ping! She doesn't seem nervous anymore. Panda bears have black and
       white fur that helps them hide in forests. And their favorite food is bamboo!
-    spanish: Vamos, Ping! Ya no parece nerviosa. Los osos panda tienen un pelaje
-      blanco y negro que les ayuda a esconderse en los bosques. Y su comida favorita
-      es el bambu!
+    spanish: ¡Vamos, Ping! Ya no parece nerviosa. Los osos panda tienen un pelaje
+      blanco y negro que les ayuda a esconderse en los bosques. ¡Y su comida favorita
+      es el bambú!
   nudgeOnFixedTimer: 1
   nudgeDelay: 4
   nudgeInterval: 3
   nudgeLines:
-  - english: {fileID: 8300000, guid: 96c8aa7aa20e74ee3bd0cfb4e044b45a, type: 3}
-    spanish: {fileID: 8300000, guid: 4e4536b24752d4395adcb6091c4f1e11, type: 3}
-  - english: {fileID: 8300000, guid: 976abc1c3408143bbaddf601b7452f2a, type: 3}
-    spanish: {fileID: 8300000, guid: 4929aa8bfc34c4d35aefb356bc821b90, type: 3}
-  - english: {fileID: 8300000, guid: 37805b18973924390b8d74f8ea4d8476, type: 3}
-    spanish: {fileID: 8300000, guid: 3dd6d934e71e4422096308afe38d6fcb, type: 3}
+  - english: {fileID: 8300000, guid: 85a87d40471ed4facadec89187b18feb, type: 3}
+    spanish: {fileID: 8300000, guid: ae1286a7fc17c497faaa35525b5484e9, type: 3}
+  - english: {fileID: 8300000, guid: 8febde29e59dd4e6684469ece8c73f52, type: 3}
+    spanish: {fileID: 8300000, guid: 9e983c2b6dcaa431b93157912797d1d0, type: 3}
+  - english: {fileID: 8300000, guid: caf8a0c99ffb6466bbc346eee3a6b9a1, type: 3}
+    spanish: {fileID: 8300000, guid: 0c1ac0c9bb2f7492282b0b22778a47cf, type: 3}
   nudgeCaptions:
   - english: Once you have the scope over Ping's eye tap the button to turn it on.
       The light needs to shine into the center of her eye, the center is called the
       'pupil'.
-    spanish: La luz debe incidir en el centro de su ojo; el centro se llama "pupila".
+    spanish: La luz debe incidir en el centro de su ojo; el centro se llama «pupila».
   - english: Can you find a way to turn on the light?
-    spanish: Puedes encontrar la manera de encender la luz?
+    spanish: ¿Puedes encontrar la manera de encender la luz?
   - english: Is that a button on top?
-    spanish: Es eso un boton en la parte de arriba?
+    spanish: ¿Es eso un botón en la parte de arriba?
 --- !u!4 &2084266843
 Transform:
   m_ObjectHideFlags: 0

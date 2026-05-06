@@ -13,8 +13,11 @@ public class DialogueController : MonoBehaviour
     [SerializeField] private GameObject captionBox;
     [Tooltip("Seconds the caption stays visible after a line finishes.")]
     [SerializeField] private float captionLingerTime = 1f;
+    [Tooltip("Font used for Spanish captions. Leave null to keep default font.")]
+    [SerializeField] private TMP_FontAsset spanishFont;
 
     private TMP_Text _captionText;
+    private TMP_FontAsset _defaultFont;
 
     [Header("Opening")]
     [Tooltip("Plays once automatically when the scene loads — input is blocked until it finishes")]
@@ -177,6 +180,12 @@ public class DialogueController : MonoBehaviour
 
         captionBox.SetActive(true);
         if (_captionText != null)
+        {
+            if (_defaultFont == null) _defaultFont = _captionText.font;
+            bool isSpanish = spanishFont != null && LanguageManager.CurrentLanguage == LanguageManager.Language.Spanish;
+            _captionText.font = isSpanish ? spanishFont : _defaultFont;
+            _captionText.wordSpacing = isSpanish ? 15f : 0f;
             _captionText.text = text;
+        }
     }
 }

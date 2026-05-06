@@ -937,40 +937,41 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueController
   audioSource: {fileID: 303465988}
   captionBox: {fileID: 1332326246}
+  spanishFont: {fileID: 11400000, guid: ec752da0268ee4eb48f9eab01ba26e37, type: 2}
   captionLingerTime: 0.1
   openingLine:
-    english: {fileID: 8300000, guid: c1b1234a1c9e94fa2858cbcbd6cbb964, type: 3}
-    spanish: {fileID: 8300000, guid: 620c67ab1541f4e4b835f1a674e1a786, type: 3}
+    english: {fileID: 8300000, guid: bc4d1394868b34e79af3a332b5d5dcf2, type: 3}
+    spanish: {fileID: 8300000, guid: 307767a437d274c91a396b34ecd146af, type: 3}
   openingCaption:
     english: Ren the stork needs his heart rate measured, but first we want to help
       him relax a little. Drag the slider to find the right light brightness and
       make him feel ready for his exam.
-    spanish: La ciguena Ren necesita que le midan el ritmo cardiaco, pero primero
+    spanish: La cigüeña Ren necesita que le midan el ritmo cardíaco, pero primero
       queremos ayudarle a relajarse un poco. Arrastra el control deslizador para
       encontrar el brillo de luz adecuado y haz que se sienta listo para su examen.
   completionLine:
-    english: {fileID: 8300000, guid: 8f2974b5d11114cdb9648116584cc9fe, type: 3}
-    spanish: {fileID: 8300000, guid: b5c0ca82ce0d0417f98a314cd3e55057, type: 3}
+    english: {fileID: 8300000, guid: e8a8be606f9304b7899b35fe0596b2ec, type: 3}
+    spanish: {fileID: 8300000, guid: c919a1d5a00c74c4bb6f482ad2064229, type: 3}
   completionCaption:
     english: Ren, like many birds, is much calmer when the lights are low. Good job.
       A baby heron can learn to fly just a few weeks after it hatches from its egg!
-    spanish: Ren, al igual que muchas aves, esta mucho mas tranquilo cuando las luces
-      estan tenues. Buen trabajo! Una garza bebe puede aprender a volar apenas unas
-      semanas despues de salir del huevo!
+    spanish: Ren, al igual que muchas aves, está mucho más tranquilo cuando las luces
+      están tenues. ¡Buen trabajo! ¡Una garza bebé puede aprender a volar apenas unas
+      semanas después de salir del huevo!
   nudgeOnFixedTimer: 0
   nudgeDelay: 5
   nudgeInterval: 6
   nudgeLines:
-  - english: {fileID: 8300000, guid: 0fbd35ebec3e542ba97cc1d27b7d61ea, type: 3}
+  - english: {fileID: 8300000, guid: b8c32f3ce242e4f8f80d4b3dad2a8085, type: 3}
     spanish: {fileID: 8300000, guid: 00bb33f4c5da646e8adc4242f954f9ab, type: 3}
-  - english: {fileID: 8300000, guid: 068ca4a77711247a2b9f937fdba9b47e, type: 3}
+  - english: {fileID: 8300000, guid: 72a80c7a0acea4660ade2414967c6934, type: 3}
     spanish: {fileID: 8300000, guid: 6def8331c30144082b80418cce0d1d28, type: 3}
   nudgeCaptions:
   - english: Drag the slider so it's not too bright or too dark.
     spanish: Arrastra el deslizador para que no quede ni demasiado brillante ni demasiado
       oscuro.
   - english: Bring the stethoscope to his chest to check his heart.
-    spanish: Acerca el estetoscopio a su pecho para examinar su corazon.
+    spanish: Acerca el estetoscopio a su pecho para examinar su corazón.
 --- !u!4 &303465990
 Transform:
   m_ObjectHideFlags: 0

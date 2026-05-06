@@ -356,6 +356,10 @@ MonoBehaviour:
   confettiStateName: Confetti
   congratsButton: {fileID: 662360926}
   dialogueController: {fileID: 1510137563}
+  zoneImages:
+  - {fileID: 1288943668}
+  - {fileID: 1448723827}
+  - {fileID: 1223646279}
   menuSceneName: _02MiniGameSelect
 --- !u!4 &165878639
 Transform:
@@ -782,19 +786,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4619757299269663185, guid: a80abad21f3004f509413d1e12350ccb, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5066775938895281148, guid: a80abad21f3004f509413d1e12350ccb, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5066775938895281148, guid: a80abad21f3004f509413d1e12350ccb, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5066775938895281148, guid: a80abad21f3004f509413d1e12350ccb, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7113045436283634966, guid: a80abad21f3004f509413d1e12350ccb, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -802,11 +806,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8192087940184330248, guid: a80abad21f3004f509413d1e12350ccb, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8192087940184330248, guid: a80abad21f3004f509413d1e12350ccb, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1671,14 +1675,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: f201963c3ba374c9d871c895ba173822, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1789,14 +1793,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: f201963c3ba374c9d871c895ba173822, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2129,14 +2133,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: f201963c3ba374c9d871c895ba173822, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2362,31 +2366,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueController
   audioSource: {fileID: 1510137562}
   captionBox: {fileID: 966766907}
+  spanishFont: {fileID: 11400000, guid: ec752da0268ee4eb48f9eab01ba26e37, type: 2}
   captionLingerTime: 0.1
   openingLine:
-    english: {fileID: 8300000, guid: 5f1f1dd53933b4154b85ef7ed8281575, type: 3}
-    spanish: {fileID: 8300000, guid: e56ef1655e42245c39ba8a3089c220e0, type: 3}
+    english: {fileID: 8300000, guid: 2ae15ba57a603458c8b1545aada74218, type: 3}
+    spanish: {fileID: 8300000, guid: 5cb109fb9093644489b9f16b6217fa6e, type: 3}
   openingCaption:
     english: Santi the sloth loves to climb trees. How can we find a way to check
       his blood pressure? We need to get Santi to move to another part of the tree
       so that the blood pressure cuff can be placed on his free arm.
-    spanish: A Santi, el perezoso, le encanta trepar a los arboles. Como podemos
-      encontrar la manera de tomarle la presion arterial? Necesitamos lograr que
-      Santi se mueva a otra parte del arbol para poder colocarle el brazalete de
-      presion en su brazo libre.
+    spanish: A Santi, el perezoso, le encanta trepar a los árboles. ¿Cómo podemos
+      encontrar la manera de tomarle la presión arterial? Necesitamos lograr que
+      Santi se mueva a otra parte del árbol para poder colocarle el brazalete de
+      presión en su brazo libre.
   completionLine:
     english: {fileID: 8300000, guid: b45fb20a9579742fb9a89f67556b5b73, type: 3}
-    spanish: {fileID: 8300000, guid: 3b5927338134844f4a83d0a66b401013, type: 3}
+    spanish: {fileID: 8300000, guid: 9861290ba5c0d4f58b9cb2a31e7ccdf4, type: 3}
   completionCaption:
     english: And Santi the sloth has very good blood pressure. Baby sloths eat soft
       leaves while holding onto their mom's tummies.
-    spanish: Y Santi el perezoso tiene una presion arterial muy buena. Los perezosos
-      bebes comen hojas tiernas mientras se aferran a la barriga de sus mamas.
+    spanish: Y Santi el perezoso tiene una presión arterial muy buena. Los perezosos
+      bebés comen hojas tiernas mientras se aferran a la barriga de sus mamás.
   nudgeOnFixedTimer: 0
   nudgeDelay: 5
   nudgeInterval: 6
   nudgeLines:
-  - english: {fileID: 8300000, guid: b7dea91d8340d44d2963b2132bc4fa55, type: 3}
+  - english: {fileID: 8300000, guid: 6056826ac63954ce1b1dfed9d356ec71, type: 3}
     spanish: {fileID: 8300000, guid: dcdc394bd1c654841b56eeea5aa70bbe, type: 3}
   nudgeCaptions:
   - english: Tap inside the drop zones to see if you can help Santi hold on with
@@ -2395,8 +2400,8 @@ MonoBehaviour:
       a sostenerse con un solo brazo.
   - english: Choose another part of the tree and see if Santi will go there, then
       bring the blood pressure cuff up to his arm.
-    spanish: Elige otra parte del arbol y mira si Santi va hacia alli; luego, acercale
-      el manguito del tensiometro al brazo.
+    spanish: Elige otra parte del árbol y mira si Santi va hacia allí; luego, acércale
+      el manguito del tensiómetro al brazo.
 --- !u!4 &1510137564
 Transform:
   m_ObjectHideFlags: 0

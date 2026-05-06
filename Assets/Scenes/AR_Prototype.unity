@@ -779,8 +779,8 @@ MonoBehaviour:
   captionBox: {fileID: 0}
   captionLingerTime: 1
   openingLine:
-    english: {fileID: 8300000, guid: 568dd5ed0051b4bfc965819cb150fe6e, type: 3}
-    spanish: {fileID: 8300000, guid: 4f6e029da3d3c449eafbf9e47c10efc2, type: 3}
+    english: {fileID: 8300000, guid: e36ffc3c5e6974bdd972521a971d1949, type: 3}
+    spanish: {fileID: 8300000, guid: 201cd08e4412b4224a8e5087c6fbd0b4, type: 3}
   openingCaption:
     english: 
     spanish: 

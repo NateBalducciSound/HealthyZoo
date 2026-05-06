@@ -1760,15 +1760,15 @@ MonoBehaviour:
   audioSource: {fileID: 1556204770}
   introLine:
     english: {fileID: 8300000, guid: 0c35bd56ba22c4f2b815202c667e2596, type: 3}
-    spanish: {fileID: 8300000, guid: a9b83102b0c644322acb2c02fb50a4c2, type: 3}
+    spanish: {fileID: 8300000, guid: bbe028fe523fc45a4a93dbf1f9f96493, type: 3}
   tapToContinueButton: {fileID: 513245593}
   continuePrompt: {fileID: 0}
   splashImage: {fileID: 1556204768}
   phoneSprite: {fileID: 21300000, guid: aaaf0fe5646e5446192aef7bd303cdc7, type: 3}
   ipadSprite: {fileID: 21300000, guid: 9d8988c94652947c3b56e99cfe1fd5a5, type: 3}
   inactivityPrompt:
-    english: {fileID: 8300000, guid: 86cdbbaafe60f47fe84ad4f72702e8b3, type: 3}
-    spanish: {fileID: 8300000, guid: a4d3d3e473427428ba4e83898ebc7782, type: 3}
+    english: {fileID: 8300000, guid: bafe6ff87ee8c48f38ec0c50fbf16328, type: 3}
+    spanish: {fileID: 8300000, guid: c71866325637648e3933c083407f9145, type: 3}
   inactivityDelay: 2
   loopInactivityPrompt: 0
   allowSkip: 1
