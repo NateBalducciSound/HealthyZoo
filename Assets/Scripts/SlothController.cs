@@ -136,6 +136,10 @@ public class SlothController : MonoBehaviour
     IEnumerator SuccessSequence(Draggable2D cuff)
     {
         cuff.gameObject.SetActive(false);
+
+        if (zoneImages != null)
+            foreach (var img in zoneImages)
+                if (img != null) img.enabled = false;
         MiniGameProgress.SetCompleted(GrabbableType.Sloth);
 
         if (confettiAnimator != null) confettiAnimator.Play(confettiStateName);

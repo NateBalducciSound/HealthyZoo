@@ -2366,8 +2366,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueController
   audioSource: {fileID: 1510137562}
   captionBox: {fileID: 966766907}
-  spanishFont: {fileID: 11400000, guid: ec752da0268ee4eb48f9eab01ba26e37, type: 2}
   captionLingerTime: 0.1
+  spanishFont: {fileID: 11400000, guid: ec752da0268ee4eb48f9eab01ba26e37, type: 2}
   openingLine:
     english: {fileID: 8300000, guid: 2ae15ba57a603458c8b1545aada74218, type: 3}
     spanish: {fileID: 8300000, guid: 5cb109fb9093644489b9f16b6217fa6e, type: 3}
@@ -2375,24 +2375,24 @@ MonoBehaviour:
     english: Santi the sloth loves to climb trees. How can we find a way to check
       his blood pressure? We need to get Santi to move to another part of the tree
       so that the blood pressure cuff can be placed on his free arm.
-    spanish: A Santi, el perezoso, le encanta trepar a los árboles. ¿Cómo podemos
-      encontrar la manera de tomarle la presión arterial? Necesitamos lograr que
-      Santi se mueva a otra parte del árbol para poder colocarle el brazalete de
-      presión en su brazo libre.
+    spanish: "A Santi, el perezoso, le encanta trepar a los \xE1rboles. \xBFC\xF3mo
+      podemos encontrar la manera de tomarle la presi\xF3n arterial? Necesitamos
+      lograr que Santi se mueva a otra parte del \xE1rbol para poder colocarle el
+      brazalete de presi\xF3n en su brazo libre."
   completionLine:
-    english: {fileID: 8300000, guid: b45fb20a9579742fb9a89f67556b5b73, type: 3}
+    english: {fileID: 8300000, guid: 6d715cb7bde364a978d18ef736167ab3, type: 3}
     spanish: {fileID: 8300000, guid: 9861290ba5c0d4f58b9cb2a31e7ccdf4, type: 3}
   completionCaption:
     english: And Santi the sloth has very good blood pressure. Baby sloths eat soft
       leaves while holding onto their mom's tummies.
-    spanish: Y Santi el perezoso tiene una presión arterial muy buena. Los perezosos
-      bebés comen hojas tiernas mientras se aferran a la barriga de sus mamás.
+    spanish: "Y Santi el perezoso tiene una presi\xF3n arterial muy buena. Los perezosos
+      beb\xE9s comen hojas tiernas mientras se aferran a la barriga de sus mam\xE1s."
   nudgeOnFixedTimer: 0
   nudgeDelay: 5
   nudgeInterval: 6
   nudgeLines:
   - english: {fileID: 8300000, guid: 6056826ac63954ce1b1dfed9d356ec71, type: 3}
-    spanish: {fileID: 8300000, guid: dcdc394bd1c654841b56eeea5aa70bbe, type: 3}
+    spanish: {fileID: 8300000, guid: 086583233b56041aab1ba658bb5004cc, type: 3}
   nudgeCaptions:
   - english: Tap inside the drop zones to see if you can help Santi hold on with
       only one arm.
@@ -2400,8 +2400,8 @@ MonoBehaviour:
       a sostenerse con un solo brazo.
   - english: Choose another part of the tree and see if Santi will go there, then
       bring the blood pressure cuff up to his arm.
-    spanish: Elige otra parte del árbol y mira si Santi va hacia allí; luego, acércale
-      el manguito del tensiómetro al brazo.
+    spanish: "Elige otra parte del \xE1rbol y mira si Santi va hacia all\xED; luego,
+      ac\xE9rcale el manguito del tensi\xF3metro al brazo."
 --- !u!4 &1510137564
 Transform:
   m_ObjectHideFlags: 0

@@ -45,7 +45,7 @@ public class AllCompletePanel : MonoBehaviour
         if (closeButton != null)
             closeButton.onClick.AddListener(OnTapped);
 
-        if (AllCompleted())
+        if (AllCompleted() && !MiniGameProgress.HasShownAllComplete())
             StartCoroutine(ShowPanel());
     }
 
@@ -78,6 +78,7 @@ public class AllCompletePanel : MonoBehaviour
         }
         _cg.alpha = 1f;
         _cg.blocksRaycasts = true;
+        MiniGameProgress.SetAllCompleteShown();
 
         // Play voice line and lock dismissal until it finishes.
         AudioClip resolved = LanguageManager.Resolve(voiceLine);

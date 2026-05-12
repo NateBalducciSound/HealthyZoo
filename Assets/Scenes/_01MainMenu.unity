@@ -1281,8 +1281,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AudioManager
   buttonClickClip: {fileID: 8300000, guid: aa9c6795a08dd4e1bb7491bc24625e17, type: 3}
   levelCompleteClip: {fileID: 8300000, guid: 9613ce864ef9f4fe2be345e96eedde0c, type: 3}
+  sliderNotchClips:
+  - {fileID: 8300000, guid: 885115cc7294542c08c9f318fb8f2363, type: 3}
+  - {fileID: 8300000, guid: 63228db99ee1f4f0fac987460ffb6c9d, type: 3}
+  - {fileID: 8300000, guid: e2a545acdf2c745c5a5858c1bc92c19b, type: 3}
+  scanButtonClip: {fileID: 8300000, guid: 87ff955bd77594e18804fd900aef9099, type: 3}
   clickVolume: 1
   completeVolume: 0.57
+  notchVolume: 0.699
+  scanButtonVolume: 1
   mixerGroup: {fileID: 24300002, guid: 6c8de38a7bafb4120a25cff414f169d8, type: 2}
 --- !u!4 &984339795
 Transform:
@@ -1759,7 +1766,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SplashScreenController
   audioSource: {fileID: 1556204770}
   introLine:
-    english: {fileID: 8300000, guid: 0c35bd56ba22c4f2b815202c667e2596, type: 3}
+    english: {fileID: 8300000, guid: 7dfa21acfcb31439ea9b3dfff1143d57, type: 3}
     spanish: {fileID: 8300000, guid: bbe028fe523fc45a4a93dbf1f9f96493, type: 3}
   tapToContinueButton: {fileID: 513245593}
   continuePrompt: {fileID: 0}

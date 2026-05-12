@@ -1979,8 +1979,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FirstVisitDialogue
   audioSource: {fileID: 1391526951}
   firstVisitLine:
-    english: {fileID: 8300000, guid: 4ec325fc9e76042f296fd5d51b7f91a4, type: 3}
-    spanish: {fileID: 0}
+    english: {fileID: 8300000, guid: 003cc063aefbb42b29f5ee40cc7700cd, type: 3}
+    spanish: {fileID: 8300000, guid: 4d36214ad5d9a4c61a7eb817984b1d69, type: 3}
   prefsKey: FirstVisit_MiniGameSelect
   lockInputDuringLine: 1
 --- !u!82 &1391526951
@@ -3516,6 +3516,18 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3336108781152545915, guid: fc5dcc2d020684237ba50154b2c0045a, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 1391526951}
+    - target: {fileID: 3336108781152545915, guid: fc5dcc2d020684237ba50154b2c0045a, type: 3}
+      propertyPath: voiceLine.english
+      value: 
+      objectReference: {fileID: 8300000, guid: 8f2ab1bfc871747899df8a87855c540c, type: 3}
+    - target: {fileID: 3336108781152545915, guid: fc5dcc2d020684237ba50154b2c0045a, type: 3}
+      propertyPath: voiceLine.spanish
+      value: 
+      objectReference: {fileID: 8300000, guid: 8bfc92e2f249b4488af2b1f11a87a2ad, type: 3}
     - target: {fileID: 3354606141889032964, guid: fc5dcc2d020684237ba50154b2c0045a, type: 3}
       propertyPath: m_Name
       value: AllCompletePanel
@@ -3617,6 +3629,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3276980866181890574, guid: 914d8de27700e472ba24507f929ca458, type: 3}
+      propertyPath: musicVolume
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 6392687008486265527, guid: 914d8de27700e472ba24507f929ca458, type: 3}
       propertyPath: m_Name
       value: MusicManager

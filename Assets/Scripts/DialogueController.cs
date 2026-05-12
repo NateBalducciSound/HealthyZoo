@@ -15,6 +15,10 @@ public class DialogueController : MonoBehaviour
     [SerializeField] private float captionLingerTime = 1f;
     [Tooltip("Font used for Spanish captions. Leave null to keep default font.")]
     [SerializeField] private TMP_FontAsset spanishFont;
+    [Tooltip("Smallest font size auto-sizing will shrink to.")]
+    [SerializeField] private float captionFontSizeMin = 12f;
+    [Tooltip("Largest font size auto-sizing will grow to.")]
+    [SerializeField] private float captionFontSizeMax = 36f;
 
     private TMP_Text _captionText;
     private TMP_FontAsset _defaultFont;
@@ -176,7 +180,14 @@ public class DialogueController : MonoBehaviour
         }
 
         if (_captionText == null)
+        {
             _captionText = captionBox.GetComponentInChildren<TMP_Text>();
+            if (_captionText != null)
+            {
+                _captionText.enableAutoSizing = true;
+                _captionText.fontSizeMin = 1f;
+            }
+        }
 
         captionBox.SetActive(true);
         if (_captionText != null)

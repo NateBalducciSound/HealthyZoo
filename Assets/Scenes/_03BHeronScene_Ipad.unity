@@ -937,8 +937,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueController
   audioSource: {fileID: 303465988}
   captionBox: {fileID: 1332326246}
-  spanishFont: {fileID: 11400000, guid: ec752da0268ee4eb48f9eab01ba26e37, type: 2}
   captionLingerTime: 0.1
+  spanishFont: {fileID: 11400000, guid: ec752da0268ee4eb48f9eab01ba26e37, type: 2}
   openingLine:
     english: {fileID: 8300000, guid: bc4d1394868b34e79af3a332b5d5dcf2, type: 3}
     spanish: {fileID: 8300000, guid: 307767a437d274c91a396b34ecd146af, type: 3}
@@ -946,32 +946,33 @@ MonoBehaviour:
     english: Ren the stork needs his heart rate measured, but first we want to help
       him relax a little. Drag the slider to find the right light brightness and
       make him feel ready for his exam.
-    spanish: La cigüeña Ren necesita que le midan el ritmo cardíaco, pero primero
-      queremos ayudarle a relajarse un poco. Arrastra el control deslizador para
-      encontrar el brillo de luz adecuado y haz que se sienta listo para su examen.
+    spanish: "La cig\xFCe\xF1a Ren necesita que le midan el ritmo card\xEDaco, pero
+      primero queremos ayudarle a relajarse un poco. Arrastra el control deslizador
+      para encontrar el brillo de luz adecuado y haz que se sienta listo para su
+      examen."
   completionLine:
     english: {fileID: 8300000, guid: e8a8be606f9304b7899b35fe0596b2ec, type: 3}
     spanish: {fileID: 8300000, guid: c919a1d5a00c74c4bb6f482ad2064229, type: 3}
   completionCaption:
     english: Ren, like many birds, is much calmer when the lights are low. Good job.
       A baby heron can learn to fly just a few weeks after it hatches from its egg!
-    spanish: Ren, al igual que muchas aves, está mucho más tranquilo cuando las luces
-      están tenues. ¡Buen trabajo! ¡Una garza bebé puede aprender a volar apenas unas
-      semanas después de salir del huevo!
+    spanish: "Ren, al igual que muchas aves, est\xE1 mucho m\xE1s tranquilo cuando
+      las luces est\xE1n tenues. \xA1Buen trabajo! \xA1Una garza beb\xE9 puede aprender
+      a volar apenas unas semanas despu\xE9s de salir del huevo!"
   nudgeOnFixedTimer: 0
   nudgeDelay: 5
   nudgeInterval: 6
   nudgeLines:
   - english: {fileID: 8300000, guid: b8c32f3ce242e4f8f80d4b3dad2a8085, type: 3}
-    spanish: {fileID: 8300000, guid: 00bb33f4c5da646e8adc4242f954f9ab, type: 3}
+    spanish: {fileID: 8300000, guid: 8a534abe7f7524e8a8735280f4466a23, type: 3}
   - english: {fileID: 8300000, guid: 72a80c7a0acea4660ade2414967c6934, type: 3}
-    spanish: {fileID: 8300000, guid: 6def8331c30144082b80418cce0d1d28, type: 3}
+    spanish: {fileID: 8300000, guid: a751b0f3de04a43208a48e18c5ff3ae6, type: 3}
   nudgeCaptions:
   - english: Drag the slider so it's not too bright or too dark.
     spanish: Arrastra el deslizador para que no quede ni demasiado brillante ni demasiado
       oscuro.
   - english: Bring the stethoscope to his chest to check his heart.
-    spanish: Acerca el estetoscopio a su pecho para examinar su corazón.
+    spanish: "Acerca el estetoscopio a su pecho para examinar su coraz\xF3n."
 --- !u!4 &303465990
 Transform:
   m_ObjectHideFlags: 0

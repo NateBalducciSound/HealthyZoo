@@ -10,6 +10,7 @@ public class ARMusicPlayer : MonoBehaviour
     [Header("Audio")]
     public AudioSource audioSource;
     public AudioClip musicClip;
+    [Range(0f, 1f)] public float musicVolume = 1f;
 
     [Header("Fade")]
     public float fadeInDuration  = 1f;
@@ -93,7 +94,7 @@ public class ARMusicPlayer : MonoBehaviour
             audioSource.volume = 0f;
             audioSource.Play();
         }
-        SetFade(audioSource.volume, 1f, fadeInDuration);
+        SetFade(audioSource.volume, musicVolume, fadeInDuration);
     }
 
     void TriggerFadeOut()

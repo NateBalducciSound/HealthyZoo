@@ -1398,8 +1398,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueController
   audioSource: {fileID: 619614828}
   captionBox: {fileID: 130021889}
-  spanishFont: {fileID: 11400000, guid: ec752da0268ee4eb48f9eab01ba26e37, type: 2}
   captionLingerTime: 0.1
+  spanishFont: {fileID: 11400000, guid: ec752da0268ee4eb48f9eab01ba26e37, type: 2}
+  captionFontSizeMin: 12
+  captionFontSizeMax: 36
   openingLine:
     english: {fileID: 8300000, guid: 6d25ef48144ea473abbf9432cb9bfb36, type: 3}
     spanish: {fileID: 8300000, guid: 1b7cf209b621e457f9542460135e406d, type: 3}
@@ -1412,11 +1414,11 @@ MonoBehaviour:
     english: {fileID: 8300000, guid: ddc8a9f3a7c664d2e9ca6e6902a11b16, type: 3}
     spanish: {fileID: 8300000, guid: 83f7152feb5ef46368e74247d42b8a0c, type: 3}
   completionCaption:
-    english: Yay Ping! She doesn't seem nervous anymore. Panda bears have black and
-      white fur that helps them hide in forests. And their favorite food is bamboo!
-    spanish: ¡Vamos, Ping! Ya no parece nerviosa. Los osos panda tienen un pelaje
-      blanco y negro que les ayuda a esconderse en los bosques. ¡Y su comida favorita
-      es el bambú!
+    english: Yeah Ping! She doesn't seem nervous anymore. Panda bears have black
+      and white fur that helps them hide in forests. And their favorite food is bamboo!
+    spanish: "\xA1Vamos, Ping! Ya no parece nerviosa. Los osos panda tienen un pelaje
+      blanco y negro que les ayuda a esconderse en los bosques. \xA1Y su comida favorita
+      es el bamb\xFA!"
   nudgeOnFixedTimer: 0
   nudgeDelay: 5
   nudgeInterval: 6
@@ -1431,11 +1433,11 @@ MonoBehaviour:
   - english: Once you have the scope over Ping's eye tap the button to turn it on.
       The light needs to shine into the center of her eye, the center is called the
       'pupil'.
-    spanish: La luz debe incidir en el centro de su ojo; el centro se llama «pupila».
+    spanish: "La luz debe incidir en el centro de su ojo; el centro se llama \xABpupila\xBB."
   - english: Can you find a way to turn on the light?
-    spanish: ¿Puedes encontrar la manera de encender la luz?
+    spanish: "\xBFPuedes encontrar la manera de encender la luz?"
   - english: Is that a button on top?
-    spanish: ¿Es eso un botón en la parte de arriba?
+    spanish: "\xBFEs eso un bot\xF3n en la parte de arriba?"
 --- !u!82 &619614828
 AudioSource:
   m_ObjectHideFlags: 0

@@ -74,6 +74,9 @@ public class SliderValueActions : MonoBehaviour
         currentStage = stage;
         UpdateCharacterSprite(stage);
 
+        if (stage < stageSprites.Length - 1)
+            AudioManager.PlayNotch();
+
         if (stage == stageSprites.Length - 1 && !completionTriggered)
         {
             completionTriggered = true;

@@ -99,6 +99,7 @@ public class PandaController : MonoBehaviour
         isFinished = true;
         if (scanButton != null) scanButton.SetActive(false);
 
+        AudioManager.PlayScanButton();
         MiniGameProgress.SetCompleted(GrabbableType.Panda);
         StartCoroutine(WinSequence());
     }
