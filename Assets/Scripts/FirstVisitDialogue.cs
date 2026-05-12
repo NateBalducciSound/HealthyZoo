@@ -9,7 +9,7 @@ public class FirstVisitDialogue : MonoBehaviour
 {
     [Header("Audio")]
     [SerializeField] private AudioSource audioSource;
-    [SerializeField] private AudioClip firstVisitLine;
+    [SerializeField] private LocalizedClip firstVisitLine;
 
     [Header("Settings")]
     [Tooltip("Unique key for this scene — must be different for every scene that uses this script")]
@@ -40,8 +40,10 @@ public class FirstVisitDialogue : MonoBehaviour
         if (lockInputDuringLine && _eventSystem != null)
             _eventSystem.enabled = false;
 
-        audioSource.PlayOneShot(firstVisitLine);
-        yield return new WaitForSeconds(firstVisitLine.length);
+        AudioClip resolved = LanguageManager.Resolve(firstVisitLine);
+        if (resolved == null) yield break;
+        audioSource.PlayOneShot(resolved);
+        yield return new WaitForSeconds(resolved.length);
 
         if (lockInputDuringLine && _eventSystem != null)
             _eventSystem.enabled = true;

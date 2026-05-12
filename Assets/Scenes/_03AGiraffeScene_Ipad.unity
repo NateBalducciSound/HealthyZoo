@@ -154,6 +154,10 @@ MonoBehaviour:
   overlaySpriteBW: {fileID: 0}
   mainCompletedSprite: {fileID: 0}
   overlayCompletedSprite: {fileID: 0}
+  mainSpriteBW_iPad: {fileID: 0}
+  overlaySpriteBW_iPad: {fileID: 0}
+  mainCompletedSprite_iPad: {fileID: 0}
+  overlayCompletedSprite_iPad: {fileID: 0}
   playButtonPrefab: {fileID: 6593994255132046064, guid: b532888a7b9e34dabbad836db8ff270f, type: 3}
   buttonParent: {fileID: 298625174}
   idleAnimator: {fileID: 0}
@@ -269,7 +273,7 @@ SpriteRenderer:
   m_Size: {x: 8, y: 17.500574}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &158115920
@@ -512,6 +516,7 @@ RectTransform:
   - {fileID: 1540227053}
   - {fileID: 1801686403}
   - {fileID: 1860000427}
+  - {fileID: 500949994}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -541,6 +546,136 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!1001 &500949993
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 298625174}
+    m_Modifications:
+    - target: {fileID: 2971605208489502606, guid: 41fee0255130b49e0b3bc1f26af8924a, type: 3}
+      propertyPath: m_TextWrappingMode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2971605208489502606, guid: 41fee0255130b49e0b3bc1f26af8924a, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350157547731124406, guid: 41fee0255130b49e0b3bc1f26af8924a, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350157547731124406, guid: 41fee0255130b49e0b3bc1f26af8924a, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350157547731124406, guid: 41fee0255130b49e0b3bc1f26af8924a, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350157547731124406, guid: 41fee0255130b49e0b3bc1f26af8924a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350157547731124406, guid: 41fee0255130b49e0b3bc1f26af8924a, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350157547731124406, guid: 41fee0255130b49e0b3bc1f26af8924a, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350157547731124406, guid: 41fee0255130b49e0b3bc1f26af8924a, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350157547731124406, guid: 41fee0255130b49e0b3bc1f26af8924a, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350157547731124406, guid: 41fee0255130b49e0b3bc1f26af8924a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 4.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350157547731124406, guid: 41fee0255130b49e0b3bc1f26af8924a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 4.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350157547731124406, guid: 41fee0255130b49e0b3bc1f26af8924a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 4.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350157547731124406, guid: 41fee0255130b49e0b3bc1f26af8924a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350157547731124406, guid: 41fee0255130b49e0b3bc1f26af8924a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350157547731124406, guid: 41fee0255130b49e0b3bc1f26af8924a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350157547731124406, guid: 41fee0255130b49e0b3bc1f26af8924a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350157547731124406, guid: 41fee0255130b49e0b3bc1f26af8924a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350157547731124406, guid: 41fee0255130b49e0b3bc1f26af8924a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350157547731124406, guid: 41fee0255130b49e0b3bc1f26af8924a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350157547731124406, guid: 41fee0255130b49e0b3bc1f26af8924a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350157547731124406, guid: 41fee0255130b49e0b3bc1f26af8924a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -526
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350157547731124406, guid: 41fee0255130b49e0b3bc1f26af8924a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350157547731124406, guid: 41fee0255130b49e0b3bc1f26af8924a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350157547731124406, guid: 41fee0255130b49e0b3bc1f26af8924a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5256427108221107698, guid: 41fee0255130b49e0b3bc1f26af8924a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8400631623218979471, guid: 41fee0255130b49e0b3bc1f26af8924a, type: 3}
+      propertyPath: m_Name
+      value: TextBox
+      objectReference: {fileID: 0}
+    - target: {fileID: 8400631623218979471, guid: 41fee0255130b49e0b3bc1f26af8924a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 41fee0255130b49e0b3bc1f26af8924a, type: 3}
+--- !u!224 &500949994 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 4350157547731124406, guid: 41fee0255130b49e0b3bc1f26af8924a, type: 3}
+  m_PrefabInstance: {fileID: 500949993}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &786842789
 GameObject:
   m_ObjectHideFlags: 0
@@ -804,12 +939,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueController
   audioSource: {fileID: 919989835}
-  openingLine: {fileID: 8300000, guid: 75faf95fad9dd4d6bad802599ddd0d7d, type: 3}
-  completionLine: {fileID: 8300000, guid: 935a9cbe6e3284b8daa26ebf844d2a79, type: 3}
+  captionBox: {fileID: 1031189735}
+  spanishFont: {fileID: 11400000, guid: ec752da0268ee4eb48f9eab01ba26e37, type: 2}
+  captionLingerTime: 1
+  openingLine:
+    english: {fileID: 8300000, guid: a096fcb77a7d5449695487e40d303557, type: 3}
+    spanish: {fileID: 8300000, guid: 834a057e5e56d421fa4003a2dcdad56e, type: 3}
+  openingCaption:
+    english: Imagine if you had as long a neck as Gigi the Giraffe! Drag the height
+      bar up gently, a little at a time, to help her be the tallest she can be.
+    spanish: ¡Imagina si tuvieras un cuello tan largo como el de Gigi la Jirafa! Arrastra
+      suavemente la barra de altura hacia arriba, poco a poco, para ayudarla a ser
+      lo más alta posible.
+  completionLine:
+    english: {fileID: 8300000, guid: 505bc1078600f4e498efb9bf0ad5c067, type: 3}
+    spanish: {fileID: 8300000, guid: ec84d6947f7804016bfc3992295da16c, type: 3}
+  completionCaption:
+    english: Well done! Look how happy she is. A baby giraffe learns to stand up
+      and walk just a few hours after it is born!
+    spanish: ¡Bien hecho! Mira qué feliz está. ¡Una cría de jirafa aprende a ponerse
+      de pie y a caminar apenas unas horas después de nacer!
+  nudgeOnFixedTimer: 0
   nudgeDelay: 5
   nudgeInterval: 6
   nudgeLines:
-  - {fileID: 8300000, guid: 121983ab857424a5486abb53dc69a72a, type: 3}
+  - english: {fileID: 8300000, guid: e2a290cd40bb04f2788c748b682d8c26, type: 3}
+    spanish: {fileID: 8300000, guid: afa368ee295794076bb7b7f7d3950369, type: 3}
+  nudgeCaptions:
+  - english: You can drag the height bar higher or lower.
+    spanish: Puedes arrastrar la barra de altura hacia arriba o hacia abajo.
 --- !u!4 &919989834
 Transform:
   m_ObjectHideFlags: 0
@@ -1174,6 +1332,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1031189735 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8400631623218979471, guid: 41fee0255130b49e0b3bc1f26af8924a, type: 3}
+  m_PrefabInstance: {fileID: 500949993}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1101660570
 GameObject:
   m_ObjectHideFlags: 0
@@ -1616,9 +1779,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ce876df19df247228f5e87f3710160f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HeightBarAligner
-  heightBar: {fileID: 1668851518}
-  xOffset: 20
+  sliderRect: {fileID: 0}
+  canvas: {fileID: 0}
   cam: {fileID: 961739752}
+  alignX: 1
+  offsetX: 0
+  giraffeRenderer: {fileID: 0}
+  barBottomOffset: 0
 --- !u!1 &1647523846
 GameObject:
   m_ObjectHideFlags: 0
@@ -1714,7 +1881,7 @@ SpriteRenderer:
   m_Size: {x: 6, y: 14.01}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1647523849
@@ -1940,7 +2107,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -772}
+  m_AnchoredPosition: {x: 0, y: -661}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1806182531

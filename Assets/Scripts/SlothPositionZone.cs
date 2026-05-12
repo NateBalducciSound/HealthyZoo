@@ -2,11 +2,15 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 /// <summary>
-/// Attach to an invisible 2D collider that covers a "tap area" on screen.
-/// When the player taps this zone, it tells SlothController to move the
-/// sloth to this position index (0, 1, or 2).
+/// Place on a UI RectTransform (child of a Screen Space canvas) that covers a
+/// tap area.  When the player taps inside this rect, it tells SlothController
+/// to move the sloth to this position index (0, 1, or 2).
+///
+/// Using a canvas RectTransform instead of a world-space Collider2D means the
+/// zones stay correctly anchored on every screen aspect ratio, and they can
+/// remain active even while the sloth GameObjects they correspond to are disabled.
 /// </summary>
-[RequireComponent(typeof(Collider2D))]
+[RequireComponent(typeof(RectTransform))]
 public class SlothPositionZone : MonoBehaviour
 {
     public SlothController slothController;
@@ -14,13 +18,13 @@ public class SlothPositionZone : MonoBehaviour
     [Tooltip("Which sloth sprite index this zone activates (0, 1, or 2).")]
     public int positionIndex;
 
+    private RectTransform rectTransform;
     private Camera mainCamera;
 
     private void Awake()
     {
+        rectTransform = GetComponent<RectTransform>();
         mainCamera = Camera.main;
-        // Ensure collider is trigger so it doesn't block physics
-        GetComponent<Collider2D>().isTrigger = true;
     }
 
     private void Update()
@@ -53,7 +57,7 @@ public class SlothPositionZone : MonoBehaviour
     }
 #endif
 
-    // Returns true if the tap landed on a Draggable2D (the cuff) so we don't
+    // Returns true if the tap landed on the Draggable2D (the cuff) so we don't
     // accidentally switch sloth position while the player is grabbing the cuff.
     bool IsTappingDraggable(Vector2 screenPos)
     {
@@ -68,14 +72,6 @@ public class SlothPositionZone : MonoBehaviour
 
     bool IsTappingThis(Vector2 screenPos)
     {
-        Vector3 world = mainCamera.ScreenToWorldPoint(
-            new Vector3(screenPos.x, screenPos.y, Mathf.Abs(mainCamera.transform.position.z)));
-        world.z = 0f;
-
-        // OverlapPointAll so layered colliders don't block each other
-        Collider2D[] hits = Physics2D.OverlapPointAll(world);
-        foreach (var hit in hits)
-            if (hit.gameObject == gameObject) return true;
-        return false;
+        return RectTransformUtility.RectangleContainsScreenPoint(rectTransform, screenPos, null);
     }
 }

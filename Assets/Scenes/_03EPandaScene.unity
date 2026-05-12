@@ -244,6 +244,10 @@ MonoBehaviour:
   overlaySpriteBW: {fileID: 0}
   mainCompletedSprite: {fileID: 0}
   overlayCompletedSprite: {fileID: 0}
+  mainSpriteBW_iPad: {fileID: 0}
+  overlaySpriteBW_iPad: {fileID: 0}
+  mainCompletedSprite_iPad: {fileID: 0}
+  overlayCompletedSprite_iPad: {fileID: 0}
   playButtonPrefab: {fileID: 3197394493052294629, guid: 06c0b6e24193c410597fd6d57fd25061, type: 3}
   buttonParent: {fileID: 298625174}
   idleAnimator: {fileID: 0}
@@ -305,6 +309,129 @@ Transform:
   - {fileID: 889026154}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &130021887
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 298625174}
+    m_Modifications:
+    - target: {fileID: 1842311755499723306, guid: a219c2d51919f40aba01dbf15f27ca6a, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1842311755499723306, guid: a219c2d51919f40aba01dbf15f27ca6a, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1842311755499723306, guid: a219c2d51919f40aba01dbf15f27ca6a, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1842311755499723306, guid: a219c2d51919f40aba01dbf15f27ca6a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1842311755499723306, guid: a219c2d51919f40aba01dbf15f27ca6a, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1842311755499723306, guid: a219c2d51919f40aba01dbf15f27ca6a, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1842311755499723306, guid: a219c2d51919f40aba01dbf15f27ca6a, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1842311755499723306, guid: a219c2d51919f40aba01dbf15f27ca6a, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1842311755499723306, guid: a219c2d51919f40aba01dbf15f27ca6a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 4.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1842311755499723306, guid: a219c2d51919f40aba01dbf15f27ca6a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 4.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1842311755499723306, guid: a219c2d51919f40aba01dbf15f27ca6a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 4.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1842311755499723306, guid: a219c2d51919f40aba01dbf15f27ca6a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1842311755499723306, guid: a219c2d51919f40aba01dbf15f27ca6a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1842311755499723306, guid: a219c2d51919f40aba01dbf15f27ca6a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1842311755499723306, guid: a219c2d51919f40aba01dbf15f27ca6a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1842311755499723306, guid: a219c2d51919f40aba01dbf15f27ca6a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1842311755499723306, guid: a219c2d51919f40aba01dbf15f27ca6a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1842311755499723306, guid: a219c2d51919f40aba01dbf15f27ca6a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1842311755499723306, guid: a219c2d51919f40aba01dbf15f27ca6a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1842311755499723306, guid: a219c2d51919f40aba01dbf15f27ca6a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -608
+      objectReference: {fileID: 0}
+    - target: {fileID: 1842311755499723306, guid: a219c2d51919f40aba01dbf15f27ca6a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1842311755499723306, guid: a219c2d51919f40aba01dbf15f27ca6a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1842311755499723306, guid: a219c2d51919f40aba01dbf15f27ca6a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5862244198052837395, guid: a219c2d51919f40aba01dbf15f27ca6a, type: 3}
+      propertyPath: m_Name
+      value: TextBoxPhone
+      objectReference: {fileID: 0}
+    - target: {fileID: 5862244198052837395, guid: a219c2d51919f40aba01dbf15f27ca6a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a219c2d51919f40aba01dbf15f27ca6a, type: 3}
+--- !u!224 &130021888 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 1842311755499723306, guid: a219c2d51919f40aba01dbf15f27ca6a, type: 3}
+  m_PrefabInstance: {fileID: 130021887}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &130021889 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5862244198052837395, guid: a219c2d51919f40aba01dbf15f27ca6a, type: 3}
+  m_PrefabInstance: {fileID: 130021887}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &151301833
 GameObject:
   m_ObjectHideFlags: 0
@@ -693,7 +820,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 73.219604, z: 0}
-  m_LocalScale: {x: 52.216057, y: 29.287844, z: 52.216057}
+  m_LocalScale: {x: 52.216057, y: 29.287844, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 105293103}
@@ -854,6 +981,7 @@ RectTransform:
   m_Children:
   - {fileID: 288759308}
   - {fileID: 574067370}
+  - {fileID: 130021888}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -879,7 +1007,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &561028057
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -926,7 +1054,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   m_Color: {r: 0.21960784, g: 0.21960784, b: 0.21960784, a: 0}
   m_FlipX: 0
@@ -947,7 +1075,7 @@ Transform:
   m_GameObject: {fileID: 561028056}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.9, y: 24.9, z: 3.7}
+  m_LocalPosition: {x: -7.4, y: 27.3, z: 3.7}
   m_LocalScale: {x: 200, y: 200, z: 200}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -1269,14 +1397,47 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueController
   audioSource: {fileID: 619614828}
-  openingLine: {fileID: 8300000, guid: 2f1d4e64fdca842188e3457603362e60, type: 3}
-  completionLine: {fileID: 8300000, guid: a31bf9ce384014b3388f5097cd7707f0, type: 3}
+  captionBox: {fileID: 130021889}
+  captionLingerTime: 0.1
+  spanishFont: {fileID: 11400000, guid: ec752da0268ee4eb48f9eab01ba26e37, type: 2}
+  captionFontSizeMin: 12
+  captionFontSizeMax: 36
+  openingLine:
+    english: {fileID: 8300000, guid: 6d25ef48144ea473abbf9432cb9bfb36, type: 3}
+    spanish: {fileID: 8300000, guid: 1b7cf209b621e457f9542460135e406d, type: 3}
+  openingCaption:
+    english: Ping seems a little nervous about getting her eyes checked. Let's try
+      tapping her to move the light into the right place for her eye exam.
+    spanish: Ping parece un poco nerviosa de que le revisen los ojos. Intentemos
+      darle unos toques para colocar la luz en el lugar correcto para su examen ocular.
+  completionLine:
+    english: {fileID: 8300000, guid: ddc8a9f3a7c664d2e9ca6e6902a11b16, type: 3}
+    spanish: {fileID: 8300000, guid: 83f7152feb5ef46368e74247d42b8a0c, type: 3}
+  completionCaption:
+    english: Yeah Ping! She doesn't seem nervous anymore. Panda bears have black
+      and white fur that helps them hide in forests. And their favorite food is bamboo!
+    spanish: "\xA1Vamos, Ping! Ya no parece nerviosa. Los osos panda tienen un pelaje
+      blanco y negro que les ayuda a esconderse en los bosques. \xA1Y su comida favorita
+      es el bamb\xFA!"
+  nudgeOnFixedTimer: 0
   nudgeDelay: 5
   nudgeInterval: 6
   nudgeLines:
-  - {fileID: 8300000, guid: 96c8aa7aa20e74ee3bd0cfb4e044b45a, type: 3}
-  - {fileID: 8300000, guid: 976abc1c3408143bbaddf601b7452f2a, type: 3}
-  - {fileID: 8300000, guid: 37805b18973924390b8d74f8ea4d8476, type: 3}
+  - english: {fileID: 8300000, guid: 85a87d40471ed4facadec89187b18feb, type: 3}
+    spanish: {fileID: 8300000, guid: ae1286a7fc17c497faaa35525b5484e9, type: 3}
+  - english: {fileID: 8300000, guid: 8febde29e59dd4e6684469ece8c73f52, type: 3}
+    spanish: {fileID: 8300000, guid: 9e983c2b6dcaa431b93157912797d1d0, type: 3}
+  - english: {fileID: 8300000, guid: caf8a0c99ffb6466bbc346eee3a6b9a1, type: 3}
+    spanish: {fileID: 8300000, guid: 0c1ac0c9bb2f7492282b0b22778a47cf, type: 3}
+  nudgeCaptions:
+  - english: Once you have the scope over Ping's eye tap the button to turn it on.
+      The light needs to shine into the center of her eye, the center is called the
+      'pupil'.
+    spanish: "La luz debe incidir en el centro de su ojo; el centro se llama \xABpupila\xBB."
+  - english: Can you find a way to turn on the light?
+    spanish: "\xBFPuedes encontrar la manera de encender la luz?"
+  - english: Is that a button on top?
+    spanish: "\xBFEs eso un bot\xF3n en la parte de arriba?"
 --- !u!82 &619614828
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1418,7 +1579,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68bdfa29c62654b85a42d8e8d054eb8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PandaController
-  scopeDraggable: {fileID: 1246194125}
+  scopeObject: {fileID: 1246194120}
   combinedSprites:
   - {fileID: 33988702}
   - {fileID: 1335138826}
@@ -1431,13 +1592,11 @@ MonoBehaviour:
   pandaAnimator: {fileID: 1076327139}
   orangeGlowStateName: OrangeButton
   greenGlowStateName: GreenButton
-  loopCelebrationStateName: PingQRAnimations
   confettiAnimator: {fileID: 561312581}
   confettiStateName: Confetti
   congratsButton: {fileID: 288759309}
   dialogueController: {fileID: 619614827}
   menuSceneName: _02MiniGameSelect
-  zone4YThreshold: 200
 --- !u!4 &883705863
 Transform:
   m_ObjectHideFlags: 0
@@ -2383,7 +2542,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 111.00098, z: 0}
-  m_LocalScale: {x: 52.216057, y: 29.287844, z: 52.216057}
+  m_LocalScale: {x: 52.216057, y: 29.287844, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 105293103}
@@ -2476,7 +2635,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -54.76831, z: 0}
-  m_LocalScale: {x: 52.216057, y: 52.216057, z: 52.216057}
+  m_LocalScale: {x: 52.216057, y: 52.216057, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 105293103}
@@ -2569,7 +2728,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -11.275757, z: 0}
-  m_LocalScale: {x: 52.216057, y: 29.287844, z: 52.216057}
+  m_LocalScale: {x: 52.216057, y: 29.287844, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 105293103}
@@ -2752,7 +2911,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 30.020142, z: 0}
-  m_LocalScale: {x: 52.216057, y: 52.216057, z: 52.216057}
+  m_LocalScale: {x: 52.216057, y: 52.216057, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 105293103}

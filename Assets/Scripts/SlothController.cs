@@ -46,6 +46,11 @@ public class SlothController : MonoBehaviour
     [Header("Dialogue")]
     public DialogueController dialogueController;
 
+    [Header("Position Zone Images")]
+    [Tooltip("Image component on each clickable zone (index matches positionIndex). " +
+             "The active zone's image is hidden; others are shown.")]
+    public Image[] zoneImages; // length 3
+
     [Header("Navigation")]
     public string menuSceneName = "_02MiniGameSelect";
 
@@ -74,6 +79,8 @@ public class SlothController : MonoBehaviour
 
         if (congratsButton != null)
             congratsButton.SetActive(false);
+
+        SetZoneImageVisible(startingPositionIndex, false);
     }
 
     // ── Called by SlothPositionZone ───────────────────────────────────────────
@@ -90,10 +97,14 @@ public class SlothController : MonoBehaviour
 
         // Deactivate previous, activate new
         if (activeIndex >= 0 && activeIndex < slothPositions.Length)
+        {
             if (slothPositions[activeIndex] != null)
                 slothPositions[activeIndex].SetActive(false);
+            SetZoneImageVisible(activeIndex, true);
+        }
 
         slothPositions[index].SetActive(true);
+        SetZoneImageVisible(index, false);
         activeIndex = index;
     }
 
@@ -125,6 +136,10 @@ public class SlothController : MonoBehaviour
     IEnumerator SuccessSequence(Draggable2D cuff)
     {
         cuff.gameObject.SetActive(false);
+
+        if (zoneImages != null)
+            foreach (var img in zoneImages)
+                if (img != null) img.enabled = false;
         MiniGameProgress.SetCompleted(GrabbableType.Sloth);
 
         if (confettiAnimator != null) confettiAnimator.Play(confettiStateName);
@@ -146,6 +161,12 @@ public class SlothController : MonoBehaviour
         playerStarted = true;
         if (dialogueController != null)
             dialogueController.OnPlayerStarted();
+    }
+
+    void SetZoneImageVisible(int index, bool visible)
+    {
+        if (zoneImages == null || index < 0 || index >= zoneImages.Length) return;
+        if (zoneImages[index] != null) zoneImages[index].enabled = visible;
     }
 
     public void OnBackToMenuPressed()

@@ -76,6 +76,7 @@ SpriteAtlas:
     isAtlasV2: 0
     cachedData: {fileID: 0}
     packedSpriteRenderDataKeys:
+    - b5b5fe31e89894246ace698589957aa8: 21300000
     - c16fbdb1ede2c43319d687e3cf74592f: 21300000
     - 91328b73399ad4afab1dc1ee59e970f7: 21300000
     - cc66d874afaa2453993538150ddca9f4: 21300000
@@ -91,6 +92,7 @@ SpriteAtlas:
     - 22a2fa3a5544b4c0f91fc744744d4a19: 21300000
     - fcfa0c6a576c3416e9bc42c0f65928f6: 21300000
     - 891b8c9a08cc24b6ab1fcf2d6a5d3d4e: 21300000
+    - f201963c3ba374c9d871c895ba173822: 21300000
     - 249c1f1d926c7430d9b80f8265c9ec20: 21300000
     - c5072fad9f3a74bbebbb0818b54cae6c: 21300000
     - fd20b42e4a0ee4a169361fa271a0a7e3: 21300000
@@ -99,6 +101,7 @@ SpriteAtlas:
     - a2cd80af077614dd9baf199043189845: 21300000
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
+  - {fileID: 21300000, guid: b5b5fe31e89894246ace698589957aa8, type: 3}
   - {fileID: 21300000, guid: c16fbdb1ede2c43319d687e3cf74592f, type: 3}
   - {fileID: 21300000, guid: 91328b73399ad4afab1dc1ee59e970f7, type: 3}
   - {fileID: 21300000, guid: cc66d874afaa2453993538150ddca9f4, type: 3}
@@ -114,6 +117,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 22a2fa3a5544b4c0f91fc744744d4a19, type: 3}
   - {fileID: 21300000, guid: fcfa0c6a576c3416e9bc42c0f65928f6, type: 3}
   - {fileID: 21300000, guid: 891b8c9a08cc24b6ab1fcf2d6a5d3d4e, type: 3}
+  - {fileID: 21300000, guid: f201963c3ba374c9d871c895ba173822, type: 3}
   - {fileID: 21300000, guid: 249c1f1d926c7430d9b80f8265c9ec20, type: 3}
   - {fileID: 21300000, guid: c5072fad9f3a74bbebbb0818b54cae6c, type: 3}
   - {fileID: 21300000, guid: fd20b42e4a0ee4a169361fa271a0a7e3, type: 3}
@@ -121,6 +125,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 27c73e4f993a64a2098973b8b56a90b0, type: 3}
   - {fileID: 21300000, guid: a2cd80af077614dd9baf199043189845, type: 3}
   m_PackedSpriteNamesToIndex:
+  - dropbox_outline
   - base+pole
   - slider_mark@300x
   - map_ren-ipad-cl
@@ -136,6 +141,7 @@ SpriteAtlas:
   - homepage_visitthezoo@300x
   - GreenCheckmark
   - slider_progress@300x
+  - dropbox
   - Congrats
   - map_gigi-ipad-bw
   - measuring bar00000

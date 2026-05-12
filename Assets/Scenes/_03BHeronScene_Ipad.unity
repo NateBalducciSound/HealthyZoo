@@ -800,6 +800,7 @@ RectTransform:
   - {fileID: 104073255}
   - {fileID: 2092202611}
   - {fileID: 1823286445}
+  - {fileID: 1332326247}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -935,13 +936,43 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueController
   audioSource: {fileID: 303465988}
-  openingLine: {fileID: 8300000, guid: c1b1234a1c9e94fa2858cbcbd6cbb964, type: 3}
-  completionLine: {fileID: 8300000, guid: 8f2974b5d11114cdb9648116584cc9fe, type: 3}
+  captionBox: {fileID: 1332326246}
+  captionLingerTime: 0.1
+  spanishFont: {fileID: 11400000, guid: ec752da0268ee4eb48f9eab01ba26e37, type: 2}
+  openingLine:
+    english: {fileID: 8300000, guid: bc4d1394868b34e79af3a332b5d5dcf2, type: 3}
+    spanish: {fileID: 8300000, guid: 307767a437d274c91a396b34ecd146af, type: 3}
+  openingCaption:
+    english: Ren the stork needs his heart rate measured, but first we want to help
+      him relax a little. Drag the slider to find the right light brightness and
+      make him feel ready for his exam.
+    spanish: "La cig\xFCe\xF1a Ren necesita que le midan el ritmo card\xEDaco, pero
+      primero queremos ayudarle a relajarse un poco. Arrastra el control deslizador
+      para encontrar el brillo de luz adecuado y haz que se sienta listo para su
+      examen."
+  completionLine:
+    english: {fileID: 8300000, guid: e8a8be606f9304b7899b35fe0596b2ec, type: 3}
+    spanish: {fileID: 8300000, guid: c919a1d5a00c74c4bb6f482ad2064229, type: 3}
+  completionCaption:
+    english: Ren, like many birds, is much calmer when the lights are low. Good job.
+      A baby heron can learn to fly just a few weeks after it hatches from its egg!
+    spanish: "Ren, al igual que muchas aves, est\xE1 mucho m\xE1s tranquilo cuando
+      las luces est\xE1n tenues. \xA1Buen trabajo! \xA1Una garza beb\xE9 puede aprender
+      a volar apenas unas semanas despu\xE9s de salir del huevo!"
+  nudgeOnFixedTimer: 0
   nudgeDelay: 5
   nudgeInterval: 6
   nudgeLines:
-  - {fileID: 8300000, guid: 0fbd35ebec3e542ba97cc1d27b7d61ea, type: 3}
-  - {fileID: 8300000, guid: 068ca4a77711247a2b9f937fdba9b47e, type: 3}
+  - english: {fileID: 8300000, guid: b8c32f3ce242e4f8f80d4b3dad2a8085, type: 3}
+    spanish: {fileID: 8300000, guid: 8a534abe7f7524e8a8735280f4466a23, type: 3}
+  - english: {fileID: 8300000, guid: 72a80c7a0acea4660ade2414967c6934, type: 3}
+    spanish: {fileID: 8300000, guid: a751b0f3de04a43208a48e18c5ff3ae6, type: 3}
+  nudgeCaptions:
+  - english: Drag the slider so it's not too bright or too dark.
+    spanish: Arrastra el deslizador para que no quede ni demasiado brillante ni demasiado
+      oscuro.
+  - english: Bring the stethoscope to his chest to check his heart.
+    spanish: "Acerca el estetoscopio a su pecho para examinar su coraz\xF3n."
 --- !u!4 &303465990
 Transform:
   m_ObjectHideFlags: 0
@@ -1199,7 +1230,7 @@ BoxCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: -1.0150458, y: -1.971698}
   m_SpriteTilingProperty:
-    border: {x: 0.36400002, y: 0.44000003, z: 2.384, w: 4.504}
+    border: {x: 0.52, y: 0.62857145, z: 3.4057143, w: 6.4342856}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 4.32, y: 7.68}
     newSize: {x: 4.32, y: 7.68}
@@ -1672,6 +1703,129 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1286922259}
   m_CullTransparentMesh: 1
+--- !u!1001 &1332326245
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 298625174}
+    m_Modifications:
+    - target: {fileID: 4350157547731124406, guid: 41fee0255130b49e0b3bc1f26af8924a, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350157547731124406, guid: 41fee0255130b49e0b3bc1f26af8924a, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350157547731124406, guid: 41fee0255130b49e0b3bc1f26af8924a, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350157547731124406, guid: 41fee0255130b49e0b3bc1f26af8924a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350157547731124406, guid: 41fee0255130b49e0b3bc1f26af8924a, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350157547731124406, guid: 41fee0255130b49e0b3bc1f26af8924a, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350157547731124406, guid: 41fee0255130b49e0b3bc1f26af8924a, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350157547731124406, guid: 41fee0255130b49e0b3bc1f26af8924a, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350157547731124406, guid: 41fee0255130b49e0b3bc1f26af8924a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350157547731124406, guid: 41fee0255130b49e0b3bc1f26af8924a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350157547731124406, guid: 41fee0255130b49e0b3bc1f26af8924a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350157547731124406, guid: 41fee0255130b49e0b3bc1f26af8924a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350157547731124406, guid: 41fee0255130b49e0b3bc1f26af8924a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350157547731124406, guid: 41fee0255130b49e0b3bc1f26af8924a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350157547731124406, guid: 41fee0255130b49e0b3bc1f26af8924a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350157547731124406, guid: 41fee0255130b49e0b3bc1f26af8924a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350157547731124406, guid: 41fee0255130b49e0b3bc1f26af8924a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350157547731124406, guid: 41fee0255130b49e0b3bc1f26af8924a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350157547731124406, guid: 41fee0255130b49e0b3bc1f26af8924a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350157547731124406, guid: 41fee0255130b49e0b3bc1f26af8924a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -458
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350157547731124406, guid: 41fee0255130b49e0b3bc1f26af8924a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350157547731124406, guid: 41fee0255130b49e0b3bc1f26af8924a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350157547731124406, guid: 41fee0255130b49e0b3bc1f26af8924a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8400631623218979471, guid: 41fee0255130b49e0b3bc1f26af8924a, type: 3}
+      propertyPath: m_Name
+      value: TextBox
+      objectReference: {fileID: 0}
+    - target: {fileID: 8400631623218979471, guid: 41fee0255130b49e0b3bc1f26af8924a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 41fee0255130b49e0b3bc1f26af8924a, type: 3}
+--- !u!1 &1332326246 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8400631623218979471, guid: 41fee0255130b49e0b3bc1f26af8924a, type: 3}
+  m_PrefabInstance: {fileID: 1332326245}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &1332326247 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 4350157547731124406, guid: 41fee0255130b49e0b3bc1f26af8924a, type: 3}
+  m_PrefabInstance: {fileID: 1332326245}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1443739627
 GameObject:
   m_ObjectHideFlags: 0
