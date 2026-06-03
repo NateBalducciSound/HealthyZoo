@@ -19,9 +19,12 @@ public class DialogueController : MonoBehaviour
     [SerializeField] private float captionFontSizeMin = 12f;
     [Tooltip("Largest font size auto-sizing will grow to.")]
     [SerializeField] private float captionFontSizeMax = 36f;
+    [Tooltip("Fixed word spacing in pixels — stays constant regardless of auto-sized font size.")]
+    [SerializeField] private float fixedWordSpacingPx = 6f;
 
     private TMP_Text _captionText;
     private TMP_FontAsset _defaultFont;
+    private Coroutine _wordSpacingRoutine;
 
     [Header("Opening")]
     [Tooltip("Plays once automatically when the scene loads — input is blocked until it finishes")]
@@ -52,6 +55,7 @@ public class DialogueController : MonoBehaviour
     private bool _finished = false;
     private int _nudgeIndex = 0;
     private Coroutine _nudgeRoutine;
+    private Coroutine _captionClearRoutine;
     private EventSystem _eventSystem;
 
     void Start()
@@ -92,6 +96,11 @@ public class DialogueController : MonoBehaviour
             ResetNudgeTimer();
     }
 
+    public void StopNudge()
+    {
+        if (_nudgeRoutine != null) { StopCoroutine(_nudgeRoutine); _nudgeRoutine = null; }
+    }
+
     public void ResetNudgeTimer()
     {
         if (_finished) return;
@@ -99,6 +108,16 @@ public class DialogueController : MonoBehaviour
         if (_nudgeRoutine != null) StopCoroutine(_nudgeRoutine);
         if (nudgeLines.Length > 0)
             _nudgeRoutine = StartCoroutine(NudgeLoop(nudgeDelay));
+    }
+
+    public void PlayVoiceLine(LocalizedClip clip, LocalizedCaption caption)
+    {
+        AudioClip resolved = LanguageManager.Resolve(clip);
+        if (resolved == null) return;
+        audioSource.Stop();
+        audioSource.PlayOneShot(resolved);
+        ShowCaption(LanguageManager.ResolveCaption(caption));
+        ScheduleCaptionClear(resolved.length);
     }
 
     public void OnLevelCompleted()
@@ -112,7 +131,7 @@ public class DialogueController : MonoBehaviour
         {
             audioSource.PlayOneShot(clip);
             ShowCaption(LanguageManager.ResolveCaption(completionCaption));
-            StartCoroutine(ClearCaptionAfter(clip.length));
+            ScheduleCaptionClear(clip.length);
         }
         else
         {
@@ -126,7 +145,7 @@ public class DialogueController : MonoBehaviour
         ShowCaption(LanguageManager.ResolveCaption(openingCaption));
         yield return new WaitForSeconds(clip.length);
 
-        StartCoroutine(ClearCaptionAfter(0f));
+        ScheduleCaptionClear(0f);
         SetInputLocked(false);
 
         if (nudgeLines.Length > 0 && (!_playerStarted || nudgeOnFixedTimer))
@@ -152,7 +171,7 @@ public class DialogueController : MonoBehaviour
                     ShowCaption(caption);
 
                     yield return new WaitForSeconds(clip.length);
-                    StartCoroutine(ClearCaptionAfter(0f));
+                    ScheduleCaptionClear(0f);
                 }
 
                 _nudgeIndex = (_nudgeIndex + 1) % nudgeLines.Length;
@@ -160,6 +179,12 @@ public class DialogueController : MonoBehaviour
 
             yield return new WaitForSeconds(nudgeInterval);
         }
+    }
+
+    void ScheduleCaptionClear(float delay)
+    {
+        if (_captionClearRoutine != null) StopCoroutine(_captionClearRoutine);
+        _captionClearRoutine = StartCoroutine(ClearCaptionAfter(delay));
     }
 
     IEnumerator ClearCaptionAfter(float delay)
@@ -195,8 +220,20 @@ public class DialogueController : MonoBehaviour
             if (_defaultFont == null) _defaultFont = _captionText.font;
             bool isSpanish = spanishFont != null && LanguageManager.CurrentLanguage == LanguageManager.Language.Spanish;
             _captionText.font = isSpanish ? spanishFont : _defaultFont;
-            _captionText.wordSpacing = isSpanish ? 15f : 0f;
             _captionText.text = text;
+
+            // Apply fixed pixel word spacing after auto-size resolves next frame.
+            if (_wordSpacingRoutine != null) StopCoroutine(_wordSpacingRoutine);
+            _wordSpacingRoutine = StartCoroutine(ApplyFixedWordSpacing());
         }
+    }
+
+    // Waits one frame for TMP auto-sizing to compute fontSize, then sets
+    // wordSpacing so the pixel gap between words stays constant.
+    IEnumerator ApplyFixedWordSpacing()
+    {
+        yield return null;
+        if (_captionText != null && _captionText.fontSize > 0f)
+            _captionText.wordSpacing = (fixedWordSpacingPx / _captionText.fontSize) * 100f;
     }
 }

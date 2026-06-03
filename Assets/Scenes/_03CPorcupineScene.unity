@@ -557,6 +557,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1001 &314633577
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 133f4c7f73d8d4e51aa5acaac830895e, type: 3}
 --- !u!1 &316504133
 GameObject:
   m_ObjectHideFlags: 0
@@ -1425,6 +1438,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 343.2
       objectReference: {fileID: 0}
+    - target: {fileID: 7113045436283634966, guid: a80abad21f3004f509413d1e12350ccb, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 841
+      objectReference: {fileID: 0}
     - target: {fileID: 8192087940184330248, guid: a80abad21f3004f509413d1e12350ccb, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -1788,8 +1805,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueController
   audioSource: {fileID: 1508713119}
   captionBox: {fileID: 884638559}
-  spanishFont: {fileID: 11400000, guid: ec752da0268ee4eb48f9eab01ba26e37, type: 2}
   captionLingerTime: 0.1
+  spanishFont: {fileID: 11400000, guid: ec752da0268ee4eb48f9eab01ba26e37, type: 2}
+  captionFontSizeMin: 12
+  captionFontSizeMax: 36
   openingLine:
     english: {fileID: 8300000, guid: 35d1d1c0677d54e88b3fca6436986ec7, type: 3}
     spanish: {fileID: 8300000, guid: ea30fd75f487e430b9fa244c36148284, type: 3}
@@ -1797,9 +1816,9 @@ MonoBehaviour:
     english: Penny the porcupine is very nervous about getting a shot. Your job is
       to help her get ready by dragging the cleaning wipe, syringe, and Band-Aid
       into the correct order.
-    spanish: Penny, la puercoespín, está muy nerviosa por recibir una inyección.
+    spanish: "Penny, la puercoesp\xEDn, est\xE1 muy nerviosa por recibir una inyecci\xF3n.
       Tu tarea es ayudarla a prepararse arrastrando la toallita limpiadora, la jeringa
-      y la curita para colocarlas en el orden correcto.
+      y la curita para colocarlas en el orden correcto."
   completionLine:
     english: {fileID: 8300000, guid: 5fa13346cfbab45b8995e9142bb9d154, type: 3}
     spanish: {fileID: 8300000, guid: da63a554de9e640eaa9016c862c61d8c, type: 3}
@@ -1807,9 +1826,9 @@ MonoBehaviour:
     english: You did a great job helping Penny get ready - it was over before she
       knew it! Porcupines have natural antibiotics in their bodies to prevent infections
       in case they accidentally poke themselves.
-    spanish: Hiciste un gran trabajo ayudando a Penny a prepararse; ¡todo terminó
-      antes de que se diera cuenta! Los puercoespines tienen antibióticos naturales
-      en su organismo para prevenir infecciones en caso de que se pinchen accidentalmente.
+    spanish: "Hiciste un gran trabajo ayudando a Penny a prepararse; \xA1todo termin\xF3
+      antes de que se diera cuenta! Los puercoespines tienen antibi\xF3ticos naturales
+      en su organismo para prevenir infecciones en caso de que se pinchen accidentalmente."
   nudgeOnFixedTimer: 0
   nudgeDelay: 5
   nudgeInterval: 6
@@ -1821,8 +1840,8 @@ MonoBehaviour:
   nudgeCaptions:
   - english: Think about the three things to do... drag them so the wipe is first,
       then the syringe, and finally the band-aid.
-    spanish: Piensa en las tres cosas que hay que hacer... ¿deberíamos usar la toallita
-      para limpiarle el brazo primero?
+    spanish: "Piensa en las tres cosas que hay que hacer... \xBFdeber\xEDamos usar
+      la toallita para limpiarle el brazo primero?"
   - english: Try the swab first to clean Penny's arm.
     spanish: Prueba primero con el hisopo para limpiar el brazo de Penny.
 --- !u!4 &1508713121
@@ -2234,3 +2253,4 @@ SceneRoots:
   - {fileID: 1508713121}
   - {fileID: 1881005619}
   - {fileID: 3220258710288413789}
+  - {fileID: 314633577}

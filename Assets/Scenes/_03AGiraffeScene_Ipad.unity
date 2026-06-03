@@ -2493,3 +2493,17 @@ SceneRoots:
   - {fileID: 1668851515}
   - {fileID: 919989834}
   - {fileID: 1346286196}
+
+--- !u!1001 &659490640
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 133f4c7f73d8d4e51aa5acaac830895e, type: 3}

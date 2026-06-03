@@ -89,6 +89,7 @@ public class AllCompletePanel : MonoBehaviour
         }
 
         _canDismiss = true;
+        OnTapped();
     }
 
     IEnumerator FadeOut()

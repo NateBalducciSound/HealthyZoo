@@ -103,6 +103,7 @@ public class PlayButtonSpawner : MonoBehaviour
             {
                 btn.onClick.AddListener(OnPlayPressed);
             }
+            currentButton.AddComponent<PlayButtonFlash>();
         }
 
     }

@@ -29,6 +29,10 @@ public class SplashScreenController : MonoBehaviour
     [Tooltip("If true, repeats the inactivity prompt on this interval until tapped")]
     [SerializeField] private bool loopInactivityPrompt = true;
 
+    [Header("Menu Reveal")]
+    [Tooltip("Called once the splash fades out — plays the reveal voice line")]
+    [SerializeField] private MenuManager menuManager;
+
     [Header("Settings")]
     [Tooltip("Player can tap to dismiss before the voice line finishes")]
     [SerializeField] private bool allowSkip = true;
@@ -159,6 +163,7 @@ public class SplashScreenController : MonoBehaviour
 
         _canvasGroup.alpha = 0f;
         _canvasGroup.blocksRaycasts = false;
+        if (menuManager != null) menuManager.PlayRevealLine();
         gameObject.SetActive(false);
     }
 }

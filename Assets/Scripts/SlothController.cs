@@ -51,6 +51,10 @@ public class SlothController : MonoBehaviour
              "The active zone's image is hidden; others are shown.")]
     public Image[] zoneImages; // length 3
 
+    [Header("Cuff Background")]
+    [Tooltip("Background sprite renderer behind the cuff that fades out on completion.")]
+    public SpriteRenderer cuffBackground;
+
     [Header("Navigation")]
     public string menuSceneName = "_02MiniGameSelect";
 
@@ -127,6 +131,7 @@ public class SlothController : MonoBehaviour
         else
         {
             cuff.ReturnToStart();
+            AudioManager.PlayIncorrect();
             dialogueController?.ResetNudgeTimer();
         }
     }
@@ -136,6 +141,8 @@ public class SlothController : MonoBehaviour
     IEnumerator SuccessSequence(Draggable2D cuff)
     {
         cuff.gameObject.SetActive(false);
+
+        if (cuffBackground != null) StartCoroutine(FadeOut(cuffBackground, 0.6f));
 
         if (zoneImages != null)
             foreach (var img in zoneImages)
@@ -151,6 +158,21 @@ public class SlothController : MonoBehaviour
         yield return new WaitForSeconds(dialogueController != null ? dialogueController.CompletionLineDuration : 0f);
 
         if (congratsButton != null) congratsButton.SetActive(true);
+    }
+
+    IEnumerator FadeOut(SpriteRenderer sr, float duration)
+    {
+        Color c = sr.color;
+        float start = c.a;
+        float elapsed = 0f;
+        while (elapsed < duration)
+        {
+            elapsed += Time.deltaTime;
+            c.a = Mathf.Lerp(start, 0f, elapsed / duration);
+            sr.color = c;
+            yield return null;
+        }
+        sr.gameObject.SetActive(false);
     }
 
     // ── Helpers ───────────────────────────────────────────────────────────────

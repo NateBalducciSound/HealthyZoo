@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8125337064357867907
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2467791971616695149}
+  - component: {fileID: 4655581237904048705}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2467791971616695149
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8125337064357867907}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4655581237904048705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8125337064357867907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e0762921ef814e379168b876635e70c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioManager
+  buttonClickClip: {fileID: 8300000, guid: aa9c6795a08dd4e1bb7491bc24625e17, type: 3}
+  levelCompleteClip: {fileID: 8300000, guid: 9613ce864ef9f4fe2be345e96eedde0c, type: 3}
+  correctActionClip: {fileID: 8300000, guid: d55459f31c6924f458e68c8966d3f721, type: 3}
+  incorrectActionClip: {fileID: 8300000, guid: b5fe8b34b4d5e4edd8cc2b1437658390, type: 3}
+  sliderNotchClips:
+  - {fileID: 8300000, guid: 885115cc7294542c08c9f318fb8f2363, type: 3}
+  - {fileID: 8300000, guid: 63228db99ee1f4f0fac987460ffb6c9d, type: 3}
+  - {fileID: 8300000, guid: e2a545acdf2c745c5a5858c1bc92c19b, type: 3}
+  scanButtonClip: {fileID: 8300000, guid: 87ff955bd77594e18804fd900aef9099, type: 3}
+  clickVolume: 1
+  completeVolume: 0.57
+  correctActionVolume: 1
+  incorrectActionVolume: 1
+  notchVolume: 0.699
+  scanButtonVolume: 1
+  musicVolume: 0.3
+  mixerGroup: {fileID: 24300002, guid: 6c8de38a7bafb4120a25cff414f169d8, type: 2}

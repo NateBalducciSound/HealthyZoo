@@ -939,6 +939,8 @@ MonoBehaviour:
   captionBox: {fileID: 1332326246}
   captionLingerTime: 0.1
   spanishFont: {fileID: 11400000, guid: ec752da0268ee4eb48f9eab01ba26e37, type: 2}
+  captionFontSizeMin: 12
+  captionFontSizeMax: 36
   openingLine:
     english: {fileID: 8300000, guid: bc4d1394868b34e79af3a332b5d5dcf2, type: 3}
     spanish: {fileID: 8300000, guid: 307767a437d274c91a396b34ecd146af, type: 3}
@@ -1031,7 +1033,7 @@ Animator:
   m_GameObject: {fileID: 404679490}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 287afa8164f8a4caebd18a0f1a97e534, type: 2}
+  m_Controller: {fileID: 9100000, guid: 4bf29a30c10b348c7a64d8321f9110a9, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1326,6 +1328,11 @@ MonoBehaviour:
   heartbeatSpeedFast: 1
   heartbeatSpeedNormal: 0.66
   heartbeatSpeedSlow: 0.33
+  heartbeatClipFast: {fileID: 8300000, guid: 80b569747a793432bae4a295033a089b, type: 3}
+  heartbeatClipNormal: {fileID: 8300000, guid: bfbd851ab4589477cb987c593e43a026, type: 3}
+  heartbeatClipSlow: {fileID: 8300000, guid: b5a8b0003e3e04829a15fb12195a656c, type: 3}
+  heartbeatVolume: 1
+  heartbeatAudioOffset: 0.155
   stethoscopeAnimator: {fileID: 259039215}
   startupStateName: HeronStartUpAnimation
   loopStateName: HeronCelebrationLoopAnimation
@@ -1355,6 +1362,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &677430535
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 133f4c7f73d8d4e51aa5acaac830895e, type: 3}
 --- !u!1 &952191479
 GameObject:
   m_ObjectHideFlags: 0
@@ -2221,6 +2241,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SettingsRoot
       objectReference: {fileID: 0}
+    - target: {fileID: 4619757299269663185, guid: a80abad21f3004f509413d1e12350ccb, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5066775938895281148, guid: a80abad21f3004f509413d1e12350ccb, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -2297,15 +2321,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6206422123525825135, guid: 53d51ef7972d04249a37c9ea879b182c, type: 3}
       propertyPath: m_LocalScale.x
-      value: 13
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6206422123525825135, guid: 53d51ef7972d04249a37c9ea879b182c, type: 3}
       propertyPath: m_LocalScale.y
-      value: 27.444445
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6206422123525825135, guid: 53d51ef7972d04249a37c9ea879b182c, type: 3}
       propertyPath: m_LocalScale.z
-      value: 2.8888888
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6206422123525825135, guid: 53d51ef7972d04249a37c9ea879b182c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2429,7 +2453,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 27c73e4f993a64a2098973b8b56a90b0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 27423365c23844422b5a10efd929177a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2655,3 +2679,4 @@ SceneRoots:
   - {fileID: 1751366955}
   - {fileID: 630928307}
   - {fileID: 303465990}
+  - {fileID: 677430535}

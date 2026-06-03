@@ -41,6 +41,15 @@ public class HeronLevelController : MonoBehaviour
     [Tooltip("Animator speed when slider = 2 (too slow)")]
     public float heartbeatSpeedSlow   = 0.4f;
 
+    [Header("Heartbeat Audio")]
+    public AudioClip heartbeatClipFast;
+    public AudioClip heartbeatClipNormal;
+    public AudioClip heartbeatClipSlow;
+    [Range(0f, 1f)] public float heartbeatVolume = 1f;
+    [Range(0f, 1f)]
+    [Tooltip("Normalized position in the animation cycle to play the sound (0=start, 0.5=middle, 1=end)")]
+    public float heartbeatAudioOffset = 0.5f;
+
     [Header("Stethoscope Drop Animation")]
     public Animator stethoscopeAnimator;
     [Tooltip("Exact name of the Startup state in the Animator Controller")]
@@ -73,11 +82,16 @@ public class HeronLevelController : MonoBehaviour
     private bool _playerStarted = false;
     private int currentSliderIndex = -1;
     private Coroutine crossfadeCoroutine;
+    private Coroutine heartbeatCoroutine;
     private SpriteRenderer[] overlayRenderers;
+    private AudioSource _heartbeatSource;
 
     void Start()
     {
         AsyncSceneLoader.Preload(DeviceDetector.GetSceneName(menuSceneName));
+
+        _heartbeatSource = gameObject.AddComponent<AudioSource>();
+        _heartbeatSource.playOnAwake = false;
 
         // Disable animator so it doesn't overwrite sprites while slider is active
         if (stethoscopeAnimator) stethoscopeAnimator.enabled = false;
@@ -98,6 +112,7 @@ public class HeronLevelController : MonoBehaviour
             positionSlider.interactable = false;
             dialogueController.OnInputUnlocked += () => positionSlider.interactable = true;
         }
+
 
         // Create overlay renderers for crossfading
         overlayRenderers = new SpriteRenderer[spriteSets.Length];
@@ -139,6 +154,13 @@ public class HeronLevelController : MonoBehaviour
         if (index == currentSliderIndex) return;
         currentSliderIndex = index;
 
+        if (index == 1) AudioManager.PlayCorrect();
+        else            AudioManager.PlayIncorrect();
+
+        // Restart heartbeat audio loop for new slider position
+        if (heartbeatCoroutine != null) StopCoroutine(heartbeatCoroutine);
+        heartbeatCoroutine = StartCoroutine(HeartbeatLoop(index));
+
         // Crossfade sprites
         if (crossfadeCoroutine != null) StopCoroutine(crossfadeCoroutine);
         crossfadeCoroutine = StartCoroutine(CrossfadeSprites(index));
@@ -149,6 +171,35 @@ public class HeronLevelController : MonoBehaviour
             heartbeatAnimator.speed = index == 0 ? heartbeatSpeedFast
                                     : index == 2 ? heartbeatSpeedSlow
                                     : heartbeatSpeedNormal;
+        }
+    }
+
+    // ─── Heartbeat Audio Loop ──────────────────────────────────────────────────
+
+    IEnumerator HeartbeatLoop(int sliderIndex)
+    {
+        AudioClip clip = sliderIndex == 0 ? heartbeatClipFast
+                       : sliderIndex == 2 ? heartbeatClipSlow
+                       : heartbeatClipNormal;
+
+        if (clip == null || heartbeatAnimator == null) yield break;
+
+        bool triggered = true; // skip until the next natural cycle crossing
+        while (true)
+        {
+            float norm = heartbeatAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime % 1f;
+
+            if (!triggered && norm >= heartbeatAudioOffset)
+            {
+                _heartbeatSource.PlayOneShot(clip, heartbeatVolume);
+                triggered = true;
+            }
+            else if (triggered && norm < heartbeatAudioOffset)
+            {
+                triggered = false;
+            }
+
+            yield return null;
         }
     }
 
@@ -211,6 +262,7 @@ public class HeronLevelController : MonoBehaviour
         else
         {
             item.ReturnToStart();
+            AudioManager.PlayIncorrect();
         }
     }
 
@@ -224,6 +276,7 @@ public class HeronLevelController : MonoBehaviour
         else
         {
             item.ReturnToStart();
+            AudioManager.PlayIncorrect();
         }
     }
 
@@ -259,6 +312,7 @@ public class HeronLevelController : MonoBehaviour
 
     IEnumerator SuccessSequence(GameObject itemGO)
     {
+        if (heartbeatCoroutine != null) { StopCoroutine(heartbeatCoroutine); heartbeatCoroutine = null; }
         itemGO.SetActive(false);
         positionSlider.interactable = false;
         StartCoroutine(FadeOutToolbar());

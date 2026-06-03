@@ -80,6 +80,7 @@ SpriteAtlas:
     - c16fbdb1ede2c43319d687e3cf74592f: 21300000
     - 91328b73399ad4afab1dc1ee59e970f7: 21300000
     - cc66d874afaa2453993538150ddca9f4: 21300000
+    - 27423365c23844422b5a10efd929177a: 21300000
     - 9865e2b5a2fbe4b1dbb5e0ec0d8f23b9: 21300000
     - 336da5165a4684de0b96ee22b489535f: 21300000
     - 4dad2566aa89249baadbac74a273f56f: 21300000
@@ -105,6 +106,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: c16fbdb1ede2c43319d687e3cf74592f, type: 3}
   - {fileID: 21300000, guid: 91328b73399ad4afab1dc1ee59e970f7, type: 3}
   - {fileID: 21300000, guid: cc66d874afaa2453993538150ddca9f4, type: 3}
+  - {fileID: 21300000, guid: 27423365c23844422b5a10efd929177a, type: 3}
   - {fileID: 21300000, guid: 9865e2b5a2fbe4b1dbb5e0ec0d8f23b9, type: 3}
   - {fileID: 21300000, guid: 336da5165a4684de0b96ee22b489535f, type: 3}
   - {fileID: 21300000, guid: 4dad2566aa89249baadbac74a273f56f, type: 3}
@@ -129,6 +131,7 @@ SpriteAtlas:
   - base+pole
   - slider_mark@300x
   - map_ren-ipad-cl
+  - toolbar_ren
   - homepage_ar-mobile-updated
   - healthyzoo-homepage_bg
   - map_gigi-ipad-cl

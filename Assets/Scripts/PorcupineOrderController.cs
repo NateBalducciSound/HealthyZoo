@@ -284,9 +284,17 @@ public class PorcupineOrderController : MonoBehaviour
 
     void CheckAndLockCorrectItems()
     {
+        bool anyNewlyLocked = false;
         foreach (var item in items)
+        {
             if (!item.isLocked && item.currentSlotIndex == item.correctSlotIndex)
+            {
                 item.isLocked = true;
+                anyNewlyLocked = true;
+            }
+        }
+        // Don't play correct sound if all items just locked — PlayComplete fires instead
+        if (anyNewlyLocked && !AllLocked()) AudioManager.PlayCorrect();
     }
 
     bool AllLocked()

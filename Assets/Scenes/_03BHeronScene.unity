@@ -253,6 +253,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 298625174}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &143198530
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 133f4c7f73d8d4e51aa5acaac830895e, type: 3}
 --- !u!1 &202315429
 GameObject:
   m_ObjectHideFlags: 0
@@ -845,6 +858,8 @@ MonoBehaviour:
   captionBox: {fileID: 1877906631}
   captionLingerTime: 0.1
   spanishFont: {fileID: 11400000, guid: ec752da0268ee4eb48f9eab01ba26e37, type: 2}
+  captionFontSizeMin: 12
+  captionFontSizeMax: 36
   openingLine:
     english: {fileID: 8300000, guid: bc4d1394868b34e79af3a332b5d5dcf2, type: 3}
     spanish: {fileID: 8300000, guid: 307767a437d274c91a396b34ecd146af, type: 3}
@@ -1232,6 +1247,11 @@ MonoBehaviour:
   heartbeatSpeedFast: 1
   heartbeatSpeedNormal: 0.66
   heartbeatSpeedSlow: 0.33
+  heartbeatClipFast: {fileID: 8300000, guid: 80b569747a793432bae4a295033a089b, type: 3}
+  heartbeatClipNormal: {fileID: 8300000, guid: bfbd851ab4589477cb987c593e43a026, type: 3}
+  heartbeatClipSlow: {fileID: 8300000, guid: b5a8b0003e3e04829a15fb12195a656c, type: 3}
+  heartbeatVolume: 1
+  heartbeatAudioOffset: 0.155
   stethoscopeAnimator: {fileID: 259039215}
   startupStateName: HeronStartUpAnimation
   loopStateName: HeronCelebrationLoopAnimation
@@ -1453,35 +1473,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4619757299269663185, guid: a80abad21f3004f509413d1e12350ccb, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5066775938895281148, guid: a80abad21f3004f509413d1e12350ccb, type: 3}
+      propertyPath: m_AnchorMax.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5066775938895281148, guid: a80abad21f3004f509413d1e12350ccb, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5066775938895281148, guid: a80abad21f3004f509413d1e12350ccb, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5066775938895281148, guid: a80abad21f3004f509413d1e12350ccb, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7113045436283634966, guid: a80abad21f3004f509413d1e12350ccb, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -320
+      value: -117
       objectReference: {fileID: 0}
     - target: {fileID: 7113045436283634966, guid: a80abad21f3004f509413d1e12350ccb, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 945
+      value: 857
       objectReference: {fileID: 0}
     - target: {fileID: 8192087940184330248, guid: a80abad21f3004f509413d1e12350ccb, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8192087940184330248, guid: a80abad21f3004f509413d1e12350ccb, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2781,6 +2801,10 @@ PrefabInstance:
       value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 6206422123525825135, guid: 53d51ef7972d04249a37c9ea879b182c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 6.2373238
+      objectReference: {fileID: 0}
+    - target: {fileID: 6206422123525825135, guid: 53d51ef7972d04249a37c9ea879b182c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -2814,7 +2838,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6206422123525825135, guid: 53d51ef7972d04249a37c9ea879b182c, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -563
+      value: -549
       objectReference: {fileID: 0}
     - target: {fileID: 6206422123525825135, guid: 53d51ef7972d04249a37c9ea879b182c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2832,6 +2856,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ToolBar
       objectReference: {fileID: 0}
+    - target: {fileID: 7565739809928220079, guid: 53d51ef7972d04249a37c9ea879b182c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 27423365c23844422b5a10efd929177a, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2856,3 +2884,4 @@ SceneRoots:
   - {fileID: 1449486952}
   - {fileID: 2092202611}
   - {fileID: 1443739628}
+  - {fileID: 143198530}

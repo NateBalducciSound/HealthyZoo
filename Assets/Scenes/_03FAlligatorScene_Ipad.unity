@@ -661,8 +661,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueController
   audioSource: {fileID: 221412550}
   captionBox: {fileID: 2045174390}
-  spanishFont: {fileID: 11400000, guid: ec752da0268ee4eb48f9eab01ba26e37, type: 2}
   captionLingerTime: 0.1
+  spanishFont: {fileID: 11400000, guid: ec752da0268ee4eb48f9eab01ba26e37, type: 2}
+  captionFontSizeMin: 12
+  captionFontSizeMax: 36
   openingLine:
     english: {fileID: 8300000, guid: 0066efd9bbd15409d9ff9cb1831070a6, type: 3}
     spanish: {fileID: 8300000, guid: 7f9d3241542a04a119d38aff56a6272c, type: 3}
@@ -670,9 +672,9 @@ MonoBehaviour:
     english: Let's find a way to see if Arlo might have a sore throat. To get him
       to say "ahhhhh" drag the tongue depressor and touch his face. Be sure to touch
       him gently.
-    spanish: Busquemos la manera de ver si Arlo podría tener dolor de garganta. Para
-      lograr que diga «hhhhhh», desliza el bajalenguas y tócalo en la cara. Asegúrate
-      de tocarlo con suavidad.
+    spanish: "Busquemos la manera de ver si Arlo podr\xEDa tener dolor de garganta.
+      Para lograr que diga \xABhhhhhh\xBB, desliza el bajalenguas y t\xF3calo en
+      la cara. Aseg\xFArate de tocarlo con suavidad."
   completionLine:
     english: {fileID: 8300000, guid: 86d791669cdc042ccb4c140dcd8977d2, type: 3}
     spanish: {fileID: 8300000, guid: 28e0b512114674ab8b3cf33e3753dff6, type: 3}
@@ -680,9 +682,9 @@ MonoBehaviour:
     english: Arlo's throat looks good! Baby alligators make cute chirping sounds
       before they hatch from their eggs, then they use their tails to swim super
       fast in the water!
-    spanish: ¡La garganta de Arlo se ve bien! Los caimanes bebés emiten lindos sonidos
-      de cantito de pajaros antes de salir de sus huevos; ¡luego usan sus colas para
-      nadar súper rápido en el agua!
+    spanish: "\xA1La garganta de Arlo se ve bien! Los caimanes beb\xE9s emiten lindos
+      sonidos de cantito de pajaros antes de salir de sus huevos; \xA1luego usan
+      sus colas para nadar s\xFAper r\xE1pido en el agua!"
   nudgeOnFixedTimer: 0
   nudgeDelay: 5
   nudgeInterval: 6
@@ -694,9 +696,9 @@ MonoBehaviour:
   nudgeCaptions:
   - english: The tongue depressor is the flat wooden stick up above Arlo's head.
       Drag it down and touch the area near his nose to see if he reacts.
-    spanish: El bajalenguas es el palito de madera plano que se encuentra sobre la
-      cabeza de Arlo. Arrástralo hacia abajo y toca la zona cercana a su nariz para
-      ver si reacciona.
+    spanish: "El bajalenguas es el palito de madera plano que se encuentra sobre
+      la cabeza de Arlo. Arr\xE1stralo hacia abajo y toca la zona cercana a su nariz
+      para ver si reacciona."
   - english: Alligators like to open their mouth when you touch their nose.
     spanish: A los caimanes les gusta abrir la boca cuando les tocas la nariz.
 --- !u!4 &221412552
@@ -846,6 +848,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!1001 &398161323
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 133f4c7f73d8d4e51aa5acaac830895e, type: 3}
 --- !u!1 &612562730
 GameObject:
   m_ObjectHideFlags: 0
@@ -1296,6 +1311,17 @@ MonoBehaviour:
   - {fileID: 2119787543}
   - {fileID: 1280969785}
   - {fileID: 1551762025}
+  eyesIncorrectClip: {fileID: 8300000, guid: 207185f188ac640738b29bbb2b21096c, type: 3}
+  eyesIncorrectDelay: 0.6
+  feetIncorrectClip: {fileID: 8300000, guid: 51a99feb65cec48b1844f2bb221f7d46, type: 3}
+  feetIncorrectDelay: 0.6
+  incorrectVolume: 0.417
+  noseVoiceLine:
+    english: {fileID: 8300000, guid: 142bc82efd333468cacb900a6677763d, type: 3}
+    spanish: {fileID: 8300000, guid: 0be3f7f2bbd7a4959ab133168838b003, type: 3}
+  noseCaption:
+    english: "Drag the tongue depressor down to Arlo\u2019s tongue."
+    spanish: Arrastra el bajalenguas hacia abajo, hasta la lengua de Arlo.
   dialogueController: {fileID: 221412551}
   respawnEarlyBy: 0.15
 --- !u!4 &1062466388
@@ -2381,19 +2407,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4619757299269663185, guid: a80abad21f3004f509413d1e12350ccb, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5066775938895281148, guid: a80abad21f3004f509413d1e12350ccb, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5066775938895281148, guid: a80abad21f3004f509413d1e12350ccb, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5066775938895281148, guid: a80abad21f3004f509413d1e12350ccb, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7113045436283634966, guid: a80abad21f3004f509413d1e12350ccb, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -2401,11 +2427,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8192087940184330248, guid: a80abad21f3004f509413d1e12350ccb, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8192087940184330248, guid: a80abad21f3004f509413d1e12350ccb, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3197,3 +3223,4 @@ SceneRoots:
   - {fileID: 1551762026}
   - {fileID: 221412552}
   - {fileID: 2374826}
+  - {fileID: 398161323}

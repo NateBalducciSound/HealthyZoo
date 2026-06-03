@@ -10,7 +10,39 @@ public class MenuManager : MonoBehaviour
     [Tooltip("Assign the PaytoneOne TMP Font Asset here")]
     public TMP_FontAsset loadingFont;
 
+    [Header("Menu Reveal Voice Line")]
+    [SerializeField] private AudioSource revealAudioSource;
+    [SerializeField] private LocalizedClip revealLine;
+    [SerializeField] private LocalizedCaption revealCaption;
+    [SerializeField] private GameObject revealCaptionBox;
+    [SerializeField] private float revealCaptionLingerTime = 1f;
+
     private bool _isLoading = false;
+
+    public void PlayRevealLine()
+    {
+        AudioClip clip = LanguageManager.Resolve(revealLine);
+        if (clip == null || revealAudioSource == null) return;
+        revealAudioSource.PlayOneShot(clip);
+
+        if (revealCaptionBox != null && LanguageManager.ShowCaptions)
+        {
+            string text = LanguageManager.ResolveCaption(revealCaption);
+            if (!string.IsNullOrEmpty(text))
+            {
+                var tmp = revealCaptionBox.GetComponentInChildren<TMPro.TMP_Text>();
+                if (tmp != null) tmp.text = text;
+                revealCaptionBox.SetActive(true);
+                StartCoroutine(ClearRevealCaption(clip.length + revealCaptionLingerTime));
+            }
+        }
+    }
+
+    IEnumerator ClearRevealCaption(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        if (revealCaptionBox != null) revealCaptionBox.SetActive(false);
+    }
 
     public void PlayGame()
     {
